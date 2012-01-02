@@ -1,0 +1,10 @@
+Experimental project to build desktop application in Ruby via JRuby.
+
+Combines a SWING Java desktop, designed with netbeans gui builder, but almost exclusively implemented in Ruby code.
+
+ADAM concept is Asset Definition and Manipulation, enabling user to define database assetsi via XSD, XML, Excel, CSV etc,
+and then manage the transformation, import or export of such assets from populated databases.
+
+Use cases include migration of data between databases, or between databases and applications, export/import of data requiring
+ complex transformations as part of the process, managment of complex test fixtures requiring a high level of coupling between assets.
+
