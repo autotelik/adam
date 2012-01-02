@@ -1,0 +1,7474 @@
+--- 
+annotation_versions_097: 
+  updated_at: 2009-01-18 18:51:37.0
+  element_id: "1545"
+  id: "97"
+  element_type: Composer
+  annotation_id: "49"
+  documentation: 
+  version: "1"
+annotation_versions_095: 
+  updated_at: 2009-01-18 18:50:28.0
+  element_id: "1099"
+  id: "95"
+  element_type: Composer
+  annotation_id: "48"
+  documentation: 
+  version: "1"
+annotation_versions_246: 
+  updated_at: 2009-01-18 18:53:50.0
+  element_id: "2295"
+  id: "246"
+  element_type: Composer
+  annotation_id: "123"
+  documentation: Preferred CurrencyPair for the position display.
+  version: "2"
+annotation_versions_096: 
+  updated_at: 2009-01-18 18:50:28.0
+  element_id: "1099"
+  id: "96"
+  element_type: Composer
+  annotation_id: "48"
+  documentation: Definition of Calypso StatusAccess object
+  version: "2"
+annotation_versions_094: 
+  updated_at: 2009-01-18 18:50:22.0
+  element_id: "1058"
+  id: "94"
+  element_type: Composer
+  annotation_id: "47"
+  documentation: Definition of Calypso UserAccessPermission object
+  version: "2"
+annotation_versions_243: 
+  updated_at: 2009-01-18 18:53:50.0
+  element_id: "2292"
+  id: "243"
+  element_type: Composer
+  annotation_id: "122"
+  documentation: 
+  version: "1"
+annotation_versions_245: 
+  updated_at: 2009-01-18 18:53:50.0
+  element_id: "2295"
+  id: "245"
+  element_type: Composer
+  annotation_id: "123"
+  documentation: 
+  version: "1"
+annotation_versions_093: 
+  updated_at: 2009-01-18 18:50:21.0
+  element_id: "1058"
+  id: "93"
+  element_type: Composer
+  annotation_id: "47"
+  documentation: 
+  version: "1"
+annotation_versions_244: 
+  updated_at: 2009-01-18 18:53:50.0
+  element_id: "2292"
+  id: "244"
+  element_type: Composer
+  annotation_id: "122"
+  documentation: The quoting currency of the pair.
+  version: "2"
+annotation_versions_369: 
+  updated_at: 2009-01-18 19:00:11.0
+  element_id: "4548"
+  id: "369"
+  element_type: Composer
+  annotation_id: "185"
+  documentation: 
+  version: "1"
+annotation_versions_241: 
+  updated_at: 2009-01-18 18:53:49.0
+  element_id: "2289"
+  id: "241"
+  element_type: Composer
+  annotation_id: "121"
+  documentation: 
+  version: "1"
+annotation_versions_091: 
+  updated_at: 2009-01-18 18:50:18.0
+  element_id: "1038"
+  id: "91"
+  element_type: Composer
+  annotation_id: "46"
+  documentation: 
+  version: "1"
+annotation_versions_240: 
+  updated_at: 2009-01-18 18:53:48.0
+  element_id: "2280"
+  id: "240"
+  element_type: Composer
+  annotation_id: "120"
+  documentation: This is the definition of a Calypso Currency Pair object.
+  version: "2"
+annotation_versions_092: 
+  updated_at: 2009-01-18 18:50:18.0
+  element_id: "1038"
+  id: "92"
+  element_type: Composer
+  annotation_id: "46"
+  documentation: "This is the definition of CreditMarketData configurable\n\t\t\t\t\
+    object."
+  version: "2"
+annotation_versions_368: 
+  updated_at: 2009-01-18 19:00:11.0
+  element_id: "4547"
+  id: "368"
+  element_type: Composer
+  annotation_id: "184"
+  documentation: SettleDeliveryInstruction.setAgentAccount()
+  version: "2"
+annotation_versions_242: 
+  updated_at: 2009-01-18 18:53:49.0
+  element_id: "2289"
+  id: "242"
+  element_type: Composer
+  annotation_id: "121"
+  documentation: The primary currency of the pair.
+  version: "2"
+annotation_versions_090: 
+  updated_at: 2009-01-18 18:50:17.0
+  element_id: "1030"
+  id: "90"
+  element_type: Composer
+  annotation_id: "45"
+  documentation: Definition of Trade WIndow Class
+  version: "2"
+annotation_versions_364: 
+  updated_at: 2009-01-18 19:00:10.0
+  element_id: "4542"
+  id: "364"
+  element_type: Composer
+  annotation_id: "182"
+  documentation: SettleDeliveryInstruction.setAgentContactType()
+  version: "2"
+annotation_versions_365: 
+  updated_at: 2009-01-18 19:00:10.0
+  element_id: "4544"
+  id: "365"
+  element_type: Composer
+  annotation_id: "183"
+  documentation: 
+  version: "1"
+annotation_versions_210: 
+  updated_at: 2009-01-18 18:53:41.0
+  element_id: "2246"
+  id: "210"
+  element_type: Composer
+  annotation_id: "105"
+  documentation: The country of the currency.
+  version: "2"
+annotation_versions_366: 
+  updated_at: 2009-01-18 19:00:10.0
+  element_id: "4544"
+  id: "366"
+  element_type: Composer
+  annotation_id: "183"
+  documentation: SettleDeliveryInstruction.setAgentName()
+  version: "2"
+annotation_versions_367: 
+  updated_at: 2009-01-18 19:00:10.0
+  element_id: "4547"
+  id: "367"
+  element_type: Composer
+  annotation_id: "184"
+  documentation: 
+  version: "1"
+annotation_versions_360: 
+  updated_at: 2009-01-18 19:00:07.0
+  element_id: "4532"
+  id: "360"
+  element_type: Composer
+  annotation_id: "180"
+  documentation: This object is an Agent
+  version: "2"
+annotation_versions_247: 
+  updated_at: 2009-01-18 18:53:51.0
+  element_id: "2296"
+  id: "247"
+  element_type: Composer
+  annotation_id: "124"
+  documentation: 
+  version: "1"
+annotation_versions_361: 
+  updated_at: 2009-01-18 19:00:09.0
+  element_id: "4534"
+  id: "361"
+  element_type: Composer
+  annotation_id: "181"
+  documentation: 
+  version: "1"
+annotation_versions_362: 
+  updated_at: 2009-01-18 19:00:09.0
+  element_id: "4534"
+  id: "362"
+  element_type: Composer
+  annotation_id: "181"
+  documentation: SettleDeliveryInstruction.setAgentId(Id of the Agent referred by
+    its short name or by its external reference)
+  version: "2"
+annotation_versions_248: 
+  updated_at: 2009-01-18 18:53:51.0
+  element_id: "2296"
+  id: "248"
+  element_type: Composer
+  annotation_id: "124"
+  documentation: Determines if the currency pair is direct or not.
+  version: "2"
+annotation_versions_249: 
+  updated_at: 2009-01-18 18:53:51.0
+  element_id: "2297"
+  id: "249"
+  element_type: Composer
+  annotation_id: "125"
+  documentation: 
+  version: "1"
+annotation_versions_363: 
+  updated_at: 2009-01-18 19:00:10.0
+  element_id: "4542"
+  id: "363"
+  element_type: Composer
+  annotation_id: "182"
+  documentation: 
+  version: "1"
+annotation_versions_738: 
+  updated_at: 2009-01-18 23:04:09.0
+  element_id: "80533"
+  id: "738"
+  element_type: Composer
+  annotation_id: "369"
+  documentation: AccountingRule.setHolidays(Vector of Holiday)
+  version: "2"
+annotation_versions_737: 
+  updated_at: 2009-01-18 23:04:09.0
+  element_id: "80533"
+  id: "737"
+  element_type: Composer
+  annotation_id: "369"
+  documentation: 
+  version: "1"
+annotation_versions_799: 
+  updated_at: 2009-01-18 23:10:58.0
+  element_id: "82462"
+  id: "799"
+  element_type: Composer
+  annotation_id: "400"
+  documentation: 
+  version: "1"
+annotation_versions_739: 
+  updated_at: 2009-01-18 23:04:10.0
+  element_id: "80535"
+  id: "739"
+  element_type: Composer
+  annotation_id: "370"
+  documentation: 
+  version: "1"
+annotation_versions_798: 
+  updated_at: 2009-01-18 23:10:57.0
+  element_id: "82460"
+  id: "798"
+  element_type: Composer
+  annotation_id: "399"
+  documentation: stike2 is used for Capped Certificates
+  version: "2"
+annotation_versions_797: 
+  updated_at: 2009-01-18 23:10:57.0
+  element_id: "82460"
+  id: "797"
+  element_type: Composer
+  annotation_id: "399"
+  documentation: 
+  version: "1"
+annotation_versions_732: 
+  updated_at: 2009-01-18 23:04:08.0
+  element_id: "80522"
+  id: "732"
+  element_type: Composer
+  annotation_id: "366"
+  documentation: The reference to the processing org to which this attribute is attached.
+  version: "2"
+annotation_versions_734: 
+  updated_at: 2009-01-18 23:04:09.0
+  element_id: "80530"
+  id: "734"
+  element_type: Composer
+  annotation_id: "367"
+  documentation: AccountingRule.setAccRuleType()
+  version: "2"
+annotation_versions_733: 
+  updated_at: 2009-01-18 23:04:09.0
+  element_id: "80530"
+  id: "733"
+  element_type: Composer
+  annotation_id: "367"
+  documentation: 
+  version: "1"
+annotation_versions_735: 
+  updated_at: 2009-01-18 23:04:09.0
+  element_id: "80532"
+  id: "735"
+  element_type: Composer
+  annotation_id: "368"
+  documentation: 
+  version: "1"
+annotation_versions_736: 
+  updated_at: 2009-01-18 23:04:09.0
+  element_id: "80532"
+  id: "736"
+  element_type: Composer
+  annotation_id: "368"
+  documentation: AccountingRule.SetIsDailyClosing()
+  version: "2"
+annotation_versions_917: 
+  updated_at: 2009-01-18 23:47:28.0
+  element_id: "92430"
+  id: "917"
+  element_type: Composer
+  annotation_id: "459"
+  documentation: 
+  version: "1"
+annotation_versions_918: 
+  updated_at: 2009-01-18 23:47:28.0
+  element_id: "92430"
+  id: "918"
+  element_type: Composer
+  annotation_id: "459"
+  documentation: This is the definition of Custom Rules
+  version: "2"
+annotation_versions_339: 
+  updated_at: 2009-01-18 18:59:54.0
+  element_id: "4450"
+  id: "339"
+  element_type: Composer
+  annotation_id: "170"
+  documentation: 
+  version: "1"
+annotation_versions_919: 
+  updated_at: 2009-01-18 23:47:30.0
+  element_id: "92443"
+  id: "919"
+  element_type: Composer
+  annotation_id: "460"
+  documentation: 
+  version: "1"
+annotation_versions_338: 
+  updated_at: 2009-01-18 18:59:53.0
+  element_id: "4449"
+  id: "338"
+  element_type: Composer
+  annotation_id: "169"
+  documentation: SettleDeliveryInstruction.setStaticFilterSet()
+  version: "2"
+annotation_versions_915: 
+  updated_at: 2009-01-18 23:46:55.0
+  element_id: "92262"
+  id: "915"
+  element_type: Composer
+  annotation_id: "458"
+  documentation: 
+  version: "1"
+annotation_versions_730: 
+  updated_at: 2009-01-18 23:04:07.0
+  element_id: "80520"
+  id: "730"
+  element_type: Composer
+  annotation_id: "365"
+  documentation: AccountingRule.setCurrencyRule()
+  version: "2"
+annotation_versions_337: 
+  updated_at: 2009-01-18 18:59:53.0
+  element_id: "4449"
+  id: "337"
+  element_type: Composer
+  annotation_id: "169"
+  documentation: 
+  version: "1"
+annotation_versions_916: 
+  updated_at: 2009-01-18 23:46:55.0
+  element_id: "92262"
+  id: "916"
+  element_type: Composer
+  annotation_id: "458"
+  documentation: Definition of calypso scheduled task
+  version: "2"
+annotation_versions_336: 
+  updated_at: 2009-01-18 18:59:52.0
+  element_id: "4447"
+  id: "336"
+  element_type: Composer
+  annotation_id: "168"
+  documentation: Creates a list of products. It needs at least one component to be
+    valid
+  version: "2"
+annotation_versions_731: 
+  updated_at: 2009-01-18 23:04:08.0
+  element_id: "80522"
+  id: "731"
+  element_type: Composer
+  annotation_id: "366"
+  documentation: 
+  version: "1"
+annotation_versions_912: 
+  updated_at: 2009-01-18 23:44:10.0
+  element_id: "91503"
+  id: "912"
+  element_type: Composer
+  annotation_id: "456"
+  documentation: Definition of calypso PreciousMetalLeaseRateSwap object
+  version: "2"
+annotation_versions_335: 
+  updated_at: 2009-01-18 18:59:52.0
+  element_id: "4447"
+  id: "335"
+  element_type: Composer
+  annotation_id: "168"
+  documentation: 
+  version: "1"
+annotation_versions_913: 
+  updated_at: 2009-01-18 23:45:04.0
+  element_id: "91768"
+  id: "913"
+  element_type: Composer
+  annotation_id: "457"
+  documentation: 
+  version: "1"
+annotation_versions_334: 
+  updated_at: 2009-01-18 18:59:52.0
+  element_id: "4445"
+  id: "334"
+  element_type: Composer
+  annotation_id: "167"
+  documentation: SettleDeliveryInstruction.setType()
+  version: "2"
+annotation_versions_914: 
+  updated_at: 2009-01-18 23:45:04.0
+  element_id: "91768"
+  id: "914"
+  element_type: Composer
+  annotation_id: "457"
+  documentation: Definition of calypso SwapSettlementInfo object
+  version: "2"
+annotation_versions_910: 
+  updated_at: 2009-01-18 23:43:33.0
+  element_id: "91315"
+  id: "910"
+  element_type: Composer
+  annotation_id: "455"
+  documentation: Definition of calypso PreciousMetalDepositLease object
+  version: "2"
+annotation_versions_098: 
+  updated_at: 2009-01-18 18:51:38.0
+  element_id: "1545"
+  id: "98"
+  element_type: Composer
+  annotation_id: "49"
+  documentation: This is the definition of a Calypso LegalEntity object.
+  version: "2"
+annotation_versions_333: 
+  updated_at: 2009-01-18 18:59:52.0
+  element_id: "4445"
+  id: "333"
+  element_type: Composer
+  annotation_id: "167"
+  documentation: 
+  version: "1"
+annotation_versions_332: 
+  updated_at: 2009-01-18 18:59:52.0
+  element_id: "4443"
+  id: "332"
+  element_type: Composer
+  annotation_id: "166"
+  documentation: SettleDeliveryInstruction.setPayReceive()
+  version: "2"
+annotation_versions_911: 
+  updated_at: 2009-01-18 23:44:10.0
+  element_id: "91503"
+  id: "911"
+  element_type: Composer
+  annotation_id: "456"
+  documentation: 
+  version: "1"
+annotation_versions_099: 
+  updated_at: 2009-01-18 18:51:41.0
+  element_id: "1567"
+  id: "99"
+  element_type: Composer
+  annotation_id: "50"
+  documentation: 
+  version: "1"
+annotation_versions_525: 
+  updated_at: 2009-01-18 20:28:32.0
+  element_id: "33213"
+  id: "525"
+  element_type: Composer
+  annotation_id: "263"
+  documentation: 
+  version: "1"
+annotation_versions_273: 
+  updated_at: 2009-01-18 18:53:55.0
+  element_id: "2312"
+  id: "273"
+  element_type: Composer
+  annotation_id: "137"
+  documentation: 
+  version: "1"
+annotation_versions_497: 
+  updated_at: 2009-01-18 19:24:19.0
+  element_id: "11758"
+  id: "497"
+  element_type: Composer
+  annotation_id: "249"
+  documentation: 
+  version: "1"
+annotation_versions_498: 
+  updated_at: 2009-01-18 19:24:19.0
+  element_id: "11758"
+  id: "498"
+  element_type: Composer
+  annotation_id: "249"
+  documentation: This is the definition of a SingleSwapLeg.
+  version: "2"
+annotation_versions_526: 
+  updated_at: 2009-01-18 20:28:32.0
+  element_id: "33213"
+  id: "526"
+  element_type: Composer
+  annotation_id: "263"
+  documentation: The type of the FutureContract (Bond, Commodity, ...).
+  version: "2"
+annotation_versions_274: 
+  updated_at: 2009-01-18 18:53:55.0
+  element_id: "2312"
+  id: "274"
+  element_type: Composer
+  annotation_id: "137"
+  documentation: An attribute associated to the CurrencyPair.
+  version: "2"
+annotation_versions_527: 
+  updated_at: 2009-01-18 20:28:33.0
+  element_id: "33215"
+  id: "527"
+  element_type: Composer
+  annotation_id: "264"
+  documentation: 
+  version: "1"
+annotation_versions_494: 
+  updated_at: 2009-01-18 19:23:10.0
+  element_id: "11394"
+  id: "494"
+  element_type: Composer
+  annotation_id: "247"
+  documentation: The compounding parameters.
+  version: "2"
+annotation_versions_522: 
+  updated_at: 2009-01-18 20:28:32.0
+  element_id: "33208"
+  id: "522"
+  element_type: Composer
+  annotation_id: "261"
+  documentation: The currency in which of the FutureContract is denominated.
+  version: "2"
+annotation_versions_270: 
+  updated_at: 2009-01-18 18:53:54.0
+  element_id: "2310"
+  id: "270"
+  element_type: Composer
+  annotation_id: "135"
+  documentation: Decimals used on the family quote.
+  version: "2"
+annotation_versions_523: 
+  updated_at: 2009-01-18 20:28:32.0
+  element_id: "33211"
+  id: "523"
+  element_type: Composer
+  annotation_id: "262"
+  documentation: 
+  version: "1"
+annotation_versions_272: 
+  updated_at: 2009-01-18 18:53:55.0
+  element_id: "2311"
+  id: "272"
+  element_type: Composer
+  annotation_id: "136"
+  documentation: The fixed quote between the currency and the family.
+  version: "2"
+annotation_versions_495: 
+  updated_at: 2009-01-18 19:23:15.0
+  element_id: "11416"
+  id: "495"
+  element_type: Composer
+  annotation_id: "248"
+  documentation: 
+  version: "1"
+annotation_versions_271: 
+  updated_at: 2009-01-18 18:53:54.0
+  element_id: "2311"
+  id: "271"
+  element_type: Composer
+  annotation_id: "136"
+  documentation: 
+  version: "1"
+annotation_versions_496: 
+  updated_at: 2009-01-18 19:23:15.0
+  element_id: "11416"
+  id: "496"
+  element_type: Composer
+  annotation_id: "248"
+  documentation: This is the definition of a SpreadInterestStream.
+  version: "2"
+annotation_versions_524: 
+  updated_at: 2009-01-18 20:28:32.0
+  element_id: "33211"
+  id: "524"
+  element_type: Composer
+  annotation_id: "262"
+  documentation: The exchange market place that manages the FutureContract.
+  version: "2"
+annotation_versions_491: 
+  updated_at: 2009-01-18 19:23:08.0
+  element_id: "11384"
+  id: "491"
+  element_type: Composer
+  annotation_id: "246"
+  documentation: 
+  version: "1"
+annotation_versions_492: 
+  updated_at: 2009-01-18 19:23:08.0
+  element_id: "11384"
+  id: "492"
+  element_type: Composer
+  annotation_id: "246"
+  documentation: The averaging parameters.
+  version: "2"
+annotation_versions_521: 
+  updated_at: 2009-01-18 20:28:31.0
+  element_id: "33208"
+  id: "521"
+  element_type: Composer
+  annotation_id: "261"
+  documentation: 
+  version: "1"
+annotation_versions_493: 
+  updated_at: 2009-01-18 19:23:10.0
+  element_id: "11394"
+  id: "493"
+  element_type: Composer
+  annotation_id: "247"
+  documentation: 
+  version: "1"
+annotation_versions_490: 
+  updated_at: 2009-01-18 19:23:06.0
+  element_id: "11373"
+  id: "490"
+  element_type: Composer
+  annotation_id: "245"
+  documentation: The resets for the stub periods.
+  version: "2"
+annotation_versions_520: 
+  updated_at: 2009-01-18 20:28:31.0
+  element_id: "33205"
+  id: "520"
+  element_type: Composer
+  annotation_id: "260"
+  documentation: The name of the FutureContract (EURIBOR, LONG_GILT, ...).
+  version: "2"
+annotation_versions_790: 
+  updated_at: 2009-01-18 23:10:56.0
+  element_id: "82452"
+  id: "790"
+  element_type: Composer
+  annotation_id: "395"
+  documentation: The type of exercise (American, European, ...).
+  version: "2"
+annotation_versions_791: 
+  updated_at: 2009-01-18 23:10:56.0
+  element_id: "82454"
+  id: "791"
+  element_type: Composer
+  annotation_id: "396"
+  documentation: 
+  version: "1"
+annotation_versions_793: 
+  updated_at: 2009-01-18 23:10:57.0
+  element_id: "82456"
+  id: "793"
+  element_type: Composer
+  annotation_id: "397"
+  documentation: 
+  version: "1"
+annotation_versions_278: 
+  updated_at: 2009-01-18 18:54:00.0
+  element_id: "2344"
+  id: "278"
+  element_type: Composer
+  annotation_id: "139"
+  documentation: This is the definition of a RateIndexDefaults from Calypso.
+  version: "2"
+annotation_versions_792: 
+  updated_at: 2009-01-18 23:10:56.0
+  element_id: "82454"
+  id: "792"
+  element_type: Composer
+  annotation_id: "396"
+  documentation: The type of delivery mode (Physical, Cash, Mix, ...).
+  version: "2"
+annotation_versions_794: 
+  updated_at: 2009-01-18 23:10:57.0
+  element_id: "82456"
+  id: "794"
+  element_type: Composer
+  annotation_id: "397"
+  documentation: The type of option (Put, Call).
+  version: "2"
+annotation_versions_279: 
+  updated_at: 2009-01-18 18:54:10.0
+  element_id: "2415"
+  id: "279"
+  element_type: Composer
+  annotation_id: "140"
+  documentation: 
+  version: "1"
+annotation_versions_275: 
+  updated_at: 2009-01-18 18:53:56.0
+  element_id: "2317"
+  id: "275"
+  element_type: Composer
+  annotation_id: "138"
+  documentation: 
+  version: "1"
+annotation_versions_499: 
+  updated_at: 2009-01-18 19:26:24.0
+  element_id: "12452"
+  id: "499"
+  element_type: Composer
+  annotation_id: "250"
+  documentation: 
+  version: "1"
+annotation_versions_795: 
+  updated_at: 2009-01-18 23:10:57.0
+  element_id: "82458"
+  id: "795"
+  element_type: Composer
+  annotation_id: "398"
+  documentation: 
+  version: "1"
+annotation_versions_276: 
+  updated_at: 2009-01-18 18:53:56.0
+  element_id: "2317"
+  id: "276"
+  element_type: Composer
+  annotation_id: "138"
+  documentation: This is the definition of a RateIndex from Calypso.
+  version: "2"
+annotation_versions_796: 
+  updated_at: 2009-01-18 23:10:57.0
+  element_id: "82458"
+  id: "796"
+  element_type: Composer
+  annotation_id: "398"
+  documentation: true if deactivation barrier is reached
+  version: "2"
+annotation_versions_277: 
+  updated_at: 2009-01-18 18:53:59.0
+  element_id: "2344"
+  id: "277"
+  element_type: Composer
+  annotation_id: "139"
+  documentation: 
+  version: "1"
+annotation_versions_649: 
+  updated_at: 2009-01-18 22:30:44.0
+  element_id: "71489"
+  id: "649"
+  element_type: Composer
+  annotation_id: "325"
+  documentation: 
+  version: "1"
+annotation_versions_216: 
+  updated_at: 2009-01-18 18:53:43.0
+  element_id: "2252"
+  id: "216"
+  element_type: Composer
+  annotation_id: "108"
+  documentation: "The rounding applied to the amounts in\n\t\t\t\t\t\t\t\tthe currency."
+  version: "2"
+annotation_versions_217: 
+  updated_at: 2009-01-18 18:53:43.0
+  element_id: "2257"
+  id: "217"
+  element_type: Composer
+  annotation_id: "109"
+  documentation: 
+  version: "1"
+annotation_versions_646: 
+  updated_at: 2009-01-18 22:19:31.0
+  element_id: "68201"
+  id: "646"
+  element_type: Composer
+  annotation_id: "323"
+  documentation: link to the mirror trade ?
+  version: "2"
+annotation_versions_215: 
+  updated_at: 2009-01-18 18:53:43.0
+  element_id: "2252"
+  id: "215"
+  element_type: Composer
+  annotation_id: "108"
+  documentation: 
+  version: "1"
+annotation_versions_648: 
+  updated_at: 2009-01-18 22:30:31.0
+  element_id: "71419"
+  id: "648"
+  element_type: Composer
+  annotation_id: "324"
+  documentation: This is the definition of a Calypso DateRule object.
+  version: "2"
+annotation_versions_647: 
+  updated_at: 2009-01-18 22:30:31.0
+  element_id: "71419"
+  id: "647"
+  element_type: Composer
+  annotation_id: "324"
+  documentation: 
+  version: "1"
+annotation_versions_219: 
+  updated_at: 2009-01-18 18:53:44.0
+  element_id: "2258"
+  id: "219"
+  element_type: Composer
+  annotation_id: "110"
+  documentation: 
+  version: "1"
+annotation_versions_644: 
+  updated_at: 2009-01-18 22:19:17.0
+  element_id: "68131"
+  id: "644"
+  element_type: Composer
+  annotation_id: "322"
+  documentation: period Rule
+  version: "2"
+annotation_versions_643: 
+  updated_at: 2009-01-18 22:19:17.0
+  element_id: "68131"
+  id: "643"
+  element_type: Composer
+  annotation_id: "322"
+  documentation: 
+  version: "1"
+annotation_versions_050: 
+  updated_at: 2009-01-18 18:49:11.0
+  element_id: "657"
+  id: "50"
+  element_type: Composer
+  annotation_id: "25"
+  documentation: This is the activity associated to the Book
+  version: "2"
+annotation_versions_645: 
+  updated_at: 2009-01-18 22:19:31.0
+  element_id: "68201"
+  id: "645"
+  element_type: Composer
+  annotation_id: "323"
+  documentation: 
+  version: "1"
+annotation_versions_218: 
+  updated_at: 2009-01-18 18:53:43.0
+  element_id: "2257"
+  id: "218"
+  element_type: Composer
+  annotation_id: "109"
+  documentation: "The decimals to display for the amounts\n\t\t\t\t\t\t\t\tin the \
+    currency."
+  version: "2"
+annotation_versions_212: 
+  updated_at: 2009-01-18 18:53:41.0
+  element_id: "2249"
+  id: "212"
+  element_type: Composer
+  annotation_id: "106"
+  documentation: "Number of days from the current Date for\n\t\t\t\t\t\t\t\tspot deals."
+  version: "2"
+annotation_versions_211: 
+  updated_at: 2009-01-18 18:53:41.0
+  element_id: "2249"
+  id: "211"
+  element_type: Composer
+  annotation_id: "106"
+  documentation: 
+  version: "1"
+annotation_versions_642: 
+  updated_at: 2009-01-18 22:18:09.0
+  element_id: "67781"
+  id: "642"
+  element_type: Composer
+  annotation_id: "321"
+  documentation: This is the definition of a Calypso Simple MoneyMarket object.
+  version: "2"
+annotation_versions_214: 
+  updated_at: 2009-01-18 18:53:42.0
+  element_id: "2250"
+  id: "214"
+  element_type: Composer
+  annotation_id: "107"
+  documentation: "The default holidays for deals in the\n\t\t\t\t\t\t\t\tcurrency."
+  version: "2"
+annotation_versions_641: 
+  updated_at: 2009-01-18 22:18:09.0
+  element_id: "67781"
+  id: "641"
+  element_type: Composer
+  annotation_id: "321"
+  documentation: 
+  version: "1"
+annotation_versions_640: 
+  updated_at: 2009-01-18 22:16:29.0
+  element_id: "67255"
+  id: "640"
+  element_type: Composer
+  annotation_id: "320"
+  documentation: This is the definition of a FXCompoundOption.
+  version: "2"
+annotation_versions_213: 
+  updated_at: 2009-01-18 18:53:42.0
+  element_id: "2250"
+  id: "213"
+  element_type: Composer
+  annotation_id: "107"
+  documentation: 
+  version: "1"
+annotation_versions_057: 
+  updated_at: 2009-01-18 18:49:15.0
+  element_id: "676"
+  id: "57"
+  element_type: Composer
+  annotation_id: "29"
+  documentation: 
+  version: "1"
+annotation_versions_058: 
+  updated_at: 2009-01-18 18:49:15.0
+  element_id: "676"
+  id: "58"
+  element_type: Composer
+  annotation_id: "29"
+  documentation: The end of day cutoff time for the book.
+  version: "2"
+annotation_versions_059: 
+  updated_at: 2009-01-18 18:49:15.0
+  element_id: "678"
+  id: "59"
+  element_type: Composer
+  annotation_id: "30"
+  documentation: 
+  version: "1"
+annotation_versions_052: 
+  updated_at: 2009-01-18 18:49:13.0
+  element_id: "659"
+  id: "52"
+  element_type: Composer
+  annotation_id: "26"
+  documentation: This is the accounting book associated to the Book.
+  version: "2"
+annotation_versions_051: 
+  updated_at: 2009-01-18 18:49:12.0
+  element_id: "659"
+  id: "51"
+  element_type: Composer
+  annotation_id: "26"
+  documentation: 
+  version: "1"
+annotation_versions_053: 
+  updated_at: 2009-01-18 18:49:14.0
+  element_id: "666"
+  id: "53"
+  element_type: Composer
+  annotation_id: "27"
+  documentation: 
+  version: "1"
+annotation_versions_054: 
+  updated_at: 2009-01-18 18:49:14.0
+  element_id: "666"
+  id: "54"
+  element_type: Composer
+  annotation_id: "27"
+  documentation: "The reference to the processing org to which this\n\t\t\t\t\t\t\
+    book is attached."
+  version: "2"
+annotation_versions_529: 
+  updated_at: 2009-01-18 20:28:33.0
+  element_id: "33216"
+  id: "529"
+  element_type: Composer
+  annotation_id: "265"
+  documentation: 
+  version: "1"
+annotation_versions_056: 
+  updated_at: 2009-01-18 18:49:15.0
+  element_id: "674"
+  id: "56"
+  element_type: Composer
+  annotation_id: "28"
+  documentation: The primary location of the book.
+  version: "2"
+annotation_versions_528: 
+  updated_at: 2009-01-18 20:28:33.0
+  element_id: "33215"
+  id: "528"
+  element_type: Composer
+  annotation_id: "264"
+  documentation: The number of contracts trading at any given time.
+  version: "2"
+annotation_versions_055: 
+  updated_at: 2009-01-18 18:49:14.0
+  element_id: "674"
+  id: "55"
+  element_type: Composer
+  annotation_id: "28"
+  documentation: 
+  version: "1"
+annotation_versions_824: 
+  updated_at: 2009-01-18 23:11:19.0
+  element_id: "82562"
+  id: "824"
+  element_type: Composer
+  annotation_id: "412"
+  documentation: Law of the country under which the warrant is issued.
+  version: "2"
+annotation_versions_175: 
+  updated_at: 2009-01-18 18:52:17.0
+  element_id: "1773"
+  id: "175"
+  element_type: Composer
+  annotation_id: "88"
+  documentation: 
+  version: "1"
+annotation_versions_823: 
+  updated_at: 2009-01-18 23:11:19.0
+  element_id: "82562"
+  id: "823"
+  element_type: Composer
+  annotation_id: "412"
+  documentation: 
+  version: "1"
+annotation_versions_176: 
+  updated_at: 2009-01-18 18:52:17.0
+  element_id: "1773"
+  id: "176"
+  element_type: Composer
+  annotation_id: "88"
+  documentation: The DateRule used to determine the actual balance day.
+  version: "2"
+annotation_versions_825: 
+  updated_at: 2009-01-18 23:11:20.0
+  element_id: "82563"
+  id: "825"
+  element_type: Composer
+  annotation_id: "413"
+  documentation: 
+  version: "1"
+annotation_versions_177: 
+  updated_at: 2009-01-18 18:52:18.0
+  element_id: "1775"
+  id: "177"
+  element_type: Composer
+  annotation_id: "89"
+  documentation: 
+  version: "1"
+annotation_versions_172: 
+  updated_at: 2009-01-18 18:52:17.0
+  element_id: "1770"
+  id: "172"
+  element_type: Composer
+  annotation_id: "86"
+  documentation: The balance frequency.
+  version: "2"
+annotation_versions_821: 
+  updated_at: 2009-01-18 23:11:19.0
+  element_id: "82555"
+  id: "821"
+  element_type: Composer
+  annotation_id: "411"
+  documentation: 
+  version: "1"
+annotation_versions_173: 
+  updated_at: 2009-01-18 18:52:17.0
+  element_id: "1772"
+  id: "173"
+  element_type: Composer
+  annotation_id: "87"
+  documentation: 
+  version: "1"
+annotation_versions_822: 
+  updated_at: 2009-01-18 23:11:19.0
+  element_id: "82555"
+  id: "822"
+  element_type: Composer
+  annotation_id: "411"
+  documentation: Warrant's underlying Bond. underlying bond is included in order to
+    reuse coupon generation logic
+  version: "2"
+annotation_versions_174: 
+  updated_at: 2009-01-18 18:52:17.0
+  element_id: "1772"
+  id: "174"
+  element_type: Composer
+  annotation_id: "87"
+  documentation: The day of the balance.
+  version: "2"
+annotation_versions_820: 
+  updated_at: 2009-01-18 23:11:18.0
+  element_id: "82547"
+  id: "820"
+  element_type: Composer
+  annotation_id: "410"
+  documentation: This field is used for non implemented underlyings
+  version: "2"
+annotation_versions_178: 
+  updated_at: 2009-01-18 18:52:18.0
+  element_id: "1775"
+  id: "178"
+  element_type: Composer
+  annotation_id: "89"
+  documentation: The date roll used to determine the actual balance day.
+  version: "2"
+annotation_versions_179: 
+  updated_at: 2009-01-18 18:52:18.0
+  element_id: "1778"
+  id: "179"
+  element_type: Composer
+  annotation_id: "90"
+  documentation: 
+  version: "1"
+annotation_versions_170: 
+  updated_at: 2009-01-18 18:52:16.0
+  element_id: "1769"
+  id: "170"
+  element_type: Composer
+  annotation_id: "85"
+  documentation: This sequence defines the Account balance.
+  version: "2"
+annotation_versions_829: 
+  updated_at: 2009-01-18 23:14:39.0
+  element_id: "83441"
+  id: "829"
+  element_type: Composer
+  annotation_id: "415"
+  documentation: 
+  version: "1"
+annotation_versions_171: 
+  updated_at: 2009-01-18 18:52:17.0
+  element_id: "1770"
+  id: "171"
+  element_type: Composer
+  annotation_id: "86"
+  documentation: 
+  version: "1"
+annotation_versions_826: 
+  updated_at: 2009-01-18 23:11:20.0
+  element_id: "82563"
+  id: "826"
+  element_type: Composer
+  annotation_id: "413"
+  documentation: Sets the selling restrictions of the warrant. (Static Data Filter)
+  version: "2"
+annotation_versions_827: 
+  updated_at: 2009-01-18 23:11:20.0
+  element_id: "82564"
+  id: "827"
+  element_type: Composer
+  annotation_id: "414"
+  documentation: 
+  version: "1"
+annotation_versions_828: 
+  updated_at: 2009-01-18 23:11:20.0
+  element_id: "82564"
+  id: "828"
+  element_type: Composer
+  annotation_id: "414"
+  documentation: At maturity date, the bought Warrants could be automatically exercised
+    with a Scheduled Task
+  version: "2"
+annotation_versions_030: 
+  updated_at: 2009-01-18 18:47:48.0
+  element_id: "151"
+  id: "30"
+  element_type: Composer
+  annotation_id: "15"
+  documentation: Defines the Rounding enumeration.
+  version: "2"
+annotation_versions_103: 
+  updated_at: 2009-01-18 18:51:43.0
+  element_id: "1573"
+  id: "103"
+  element_type: Composer
+  annotation_id: "52"
+  documentation: 
+  version: "1"
+annotation_versions_104: 
+  updated_at: 2009-01-18 18:51:43.0
+  element_id: "1573"
+  id: "104"
+  element_type: Composer
+  annotation_id: "52"
+  documentation: "The reference to the parent LegalEntity to which this\n\t\t\t\t\t\
+    \tLegalEntity is attached."
+  version: "2"
+annotation_versions_105: 
+  updated_at: 2009-01-18 18:51:43.0
+  element_id: "1581"
+  id: "105"
+  element_type: Composer
+  annotation_id: "53"
+  documentation: 
+  version: "1"
+annotation_versions_106: 
+  updated_at: 2009-01-18 18:51:43.0
+  element_id: "1581"
+  id: "106"
+  element_type: Composer
+  annotation_id: "53"
+  documentation: "Boolean to determine if the LegalEntity is a financial\n\t\t\t\t\
+    \t\tinstitution or not."
+  version: "2"
+annotation_versions_869: 
+  updated_at: 2009-01-18 23:28:56.0
+  element_id: "87447"
+  id: "869"
+  element_type: Composer
+  annotation_id: "435"
+  documentation: 
+  version: "1"
+annotation_versions_032: 
+  updated_at: 2009-01-18 18:47:51.0
+  element_id: "173"
+  id: "32"
+  element_type: Composer
+  annotation_id: "16"
+  documentation: The name of the attribute.
+  version: "2"
+annotation_versions_031: 
+  updated_at: 2009-01-18 18:47:51.0
+  element_id: "173"
+  id: "31"
+  element_type: Composer
+  annotation_id: "16"
+  documentation: 
+  version: "1"
+annotation_versions_867: 
+  updated_at: 2009-01-18 23:28:17.0
+  element_id: "87282"
+  id: "867"
+  element_type: Composer
+  annotation_id: "434"
+  documentation: 
+  version: "1"
+annotation_versions_107: 
+  updated_at: 2009-01-18 18:51:43.0
+  element_id: "1582"
+  id: "107"
+  element_type: Composer
+  annotation_id: "54"
+  documentation: 
+  version: "1"
+annotation_versions_868: 
+  updated_at: 2009-01-18 23:28:18.0
+  element_id: "87282"
+  id: "868"
+  element_type: Composer
+  annotation_id: "434"
+  documentation: Definition of calypso CommodityIndex object
+  version: "2"
+annotation_versions_866: 
+  updated_at: 2009-01-18 23:28:13.0
+  element_id: "87259"
+  id: "866"
+  element_type: Composer
+  annotation_id: "433"
+  documentation: Calypso CommodityIndex object
+  version: "2"
+annotation_versions_709: 
+  updated_at: 2009-01-18 23:03:58.0
+  element_id: "80480"
+  id: "709"
+  element_type: Composer
+  annotation_id: "355"
+  documentation: 
+  version: "1"
+annotation_versions_100: 
+  updated_at: 2009-01-18 18:51:41.0
+  element_id: "1567"
+  id: "100"
+  element_type: Composer
+  annotation_id: "50"
+  documentation: The Full Name of the LegalEntity.
+  version: "2"
+annotation_versions_865: 
+  updated_at: 2009-01-18 23:28:13.0
+  element_id: "87259"
+  id: "865"
+  element_type: Composer
+  annotation_id: "433"
+  documentation: 
+  version: "1"
+annotation_versions_708: 
+  updated_at: 2009-01-18 23:03:58.0
+  element_id: "80477"
+  id: "708"
+  element_type: Composer
+  annotation_id: "354"
+  documentation: AccountingEventConfig.setDescription()
+  version: "2"
+annotation_versions_863: 
+  updated_at: 2009-01-18 23:28:11.0
+  element_id: "87105"
+  id: "863"
+  element_type: Composer
+  annotation_id: "432"
+  documentation: 
+  version: "1"
+annotation_versions_706: 
+  updated_at: 2009-01-18 23:03:57.0
+  element_id: "80475"
+  id: "706"
+  element_type: Composer
+  annotation_id: "353"
+  documentation: AccountingEventConfig.setEventType()
+  version: "2"
+annotation_versions_101: 
+  updated_at: 2009-01-18 18:51:41.0
+  element_id: "1570"
+  id: "101"
+  element_type: Composer
+  annotation_id: "51"
+  documentation: 
+  version: "1"
+annotation_versions_102: 
+  updated_at: 2009-01-18 18:51:41.0
+  element_id: "1570"
+  id: "102"
+  element_type: Composer
+  annotation_id: "51"
+  documentation: The list of Roles that the LegalEntity has
+  version: "2"
+annotation_versions_864: 
+  updated_at: 2009-01-18 23:28:11.0
+  element_id: "87105"
+  id: "864"
+  element_type: Composer
+  annotation_id: "432"
+  documentation: Definition of a user.
+  version: "2"
+annotation_versions_707: 
+  updated_at: 2009-01-18 23:03:58.0
+  element_id: "80477"
+  id: "707"
+  element_type: Composer
+  annotation_id: "354"
+  documentation: 
+  version: "1"
+annotation_versions_862: 
+  updated_at: 2009-01-18 23:27:38.0
+  element_id: "87104"
+  id: "862"
+  element_type: Composer
+  annotation_id: "431"
+  documentation: Definition of calypso Commodity object
+  version: "2"
+annotation_versions_705: 
+  updated_at: 2009-01-18 23:03:57.0
+  element_id: "80475"
+  id: "705"
+  element_type: Composer
+  annotation_id: "353"
+  documentation: 
+  version: "1"
+annotation_versions_039: 
+  updated_at: 2009-01-18 18:48:27.0
+  element_id: "430"
+  id: "39"
+  element_type: Composer
+  annotation_id: "20"
+  documentation: 
+  version: "1"
+annotation_versions_454: 
+  updated_at: 2009-01-18 19:10:25.0
+  element_id: "7595"
+  id: "454"
+  element_type: Composer
+  annotation_id: "227"
+  documentation: This is the definition of a Cross Currency Swap.
+  version: "2"
+annotation_versions_704: 
+  updated_at: 2009-01-18 23:03:53.0
+  element_id: "80453"
+  id: "704"
+  element_type: Composer
+  annotation_id: "352"
+  documentation: This is the definition of a Calypso Accounting Event object.
+  version: "2"
+annotation_versions_861: 
+  updated_at: 2009-01-18 23:27:37.0
+  element_id: "87104"
+  id: "861"
+  element_type: Composer
+  annotation_id: "431"
+  documentation: 
+  version: "1"
+annotation_versions_703: 
+  updated_at: 2009-01-18 23:03:53.0
+  element_id: "80453"
+  id: "703"
+  element_type: Composer
+  annotation_id: "352"
+  documentation: 
+  version: "1"
+annotation_versions_038: 
+  updated_at: 2009-01-18 18:48:23.0
+  element_id: "396"
+  id: "38"
+  element_type: Composer
+  annotation_id: "19"
+  documentation: Common type for all amortization types. Sub-types will define the
+    parameters required for specific types.
+  version: "2"
+annotation_versions_453: 
+  updated_at: 2009-01-18 19:10:25.0
+  element_id: "7595"
+  id: "453"
+  element_type: Composer
+  annotation_id: "227"
+  documentation: 
+  version: "1"
+annotation_versions_860: 
+  updated_at: 2009-01-18 23:27:33.0
+  element_id: "87081"
+  id: "860"
+  element_type: Composer
+  annotation_id: "430"
+  documentation: Calypso Commodity object
+  version: "2"
+annotation_versions_702: 
+  updated_at: 2009-01-18 23:03:53.0
+  element_id: "80448"
+  id: "702"
+  element_type: Composer
+  annotation_id: "351"
+  documentation: This field basically represents the collection of AddressCodes of
+    the LEContact
+  version: "2"
+annotation_versions_456: 
+  updated_at: 2009-01-18 19:11:07.0
+  element_id: "7837"
+  id: "456"
+  element_type: Composer
+  annotation_id: "228"
+  documentation: This is the definition of a Spread Lock.
+  version: "2"
+annotation_versions_701: 
+  updated_at: 2009-01-18 23:03:52.0
+  element_id: "80448"
+  id: "701"
+  element_type: Composer
+  annotation_id: "351"
+  documentation: 
+  version: "1"
+annotation_versions_700: 
+  updated_at: 2009-01-18 23:03:51.0
+  element_id: "80445"
+  id: "700"
+  element_type: Composer
+  annotation_id: "350"
+  documentation: LEContact.setComment()
+  version: "2"
+annotation_versions_455: 
+  updated_at: 2009-01-18 19:11:06.0
+  element_id: "7837"
+  id: "455"
+  element_type: Composer
+  annotation_id: "228"
+  documentation: 
+  version: "1"
+annotation_versions_109: 
+  updated_at: 2009-01-18 18:51:44.0
+  element_id: "1584"
+  id: "109"
+  element_type: Composer
+  annotation_id: "55"
+  documentation: 
+  version: "1"
+annotation_versions_458: 
+  updated_at: 2009-01-18 19:12:27.0
+  element_id: "8229"
+  id: "458"
+  element_type: Composer
+  annotation_id: "229"
+  documentation: This is the definition of a Cross Currency Swap.
+  version: "2"
+annotation_versions_459: 
+  updated_at: 2009-01-18 19:13:59.0
+  element_id: "8476"
+  id: "459"
+  element_type: Composer
+  annotation_id: "230"
+  documentation: 
+  version: "1"
+annotation_versions_035: 
+  updated_at: 2009-01-18 18:47:52.0
+  element_id: "176"
+  id: "35"
+  element_type: Composer
+  annotation_id: "18"
+  documentation: 
+  version: "1"
+annotation_versions_108: 
+  updated_at: 2009-01-18 18:51:43.0
+  element_id: "1582"
+  id: "108"
+  element_type: Composer
+  annotation_id: "54"
+  documentation: The status of the LegalEntity.
+  version: "2"
+annotation_versions_457: 
+  updated_at: 2009-01-18 19:12:27.0
+  element_id: "8229"
+  id: "457"
+  element_type: Composer
+  annotation_id: "229"
+  documentation: 
+  version: "1"
+annotation_versions_033: 
+  updated_at: 2009-01-18 18:47:51.0
+  element_id: "175"
+  id: "33"
+  element_type: Composer
+  annotation_id: "17"
+  documentation: 
+  version: "1"
+annotation_versions_034: 
+  updated_at: 2009-01-18 18:47:51.0
+  element_id: "175"
+  id: "34"
+  element_type: Composer
+  annotation_id: "17"
+  documentation: The value of the attribute.
+  version: "2"
+annotation_versions_037: 
+  updated_at: 2009-01-18 18:48:23.0
+  element_id: "396"
+  id: "37"
+  element_type: Composer
+  annotation_id: "19"
+  documentation: 
+  version: "1"
+annotation_versions_036: 
+  updated_at: 2009-01-18 18:47:52.0
+  element_id: "176"
+  id: "36"
+  element_type: Composer
+  annotation_id: "18"
+  documentation: Representation of a PutCallDate object.
+  version: "2"
+annotation_versions_615: 
+  updated_at: 2009-01-18 21:55:38.0
+  element_id: "61102"
+  id: "615"
+  element_type: Composer
+  annotation_id: "308"
+  documentation: 
+  version: "1"
+annotation_versions_614: 
+  updated_at: 2009-01-18 21:52:04.0
+  element_id: "60035"
+  id: "614"
+  element_type: Composer
+  annotation_id: "307"
+  documentation: This is the definition of a CreditDefaultSwapLoan.
+  version: "2"
+annotation_versions_613: 
+  updated_at: 2009-01-18 21:52:04.0
+  element_id: "60035"
+  id: "613"
+  element_type: Composer
+  annotation_id: "307"
+  documentation: 
+  version: "1"
+annotation_versions_612: 
+  updated_at: 2009-01-18 21:51:47.0
+  element_id: "59938"
+  id: "612"
+  element_type: Composer
+  annotation_id: "306"
+  documentation: This is the definition of a CDS Settlement Matrix item.
+  version: "2"
+annotation_versions_611: 
+  updated_at: 2009-01-18 21:51:47.0
+  element_id: "59938"
+  id: "611"
+  element_type: Composer
+  annotation_id: "306"
+  documentation: 
+  version: "1"
+annotation_versions_450: 
+  updated_at: 2009-01-18 19:09:07.0
+  element_id: "7145"
+  id: "450"
+  element_type: Composer
+  annotation_id: "225"
+  documentation: This is the definition of an Extendible Swap.
+  version: "2"
+annotation_versions_667: 
+  updated_at: 2009-01-18 23:03:45.0
+  element_id: "80425"
+  id: "667"
+  element_type: Composer
+  annotation_id: "334"
+  documentation: 
+  version: "1"
+annotation_versions_668: 
+  updated_at: 2009-01-18 23:03:45.0
+  element_id: "80425"
+  id: "668"
+  element_type: Composer
+  annotation_id: "334"
+  documentation: LEContact.setEffectiveFrom()
+  version: "2"
+annotation_versions_452: 
+  updated_at: 2009-01-18 19:09:46.0
+  element_id: "7370"
+  id: "452"
+  element_type: Composer
+  annotation_id: "226"
+  documentation: This is the definition of a Spread Swap.
+  version: "2"
+annotation_versions_451: 
+  updated_at: 2009-01-18 19:09:46.0
+  element_id: "7370"
+  id: "451"
+  element_type: Composer
+  annotation_id: "226"
+  documentation: 
+  version: "1"
+annotation_versions_619: 
+  updated_at: 2009-01-18 22:00:03.0
+  element_id: "62405"
+  id: "619"
+  element_type: Composer
+  annotation_id: "310"
+  documentation: 
+  version: "1"
+annotation_versions_618: 
+  updated_at: 2009-01-18 21:57:52.0
+  element_id: "61763"
+  id: "618"
+  element_type: Composer
+  annotation_id: "309"
+  documentation: This is the definition of a CDSABSIndexTrancheDefinition.
+  version: "2"
+annotation_versions_669: 
+  updated_at: 2009-01-18 23:03:45.0
+  element_id: "80426"
+  id: "669"
+  element_type: Composer
+  annotation_id: "335"
+  documentation: 
+  version: "1"
+annotation_versions_617: 
+  updated_at: 2009-01-18 21:57:52.0
+  element_id: "61763"
+  id: "617"
+  element_type: Composer
+  annotation_id: "309"
+  documentation: 
+  version: "1"
+annotation_versions_616: 
+  updated_at: 2009-01-18 21:55:39.0
+  element_id: "61102"
+  id: "616"
+  element_type: Composer
+  annotation_id: "308"
+  documentation: This is the definition of a CDSABSIndexDefinition.
+  version: "2"
+annotation_versions_340: 
+  updated_at: 2009-01-18 18:59:54.0
+  element_id: "4450"
+  id: "340"
+  element_type: Composer
+  annotation_id: "170"
+  documentation: SettleDeliveryInstruction.setTradeCounterPartyId(Id of the Legal
+    Entity referred by its short name or its external reference). If not defined,
+    TradeCounterParty=ALL
+  version: "2"
+annotation_versions_587: 
+  updated_at: 2009-01-18 21:21:45.0
+  element_id: "50661"
+  id: "587"
+  element_type: Composer
+  annotation_id: "294"
+  documentation: 
+  version: "1"
+annotation_versions_588: 
+  updated_at: 2009-01-18 21:21:45.0
+  element_id: "50661"
+  id: "588"
+  element_type: Composer
+  annotation_id: "294"
+  documentation: This is the definition of a Credit Default Swap Nth Loss.
+  version: "2"
+annotation_versions_589: 
+  updated_at: 2009-01-18 21:25:23.0
+  element_id: "51787"
+  id: "589"
+  element_type: Composer
+  annotation_id: "295"
+  documentation: 
+  version: "1"
+annotation_versions_585: 
+  updated_at: 2009-01-18 21:18:37.0
+  element_id: "49621"
+  id: "585"
+  element_type: Composer
+  annotation_id: "293"
+  documentation: 
+  version: "1"
+annotation_versions_586: 
+  updated_at: 2009-01-18 21:18:37.0
+  element_id: "49621"
+  id: "586"
+  element_type: Composer
+  annotation_id: "293"
+  documentation: This is the definition of a Credit Default Swap.
+  version: "2"
+annotation_versions_610: 
+  updated_at: 2009-01-18 21:44:36.0
+  element_id: "57733"
+  id: "610"
+  element_type: Composer
+  annotation_id: "305"
+  documentation: This is the definition of a TotalReturnLeg.
+  version: "2"
+annotation_versions_583: 
+  updated_at: 2009-01-18 21:16:43.0
+  element_id: "48985"
+  id: "583"
+  element_type: Composer
+  annotation_id: "292"
+  documentation: 
+  version: "1"
+annotation_versions_584: 
+  updated_at: 2009-01-18 21:16:43.0
+  element_id: "48985"
+  id: "584"
+  element_type: Composer
+  annotation_id: "292"
+  documentation: This is the definition of an Asset Swap.
+  version: "2"
+annotation_versions_345: 
+  updated_at: 2009-01-18 18:59:55.0
+  element_id: "4461"
+  id: "345"
+  element_type: Composer
+  annotation_id: "173"
+  documentation: 
+  version: "1"
+annotation_versions_582: 
+  updated_at: 2009-01-18 20:57:48.0
+  element_id: "43107"
+  id: "582"
+  element_type: Composer
+  annotation_id: "291"
+  documentation: The Abstract base class for various types of VarianceSwap underlying
+    instance.
+  version: "2"
+annotation_versions_581: 
+  updated_at: 2009-01-18 20:57:48.0
+  element_id: "43107"
+  id: "581"
+  element_type: Composer
+  annotation_id: "291"
+  documentation: 
+  version: "1"
+annotation_versions_346: 
+  updated_at: 2009-01-18 18:59:55.0
+  element_id: "4461"
+  id: "346"
+  element_type: Composer
+  annotation_id: "173"
+  documentation: SettleDeliveryInstruction.setEffectiveDateFrom()
+  version: "2"
+annotation_versions_347: 
+  updated_at: 2009-01-18 18:59:55.0
+  element_id: "4462"
+  id: "347"
+  element_type: Composer
+  annotation_id: "174"
+  documentation: 
+  version: "1"
+annotation_versions_580: 
+  updated_at: 2009-01-18 20:38:06.0
+  element_id: "36408"
+  id: "580"
+  element_type: Composer
+  annotation_id: "290"
+  documentation: Provides strong typing for the FutureOptionMM subclass of FutureOption.
+  version: "2"
+annotation_versions_348: 
+  updated_at: 2009-01-18 18:59:55.0
+  element_id: "4462"
+  id: "348"
+  element_type: Composer
+  annotation_id: "174"
+  documentation: SettleDeliveryInstruction.setEffectiveDateTo()
+  version: "2"
+annotation_versions_349: 
+  updated_at: 2009-01-18 18:59:55.0
+  element_id: "4463"
+  id: "349"
+  element_type: Composer
+  annotation_id: "175"
+  documentation: 
+  version: "1"
+annotation_versions_341: 
+  updated_at: 2009-01-18 18:59:54.0
+  element_id: "4458"
+  id: "341"
+  element_type: Composer
+  annotation_id: "171"
+  documentation: 
+  version: "1"
+annotation_versions_342: 
+  updated_at: 2009-01-18 18:59:54.0
+  element_id: "4458"
+  id: "342"
+  element_type: Composer
+  annotation_id: "171"
+  documentation: SettleDeliveryInstruction.setPreferredB()
+  version: "2"
+annotation_versions_343: 
+  updated_at: 2009-01-18 18:59:54.0
+  element_id: "4459"
+  id: "343"
+  element_type: Composer
+  annotation_id: "172"
+  documentation: 
+  version: "1"
+annotation_versions_344: 
+  updated_at: 2009-01-18 18:59:54.0
+  element_id: "4459"
+  id: "344"
+  element_type: Composer
+  annotation_id: "172"
+  documentation: SettleDeliveryInstruction.setPriority(). As in most of the cases,
+    the SDI will be preferred, the priority is mandatory even for no-preferred SDIs.
+    In this case, the priority will not be used.
+  version: "2"
+annotation_versions_439: 
+  updated_at: 2009-01-18 19:06:32.0
+  element_id: "6218"
+  id: "439"
+  element_type: Composer
+  annotation_id: "220"
+  documentation: 
+  version: "1"
+annotation_versions_663: 
+  updated_at: 2009-01-18 23:03:43.0
+  element_id: "80416"
+  id: "663"
+  element_type: Composer
+  annotation_id: "332"
+  documentation: 
+  version: "1"
+annotation_versions_662: 
+  updated_at: 2009-01-18 23:03:43.0
+  element_id: "80414"
+  id: "662"
+  element_type: Composer
+  annotation_id: "331"
+  documentation: LEContact.setContactType()
+  version: "2"
+annotation_versions_666: 
+  updated_at: 2009-01-18 23:03:45.0
+  element_id: "80418"
+  id: "666"
+  element_type: Composer
+  annotation_id: "333"
+  documentation: LEContact.setStaticDataFilter().
+  version: "2"
+annotation_versions_665: 
+  updated_at: 2009-01-18 23:03:45.0
+  element_id: "80418"
+  id: "665"
+  element_type: Composer
+  annotation_id: "333"
+  documentation: 
+  version: "1"
+annotation_versions_664: 
+  updated_at: 2009-01-18 23:03:44.0
+  element_id: "80416"
+  id: "664"
+  element_type: Composer
+  annotation_id: "332"
+  documentation: LEContact.setProductTypeList(Vector of Product)
+  version: "2"
+annotation_versions_434: 
+  updated_at: 2009-01-18 19:06:31.0
+  element_id: "6202"
+  id: "434"
+  element_type: Composer
+  annotation_id: "217"
+  documentation: the identifiers refering to the party
+  version: "2"
+annotation_versions_435: 
+  updated_at: 2009-01-18 19:06:32.0
+  element_id: "6210"
+  id: "435"
+  element_type: Composer
+  annotation_id: "218"
+  documentation: 
+  version: "1"
+annotation_versions_436: 
+  updated_at: 2009-01-18 19:06:32.0
+  element_id: "6210"
+  id: "436"
+  element_type: Composer
+  annotation_id: "218"
+  documentation: Records the SDI Id  of the payer entity instructions that were used
+    to determine how this TradeTransferRule should be made.
+  version: "2"
+annotation_versions_437: 
+  updated_at: 2009-01-18 19:06:32.0
+  element_id: "6217"
+  id: "437"
+  element_type: Composer
+  annotation_id: "219"
+  documentation: 
+  version: "1"
+annotation_versions_661: 
+  updated_at: 2009-01-18 23:03:43.0
+  element_id: "80414"
+  id: "661"
+  element_type: Composer
+  annotation_id: "331"
+  documentation: 
+  version: "1"
+annotation_versions_660: 
+  updated_at: 2009-01-18 23:03:43.0
+  element_id: "80406"
+  id: "660"
+  element_type: Composer
+  annotation_id: "330"
+  documentation: The reference to the processing org to which this attribute is attached.
+  version: "2"
+annotation_versions_438: 
+  updated_at: 2009-01-18 19:06:32.0
+  element_id: "6217"
+  id: "438"
+  element_type: Composer
+  annotation_id: "219"
+  documentation: Records a keyword indicating whether (and, if so, how) the payer
+    settlement instructions were modified for this TradeTransferRule.
+  version: "2"
+annotation_versions_189: 
+  updated_at: 2009-01-18 18:52:27.0
+  element_id: "1834"
+  id: "189"
+  element_type: Composer
+  annotation_id: "95"
+  documentation: 
+  version: "1"
+annotation_versions_187: 
+  updated_at: 2009-01-18 18:52:23.0
+  element_id: "1805"
+  id: "187"
+  element_type: Composer
+  annotation_id: "94"
+  documentation: 
+  version: "1"
+annotation_versions_188: 
+  updated_at: 2009-01-18 18:52:23.0
+  element_id: "1805"
+  id: "188"
+  element_type: Composer
+  annotation_id: "94"
+  documentation: An attribute associated to the Account.
+  version: "2"
+annotation_versions_184: 
+  updated_at: 2009-01-18 18:52:21.0
+  element_id: "1796"
+  id: "184"
+  element_type: Composer
+  annotation_id: "92"
+  documentation: "An automatic attribute associated to the account (ie the attributes \
+    used\n\t\t\t\t\t\t\tto create an account based on this automatic account)."
+  version: "2"
+annotation_versions_185: 
+  updated_at: 2009-01-18 18:52:22.0
+  element_id: "1803"
+  id: "185"
+  element_type: Composer
+  annotation_id: "93"
+  documentation: 
+  version: "1"
+annotation_versions_186: 
+  updated_at: 2009-01-18 18:52:22.0
+  element_id: "1803"
+  id: "186"
+  element_type: Composer
+  annotation_id: "93"
+  documentation: The order of the given attribute in the list of attributes.
+  version: "2"
+annotation_versions_181: 
+  updated_at: 2009-01-18 18:52:21.0
+  element_id: "1795"
+  id: "181"
+  element_type: Composer
+  annotation_id: "91"
+  documentation: 
+  version: "1"
+annotation_versions_182: 
+  updated_at: 2009-01-18 18:52:21.0
+  element_id: "1795"
+  id: "182"
+  element_type: Composer
+  annotation_id: "91"
+  documentation: If the account is modified by the accounting engine only.
+  version: "2"
+annotation_versions_183: 
+  updated_at: 2009-01-18 18:52:21.0
+  element_id: "1796"
+  id: "183"
+  element_type: Composer
+  annotation_id: "92"
+  documentation: 
+  version: "1"
+annotation_versions_511: 
+  updated_at: 2009-01-18 19:35:44.0
+  element_id: "15536"
+  id: "511"
+  element_type: Composer
+  annotation_id: "256"
+  documentation: 
+  version: "1"
+annotation_versions_540: 
+  updated_at: 2009-01-18 20:28:35.0
+  element_id: "33224"
+  id: "540"
+  element_type: Composer
+  annotation_id: "270"
+  documentation: Whether the contract size is variable with time or not.
+  version: "2"
+annotation_versions_569: 
+  updated_at: 2009-01-18 20:35:17.0
+  element_id: "35478"
+  id: "569"
+  element_type: Composer
+  annotation_id: "285"
+  documentation: 
+  version: "1"
+annotation_versions_180: 
+  updated_at: 2009-01-18 18:52:18.0
+  element_id: "1778"
+  id: "180"
+  element_type: Composer
+  annotation_id: "90"
+  documentation: True when the account is automatic (ie is used to generate other
+    accounts).
+  version: "2"
+annotation_versions_512: 
+  updated_at: 2009-01-18 19:35:44.0
+  element_id: "15536"
+  id: "512"
+  element_type: Composer
+  annotation_id: "256"
+  documentation: The parameters to define the Resets.
+  version: "2"
+annotation_versions_510: 
+  updated_at: 2009-01-18 19:35:44.0
+  element_id: "15535"
+  id: "510"
+  element_type: Composer
+  annotation_id: "255"
+  documentation: 5% is represented as 0.05.
+  version: "2"
+annotation_versions_432: 
+  updated_at: 2009-01-18 19:06:29.0
+  element_id: "6196"
+  id: "432"
+  element_type: Composer
+  annotation_id: "216"
+  documentation: Returns the percentage amount of a cashflow that is split off to
+    be handled by this TradeTransferRule. For  example, you could pay 50% of an interest
+    payment with  this TradeTransferRule and another 50% with a second TradeTransferRule.
+  version: "2"
+annotation_versions_565: 
+  updated_at: 2009-01-18 20:33:10.0
+  element_id: "34761"
+  id: "565"
+  element_type: Composer
+  annotation_id: "283"
+  documentation: 
+  version: "1"
+annotation_versions_543: 
+  updated_at: 2009-01-18 20:28:41.0
+  element_id: "33265"
+  id: "543"
+  element_type: Composer
+  annotation_id: "272"
+  documentation: 
+  version: "1"
+annotation_versions_516: 
+  updated_at: 2009-01-18 19:36:01.0
+  element_id: "15640"
+  id: "516"
+  element_type: Composer
+  annotation_id: "258"
+  documentation: This is the definition of a Calypso BondSpread object.
+  version: "2"
+annotation_versions_518: 
+  updated_at: 2009-01-18 20:28:27.0
+  element_id: "33183"
+  id: "518"
+  element_type: Composer
+  annotation_id: "259"
+  documentation: This is the definition of a com.calypso.tk.product.FutureContract
+    object.
+  version: "2"
+annotation_versions_544: 
+  updated_at: 2009-01-18 20:28:41.0
+  element_id: "33265"
+  id: "544"
+  element_type: Composer
+  annotation_id: "272"
+  documentation: The description of the RateIndex.
+  version: "2"
+annotation_versions_433: 
+  updated_at: 2009-01-18 19:06:31.0
+  element_id: "6202"
+  id: "433"
+  element_type: Composer
+  annotation_id: "217"
+  documentation: 
+  version: "1"
+annotation_versions_517: 
+  updated_at: 2009-01-18 20:28:27.0
+  element_id: "33183"
+  id: "517"
+  element_type: Composer
+  annotation_id: "259"
+  documentation: 
+  version: "1"
+annotation_versions_545: 
+  updated_at: 2009-01-18 20:28:43.0
+  element_id: "33273"
+  id: "545"
+  element_type: Composer
+  annotation_id: "273"
+  documentation: 
+  version: "1"
+annotation_versions_514: 
+  updated_at: 2009-01-18 19:35:48.0
+  element_id: "15555"
+  id: "514"
+  element_type: Composer
+  annotation_id: "257"
+  documentation: The compounding parameters.
+  version: "2"
+annotation_versions_541: 
+  updated_at: 2009-01-18 20:28:41.0
+  element_id: "33262"
+  id: "541"
+  element_type: Composer
+  annotation_id: "271"
+  documentation: 
+  version: "1"
+annotation_versions_430: 
+  updated_at: 2009-01-18 19:06:26.0
+  element_id: "6173"
+  id: "430"
+  element_type: Composer
+  annotation_id: "215"
+  documentation: |-
+    Returns the product on which this transfer rule applies to. 
+    This is needed in case a StructuredProduct has customized transfer rules in order to identify to which underlying product it belongs:  Product type is not enough as one StructuredProduct could have multiple Swaps.
+  version: "2"
+annotation_versions_513: 
+  updated_at: 2009-01-18 19:35:48.0
+  element_id: "15555"
+  id: "513"
+  element_type: Composer
+  annotation_id: "257"
+  documentation: 
+  version: "1"
+annotation_versions_542: 
+  updated_at: 2009-01-18 20:28:41.0
+  element_id: "33262"
+  id: "542"
+  element_type: Composer
+  annotation_id: "271"
+  documentation: "Describes the underlying of the FutureContract.\n\t\t\t\t\t\t\t\
+    It can be a description of a RateIndex (for MoneyMarket contracts) or a Bond.\n\
+    \t\t\t\t\t\t\tIt can also be a reference to the actual Product that is the underlying.\n\
+    \t\t\t\t\t\t\tIt can also be a benchmark name that contains the reference to the \
+    actual Product."
+  version: "2"
+annotation_versions_568: 
+  updated_at: 2009-01-18 20:34:44.0
+  element_id: "35292"
+  id: "568"
+  element_type: Composer
+  annotation_id: "284"
+  documentation: Provides strong typing for the FutureOptionBond subclass of FutureOption.
+  version: "2"
+annotation_versions_515: 
+  updated_at: 2009-01-18 19:36:01.0
+  element_id: "15640"
+  id: "515"
+  element_type: Composer
+  annotation_id: "258"
+  documentation: 
+  version: "1"
+annotation_versions_566: 
+  updated_at: 2009-01-18 20:33:10.0
+  element_id: "34761"
+  id: "566"
+  element_type: Composer
+  annotation_id: "283"
+  documentation: Provides strong typing for the FutureCDSIndex subclass of Future.
+  version: "2"
+annotation_versions_567: 
+  updated_at: 2009-01-18 20:34:44.0
+  element_id: "35292"
+  id: "567"
+  element_type: Composer
+  annotation_id: "284"
+  documentation: 
+  version: "1"
+annotation_versions_431: 
+  updated_at: 2009-01-18 19:06:29.0
+  element_id: "6196"
+  id: "431"
+  element_type: Composer
+  annotation_id: "216"
+  documentation: 
+  version: "1"
+annotation_versions_297: 
+  updated_at: 2009-01-18 18:54:49.0
+  element_id: "2663"
+  id: "297"
+  element_type: Composer
+  annotation_id: "149"
+  documentation: 
+  version: "1"
+annotation_versions_560: 
+  updated_at: 2009-01-18 20:31:29.0
+  element_id: "34212"
+  id: "560"
+  element_type: Composer
+  annotation_id: "280"
+  documentation: Provides strong typing for the FutureCommodity subclass of Future.
+  version: "2"
+annotation_versions_298: 
+  updated_at: 2009-01-18 18:54:49.0
+  element_id: "2663"
+  id: "298"
+  element_type: Composer
+  annotation_id: "149"
+  documentation: This is the definition of a Calypso CashFlowSimple object.
+  version: "2"
+annotation_versions_296: 
+  updated_at: 2009-01-18 18:54:39.0
+  element_id: "2599"
+  id: "296"
+  element_type: Composer
+  annotation_id: "148"
+  documentation: This is the definition of a Calypso CashFlowPriceChange object.
+  version: "2"
+annotation_versions_549: 
+  updated_at: 2009-01-18 20:28:53.0
+  element_id: "33337"
+  id: "549"
+  element_type: Composer
+  annotation_id: "275"
+  documentation: 
+  version: "1"
+annotation_versions_561: 
+  updated_at: 2009-01-18 20:32:02.0
+  element_id: "34395"
+  id: "561"
+  element_type: Composer
+  annotation_id: "281"
+  documentation: 
+  version: "1"
+annotation_versions_548: 
+  updated_at: 2009-01-18 20:28:45.0
+  element_id: "33278"
+  id: "548"
+  element_type: Composer
+  annotation_id: "274"
+  documentation: A reference to the underlying product.
+  version: "2"
+annotation_versions_547: 
+  updated_at: 2009-01-18 20:28:45.0
+  element_id: "33278"
+  id: "547"
+  element_type: Composer
+  annotation_id: "274"
+  documentation: 
+  version: "1"
+annotation_versions_295: 
+  updated_at: 2009-01-18 18:54:39.0
+  element_id: "2599"
+  id: "295"
+  element_type: Composer
+  annotation_id: "148"
+  documentation: 
+  version: "1"
+annotation_versions_562: 
+  updated_at: 2009-01-18 20:32:02.0
+  element_id: "34395"
+  id: "562"
+  element_type: Composer
+  annotation_id: "281"
+  documentation: Provides strong typing for the FutureBond subclass of Future.
+  version: "2"
+annotation_versions_293: 
+  updated_at: 2009-01-18 18:54:34.0
+  element_id: "2566"
+  id: "293"
+  element_type: Composer
+  annotation_id: "147"
+  documentation: 
+  version: "1"
+annotation_versions_546: 
+  updated_at: 2009-01-18 20:28:43.0
+  element_id: "33273"
+  id: "546"
+  element_type: Composer
+  annotation_id: "273"
+  documentation: The description of the Bond.
+  version: "2"
+annotation_versions_564: 
+  updated_at: 2009-01-18 20:32:35.0
+  element_id: "34578"
+  id: "564"
+  element_type: Composer
+  annotation_id: "282"
+  documentation: Provides strong typing for the FutureEquityIndex subclass of Future.
+  version: "2"
+annotation_versions_294: 
+  updated_at: 2009-01-18 18:54:34.0
+  element_id: "2566"
+  id: "294"
+  element_type: Composer
+  annotation_id: "147"
+  documentation: This is the definition of a Calypso CashFlowPrincipal object.
+  version: "2"
+annotation_versions_563: 
+  updated_at: 2009-01-18 20:32:35.0
+  element_id: "34578"
+  id: "563"
+  element_type: Composer
+  annotation_id: "282"
+  documentation: 
+  version: "1"
+annotation_versions_299: 
+  updated_at: 2009-01-18 18:55:12.0
+  element_id: "2774"
+  id: "299"
+  element_type: Composer
+  annotation_id: "150"
+  documentation: 
+  version: "1"
+annotation_versions_070: 
+  updated_at: 2009-01-18 18:49:21.0
+  element_id: "716"
+  id: "70"
+  element_type: Composer
+  annotation_id: "35"
+  documentation: Definition of book hierarchy node
+  version: "2"
+annotation_versions_071: 
+  updated_at: 2009-01-18 18:49:23.0
+  element_id: "733"
+  id: "71"
+  element_type: Composer
+  annotation_id: "36"
+  documentation: 
+  version: "1"
+annotation_versions_072: 
+  updated_at: 2009-01-18 18:49:23.0
+  element_id: "733"
+  id: "72"
+  element_type: Composer
+  annotation_id: "36"
+  documentation: User configuration for one user.
+  version: "2"
+annotation_versions_073: 
+  updated_at: 2009-01-18 18:49:26.0
+  element_id: "754"
+  id: "73"
+  element_type: Composer
+  annotation_id: "37"
+  documentation: 
+  version: "1"
+annotation_versions_074: 
+  updated_at: 2009-01-18 18:49:27.0
+  element_id: "754"
+  id: "74"
+  element_type: Composer
+  annotation_id: "37"
+  documentation: Definition of user defaults information
+  version: "2"
+annotation_versions_075: 
+  updated_at: 2009-01-18 18:49:48.0
+  element_id: "850"
+  id: "75"
+  element_type: Composer
+  annotation_id: "38"
+  documentation: 
+  version: "1"
+annotation_versions_292: 
+  updated_at: 2009-01-18 18:54:26.0
+  element_id: "2513"
+  id: "292"
+  element_type: Composer
+  annotation_id: "146"
+  documentation: This is the definition of a Calypso CashFlowInterest object.
+  version: "2"
+annotation_versions_291: 
+  updated_at: 2009-01-18 18:54:26.0
+  element_id: "2513"
+  id: "291"
+  element_type: Composer
+  annotation_id: "146"
+  documentation: 
+  version: "1"
+annotation_versions_076: 
+  updated_at: 2009-01-18 18:49:48.0
+  element_id: "850"
+  id: "76"
+  element_type: Composer
+  annotation_id: "38"
+  documentation: Definition of a user.
+  version: "2"
+annotation_versions_077: 
+  updated_at: 2009-01-18 18:49:53.0
+  element_id: "892"
+  id: "77"
+  element_type: Composer
+  annotation_id: "39"
+  documentation: 
+  version: "1"
+annotation_versions_290: 
+  updated_at: 2009-01-18 18:54:23.0
+  element_id: "2494"
+  id: "290"
+  element_type: Composer
+  annotation_id: "145"
+  documentation: This is the definition of a Calypso CashFlow object.
+  version: "2"
+annotation_versions_078: 
+  updated_at: 2009-01-18 18:49:53.0
+  element_id: "892"
+  id: "78"
+  element_type: Composer
+  annotation_id: "39"
+  documentation: Definition of user viewer setting.
+  version: "2"
+annotation_versions_079: 
+  updated_at: 2009-01-18 18:49:59.0
+  element_id: "928"
+  id: "79"
+  element_type: Composer
+  annotation_id: "40"
+  documentation: 
+  version: "1"
+annotation_versions_887: 
+  updated_at: 2009-01-18 23:38:58.0
+  element_id: "90084"
+  id: "887"
+  element_type: Composer
+  annotation_id: "444"
+  documentation: 
+  version: "1"
+annotation_versions_885: 
+  updated_at: 2009-01-18 23:36:47.0
+  element_id: "89500"
+  id: "885"
+  element_type: Composer
+  annotation_id: "443"
+  documentation: 
+  version: "1"
+annotation_versions_886: 
+  updated_at: 2009-01-18 23:36:47.0
+  element_id: "89500"
+  id: "886"
+  element_type: Composer
+  annotation_id: "443"
+  documentation: Definition of calypso CommodityIndexSwap object
+  version: "2"
+annotation_versions_889: 
+  updated_at: 2009-01-18 23:39:01.0
+  element_id: "90098"
+  id: "889"
+  element_type: Composer
+  annotation_id: "445"
+  documentation: 
+  version: "1"
+annotation_versions_888: 
+  updated_at: 2009-01-18 23:38:58.0
+  element_id: "90084"
+  id: "888"
+  element_type: Composer
+  annotation_id: "444"
+  documentation: Definition of calypso FixingDatePolicy object
+  version: "2"
+annotation_versions_882: 
+  updated_at: 2009-01-18 23:33:05.0
+  element_id: "88623"
+  id: "882"
+  element_type: Composer
+  annotation_id: "441"
+  documentation: Definition of calypso CommoditySwaption object
+  version: "2"
+annotation_versions_883: 
+  updated_at: 2009-01-18 23:35:46.0
+  element_id: "89276"
+  id: "883"
+  element_type: Composer
+  annotation_id: "442"
+  documentation: 
+  version: "1"
+annotation_versions_881: 
+  updated_at: 2009-01-18 23:33:05.0
+  element_id: "88623"
+  id: "881"
+  element_type: Composer
+  annotation_id: "441"
+  documentation: 
+  version: "1"
+annotation_versions_884: 
+  updated_at: 2009-01-18 23:35:46.0
+  element_id: "89276"
+  id: "884"
+  element_type: Composer
+  annotation_id: "442"
+  documentation: Definition of calypso CommodityForward object
+  version: "2"
+annotation_versions_682: 
+  updated_at: 2009-01-18 23:03:48.0
+  element_id: "80436"
+  id: "682"
+  element_type: Composer
+  annotation_id: "341"
+  documentation: LEContact.setState()
+  version: "2"
+annotation_versions_681: 
+  updated_at: 2009-01-18 23:03:48.0
+  element_id: "80436"
+  id: "681"
+  element_type: Composer
+  annotation_id: "341"
+  documentation: 
+  version: "1"
+annotation_versions_680: 
+  updated_at: 2009-01-18 23:03:48.0
+  element_id: "80435"
+  id: "680"
+  element_type: Composer
+  annotation_id: "340"
+  documentation: LEContact.setCityName()
+  version: "2"
+annotation_versions_685: 
+  updated_at: 2009-01-18 23:03:49.0
+  element_id: "80438"
+  id: "685"
+  element_type: Composer
+  annotation_id: "343"
+  documentation: 
+  version: "1"
+annotation_versions_880: 
+  updated_at: 2009-01-18 23:31:58.0
+  element_id: "88307"
+  id: "880"
+  element_type: Composer
+  annotation_id: "440"
+  documentation: Definition of calypso CommodityCapFloor object
+  version: "2"
+annotation_versions_684: 
+  updated_at: 2009-01-18 23:03:48.0
+  element_id: "80437"
+  id: "684"
+  element_type: Composer
+  annotation_id: "342"
+  documentation: LEContact.setZipCode()
+  version: "2"
+annotation_versions_683: 
+  updated_at: 2009-01-18 23:03:48.0
+  element_id: "80437"
+  id: "683"
+  element_type: Composer
+  annotation_id: "342"
+  documentation: 
+  version: "1"
+annotation_versions_921: 
+  updated_at: 2009-01-18 23:48:03.0
+  element_id: "92596"
+  id: "921"
+  element_type: Composer
+  annotation_id: "461"
+  documentation: 
+  version: "1"
+annotation_versions_923: 
+  updated_at: 2009-01-18 23:48:03.0
+  element_id: "92597"
+  id: "923"
+  element_type: Composer
+  annotation_id: "462"
+  documentation: 
+  version: "1"
+annotation_versions_922: 
+  updated_at: 2009-01-18 23:48:03.0
+  element_id: "92596"
+  id: "922"
+  element_type: Composer
+  annotation_id: "461"
+  documentation: This is the type of top-level element for valid Calypso ML documents.
+  version: "2"
+annotation_versions_519: 
+  updated_at: 2009-01-18 20:28:31.0
+  element_id: "33205"
+  id: "519"
+  element_type: Composer
+  annotation_id: "260"
+  documentation: 
+  version: "1"
+annotation_versions_920: 
+  updated_at: 2009-01-18 23:47:30.0
+  element_id: "92443"
+  id: "920"
+  element_type: Composer
+  annotation_id: "460"
+  documentation: Definition of RatingValues
+  version: "2"
+annotation_versions_229: 
+  updated_at: 2009-01-18 18:53:46.0
+  element_id: "2268"
+  id: "229"
+  element_type: Composer
+  annotation_id: "115"
+  documentation: 
+  version: "1"
+annotation_versions_007: 
+  updated_at: 2009-01-18 18:47:32.0
+  element_id: "68"
+  id: "7"
+  element_type: Composer
+  annotation_id: "4"
+  documentation: 
+  version: "1"
+annotation_versions_006: 
+  updated_at: 2009-01-18 18:47:31.0
+  element_id: "59"
+  id: "6"
+  element_type: Composer
+  annotation_id: "3"
+  documentation: "The abstract base type from which all the CalypsoObject instances\n\
+    \t\t\tare derived."
+  version: "2"
+annotation_versions_686: 
+  updated_at: 2009-01-18 23:03:49.0
+  element_id: "80438"
+  id: "686"
+  element_type: Composer
+  annotation_id: "343"
+  documentation: LEContact.setCountry()
+  version: "2"
+annotation_versions_005: 
+  updated_at: 2009-01-18 18:47:30.0
+  element_id: "59"
+  id: "5"
+  element_type: Composer
+  annotation_id: "3"
+  documentation: 
+  version: "1"
+annotation_versions_924: 
+  updated_at: 2009-01-18 23:48:03.0
+  element_id: "92597"
+  id: "924"
+  element_type: Composer
+  annotation_id: "462"
+  documentation: A Calypso ML document contains a list of Objects as defined in the
+    calypso-common.xsd file.
+  version: "2"
+annotation_versions_687: 
+  updated_at: 2009-01-18 23:03:49.0
+  element_id: "80439"
+  id: "687"
+  element_type: Composer
+  annotation_id: "344"
+  documentation: 
+  version: "1"
+annotation_versions_009: 
+  updated_at: 2009-01-18 18:47:34.0
+  element_id: "77"
+  id: "9"
+  element_type: Composer
+  annotation_id: "5"
+  documentation: 
+  version: "1"
+annotation_versions_688: 
+  updated_at: 2009-01-18 23:03:49.0
+  element_id: "80439"
+  id: "688"
+  element_type: Composer
+  annotation_id: "344"
+  documentation: LEContact.setPhone()
+  version: "2"
+annotation_versions_008: 
+  updated_at: 2009-01-18 18:47:32.0
+  element_id: "68"
+  id: "8"
+  element_type: Composer
+  annotation_id: "4"
+  documentation: The name and version that enable to identify the object in a system
+  version: "2"
+annotation_versions_689: 
+  updated_at: 2009-01-18 23:03:49.0
+  element_id: "80440"
+  id: "689"
+  element_type: Composer
+  annotation_id: "345"
+  documentation: 
+  version: "1"
+annotation_versions_002: 
+  updated_at: 2009-01-18 18:47:28.0
+  element_id: "48"
+  id: "2"
+  element_type: Composer
+  annotation_id: "1"
+  documentation: The Action that produced this Object document.
+  version: "2"
+annotation_versions_472: 
+  updated_at: 2009-01-18 19:18:59.0
+  element_id: "9931"
+  id: "472"
+  element_type: Composer
+  annotation_id: "236"
+  documentation: This is the definition of a Swaption.
+  version: "2"
+annotation_versions_003: 
+  updated_at: 2009-01-18 18:47:29.0
+  element_id: "52"
+  id: "3"
+  element_type: Composer
+  annotation_id: "2"
+  documentation: 
+  version: "1"
+annotation_versions_223: 
+  updated_at: 2009-01-18 18:53:45.0
+  element_id: "2262"
+  id: "223"
+  element_type: Composer
+  annotation_id: "112"
+  documentation: 
+  version: "1"
+annotation_versions_001: 
+  updated_at: 2009-01-18 18:47:28.0
+  element_id: "48"
+  id: "1"
+  element_type: Composer
+  annotation_id: "1"
+  documentation: 
+  version: "1"
+annotation_versions_222: 
+  updated_at: 2009-01-18 18:53:44.0
+  element_id: "2259"
+  id: "222"
+  element_type: Composer
+  annotation_id: "111"
+  documentation: "The default DayCount to apply for the\n\t\t\t\t\t\t\t\tcurrency."
+  version: "2"
+annotation_versions_471: 
+  updated_at: 2009-01-18 19:18:59.0
+  element_id: "9931"
+  id: "471"
+  element_type: Composer
+  annotation_id: "236"
+  documentation: 
+  version: "1"
+annotation_versions_004: 
+  updated_at: 2009-01-18 18:47:29.0
+  element_id: "52"
+  id: "4"
+  element_type: Composer
+  annotation_id: "2"
+  documentation: "The abstract base type from which all the Calypso Object instances\n\
+    \t\t\tare derived if they need to be processed independently.\n\t\t\tObject representations \
+    that are only sub parts of other objects need not\n\t\t\tderive from this type."
+  version: "2"
+annotation_versions_221: 
+  updated_at: 2009-01-18 18:53:44.0
+  element_id: "2259"
+  id: "221"
+  element_type: Composer
+  annotation_id: "111"
+  documentation: 
+  version: "1"
+annotation_versions_475: 
+  updated_at: 2009-01-18 19:21:53.0
+  element_id: "10947"
+  id: "475"
+  element_type: Composer
+  annotation_id: "238"
+  documentation: 
+  version: "1"
+annotation_versions_220: 
+  updated_at: 2009-01-18 18:53:44.0
+  element_id: "2258"
+  id: "220"
+  element_type: Composer
+  annotation_id: "110"
+  documentation: "The decimals to round the amounts in the\n\t\t\t\t\t\t\t\tcurrency."
+  version: "2"
+annotation_versions_473: 
+  updated_at: 2009-01-18 19:20:26.0
+  element_id: "10429"
+  id: "473"
+  element_type: Composer
+  annotation_id: "237"
+  documentation: 
+  version: "1"
+annotation_versions_474: 
+  updated_at: 2009-01-18 19:20:26.0
+  element_id: "10429"
+  id: "474"
+  element_type: Composer
+  annotation_id: "237"
+  documentation: This is the definition of a TriggerSwaption.
+  version: "2"
+annotation_versions_228: 
+  updated_at: 2009-01-18 18:53:45.0
+  element_id: "2265"
+  id: "228"
+  element_type: Composer
+  annotation_id: "114"
+  documentation: The currency groups to which it belongs.
+  version: "2"
+annotation_versions_477: 
+  updated_at: 2009-01-18 19:22:18.0
+  element_id: "11092"
+  id: "477"
+  element_type: Composer
+  annotation_id: "239"
+  documentation: 
+  version: "1"
+annotation_versions_227: 
+  updated_at: 2009-01-18 18:53:45.0
+  element_id: "2265"
+  id: "227"
+  element_type: Composer
+  annotation_id: "114"
+  documentation: 
+  version: "1"
+annotation_versions_476: 
+  updated_at: 2009-01-18 19:21:53.0
+  element_id: "10947"
+  id: "476"
+  element_type: Composer
+  annotation_id: "238"
+  documentation: This is the definition of generic Stream definition object
+  version: "2"
+annotation_versions_226: 
+  updated_at: 2009-01-18 18:53:45.0
+  element_id: "2264"
+  id: "226"
+  element_type: Composer
+  annotation_id: "113"
+  documentation: "The default Tenor on the Rate index\n\t\t\t\t\t\t\t\t\tfor the currency."
+  version: "2"
+annotation_versions_479: 
+  updated_at: 2009-01-18 19:22:48.0
+  element_id: "11279"
+  id: "479"
+  element_type: Composer
+  annotation_id: "240"
+  documentation: 
+  version: "1"
+annotation_versions_225: 
+  updated_at: 2009-01-18 18:53:45.0
+  element_id: "2264"
+  id: "225"
+  element_type: Composer
+  annotation_id: "113"
+  documentation: 
+  version: "1"
+annotation_versions_478: 
+  updated_at: 2009-01-18 19:22:18.0
+  element_id: "11092"
+  id: "478"
+  element_type: Composer
+  annotation_id: "239"
+  documentation: This is the representation of a stream of interests, such as a SwapLeg.
+  version: "2"
+annotation_versions_779: 
+  updated_at: 2009-01-18 23:10:19.0
+  element_id: "82268"
+  id: "779"
+  element_type: Composer
+  annotation_id: "390"
+  documentation: 
+  version: "1"
+annotation_versions_224: 
+  updated_at: 2009-01-18 18:53:45.0
+  element_id: "2262"
+  id: "224"
+  element_type: Composer
+  annotation_id: "112"
+  documentation: "The default Rate index for the\n\t\t\t\t\t\t\t\t\tcurrency."
+  version: "2"
+annotation_versions_817: 
+  updated_at: 2009-01-18 23:11:16.0
+  element_id: "82546"
+  id: "817"
+  element_type: Composer
+  annotation_id: "409"
+  documentation: 
+  version: "1"
+annotation_versions_819: 
+  updated_at: 2009-01-18 23:11:18.0
+  element_id: "82547"
+  id: "819"
+  element_type: Composer
+  annotation_id: "410"
+  documentation: 
+  version: "1"
+annotation_versions_770: 
+  updated_at: 2009-01-18 23:04:31.0
+  element_id: "80640"
+  id: "770"
+  element_type: Composer
+  annotation_id: "385"
+  documentation: ReportView.setName()
+  version: "2"
+annotation_versions_470: 
+  updated_at: 2009-01-18 19:18:10.0
+  element_id: "9611"
+  id: "470"
+  element_type: Composer
+  annotation_id: "235"
+  documentation: This is the definition of a BondOption.
+  version: "2"
+annotation_versions_818: 
+  updated_at: 2009-01-18 23:11:16.0
+  element_id: "82546"
+  id: "818"
+  element_type: Composer
+  annotation_id: "409"
+  documentation: This field is used for non implemented underlyings
+  version: "2"
+annotation_versions_771: 
+  updated_at: 2009-01-18 23:04:31.0
+  element_id: "80643"
+  id: "771"
+  element_type: Composer
+  annotation_id: "386"
+  documentation: 
+  version: "1"
+annotation_versions_772: 
+  updated_at: 2009-01-18 23:04:31.0
+  element_id: "80643"
+  id: "772"
+  element_type: Composer
+  annotation_id: "386"
+  documentation: ReportView.setMimeType()
+  version: "2"
+annotation_versions_773: 
+  updated_at: 2009-01-18 23:04:32.0
+  element_id: "80647"
+  id: "773"
+  element_type: Composer
+  annotation_id: "387"
+  documentation: 
+  version: "1"
+annotation_versions_774: 
+  updated_at: 2009-01-18 23:04:32.0
+  element_id: "80647"
+  id: "774"
+  element_type: Composer
+  annotation_id: "387"
+  documentation: Creates a list of attributes made of a name and a value
+  version: "2"
+annotation_versions_775: 
+  updated_at: 2009-01-18 23:10:12.0
+  element_id: "82238"
+  id: "775"
+  element_type: Composer
+  annotation_id: "388"
+  documentation: 
+  version: "1"
+annotation_versions_776: 
+  updated_at: 2009-01-18 23:10:12.0
+  element_id: "82238"
+  id: "776"
+  element_type: Composer
+  annotation_id: "388"
+  documentation: This is the definition of a Calypso LERelation object.
+  version: "2"
+annotation_versions_777: 
+  updated_at: 2009-01-18 23:10:18.0
+  element_id: "82260"
+  id: "777"
+  element_type: Composer
+  annotation_id: "389"
+  documentation: 
+  version: "1"
+annotation_versions_778: 
+  updated_at: 2009-01-18 23:10:18.0
+  element_id: "82260"
+  id: "778"
+  element_type: Composer
+  annotation_id: "389"
+  documentation: LERelation.setLegalEntityId()
+  version: "2"
+annotation_versions_629: 
+  updated_at: 2009-01-18 22:13:26.0
+  element_id: "66316"
+  id: "629"
+  element_type: Composer
+  annotation_id: "315"
+  documentation: 
+  version: "1"
+annotation_versions_628: 
+  updated_at: 2009-01-18 22:12:51.0
+  element_id: "66151"
+  id: "628"
+  element_type: Composer
+  annotation_id: "314"
+  documentation: This is the definition of a FXForward.
+  version: "2"
+annotation_versions_627: 
+  updated_at: 2009-01-18 22:12:51.0
+  element_id: "66151"
+  id: "627"
+  element_type: Composer
+  annotation_id: "314"
+  documentation: 
+  version: "1"
+annotation_versions_810: 
+  updated_at: 2009-01-18 23:11:01.0
+  element_id: "82474"
+  id: "810"
+  element_type: Composer
+  annotation_id: "405"
+  documentation: the last trading days of this warrant. Number of days before maturity
+    Day
+  version: "2"
+annotation_versions_625: 
+  updated_at: 2009-01-18 22:12:19.0
+  element_id: "65992"
+  id: "625"
+  element_type: Composer
+  annotation_id: "313"
+  documentation: 
+  version: "1"
+annotation_versions_811: 
+  updated_at: 2009-01-18 23:11:14.0
+  element_id: "82534"
+  id: "811"
+  element_type: Composer
+  annotation_id: "406"
+  documentation: 
+  version: "1"
+annotation_versions_626: 
+  updated_at: 2009-01-18 22:12:19.0
+  element_id: "65992"
+  id: "626"
+  element_type: Composer
+  annotation_id: "313"
+  documentation: This is the definition of a FXForward.
+  version: "2"
+annotation_versions_624: 
+  updated_at: 2009-01-18 22:11:25.0
+  element_id: "65699"
+  id: "624"
+  element_type: Composer
+  annotation_id: "312"
+  documentation: This is the definition of a FXOptionStrip.
+  version: "2"
+annotation_versions_812: 
+  updated_at: 2009-01-18 23:11:14.0
+  element_id: "82534"
+  id: "812"
+  element_type: Composer
+  annotation_id: "406"
+  documentation: Class of the underlying
+  version: "2"
+annotation_versions_416: 
+  updated_at: 2009-01-18 19:03:52.0
+  element_id: "5292"
+  id: "416"
+  element_type: Composer
+  annotation_id: "208"
+  documentation: This is the definition of a Calypso Trade object.
+  version: "2"
+annotation_versions_417: 
+  updated_at: 2009-01-18 19:04:02.0
+  element_id: "5320"
+  id: "417"
+  element_type: Composer
+  annotation_id: "209"
+  documentation: 
+  version: "1"
+annotation_versions_813: 
+  updated_at: 2009-01-18 23:11:15.0
+  element_id: "82536"
+  id: "813"
+  element_type: Composer
+  annotation_id: "407"
+  documentation: 
+  version: "1"
+annotation_versions_623: 
+  updated_at: 2009-01-18 22:11:25.0
+  element_id: "65699"
+  id: "623"
+  element_type: Composer
+  annotation_id: "312"
+  documentation: 
+  version: "1"
+annotation_versions_814: 
+  updated_at: 2009-01-18 23:11:15.0
+  element_id: "82536"
+  id: "814"
+  element_type: Composer
+  annotation_id: "407"
+  documentation: "A reference to the underlying product. If the underlying is not \
+    managed in calypso (especially for exotic warrant), \n\t\t\t\t\t\t\t\tunderlying \
+    is described using underlyingCurrency, underlyingDescription and underlyinExchange"
+  version: "2"
+annotation_versions_621: 
+  updated_at: 2009-01-18 22:10:57.0
+  element_id: "65546"
+  id: "621"
+  element_type: Composer
+  annotation_id: "311"
+  documentation: 
+  version: "1"
+annotation_versions_418: 
+  updated_at: 2009-01-18 19:04:02.0
+  element_id: "5320"
+  id: "418"
+  element_type: Composer
+  annotation_id: "209"
+  documentation: "This lists primarily the counterparty and the book of the Trade.\n\
+    \t\t\t\t\t\t\tIt also holds any other party involved such as Exchange, Broker \
+    and other fee\n\t\t\t\t\t\t\tbeneficiaries."
+  version: "2"
+annotation_versions_419: 
+  updated_at: 2009-01-18 19:04:05.0
+  element_id: "5354"
+  id: "419"
+  element_type: Composer
+  annotation_id: "210"
+  documentation: 
+  version: "1"
+annotation_versions_815: 
+  updated_at: 2009-01-18 23:11:16.0
+  element_id: "82543"
+  id: "815"
+  element_type: Composer
+  annotation_id: "408"
+  documentation: 
+  version: "1"
+annotation_versions_622: 
+  updated_at: 2009-01-18 22:10:57.0
+  element_id: "65546"
+  id: "622"
+  element_type: Composer
+  annotation_id: "311"
+  documentation: This is the definition of a FX Definition.
+  version: "2"
+annotation_versions_620: 
+  updated_at: 2009-01-18 22:00:03.0
+  element_id: "62405"
+  id: "620"
+  element_type: Composer
+  annotation_id: "310"
+  documentation: This is  ABS Index Tranche
+  version: "2"
+annotation_versions_816: 
+  updated_at: 2009-01-18 23:11:16.0
+  element_id: "82543"
+  id: "816"
+  element_type: Composer
+  annotation_id: "408"
+  documentation: This field is used for non implemented underlyings
+  version: "2"
+annotation_versions_845: 
+  updated_at: 2009-01-18 23:22:30.0
+  element_id: "85609"
+  id: "845"
+  element_type: Composer
+  annotation_id: "423"
+  documentation: 
+  version: "1"
+annotation_versions_846: 
+  updated_at: 2009-01-18 23:22:31.0
+  element_id: "85609"
+  id: "846"
+  element_type: Composer
+  annotation_id: "423"
+  documentation: "Definition of abstract base class to handle parameters\n\t\t\t\t\
+    used in risk analysis"
+  version: "2"
+annotation_versions_844: 
+  updated_at: 2009-01-18 23:20:15.0
+  element_id: "84953"
+  id: "844"
+  element_type: Composer
+  annotation_id: "422"
+  documentation: "This lists primarily the counterparty and the book of the Trade.\n\
+    \t\t\t\t\t\t\tIt also holds any other party involved such as Exchange, Broker \
+    and other fee\n\t\t\t\t\t\t\tbeneficiaries."
+  version: "2"
+annotation_versions_848: 
+  updated_at: 2009-01-18 23:22:33.0
+  element_id: "85620"
+  id: "848"
+  element_type: Composer
+  annotation_id: "424"
+  documentation: "Definition of default Analysis Parameters for use in\n\t\t\t\tportfolio \
+    reporting"
+  version: "2"
+annotation_versions_847: 
+  updated_at: 2009-01-18 23:22:33.0
+  element_id: "85620"
+  id: "847"
+  element_type: Composer
+  annotation_id: "424"
+  documentation: 
+  version: "1"
+annotation_versions_849: 
+  updated_at: 2009-01-18 23:22:41.0
+  element_id: "85661"
+  id: "849"
+  element_type: Composer
+  annotation_id: "425"
+  documentation: 
+  version: "1"
+annotation_versions_840: 
+  updated_at: 2009-01-18 23:16:10.0
+  element_id: "83868"
+  id: "840"
+  element_type: Composer
+  annotation_id: "420"
+  documentation: Creates a list of attributes made of a name and a value
+  version: "2"
+annotation_versions_843: 
+  updated_at: 2009-01-18 23:20:15.0
+  element_id: "84953"
+  id: "843"
+  element_type: Composer
+  annotation_id: "422"
+  documentation: 
+  version: "1"
+annotation_versions_842: 
+  updated_at: 2009-01-18 23:20:05.0
+  element_id: "84921"
+  id: "842"
+  element_type: Composer
+  annotation_id: "421"
+  documentation: 'This is the definition of a template info object which is uniquely
+    identified by : product type + owner + name .'
+  version: "2"
+annotation_versions_841: 
+  updated_at: 2009-01-18 23:20:05.0
+  element_id: "84921"
+  id: "841"
+  element_type: Composer
+  annotation_id: "421"
+  documentation: 
+  version: "1"
+annotation_versions_750: 
+  updated_at: 2009-01-18 23:04:13.0
+  element_id: "80548"
+  id: "750"
+  element_type: Composer
+  annotation_id: "375"
+  documentation: AccountingRule.setAdjustmentDays()
+  version: "2"
+annotation_versions_159: 
+  updated_at: 2009-01-18 18:52:14.0
+  element_id: "1751"
+  id: "159"
+  element_type: Composer
+  annotation_id: "80"
+  documentation: 
+  version: "1"
+annotation_versions_157: 
+  updated_at: 2009-01-18 18:52:12.0
+  element_id: "1750"
+  id: "157"
+  element_type: Composer
+  annotation_id: "79"
+  documentation: 
+  version: "1"
+annotation_versions_158: 
+  updated_at: 2009-01-18 18:52:12.0
+  element_id: "1750"
+  id: "158"
+  element_type: Composer
+  annotation_id: "79"
+  documentation: The description of the account.
+  version: "2"
+annotation_versions_389: 
+  updated_at: 2009-01-18 19:00:20.0
+  element_id: "4581"
+  id: "389"
+  element_type: Composer
+  annotation_id: "195"
+  documentation: 
+  version: "1"
+annotation_versions_155: 
+  updated_at: 2009-01-18 18:52:11.0
+  element_id: "1748"
+  id: "155"
+  element_type: Composer
+  annotation_id: "78"
+  documentation: 
+  version: "1"
+annotation_versions_154: 
+  updated_at: 2009-01-18 18:52:10.0
+  element_id: "1745"
+  id: "154"
+  element_type: Composer
+  annotation_id: "77"
+  documentation: Indicative name that can be used to interface with outside systems.
+  version: "2"
+annotation_versions_156: 
+  updated_at: 2009-01-18 18:52:11.0
+  element_id: "1748"
+  id: "156"
+  element_type: Composer
+  annotation_id: "78"
+  documentation: The rule used to filter the postings on the account.
+  version: "2"
+annotation_versions_388: 
+  updated_at: 2009-01-18 19:00:19.0
+  element_id: "4574"
+  id: "388"
+  element_type: Composer
+  annotation_id: "194"
+  documentation: SettleDeliveryInstruction.setIntermediaryGeneralLedgerAccount(Id
+    of the Account referred by its name or by its external reference)
+  version: "2"
+annotation_versions_387: 
+  updated_at: 2009-01-18 19:00:18.0
+  element_id: "4574"
+  id: "387"
+  element_type: Composer
+  annotation_id: "194"
+  documentation: 
+  version: "1"
+annotation_versions_386: 
+  updated_at: 2009-01-18 19:00:16.0
+  element_id: "4573"
+  id: "386"
+  element_type: Composer
+  annotation_id: "193"
+  documentation: SettleDeliveryInstruction.setMessageToIntermediary()
+  version: "2"
+annotation_versions_301: 
+  updated_at: 2009-01-18 18:55:46.0
+  element_id: "2928"
+  id: "301"
+  element_type: Composer
+  annotation_id: "151"
+  documentation: 
+  version: "1"
+annotation_versions_757: 
+  updated_at: 2009-01-18 23:04:26.0
+  element_id: "80615"
+  id: "757"
+  element_type: Composer
+  annotation_id: "379"
+  documentation: 
+  version: "1"
+annotation_versions_152: 
+  updated_at: 2009-01-18 18:52:10.0
+  element_id: "1742"
+  id: "152"
+  element_type: Composer
+  annotation_id: "76"
+  documentation: The name of the account in the system.
+  version: "2"
+annotation_versions_303: 
+  updated_at: 2009-01-18 18:58:08.0
+  element_id: "3810"
+  id: "303"
+  element_type: Composer
+  annotation_id: "152"
+  documentation: 
+  version: "1"
+annotation_versions_153: 
+  updated_at: 2009-01-18 18:52:10.0
+  element_id: "1745"
+  id: "153"
+  element_type: Composer
+  annotation_id: "77"
+  documentation: 
+  version: "1"
+annotation_versions_755: 
+  updated_at: 2009-01-18 23:04:25.0
+  element_id: "80613"
+  id: "755"
+  element_type: Composer
+  annotation_id: "378"
+  documentation: 
+  version: "1"
+annotation_versions_385: 
+  updated_at: 2009-01-18 19:00:16.0
+  element_id: "4573"
+  id: "385"
+  element_type: Composer
+  annotation_id: "193"
+  documentation: 
+  version: "1"
+annotation_versions_302: 
+  updated_at: 2009-01-18 18:55:46.0
+  element_id: "2928"
+  id: "302"
+  element_type: Composer
+  annotation_id: "151"
+  documentation: This is the definition of a Calypso CashFlowCompound object
+  version: "2"
+annotation_versions_756: 
+  updated_at: 2009-01-18 23:04:25.0
+  element_id: "80613"
+  id: "756"
+  element_type: Composer
+  annotation_id: "378"
+  documentation: ReportTemplate.setReportType()
+  version: "2"
+annotation_versions_383: 
+  updated_at: 2009-01-18 19:00:16.0
+  element_id: "4572"
+  id: "383"
+  element_type: Composer
+  annotation_id: "192"
+  documentation: 
+  version: "1"
+annotation_versions_300: 
+  updated_at: 2009-01-18 18:55:12.0
+  element_id: "2774"
+  id: "300"
+  element_type: Composer
+  annotation_id: "150"
+  documentation: This is the definition of a Calypso CashFlowCoupon object.
+  version: "2"
+annotation_versions_759: 
+  updated_at: 2009-01-18 23:04:26.0
+  element_id: "80618"
+  id: "759"
+  element_type: Composer
+  annotation_id: "380"
+  documentation: 
+  version: "1"
+annotation_versions_384: 
+  updated_at: 2009-01-18 19:00:16.0
+  element_id: "4572"
+  id: "384"
+  element_type: Composer
+  annotation_id: "192"
+  documentation: SettleDeliveryInstruction.setIntermediaryAccount()
+  version: "2"
+annotation_versions_382: 
+  updated_at: 2009-01-18 19:00:15.0
+  element_id: "4569"
+  id: "382"
+  element_type: Composer
+  annotation_id: "191"
+  documentation: SettleDeliveryInstruction.setIntermediaryName()
+  version: "2"
+annotation_versions_150: 
+  updated_at: 2009-01-18 18:52:09.0
+  element_id: "1735"
+  id: "150"
+  element_type: Composer
+  annotation_id: "75"
+  documentation: The identifiers of the original Account that generated this Account.
+  version: "2"
+annotation_versions_758: 
+  updated_at: 2009-01-18 23:04:26.0
+  element_id: "80615"
+  id: "758"
+  element_type: Composer
+  annotation_id: "379"
+  documentation: ReportTemplate.setTemplateName()
+  version: "2"
+annotation_versions_151: 
+  updated_at: 2009-01-18 18:52:10.0
+  element_id: "1742"
+  id: "151"
+  element_type: Composer
+  annotation_id: "76"
+  documentation: 
+  version: "1"
+annotation_versions_752: 
+  updated_at: 2009-01-18 23:04:13.0
+  element_id: "80549"
+  id: "752"
+  element_type: Composer
+  annotation_id: "376"
+  documentation: AccountingRule.setClosingDates()
+  version: "2"
+annotation_versions_381: 
+  updated_at: 2009-01-18 19:00:15.0
+  element_id: "4569"
+  id: "381"
+  element_type: Composer
+  annotation_id: "191"
+  documentation: 
+  version: "1"
+annotation_versions_751: 
+  updated_at: 2009-01-18 23:04:13.0
+  element_id: "80549"
+  id: "751"
+  element_type: Composer
+  annotation_id: "376"
+  documentation: 
+  version: "1"
+annotation_versions_380: 
+  updated_at: 2009-01-18 19:00:14.0
+  element_id: "4567"
+  id: "380"
+  element_type: Composer
+  annotation_id: "190"
+  documentation: SettleDeliveryInstruction.setIntermediaryContactType()
+  version: "2"
+annotation_versions_754: 
+  updated_at: 2009-01-18 23:04:21.0
+  element_id: "80591"
+  id: "754"
+  element_type: Composer
+  annotation_id: "377"
+  documentation: This is the definition of a Calypso Accounting Event object.
+  version: "2"
+annotation_versions_331: 
+  updated_at: 2009-01-18 18:59:52.0
+  element_id: "4443"
+  id: "331"
+  element_type: Composer
+  annotation_id: "166"
+  documentation: 
+  version: "1"
+annotation_versions_330: 
+  updated_at: 2009-01-18 18:59:51.0
+  element_id: "4435"
+  id: "330"
+  element_type: Composer
+  annotation_id: "165"
+  documentation: SettleDeliveryInstruction.setProcessingOrg(Id of the ProcessingOrg
+    referred by its short name or its external reference). If not defined, ProcessingOrg=ALL
+  version: "2"
+annotation_versions_753: 
+  updated_at: 2009-01-18 23:04:21.0
+  element_id: "80591"
+  id: "753"
+  element_type: Composer
+  annotation_id: "377"
+  documentation: 
+  version: "1"
+annotation_versions_415: 
+  updated_at: 2009-01-18 19:03:52.0
+  element_id: "5292"
+  id: "415"
+  element_type: Composer
+  annotation_id: "208"
+  documentation: 
+  version: "1"
+annotation_versions_136: 
+  updated_at: 2009-01-18 18:51:50.0
+  element_id: "1613"
+  id: "136"
+  element_type: Composer
+  annotation_id: "68"
+  documentation: "The reference to the processing org to which this\n\t\t\t\t\tattribute \
+    is attached."
+  version: "2"
+annotation_versions_414: 
+  updated_at: 2009-01-18 19:03:12.0
+  element_id: "5148"
+  id: "414"
+  element_type: Composer
+  annotation_id: "207"
+  documentation: This is the definition of a Calypso Product.
+  version: "2"
+annotation_versions_137: 
+  updated_at: 2009-01-18 18:51:51.0
+  element_id: "1621"
+  id: "137"
+  element_type: Composer
+  annotation_id: "69"
+  documentation: 
+  version: "1"
+annotation_versions_413: 
+  updated_at: 2009-01-18 19:03:12.0
+  element_id: "5148"
+  id: "413"
+  element_type: Composer
+  annotation_id: "207"
+  documentation: 
+  version: "1"
+annotation_versions_412: 
+  updated_at: 2009-01-18 19:03:08.0
+  element_id: "5137"
+  id: "412"
+  element_type: Composer
+  annotation_id: "206"
+  documentation: "This is the representation of a Calypso Product. It contains either\n\
+    \t\t\tidentifiers for multiply traded products or a complete definition."
+  version: "2"
+annotation_versions_138: 
+  updated_at: 2009-01-18 18:51:51.0
+  element_id: "1621"
+  id: "138"
+  element_type: Composer
+  annotation_id: "69"
+  documentation: Definition of Calypso LERegistration object
+  version: "2"
+annotation_versions_309: 
+  updated_at: 2009-01-18 18:58:49.0
+  element_id: "4054"
+  id: "309"
+  element_type: Composer
+  annotation_id: "155"
+  documentation: 
+  version: "1"
+annotation_versions_411: 
+  updated_at: 2009-01-18 19:03:08.0
+  element_id: "5137"
+  id: "411"
+  element_type: Composer
+  annotation_id: "206"
+  documentation: 
+  version: "1"
+annotation_versions_139: 
+  updated_at: 2009-01-18 18:52:01.0
+  element_id: "1685"
+  id: "139"
+  element_type: Composer
+  annotation_id: "70"
+  documentation: 
+  version: "1"
+annotation_versions_308: 
+  updated_at: 2009-01-18 18:58:49.0
+  element_id: "4052"
+  id: "308"
+  element_type: Composer
+  annotation_id: "154"
+  documentation: Fixed
+  version: "2"
+annotation_versions_410: 
+  updated_at: 2009-01-18 19:02:57.0
+  element_id: "5110"
+  id: "410"
+  element_type: Composer
+  annotation_id: "205"
+  documentation: This is the definition of a Termination Event.
+  version: "2"
+annotation_versions_306: 
+  updated_at: 2009-01-18 18:58:41.0
+  element_id: "4007"
+  id: "306"
+  element_type: Composer
+  annotation_id: "153"
+  documentation: Definition of Calypso CashFlowCommodity object
+  version: "2"
+annotation_versions_307: 
+  updated_at: 2009-01-18 18:58:49.0
+  element_id: "4052"
+  id: "307"
+  element_type: Composer
+  annotation_id: "154"
+  documentation: 
+  version: "1"
+annotation_versions_305: 
+  updated_at: 2009-01-18 18:58:41.0
+  element_id: "4007"
+  id: "305"
+  element_type: Composer
+  annotation_id: "153"
+  documentation: 
+  version: "1"
+annotation_versions_304: 
+  updated_at: 2009-01-18 18:58:08.0
+  element_id: "3810"
+  id: "304"
+  element_type: Composer
+  annotation_id: "152"
+  documentation: This is the definition of a Calypso CashFlowDividend object.
+  version: "2"
+annotation_versions_130: 
+  updated_at: 2009-01-18 18:51:48.0
+  element_id: "1606"
+  id: "130"
+  element_type: Composer
+  annotation_id: "65"
+  documentation: "The type of the attribute. It will determine what values are\n\t\
+    \t\t\t\tvalid for the attribute."
+  version: "2"
+annotation_versions_131: 
+  updated_at: 2009-01-18 18:51:49.0
+  element_id: "1608"
+  id: "131"
+  element_type: Composer
+  annotation_id: "66"
+  documentation: 
+  version: "1"
+annotation_versions_132: 
+  updated_at: 2009-01-18 18:51:49.0
+  element_id: "1608"
+  id: "132"
+  element_type: Composer
+  annotation_id: "66"
+  documentation: "The value of the attribute. Valid values depend on the\n\t\t\t\t\
+    \tAttributeType."
+  version: "2"
+annotation_versions_133: 
+  updated_at: 2009-01-18 18:51:49.0
+  element_id: "1611"
+  id: "133"
+  element_type: Composer
+  annotation_id: "67"
+  documentation: 
+  version: "1"
+annotation_versions_134: 
+  updated_at: 2009-01-18 18:51:49.0
+  element_id: "1611"
+  id: "134"
+  element_type: Composer
+  annotation_id: "67"
+  documentation: A LegalEntity role to which the attribute is attached.
+  version: "2"
+annotation_versions_135: 
+  updated_at: 2009-01-18 18:51:50.0
+  element_id: "1613"
+  id: "135"
+  element_type: Composer
+  annotation_id: "68"
+  documentation: 
+  version: "1"
+annotation_versions_720: 
+  updated_at: 2009-01-18 23:04:00.0
+  element_id: "80490"
+  id: "720"
+  element_type: Composer
+  annotation_id: "360"
+  documentation: AccountingEventConfig.setIsFeeB()
+  version: "2"
+annotation_versions_721: 
+  updated_at: 2009-01-18 23:04:01.0
+  element_id: "80491"
+  id: "721"
+  element_type: Composer
+  annotation_id: "361"
+  documentation: 
+  version: "1"
+annotation_versions_722: 
+  updated_at: 2009-01-18 23:04:01.0
+  element_id: "80491"
+  id: "722"
+  element_type: Composer
+  annotation_id: "361"
+  documentation: AccountingEventConfig.setTriggeredEventTypes()
+  version: "2"
+annotation_versions_449: 
+  updated_at: 2009-01-18 19:09:07.0
+  element_id: "7145"
+  id: "449"
+  element_type: Composer
+  annotation_id: "225"
+  documentation: 
+  version: "1"
+annotation_versions_448: 
+  updated_at: 2009-01-18 19:08:28.0
+  element_id: "6920"
+  id: "448"
+  element_type: Composer
+  annotation_id: "224"
+  documentation: This is the definition of a Cancellable Swap.
+  version: "2"
+annotation_versions_447: 
+  updated_at: 2009-01-18 19:08:28.0
+  element_id: "6920"
+  id: "447"
+  element_type: Composer
+  annotation_id: "224"
+  documentation: 
+  version: "1"
+annotation_versions_446: 
+  updated_at: 2009-01-18 19:08:14.0
+  element_id: "6844"
+  id: "446"
+  element_type: Composer
+  annotation_id: "223"
+  documentation: This is the definition of the option associated to the swap.
+  version: "2"
+annotation_versions_445: 
+  updated_at: 2009-01-18 19:08:14.0
+  element_id: "6844"
+  id: "445"
+  element_type: Composer
+  annotation_id: "223"
+  documentation: 
+  version: "1"
+annotation_versions_444: 
+  updated_at: 2009-01-18 19:07:51.0
+  element_id: "6696"
+  id: "444"
+  element_type: Composer
+  annotation_id: "222"
+  documentation: This is the definition of a Swap.
+  version: "2"
+annotation_versions_729: 
+  updated_at: 2009-01-18 23:04:07.0
+  element_id: "80520"
+  id: "729"
+  element_type: Composer
+  annotation_id: "365"
+  documentation: 
+  version: "1"
+annotation_versions_728: 
+  updated_at: 2009-01-18 23:04:06.0
+  element_id: "80517"
+  id: "728"
+  element_type: Composer
+  annotation_id: "364"
+  documentation: AccountingRule.setName()
+  version: "2"
+annotation_versions_726: 
+  updated_at: 2009-01-18 23:04:02.0
+  element_id: "80495"
+  id: "726"
+  element_type: Composer
+  annotation_id: "363"
+  documentation: This is the definition of a Calypso Accounting Rule object.
+  version: "2"
+annotation_versions_727: 
+  updated_at: 2009-01-18 23:04:06.0
+  element_id: "80517"
+  id: "727"
+  element_type: Composer
+  annotation_id: "364"
+  documentation: 
+  version: "1"
+annotation_versions_723: 
+  updated_at: 2009-01-18 23:04:01.0
+  element_id: "80493"
+  id: "723"
+  element_type: Composer
+  annotation_id: "362"
+  documentation: 
+  version: "1"
+annotation_versions_725: 
+  updated_at: 2009-01-18 23:04:01.0
+  element_id: "80495"
+  id: "725"
+  element_type: Composer
+  annotation_id: "363"
+  documentation: 
+  version: "1"
+annotation_versions_724: 
+  updated_at: 2009-01-18 23:04:01.0
+  element_id: "80493"
+  id: "724"
+  element_type: Composer
+  annotation_id: "362"
+  documentation: AccountingEventConfig.setPricingMeasures()
+  version: "2"
+annotation_versions_359: 
+  updated_at: 2009-01-18 19:00:07.0
+  element_id: "4532"
+  id: "359"
+  element_type: Composer
+  annotation_id: "180"
+  documentation: 
+  version: "1"
+annotation_versions_016: 
+  updated_at: 2009-01-18 18:47:37.0
+  element_id: "93"
+  id: "16"
+  element_type: Composer
+  annotation_id: "8"
+  documentation: A reference on a LegalEntity.
+  version: "2"
+annotation_versions_015: 
+  updated_at: 2009-01-18 18:47:37.0
+  element_id: "93"
+  id: "15"
+  element_type: Composer
+  annotation_id: "8"
+  documentation: 
+  version: "1"
+annotation_versions_018: 
+  updated_at: 2009-01-18 18:47:38.0
+  element_id: "100"
+  id: "18"
+  element_type: Composer
+  annotation_id: "9"
+  documentation: "Defines a string type that preserves the white spaces.\n\t\t\tThis \
+    is separate from comment because the length may be limited\n\t\t\tin future versions."
+  version: "2"
+annotation_versions_019: 
+  updated_at: 2009-01-18 18:47:39.0
+  element_id: "103"
+  id: "19"
+  element_type: Composer
+  annotation_id: "10"
+  documentation: 
+  version: "1"
+annotation_versions_017: 
+  updated_at: 2009-01-18 18:47:38.0
+  element_id: "100"
+  id: "17"
+  element_type: Composer
+  annotation_id: "9"
+  documentation: 
+  version: "1"
+annotation_versions_012: 
+  updated_at: 2009-01-18 18:47:35.0
+  element_id: "81"
+  id: "12"
+  element_type: Composer
+  annotation_id: "6"
+  documentation: "Enables to fully identify a Calypso object from its name and version \
+    in a system.\n\t\t\tThis is used to identify a calypso Object."
+  version: "2"
+annotation_versions_441: 
+  updated_at: 2009-01-18 19:06:33.0
+  element_id: "6224"
+  id: "441"
+  element_type: Composer
+  annotation_id: "221"
+  documentation: 
+  version: "1"
+annotation_versions_500: 
+  updated_at: 2009-01-18 19:26:25.0
+  element_id: "12452"
+  id: "500"
+  element_type: Composer
+  annotation_id: "250"
+  documentation: This is the definition of a GenericOptionInfo.
+  version: "2"
+annotation_versions_534: 
+  updated_at: 2009-01-18 20:28:34.0
+  element_id: "33220"
+  id: "534"
+  element_type: Composer
+  annotation_id: "267"
+  documentation: The smallest possible movement on the contract's quote.
+  version: "2"
+annotation_versions_351: 
+  updated_at: 2009-01-18 18:59:55.0
+  element_id: "4464"
+  id: "351"
+  element_type: Composer
+  annotation_id: "176"
+  documentation: 
+  version: "1"
+annotation_versions_011: 
+  updated_at: 2009-01-18 18:47:35.0
+  element_id: "81"
+  id: "11"
+  element_type: Composer
+  annotation_id: "6"
+  documentation: 
+  version: "1"
+annotation_versions_501: 
+  updated_at: 2009-01-18 19:26:30.0
+  element_id: "12489"
+  id: "501"
+  element_type: Composer
+  annotation_id: "251"
+  documentation: 
+  version: "1"
+annotation_versions_350: 
+  updated_at: 2009-01-18 18:59:55.0
+  element_id: "4463"
+  id: "350"
+  element_type: Composer
+  annotation_id: "175"
+  documentation: SettleDeliveryInstruction.setIsByTradeDate(). Tells if the EffectiveFrom/To
+    Date are based on Trade Date or Settle Date
+  version: "2"
+annotation_versions_535: 
+  updated_at: 2009-01-18 20:28:34.0
+  element_id: "33222"
+  id: "535"
+  element_type: Composer
+  annotation_id: "268"
+  documentation: 
+  version: "1"
+annotation_versions_442: 
+  updated_at: 2009-01-18 19:06:34.0
+  element_id: "6224"
+  id: "442"
+  element_type: Composer
+  annotation_id: "221"
+  documentation: Definition of calypso CashSettleInfo object
+  version: "2"
+annotation_versions_010: 
+  updated_at: 2009-01-18 18:47:34.0
+  element_id: "77"
+  id: "10"
+  element_type: Composer
+  annotation_id: "5"
+  documentation: "Enables to identify a Calypso entity from its name in a system.\n\
+    \t\t\tThis is used to make a reference to a Calypso Entity."
+  version: "2"
+annotation_versions_443: 
+  updated_at: 2009-01-18 19:07:51.0
+  element_id: "6696"
+  id: "443"
+  element_type: Composer
+  annotation_id: "222"
+  documentation: 
+  version: "1"
+annotation_versions_536: 
+  updated_at: 2009-01-18 20:28:34.0
+  element_id: "33222"
+  id: "536"
+  element_type: Composer
+  annotation_id: "268"
+  documentation: The value (in the contract's currency) of a tick.
+  version: "2"
+annotation_versions_354: 
+  updated_at: 2009-01-18 18:59:57.0
+  element_id: "4466"
+  id: "354"
+  element_type: Composer
+  annotation_id: "177"
+  documentation: SettleDeliveryInstruction.setGeneralLedgerAccount(Id of the Account
+    referred by its name or by its external reference)
+  version: "2"
+annotation_versions_503: 
+  updated_at: 2009-01-18 19:30:47.0
+  element_id: "13860"
+  id: "503"
+  element_type: Composer
+  annotation_id: "252"
+  documentation: 
+  version: "1"
+annotation_versions_578: 
+  updated_at: 2009-01-18 20:37:31.0
+  element_id: "36222"
+  id: "578"
+  element_type: Composer
+  annotation_id: "289"
+  documentation: Provides strong typing for the FutureOptionIndex subclass of FutureOption.
+  version: "2"
+annotation_versions_014: 
+  updated_at: 2009-01-18 18:47:36.0
+  element_id: "86"
+  id: "14"
+  element_type: Composer
+  annotation_id: "7"
+  documentation: A reference on a LegalEntity.
+  version: "2"
+annotation_versions_532: 
+  updated_at: 2009-01-18 20:28:33.0
+  element_id: "33218"
+  id: "532"
+  element_type: Composer
+  annotation_id: "266"
+  documentation: The way the contract is settled (Cash, Physical, ...).
+  version: "2"
+annotation_versions_579: 
+  updated_at: 2009-01-18 20:38:06.0
+  element_id: "36408"
+  id: "579"
+  element_type: Composer
+  annotation_id: "290"
+  documentation: 
+  version: "1"
+annotation_versions_353: 
+  updated_at: 2009-01-18 18:59:57.0
+  element_id: "4466"
+  id: "353"
+  element_type: Composer
+  annotation_id: "177"
+  documentation: 
+  version: "1"
+annotation_versions_013: 
+  updated_at: 2009-01-18 18:47:36.0
+  element_id: "86"
+  id: "13"
+  element_type: Composer
+  annotation_id: "7"
+  documentation: 
+  version: "1"
+annotation_versions_352: 
+  updated_at: 2009-01-18 18:59:56.0
+  element_id: "4464"
+  id: "352"
+  element_type: Composer
+  annotation_id: "176"
+  documentation: SettleDeliveryInstruction.setRegistrationList()
+  version: "2"
+annotation_versions_502: 
+  updated_at: 2009-01-18 19:26:30.0
+  element_id: "12489"
+  id: "502"
+  element_type: Composer
+  annotation_id: "251"
+  documentation: This is the definition of a GenericOption.
+  version: "2"
+annotation_versions_533: 
+  updated_at: 2009-01-18 20:28:34.0
+  element_id: "33220"
+  id: "533"
+  element_type: Composer
+  annotation_id: "267"
+  documentation: 
+  version: "1"
+annotation_versions_440: 
+  updated_at: 2009-01-18 19:06:32.0
+  element_id: "6218"
+  id: "440"
+  element_type: Composer
+  annotation_id: "220"
+  documentation: Definition of calypso CashSettleDate
+  version: "2"
+annotation_versions_356: 
+  updated_at: 2009-01-18 18:59:59.0
+  element_id: "4475"
+  id: "356"
+  element_type: Composer
+  annotation_id: "178"
+  documentation: SettleDeliveryInstruction.setLinkId(SettleDeliveryInstruction to
+    link, 0 for none)
+  version: "2"
+annotation_versions_576: 
+  updated_at: 2009-01-18 20:36:58.0
+  element_id: "36036"
+  id: "576"
+  element_type: Composer
+  annotation_id: "288"
+  documentation: Provides strong typing for the FutureOptionFX subclass of FutureOption.
+  version: "2"
+annotation_versions_506: 
+  updated_at: 2009-01-18 19:31:20.0
+  element_id: "14062"
+  id: "506"
+  element_type: Composer
+  annotation_id: "253"
+  documentation: This is the definition of an Exotic SwapLeg.
+  version: "2"
+annotation_versions_530: 
+  updated_at: 2009-01-18 20:28:33.0
+  element_id: "33216"
+  id: "530"
+  element_type: Composer
+  annotation_id: "265"
+  documentation: The way the contract is quoted (CleanPrice, Future, Yield, ...).
+  version: "2"
+annotation_versions_531: 
+  updated_at: 2009-01-18 20:28:33.0
+  element_id: "33218"
+  id: "531"
+  element_type: Composer
+  annotation_id: "266"
+  documentation: 
+  version: "1"
+annotation_versions_504: 
+  updated_at: 2009-01-18 19:30:47.0
+  element_id: "13860"
+  id: "504"
+  element_type: Composer
+  annotation_id: "252"
+  documentation: This is the definition of an ExoticConfigurableType. (Typed leg)
+  version: "2"
+annotation_versions_355: 
+  updated_at: 2009-01-18 18:59:59.0
+  element_id: "4475"
+  id: "355"
+  element_type: Composer
+  annotation_id: "178"
+  documentation: 
+  version: "1"
+annotation_versions_505: 
+  updated_at: 2009-01-18 19:31:20.0
+  element_id: "14062"
+  id: "505"
+  element_type: Composer
+  annotation_id: "253"
+  documentation: 
+  version: "1"
+annotation_versions_577: 
+  updated_at: 2009-01-18 20:37:31.0
+  element_id: "36222"
+  id: "577"
+  element_type: Composer
+  annotation_id: "289"
+  documentation: 
+  version: "1"
+annotation_versions_508: 
+  updated_at: 2009-01-18 19:34:17.0
+  element_id: "14999"
+  id: "508"
+  element_type: Composer
+  annotation_id: "254"
+  documentation: This is the definition of a Calypso Bond object.
+  version: "2"
+annotation_versions_358: 
+  updated_at: 2009-01-18 19:00:00.0
+  element_id: "4484"
+  id: "358"
+  element_type: Composer
+  annotation_id: "179"
+  documentation: SettleDeliveryInstruction.setComments()
+  version: "2"
+annotation_versions_509: 
+  updated_at: 2009-01-18 19:35:44.0
+  element_id: "15535"
+  id: "509"
+  element_type: Composer
+  annotation_id: "255"
+  documentation: 
+  version: "1"
+annotation_versions_574: 
+  updated_at: 2009-01-18 20:36:24.0
+  element_id: "35850"
+  id: "574"
+  element_type: Composer
+  annotation_id: "287"
+  documentation: Provides strong typing for the FutureOptionEquityIndex subclass of
+    FutureOption.
+  version: "2"
+annotation_versions_507: 
+  updated_at: 2009-01-18 19:34:17.0
+  element_id: "14999"
+  id: "507"
+  element_type: Composer
+  annotation_id: "254"
+  documentation: 
+  version: "1"
+annotation_versions_575: 
+  updated_at: 2009-01-18 20:36:58.0
+  element_id: "36036"
+  id: "575"
+  element_type: Composer
+  annotation_id: "288"
+  documentation: 
+  version: "1"
+annotation_versions_357: 
+  updated_at: 2009-01-18 19:00:00.0
+  element_id: "4484"
+  id: "357"
+  element_type: Composer
+  annotation_id: "179"
+  documentation: 
+  version: "1"
+annotation_versions_049: 
+  updated_at: 2009-01-18 18:49:11.0
+  element_id: "657"
+  id: "49"
+  element_type: Composer
+  annotation_id: "25"
+  documentation: 
+  version: "1"
+annotation_versions_048: 
+  updated_at: 2009-01-18 18:49:08.0
+  element_id: "635"
+  id: "48"
+  element_type: Composer
+  annotation_id: "24"
+  documentation: This is the definition of a Calypso Book object.
+  version: "2"
+annotation_versions_045: 
+  updated_at: 2009-01-18 18:49:04.0
+  element_id: "612"
+  id: "45"
+  element_type: Composer
+  annotation_id: "23"
+  documentation: 
+  version: "1"
+annotation_versions_047: 
+  updated_at: 2009-01-18 18:49:08.0
+  element_id: "635"
+  id: "47"
+  element_type: Composer
+  annotation_id: "24"
+  documentation: 
+  version: "1"
+annotation_versions_046: 
+  updated_at: 2009-01-18 18:49:04.0
+  element_id: "612"
+  id: "46"
+  element_type: Composer
+  annotation_id: "23"
+  documentation: "This is the definition of feed configuration for particular type \
+    of\n                feed"
+  version: "2"
+annotation_versions_043: 
+  updated_at: 2009-01-18 18:49:00.0
+  element_id: "589"
+  id: "43"
+  element_type: Composer
+  annotation_id: "22"
+  documentation: 
+  version: "1"
+annotation_versions_042: 
+  updated_at: 2009-01-18 18:48:28.0
+  element_id: "431"
+  id: "42"
+  element_type: Composer
+  annotation_id: "21"
+  documentation: when not provided the trade maturity date will be used instead
+  version: "2"
+annotation_versions_044: 
+  updated_at: 2009-01-18 18:49:00.0
+  element_id: "589"
+  id: "44"
+  element_type: Composer
+  annotation_id: "22"
+  documentation: definition of Feed Configuration
+  version: "2"
+annotation_versions_062: 
+  updated_at: 2009-01-18 18:49:16.0
+  element_id: "681"
+  id: "62"
+  element_type: Composer
+  annotation_id: "31"
+  documentation: A comment associated to the Book.
+  version: "2"
+annotation_versions_040: 
+  updated_at: 2009-01-18 18:48:27.0
+  element_id: "430"
+  id: "40"
+  element_type: Composer
+  annotation_id: "20"
+  documentation: when not provided, the trade start date will be used instead
+  version: "2"
+annotation_versions_060: 
+  updated_at: 2009-01-18 18:49:15.0
+  element_id: "678"
+  id: "60"
+  element_type: Composer
+  annotation_id: "30"
+  documentation: The base currency of the book.
+  version: "2"
+annotation_versions_041: 
+  updated_at: 2009-01-18 18:48:28.0
+  element_id: "431"
+  id: "41"
+  element_type: Composer
+  annotation_id: "21"
+  documentation: 
+  version: "1"
+annotation_versions_061: 
+  updated_at: 2009-01-18 18:49:16.0
+  element_id: "681"
+  id: "61"
+  element_type: Composer
+  annotation_id: "31"
+  documentation: 
+  version: "1"
+annotation_versions_064: 
+  updated_at: 2009-01-18 18:49:16.0
+  element_id: "684"
+  id: "64"
+  element_type: Composer
+  annotation_id: "32"
+  documentation: The holidays applied to the book.
+  version: "2"
+annotation_versions_065: 
+  updated_at: 2009-01-18 18:49:17.0
+  element_id: "686"
+  id: "65"
+  element_type: Composer
+  annotation_id: "33"
+  documentation: 
+  version: "1"
+annotation_versions_063: 
+  updated_at: 2009-01-18 18:49:16.0
+  element_id: "684"
+  id: "63"
+  element_type: Composer
+  annotation_id: "32"
+  documentation: 
+  version: "1"
+annotation_versions_067: 
+  updated_at: 2009-01-18 18:49:17.0
+  element_id: "691"
+  id: "67"
+  element_type: Composer
+  annotation_id: "34"
+  documentation: 
+  version: "1"
+annotation_versions_089: 
+  updated_at: 2009-01-18 18:50:17.0
+  element_id: "1030"
+  id: "89"
+  element_type: Composer
+  annotation_id: "45"
+  documentation: 
+  version: "1"
+annotation_versions_066: 
+  updated_at: 2009-01-18 18:49:17.0
+  element_id: "686"
+  id: "66"
+  element_type: Composer
+  annotation_id: "33"
+  documentation: An attribute associated to the book.
+  version: "2"
+annotation_versions_068: 
+  updated_at: 2009-01-18 18:49:17.0
+  element_id: "691"
+  id: "68"
+  element_type: Composer
+  annotation_id: "34"
+  documentation: Definition of book hierarchy
+  version: "2"
+annotation_versions_069: 
+  updated_at: 2009-01-18 18:49:21.0
+  element_id: "716"
+  id: "69"
+  element_type: Composer
+  annotation_id: "35"
+  documentation: 
+  version: "1"
+annotation_versions_808: 
+  updated_at: 2009-01-18 23:11:01.0
+  element_id: "82473"
+  id: "808"
+  element_type: Composer
+  annotation_id: "404"
+  documentation: settlement date for trade on the primary market and grey market
+  version: "2"
+annotation_versions_318: 
+  updated_at: 2009-01-18 18:59:28.0
+  element_id: "4290"
+  id: "318"
+  element_type: Composer
+  annotation_id: "159"
+  documentation: Identified by its name
+  version: "2"
+annotation_versions_809: 
+  updated_at: 2009-01-18 23:11:01.0
+  element_id: "82474"
+  id: "809"
+  element_type: Composer
+  annotation_id: "405"
+  documentation: 
+  version: "1"
+annotation_versions_319: 
+  updated_at: 2009-01-18 18:59:42.0
+  element_id: "4383"
+  id: "319"
+  element_type: Composer
+  annotation_id: "160"
+  documentation: 
+  version: "1"
+annotation_versions_836: 
+  updated_at: 2009-01-18 23:16:07.0
+  element_id: "83847"
+  id: "836"
+  element_type: Composer
+  annotation_id: "418"
+  documentation: The reference to the Book associated with this Fund.
+  version: "2"
+annotation_versions_316: 
+  updated_at: 2009-01-18 18:59:23.0
+  element_id: "4261"
+  id: "316"
+  element_type: Composer
+  annotation_id: "158"
+  documentation: Identified by its code
+  version: "2"
+annotation_versions_837: 
+  updated_at: 2009-01-18 23:16:08.0
+  element_id: "83854"
+  id: "837"
+  element_type: Composer
+  annotation_id: "419"
+  documentation: 
+  version: "1"
+annotation_versions_315: 
+  updated_at: 2009-01-18 18:59:23.0
+  element_id: "4261"
+  id: "315"
+  element_type: Composer
+  annotation_id: "158"
+  documentation: 
+  version: "1"
+annotation_versions_835: 
+  updated_at: 2009-01-18 23:16:07.0
+  element_id: "83847"
+  id: "835"
+  element_type: Composer
+  annotation_id: "418"
+  documentation: 
+  version: "1"
+annotation_versions_317: 
+  updated_at: 2009-01-18 18:59:28.0
+  element_id: "4290"
+  id: "317"
+  element_type: Composer
+  annotation_id: "159"
+  documentation: 
+  version: "1"
+annotation_versions_839: 
+  updated_at: 2009-01-18 23:16:10.0
+  element_id: "83868"
+  id: "839"
+  element_type: Composer
+  annotation_id: "420"
+  documentation: 
+  version: "1"
+annotation_versions_313: 
+  updated_at: 2009-01-18 18:59:18.0
+  element_id: "4223"
+  id: "313"
+  element_type: Composer
+  annotation_id: "157"
+  documentation: 
+  version: "1"
+annotation_versions_838: 
+  updated_at: 2009-01-18 23:16:08.0
+  element_id: "83854"
+  id: "838"
+  element_type: Composer
+  annotation_id: "419"
+  documentation: The reference to the Unitized Fund Product associated with this Fund.
+  version: "2"
+annotation_versions_314: 
+  updated_at: 2009-01-18 18:59:18.0
+  element_id: "4223"
+  id: "314"
+  element_type: Composer
+  annotation_id: "157"
+  documentation: The Holiday settings for one location
+  version: "2"
+annotation_versions_831: 
+  updated_at: 2009-01-18 23:15:59.0
+  element_id: "83814"
+  id: "831"
+  element_type: Composer
+  annotation_id: "416"
+  documentation: 
+  version: "1"
+annotation_versions_800: 
+  updated_at: 2009-01-18 23:10:58.0
+  element_id: "82462"
+  id: "800"
+  element_type: Composer
+  annotation_id: "400"
+  documentation: The smallest possible movement on warrant trade.
+  version: "2"
+annotation_versions_466: 
+  updated_at: 2009-01-18 19:16:45.0
+  element_id: "9137"
+  id: "466"
+  element_type: Composer
+  annotation_id: "233"
+  documentation: This is the definition of an ExoticCapFloor.
+  version: "2"
+annotation_versions_802: 
+  updated_at: 2009-01-18 23:10:58.0
+  element_id: "82463"
+  id: "802"
+  element_type: Composer
+  annotation_id: "401"
+  documentation: Number of warrant
+  version: "2"
+annotation_versions_830: 
+  updated_at: 2009-01-18 23:14:39.0
+  element_id: "83441"
+  id: "830"
+  element_type: Composer
+  annotation_id: "415"
+  documentation: This is the definition of a Calypso UnitizedFund object.
+  version: "2"
+annotation_versions_468: 
+  updated_at: 2009-01-18 19:17:31.0
+  element_id: "9348"
+  id: "468"
+  element_type: Composer
+  annotation_id: "234"
+  documentation: This is the definition of a FRA.
+  version: "2"
+annotation_versions_467: 
+  updated_at: 2009-01-18 19:17:31.0
+  element_id: "9348"
+  id: "467"
+  element_type: Composer
+  annotation_id: "234"
+  documentation: 
+  version: "1"
+annotation_versions_801: 
+  updated_at: 2009-01-18 23:10:58.0
+  element_id: "82463"
+  id: "801"
+  element_type: Composer
+  annotation_id: "401"
+  documentation: 
+  version: "1"
+annotation_versions_469: 
+  updated_at: 2009-01-18 19:18:10.0
+  element_id: "9611"
+  id: "469"
+  element_type: Composer
+  annotation_id: "235"
+  documentation: 
+  version: "1"
+annotation_versions_834: 
+  updated_at: 2009-01-18 23:16:05.0
+  element_id: "83839"
+  id: "834"
+  element_type: Composer
+  annotation_id: "417"
+  documentation: The reference to the Legal Entity associated with this Fund.
+  version: "2"
+annotation_versions_833: 
+  updated_at: 2009-01-18 23:16:05.0
+  element_id: "83839"
+  id: "833"
+  element_type: Composer
+  annotation_id: "417"
+  documentation: 
+  version: "1"
+annotation_versions_832: 
+  updated_at: 2009-01-18 23:16:00.0
+  element_id: "83814"
+  id: "832"
+  element_type: Composer
+  annotation_id: "416"
+  documentation: This is the definition of a Calypso Fund object.
+  version: "2"
+annotation_versions_806: 
+  updated_at: 2009-01-18 23:11:01.0
+  element_id: "82472"
+  id: "806"
+  element_type: Composer
+  annotation_id: "403"
+  documentation: Number of days to calculate the settlement date in the trades on
+    Secondary Market
+  version: "2"
+annotation_versions_462: 
+  updated_at: 2009-01-18 19:15:19.0
+  element_id: "8724"
+  id: "462"
+  element_type: Composer
+  annotation_id: "231"
+  documentation: This is the definition of a CapFloor.
+  version: "2"
+annotation_versions_805: 
+  updated_at: 2009-01-18 23:11:01.0
+  element_id: "82472"
+  id: "805"
+  element_type: Composer
+  annotation_id: "403"
+  documentation: 
+  version: "1"
+annotation_versions_807: 
+  updated_at: 2009-01-18 23:11:01.0
+  element_id: "82473"
+  id: "807"
+  element_type: Composer
+  annotation_id: "404"
+  documentation: 
+  version: "1"
+annotation_versions_463: 
+  updated_at: 2009-01-18 19:16:07.0
+  element_id: "8930"
+  id: "463"
+  element_type: Composer
+  annotation_id: "232"
+  documentation: 
+  version: "1"
+annotation_versions_803: 
+  updated_at: 2009-01-18 23:10:59.0
+  element_id: "82464"
+  id: "803"
+  element_type: Composer
+  annotation_id: "402"
+  documentation: 
+  version: "1"
+annotation_versions_465: 
+  updated_at: 2009-01-18 19:16:45.0
+  element_id: "9137"
+  id: "465"
+  element_type: Composer
+  annotation_id: "233"
+  documentation: 
+  version: "1"
+annotation_versions_464: 
+  updated_at: 2009-01-18 19:16:07.0
+  element_id: "8930"
+  id: "464"
+  element_type: Composer
+  annotation_id: "232"
+  documentation: This is the definition of an ExoticCapFloor.
+  version: "2"
+annotation_versions_804: 
+  updated_at: 2009-01-18 23:10:59.0
+  element_id: "82464"
+  id: "804"
+  element_type: Composer
+  annotation_id: "402"
+  documentation: Number of underlying
+  version: "2"
+annotation_versions_393: 
+  updated_at: 2009-01-18 19:00:21.0
+  element_id: "4583"
+  id: "393"
+  element_type: Composer
+  annotation_id: "197"
+  documentation: 
+  version: "1"
+annotation_versions_392: 
+  updated_at: 2009-01-18 19:00:20.0
+  element_id: "4582"
+  id: "392"
+  element_type: Composer
+  annotation_id: "196"
+  documentation: This objects is a Registration
+  version: "2"
+annotation_versions_391: 
+  updated_at: 2009-01-18 19:00:20.0
+  element_id: "4582"
+  id: "391"
+  element_type: Composer
+  annotation_id: "196"
+  documentation: 
+  version: "1"
+annotation_versions_460: 
+  updated_at: 2009-01-18 19:13:59.0
+  element_id: "8476"
+  id: "460"
+  element_type: Composer
+  annotation_id: "230"
+  documentation: This is the definition of a Cross Currency Swap.
+  version: "2"
+annotation_versions_395: 
+  updated_at: 2009-01-18 19:00:26.0
+  element_id: "4601"
+  id: "395"
+  element_type: Composer
+  annotation_id: "198"
+  documentation: 
+  version: "1"
+annotation_versions_659: 
+  updated_at: 2009-01-18 23:03:43.0
+  element_id: "80406"
+  id: "659"
+  element_type: Composer
+  annotation_id: "330"
+  documentation: 
+  version: "1"
+annotation_versions_461: 
+  updated_at: 2009-01-18 19:15:19.0
+  element_id: "8724"
+  id: "461"
+  element_type: Composer
+  annotation_id: "231"
+  documentation: 
+  version: "1"
+annotation_versions_394: 
+  updated_at: 2009-01-18 19:00:21.0
+  element_id: "4583"
+  id: "394"
+  element_type: Composer
+  annotation_id: "197"
+  documentation: A Party object containing SDI specific information
+  version: "2"
+annotation_versions_658: 
+  updated_at: 2009-01-18 23:03:41.0
+  element_id: "80404"
+  id: "658"
+  element_type: Composer
+  annotation_id: "329"
+  documentation: LEContact.setLegalEntityRole(). If not defined, role=ALL
+  version: "2"
+annotation_versions_390: 
+  updated_at: 2009-01-18 19:00:20.0
+  element_id: "4581"
+  id: "390"
+  element_type: Composer
+  annotation_id: "195"
+  documentation: SettleDeliveryInstruction.setIntermediarySubAccount()
+  version: "2"
+annotation_versions_239: 
+  updated_at: 2009-01-18 18:53:48.0
+  element_id: "2280"
+  id: "239"
+  element_type: Composer
+  annotation_id: "120"
+  documentation: 
+  version: "1"
+annotation_versions_238: 
+  updated_at: 2009-01-18 18:53:48.0
+  element_id: "2275"
+  id: "238"
+  element_type: Composer
+  annotation_id: "119"
+  documentation: An attribute associated to the CurrencyDefault.
+  version: "2"
+annotation_versions_237: 
+  updated_at: 2009-01-18 18:53:48.0
+  element_id: "2275"
+  id: "237"
+  element_type: Composer
+  annotation_id: "119"
+  documentation: 
+  version: "1"
+annotation_versions_193: 
+  updated_at: 2009-01-18 18:52:32.0
+  element_id: "1859"
+  id: "193"
+  element_type: Composer
+  annotation_id: "97"
+  documentation: 
+  version: "1"
+annotation_versions_894: 
+  updated_at: 2009-01-18 23:39:10.0
+  element_id: "90144"
+  id: "894"
+  element_type: Composer
+  annotation_id: "447"
+  documentation: Definition of calypso CommodityFixing object
+  version: "2"
+annotation_versions_194: 
+  updated_at: 2009-01-18 18:52:32.0
+  element_id: "1859"
+  id: "194"
+  element_type: Composer
+  annotation_id: "97"
+  documentation: A comment on the AccountingBook.
+  version: "2"
+annotation_versions_893: 
+  updated_at: 2009-01-18 23:39:10.0
+  element_id: "90144"
+  id: "893"
+  element_type: Composer
+  annotation_id: "447"
+  documentation: 
+  version: "1"
+annotation_versions_195: 
+  updated_at: 2009-01-18 18:52:32.0
+  element_id: "1862"
+  id: "195"
+  element_type: Composer
+  annotation_id: "98"
+  documentation: 
+  version: "1"
+annotation_versions_236: 
+  updated_at: 2009-01-18 18:53:46.0
+  element_id: "2271"
+  id: "236"
+  element_type: Composer
+  annotation_id: "118"
+  documentation: "The currency amount that triggers a\n\t\t\t\t\t\t\t\twarning when \
+    inputing a Trade."
+  version: "2"
+annotation_versions_891: 
+  updated_at: 2009-01-18 23:39:02.0
+  element_id: "90103"
+  id: "891"
+  element_type: Composer
+  annotation_id: "446"
+  documentation: 
+  version: "1"
+annotation_versions_190: 
+  updated_at: 2009-01-18 18:52:27.0
+  element_id: "1834"
+  id: "190"
+  element_type: Composer
+  annotation_id: "95"
+  documentation: This is the definition of a com.calypso.tk.core.AccountingBook object.
+  version: "2"
+annotation_versions_235: 
+  updated_at: 2009-01-18 18:53:46.0
+  element_id: "2271"
+  id: "235"
+  element_type: Composer
+  annotation_id: "118"
+  documentation: 
+  version: "1"
+annotation_versions_191: 
+  updated_at: 2009-01-18 18:52:31.0
+  element_id: "1856"
+  id: "191"
+  element_type: Composer
+  annotation_id: "96"
+  documentation: 
+  version: "1"
+annotation_versions_892: 
+  updated_at: 2009-01-18 23:39:02.0
+  element_id: "90103"
+  id: "892"
+  element_type: Composer
+  annotation_id: "446"
+  documentation: Definition of calypso CashFlowScheduleGenParams object
+  version: "2"
+annotation_versions_234: 
+  updated_at: 2009-01-18 18:53:46.0
+  element_id: "2270"
+  id: "234"
+  element_type: Composer
+  annotation_id: "117"
+  documentation: The description of the currency.
+  version: "2"
+annotation_versions_890: 
+  updated_at: 2009-01-18 23:39:01.0
+  element_id: "90098"
+  id: "890"
+  element_type: Composer
+  annotation_id: "445"
+  documentation: Definition of calypso PaymentFrequency object
+  version: "2"
+annotation_versions_192: 
+  updated_at: 2009-01-18 18:52:31.0
+  element_id: "1856"
+  id: "192"
+  element_type: Composer
+  annotation_id: "96"
+  documentation: The name of the AccountingBook.
+  version: "2"
+annotation_versions_198: 
+  updated_at: 2009-01-18 18:53:28.0
+  element_id: "2165"
+  id: "198"
+  element_type: Composer
+  annotation_id: "99"
+  documentation: The processing organisation of the account. If not defined, ProcessingOrg
+    = ALL
+  version: "2"
+annotation_versions_898: 
+  updated_at: 2009-01-18 23:39:24.0
+  element_id: "90210"
+  id: "898"
+  element_type: Composer
+  annotation_id: "449"
+  documentation: Definition of calypso Commodity Leg object
+  version: "2"
+annotation_versions_899: 
+  updated_at: 2009-01-18 23:39:43.0
+  element_id: "90298"
+  id: "899"
+  element_type: Composer
+  annotation_id: "450"
+  documentation: 
+  version: "1"
+annotation_versions_233: 
+  updated_at: 2009-01-18 18:53:46.0
+  element_id: "2270"
+  id: "233"
+  element_type: Composer
+  annotation_id: "117"
+  documentation: 
+  version: "1"
+annotation_versions_398: 
+  updated_at: 2009-01-18 19:00:33.0
+  element_id: "4625"
+  id: "398"
+  element_type: Composer
+  annotation_id: "199"
+  documentation: A implementation of a SDIParty to use with AssetSettlementDeliveryInstruction
+  version: "2"
+annotation_versions_199: 
+  updated_at: 2009-01-18 18:53:32.0
+  element_id: "2186"
+  id: "199"
+  element_type: Composer
+  annotation_id: "100"
+  documentation: 
+  version: "1"
+annotation_versions_897: 
+  updated_at: 2009-01-18 23:39:24.0
+  element_id: "90210"
+  id: "897"
+  element_type: Composer
+  annotation_id: "449"
+  documentation: 
+  version: "1"
+annotation_versions_231: 
+  updated_at: 2009-01-18 18:53:46.0
+  element_id: "2269"
+  id: "231"
+  element_type: Composer
+  annotation_id: "116"
+  documentation: 
+  version: "1"
+annotation_versions_396: 
+  updated_at: 2009-01-18 19:00:26.0
+  element_id: "4601"
+  id: "396"
+  element_type: Composer
+  annotation_id: "198"
+  documentation: A implementation of a SDIParty to use with ManualSettlementDeliveryInstruction
+  version: "2"
+annotation_versions_232: 
+  updated_at: 2009-01-18 18:53:46.0
+  element_id: "2269"
+  id: "232"
+  element_type: Composer
+  annotation_id: "116"
+  documentation: The external reference of the currency.
+  version: "2"
+annotation_versions_397: 
+  updated_at: 2009-01-18 19:00:33.0
+  element_id: "4625"
+  id: "397"
+  element_type: Composer
+  annotation_id: "199"
+  documentation: 
+  version: "1"
+annotation_versions_230: 
+  updated_at: 2009-01-18 18:53:46.0
+  element_id: "2268"
+  id: "230"
+  element_type: Composer
+  annotation_id: "115"
+  documentation: The TimeZone of the currency.
+  version: "2"
+annotation_versions_196: 
+  updated_at: 2009-01-18 18:52:32.0
+  element_id: "1862"
+  id: "196"
+  element_type: Composer
+  annotation_id: "98"
+  documentation: The classification of the AccountingBook.
+  version: "2"
+annotation_versions_896: 
+  updated_at: 2009-01-18 23:39:12.0
+  element_id: "90154"
+  id: "896"
+  element_type: Composer
+  annotation_id: "448"
+  documentation: Definition of calypso CashFlowCommodity2 object
+  version: "2"
+annotation_versions_197: 
+  updated_at: 2009-01-18 18:53:28.0
+  element_id: "2165"
+  id: "197"
+  element_type: Composer
+  annotation_id: "99"
+  documentation: 
+  version: "1"
+annotation_versions_399: 
+  updated_at: 2009-01-18 19:02:05.0
+  element_id: "4960"
+  id: "399"
+  element_type: Composer
+  annotation_id: "200"
+  documentation: 
+  version: "1"
+annotation_versions_895: 
+  updated_at: 2009-01-18 23:39:12.0
+  element_id: "90154"
+  id: "895"
+  element_type: Composer
+  annotation_id: "448"
+  documentation: 
+  version: "1"
+annotation_versions_281: 
+  updated_at: 2009-01-18 18:54:11.0
+  element_id: "2420"
+  id: "281"
+  element_type: Composer
+  annotation_id: "141"
+  documentation: 
+  version: "1"
+annotation_versions_280: 
+  updated_at: 2009-01-18 18:54:10.0
+  element_id: "2415"
+  id: "280"
+  element_type: Composer
+  annotation_id: "140"
+  documentation: An attribute associated to the RateIndexDefault.
+  version: "2"
+annotation_versions_853: 
+  updated_at: 2009-01-18 23:23:29.0
+  element_id: "85878"
+  id: "853"
+  element_type: Composer
+  annotation_id: "427"
+  documentation: 
+  version: "1"
+annotation_versions_855: 
+  updated_at: 2009-01-18 23:23:29.0
+  element_id: "85879"
+  id: "855"
+  element_type: Composer
+  annotation_id: "428"
+  documentation: 
+  version: "1"
+annotation_versions_854: 
+  updated_at: 2009-01-18 23:23:29.0
+  element_id: "85878"
+  id: "854"
+  element_type: Composer
+  annotation_id: "427"
+  documentation: This lists contains the risk config items associated with the risk
+    config.
+  version: "2"
+annotation_versions_129: 
+  updated_at: 2009-01-18 18:51:48.0
+  element_id: "1606"
+  id: "129"
+  element_type: Composer
+  annotation_id: "65"
+  documentation: 
+  version: "1"
+annotation_versions_856: 
+  updated_at: 2009-01-18 23:23:29.0
+  element_id: "85879"
+  id: "856"
+  element_type: Composer
+  annotation_id: "428"
+  documentation: Represents risk config item in the risk config.
+  version: "2"
+annotation_versions_128: 
+  updated_at: 2009-01-18 18:51:48.0
+  element_id: "1604"
+  id: "128"
+  element_type: Composer
+  annotation_id: "64"
+  documentation: "This type describes LegalEntity attributes. This type may become\n\
+    \t\t\ta sub type of an Attribute type in future versions."
+  version: "2"
+annotation_versions_283: 
+  updated_at: 2009-01-18 18:54:14.0
+  element_id: "2445"
+  id: "283"
+  element_type: Composer
+  annotation_id: "142"
+  documentation: 
+  version: "1"
+annotation_versions_282: 
+  updated_at: 2009-01-18 18:54:11.0
+  element_id: "2420"
+  id: "282"
+  element_type: Composer
+  annotation_id: "141"
+  documentation: Definition of Calypso Domain
+  version: "2"
+annotation_versions_127: 
+  updated_at: 2009-01-18 18:51:48.0
+  element_id: "1604"
+  id: "127"
+  element_type: Composer
+  annotation_id: "64"
+  documentation: 
+  version: "1"
+annotation_versions_857: 
+  updated_at: 2009-01-18 23:23:44.0
+  element_id: "85950"
+  id: "857"
+  element_type: Composer
+  annotation_id: "429"
+  documentation: 
+  version: "1"
+annotation_versions_126: 
+  updated_at: 2009-01-18 18:51:48.0
+  element_id: "1603"
+  id: "126"
+  element_type: Composer
+  annotation_id: "63"
+  documentation: An attribute attached to the LegalEntity.
+  version: "2"
+annotation_versions_859: 
+  updated_at: 2009-01-18 23:27:33.0
+  element_id: "87081"
+  id: "859"
+  element_type: Composer
+  annotation_id: "430"
+  documentation: 
+  version: "1"
+annotation_versions_858: 
+  updated_at: 2009-01-18 23:23:44.0
+  element_id: "85950"
+  id: "858"
+  element_type: Composer
+  annotation_id: "429"
+  documentation: This is the definition of a Calypso SenderConfig object.
+  version: "2"
+annotation_versions_570: 
+  updated_at: 2009-01-18 20:35:17.0
+  element_id: "35478"
+  id: "570"
+  element_type: Composer
+  annotation_id: "285"
+  documentation: Provides strong typing for the FutureOptionCommodity subclass of
+    FutureOption.
+  version: "2"
+annotation_versions_572: 
+  updated_at: 2009-01-18 20:35:51.0
+  element_id: "35664"
+  id: "572"
+  element_type: Composer
+  annotation_id: "286"
+  documentation: Provides strong typing for the FutureOptionEquity subclass of FutureOption.
+  version: "2"
+annotation_versions_573: 
+  updated_at: 2009-01-18 20:36:24.0
+  element_id: "35850"
+  id: "573"
+  element_type: Composer
+  annotation_id: "287"
+  documentation: 
+  version: "1"
+annotation_versions_571: 
+  updated_at: 2009-01-18 20:35:51.0
+  element_id: "35664"
+  id: "571"
+  element_type: Composer
+  annotation_id: "286"
+  documentation: 
+  version: "1"
+annotation_versions_121: 
+  updated_at: 2009-01-18 18:51:47.0
+  element_id: "1599"
+  id: "121"
+  element_type: Composer
+  annotation_id: "61"
+  documentation: 
+  version: "1"
+annotation_versions_120: 
+  updated_at: 2009-01-18 18:51:47.0
+  element_id: "1598"
+  id: "120"
+  element_type: Composer
+  annotation_id: "60"
+  documentation: An external reference for the LegalEntity
+  version: "2"
+annotation_versions_650: 
+  updated_at: 2009-01-18 22:30:44.0
+  element_id: "71489"
+  id: "650"
+  element_type: Composer
+  annotation_id: "325"
+  documentation: This is the definition of a FXReset from Calypso.
+  version: "2"
+annotation_versions_651: 
+  updated_at: 2009-01-18 22:35:25.0
+  element_id: "72404"
+  id: "651"
+  element_type: Composer
+  annotation_id: "326"
+  documentation: 
+  version: "1"
+annotation_versions_652: 
+  updated_at: 2009-01-18 22:35:25.0
+  element_id: "72404"
+  id: "652"
+  element_type: Composer
+  annotation_id: "326"
+  documentation: Includes also the history of substituted collaterals
+  version: "2"
+annotation_versions_407: 
+  updated_at: 2009-01-18 19:02:53.0
+  element_id: "5101"
+  id: "407"
+  element_type: Composer
+  annotation_id: "204"
+  documentation: 
+  version: "1"
+annotation_versions_125: 
+  updated_at: 2009-01-18 18:51:48.0
+  element_id: "1603"
+  id: "125"
+  element_type: Composer
+  annotation_id: "63"
+  documentation: 
+  version: "1"
+annotation_versions_653: 
+  updated_at: 2009-01-18 23:03:35.0
+  element_id: "80374"
+  id: "653"
+  element_type: Composer
+  annotation_id: "327"
+  documentation: 
+  version: "1"
+annotation_versions_286: 
+  updated_at: 2009-01-18 18:54:17.0
+  element_id: "2452"
+  id: "286"
+  element_type: Composer
+  annotation_id: "143"
+  documentation: Definition of calypso FixingMethod object
+  version: "2"
+annotation_versions_850: 
+  updated_at: 2009-01-18 23:22:41.0
+  element_id: "85661"
+  id: "850"
+  element_type: Composer
+  annotation_id: "425"
+  documentation: This provides the definition of EconomicPL params.
+  version: "2"
+annotation_versions_284: 
+  updated_at: 2009-01-18 18:54:15.0
+  element_id: "2445"
+  id: "284"
+  element_type: Composer
+  annotation_id: "142"
+  documentation: Definition of Calypso Domain Value
+  version: "2"
+annotation_versions_285: 
+  updated_at: 2009-01-18 18:54:17.0
+  element_id: "2452"
+  id: "285"
+  element_type: Composer
+  annotation_id: "143"
+  documentation: 
+  version: "1"
+annotation_versions_408: 
+  updated_at: 2009-01-18 19:02:53.0
+  element_id: "5101"
+  id: "408"
+  element_type: Composer
+  annotation_id: "204"
+  documentation: This is the information about FeeDate.
+  version: "2"
+annotation_versions_654: 
+  updated_at: 2009-01-18 23:03:35.0
+  element_id: "80374"
+  id: "654"
+  element_type: Composer
+  annotation_id: "327"
+  documentation: This is the definition of a Calypso LEContact object.
+  version: "2"
+annotation_versions_123: 
+  updated_at: 2009-01-18 18:51:47.0
+  element_id: "1600"
+  id: "123"
+  element_type: Composer
+  annotation_id: "62"
+  documentation: 
+  version: "1"
+annotation_versions_655: 
+  updated_at: 2009-01-18 23:03:40.0
+  element_id: "80396"
+  id: "655"
+  element_type: Composer
+  annotation_id: "328"
+  documentation: 
+  version: "1"
+annotation_versions_288: 
+  updated_at: 2009-01-18 18:54:19.0
+  element_id: "2467"
+  id: "288"
+  element_type: Composer
+  annotation_id: "144"
+  documentation: This is the definition of a Calypso SpreadInfo object.
+  version: "2"
+annotation_versions_851: 
+  updated_at: 2009-01-18 23:23:23.0
+  element_id: "85852"
+  id: "851"
+  element_type: Composer
+  annotation_id: "426"
+  documentation: 
+  version: "1"
+annotation_versions_289: 
+  updated_at: 2009-01-18 18:54:23.0
+  element_id: "2494"
+  id: "289"
+  element_type: Composer
+  annotation_id: "145"
+  documentation: 
+  version: "1"
+annotation_versions_409: 
+  updated_at: 2009-01-18 19:02:56.0
+  element_id: "5110"
+  id: "409"
+  element_type: Composer
+  annotation_id: "205"
+  documentation: 
+  version: "1"
+annotation_versions_124: 
+  updated_at: 2009-01-18 18:51:47.0
+  element_id: "1600"
+  id: "124"
+  element_type: Composer
+  annotation_id: "62"
+  documentation: A comment associated to the LegalEntity.
+  version: "2"
+annotation_versions_287: 
+  updated_at: 2009-01-18 18:54:19.0
+  element_id: "2467"
+  id: "287"
+  element_type: Composer
+  annotation_id: "144"
+  documentation: 
+  version: "1"
+annotation_versions_122: 
+  updated_at: 2009-01-18 18:51:47.0
+  element_id: "1599"
+  id: "122"
+  element_type: Composer
+  annotation_id: "61"
+  documentation: The date when this LegalEntity becomes inactive.
+  version: "2"
+annotation_versions_656: 
+  updated_at: 2009-01-18 23:03:40.0
+  element_id: "80396"
+  id: "656"
+  element_type: Composer
+  annotation_id: "328"
+  documentation: LEContact.setLegalEntityId()
+  version: "2"
+annotation_versions_657: 
+  updated_at: 2009-01-18 23:03:41.0
+  element_id: "80404"
+  id: "657"
+  element_type: Composer
+  annotation_id: "329"
+  documentation: 
+  version: "1"
+annotation_versions_852: 
+  updated_at: 2009-01-18 23:23:23.0
+  element_id: "85852"
+  id: "852"
+  element_type: Composer
+  annotation_id: "426"
+  documentation: This is the definition of a Calypso Risk Config object.
+  version: "2"
+annotation_versions_259: 
+  updated_at: 2009-01-18 18:53:52.0
+  element_id: "2302"
+  id: "259"
+  element_type: Composer
+  annotation_id: "130"
+  documentation: 
+  version: "1"
+annotation_versions_403: 
+  updated_at: 2009-01-18 19:02:22.0
+  element_id: "5014"
+  id: "403"
+  element_type: Composer
+  annotation_id: "202"
+  documentation: 
+  version: "1"
+annotation_versions_401: 
+  updated_at: 2009-01-18 19:02:11.0
+  element_id: "4981"
+  id: "401"
+  element_type: Composer
+  annotation_id: "201"
+  documentation: 
+  version: "1"
+annotation_versions_402: 
+  updated_at: 2009-01-18 19:02:11.0
+  element_id: "4981"
+  id: "402"
+  element_type: Composer
+  annotation_id: "201"
+  documentation: This is the definition of a Credit Event.
+  version: "2"
+annotation_versions_257: 
+  updated_at: 2009-01-18 18:53:52.0
+  element_id: "2301"
+  id: "257"
+  element_type: Composer
+  annotation_id: "129"
+  documentation: 
+  version: "1"
+annotation_versions_405: 
+  updated_at: 2009-01-18 19:02:42.0
+  element_id: "5076"
+  id: "405"
+  element_type: Composer
+  annotation_id: "203"
+  documentation: 
+  version: "1"
+annotation_versions_406: 
+  updated_at: 2009-01-18 19:02:42.0
+  element_id: "5076"
+  id: "406"
+  element_type: Composer
+  annotation_id: "203"
+  documentation: This is the information about CallInfo of the product.
+  version: "2"
+annotation_versions_404: 
+  updated_at: 2009-01-18 19:02:22.0
+  element_id: "5014"
+  id: "404"
+  element_type: Composer
+  annotation_id: "202"
+  documentation: This is the information about Credit Contingency of the product.
+  version: "2"
+annotation_versions_258: 
+  updated_at: 2009-01-18 18:53:52.0
+  element_id: "2301"
+  id: "258"
+  element_type: Composer
+  annotation_id: "129"
+  documentation: The number of days for spot currency trades.
+  version: "2"
+annotation_versions_400: 
+  updated_at: 2009-01-18 19:02:05.0
+  element_id: "4960"
+  id: "400"
+  element_type: Composer
+  annotation_id: "200"
+  documentation: Represents a party in a Trade.
+  version: "2"
+annotation_versions_250: 
+  updated_at: 2009-01-18 18:53:51.0
+  element_id: "2297"
+  id: "250"
+  element_type: Composer
+  annotation_id: "125"
+  documentation: The quotation factor of the currency pair.
+  version: "2"
+annotation_versions_310: 
+  updated_at: 2009-01-18 18:58:49.0
+  element_id: "4054"
+  id: "310"
+  element_type: Composer
+  annotation_id: "155"
+  documentation: Float
+  version: "2"
+annotation_versions_251: 
+  updated_at: 2009-01-18 18:53:51.0
+  element_id: "2298"
+  id: "251"
+  element_type: Composer
+  annotation_id: "126"
+  documentation: 
+  version: "1"
+annotation_versions_312: 
+  updated_at: 2009-01-18 18:59:17.0
+  element_id: "4214"
+  id: "312"
+  element_type: Composer
+  annotation_id: "156"
+  documentation: The system's holidays settings
+  version: "2"
+annotation_versions_311: 
+  updated_at: 2009-01-18 18:59:17.0
+  element_id: "4214"
+  id: "311"
+  element_type: Composer
+  annotation_id: "156"
+  documentation: 
+  version: "1"
+annotation_versions_255: 
+  updated_at: 2009-01-18 18:53:52.0
+  element_id: "2300"
+  id: "255"
+  element_type: Composer
+  annotation_id: "128"
+  documentation: 
+  version: "1"
+annotation_versions_256: 
+  updated_at: 2009-01-18 18:53:52.0
+  element_id: "2300"
+  id: "256"
+  element_type: Composer
+  annotation_id: "128"
+  documentation: Decimals to keep on the quote.
+  version: "2"
+annotation_versions_252: 
+  updated_at: 2009-01-18 18:53:51.0
+  element_id: "2298"
+  id: "252"
+  element_type: Composer
+  annotation_id: "126"
+  documentation: The value of a basis point.
+  version: "2"
+annotation_versions_253: 
+  updated_at: 2009-01-18 18:53:51.0
+  element_id: "2299"
+  id: "253"
+  element_type: Composer
+  annotation_id: "127"
+  documentation: 
+  version: "1"
+annotation_versions_254: 
+  updated_at: 2009-01-18 18:53:51.0
+  element_id: "2299"
+  id: "254"
+  element_type: Composer
+  annotation_id: "127"
+  documentation: Decimals to apply for the bp rounding.
+  version: "2"
+annotation_versions_872: 
+  updated_at: 2009-01-18 23:29:14.0
+  element_id: "87542"
+  id: "872"
+  element_type: Composer
+  annotation_id: "436"
+  documentation: Definition of calypso TotalReturnCommodityLeg object
+  version: "2"
+annotation_versions_873: 
+  updated_at: 2009-01-18 23:29:21.0
+  element_id: "87577"
+  id: "873"
+  element_type: Composer
+  annotation_id: "437"
+  documentation: 
+  version: "1"
+annotation_versions_874: 
+  updated_at: 2009-01-18 23:29:21.0
+  element_id: "87577"
+  id: "874"
+  element_type: Composer
+  annotation_id: "437"
+  documentation: Definition of calypso CommoditySwap object
+  version: "2"
+annotation_versions_699: 
+  updated_at: 2009-01-18 23:03:51.0
+  element_id: "80445"
+  id: "699"
+  element_type: Composer
+  annotation_id: "350"
+  documentation: 
+  version: "1"
+annotation_versions_875: 
+  updated_at: 2009-01-18 23:30:54.0
+  element_id: "88008"
+  id: "875"
+  element_type: Composer
+  annotation_id: "438"
+  documentation: 
+  version: "1"
+annotation_versions_877: 
+  updated_at: 2009-01-18 23:31:42.0
+  element_id: "88228"
+  id: "877"
+  element_type: Composer
+  annotation_id: "439"
+  documentation: 
+  version: "1"
+annotation_versions_876: 
+  updated_at: 2009-01-18 23:30:54.0
+  element_id: "88008"
+  id: "876"
+  element_type: Composer
+  annotation_id: "438"
+  documentation: Definition of calypso OTCOmmodityOption object
+  version: "2"
+annotation_versions_144: 
+  updated_at: 2009-01-18 18:52:07.0
+  element_id: "1723"
+  id: "144"
+  element_type: Composer
+  annotation_id: "72"
+  documentation: The currency of the account. If not defined, Currency=ANY.
+  version: "2"
+annotation_versions_698: 
+  updated_at: 2009-01-18 23:03:51.0
+  element_id: "80444"
+  id: "698"
+  element_type: Composer
+  annotation_id: "349"
+  documentation: LEContact.setExternalRef()
+  version: "2"
+annotation_versions_143: 
+  updated_at: 2009-01-18 18:52:07.0
+  element_id: "1723"
+  id: "143"
+  element_type: Composer
+  annotation_id: "72"
+  documentation: 
+  version: "1"
+annotation_versions_878: 
+  updated_at: 2009-01-18 23:31:42.0
+  element_id: "88228"
+  id: "878"
+  element_type: Composer
+  annotation_id: "439"
+  documentation: Asian
+  version: "2"
+annotation_versions_420: 
+  updated_at: 2009-01-18 19:04:05.0
+  element_id: "5354"
+  id: "420"
+  element_type: Composer
+  annotation_id: "210"
+  documentation: This enables the handling of mirrors by Calypso.
+  version: "2"
+annotation_versions_421: 
+  updated_at: 2009-01-18 19:04:06.0
+  element_id: "5355"
+  id: "421"
+  element_type: Composer
+  annotation_id: "211"
+  documentation: 
+  version: "1"
+annotation_versions_697: 
+  updated_at: 2009-01-18 23:03:50.0
+  element_id: "80444"
+  id: "697"
+  element_type: Composer
+  annotation_id: "349"
+  documentation: 
+  version: "1"
+annotation_versions_696: 
+  updated_at: 2009-01-18 23:03:50.0
+  element_id: "80443"
+  id: "696"
+  element_type: Composer
+  annotation_id: "348"
+  documentation: LEContact.setEMailAddress()
+  version: "2"
+annotation_versions_142: 
+  updated_at: 2009-01-18 18:52:06.0
+  element_id: "1710"
+  id: "142"
+  element_type: Composer
+  annotation_id: "71"
+  documentation: The processing organisation of the account. If not a LegalEntity,
+    then could be AUTO/ALL. If not defined, ProcessingOrg=ALL.
+  version: "2"
+annotation_versions_423: 
+  updated_at: 2009-01-18 19:04:07.0
+  element_id: "5362"
+  id: "423"
+  element_type: Composer
+  annotation_id: "212"
+  documentation: 
+  version: "1"
+annotation_versions_879: 
+  updated_at: 2009-01-18 23:31:58.0
+  element_id: "88307"
+  id: "879"
+  element_type: Composer
+  annotation_id: "440"
+  documentation: 
+  version: "1"
+annotation_versions_141: 
+  updated_at: 2009-01-18 18:52:06.0
+  element_id: "1710"
+  id: "141"
+  element_type: Composer
+  annotation_id: "71"
+  documentation: 
+  version: "1"
+annotation_versions_424: 
+  updated_at: 2009-01-18 19:04:07.0
+  element_id: "5362"
+  id: "424"
+  element_type: Composer
+  annotation_id: "212"
+  documentation: Required to enable mirror handling in Calypso.
+  version: "2"
+annotation_versions_422: 
+  updated_at: 2009-01-18 19:04:06.0
+  element_id: "5355"
+  id: "422"
+  element_type: Composer
+  annotation_id: "211"
+  documentation: "This identifies to the Trade that is a mirror of this one. When \
+    this is present,\n\t\t\t\t\t\t\t\twe will ensure that the mirror trade created \
+    in Calypso will carry this information\n\t\t\t\t\t\t\t\t to ensure that updates \
+    can be made on any of the mirrored trades (both are managed remotely).\n\t\t\t\
+    \t\t\t\t\t When it is not present, the system will assume that the mirror is managed \
+    locally only."
+  version: "2"
+annotation_versions_140: 
+  updated_at: 2009-01-18 18:52:01.0
+  element_id: "1685"
+  id: "140"
+  element_type: Composer
+  annotation_id: "70"
+  documentation: This is the definition of a com.calypso.tk.refdata.Account object.
+  version: "2"
+annotation_versions_695: 
+  updated_at: 2009-01-18 23:03:50.0
+  element_id: "80443"
+  id: "695"
+  element_type: Composer
+  annotation_id: "348"
+  documentation: 
+  version: "1"
+annotation_versions_148: 
+  updated_at: 2009-01-18 18:52:08.0
+  element_id: "1728"
+  id: "148"
+  element_type: Composer
+  annotation_id: "74"
+  documentation: The identifiers of the parent Account.
+  version: "2"
+annotation_versions_149: 
+  updated_at: 2009-01-18 18:52:09.0
+  element_id: "1735"
+  id: "149"
+  element_type: Composer
+  annotation_id: "75"
+  documentation: 
+  version: "1"
+annotation_versions_907: 
+  updated_at: 2009-01-18 23:43:30.0
+  element_id: "91302"
+  id: "907"
+  element_type: Composer
+  annotation_id: "454"
+  documentation: 
+  version: "1"
+annotation_versions_906: 
+  updated_at: 2009-01-18 23:43:22.0
+  element_id: "91262"
+  id: "906"
+  element_type: Composer
+  annotation_id: "453"
+  documentation: Definition of calypso CommodityReset object
+  version: "2"
+annotation_versions_147: 
+  updated_at: 2009-01-18 18:52:08.0
+  element_id: "1728"
+  id: "147"
+  element_type: Composer
+  annotation_id: "74"
+  documentation: 
+  version: "1"
+annotation_versions_909: 
+  updated_at: 2009-01-18 23:43:33.0
+  element_id: "91315"
+  id: "909"
+  element_type: Composer
+  annotation_id: "455"
+  documentation: 
+  version: "1"
+annotation_versions_145: 
+  updated_at: 2009-01-18 18:52:07.0
+  element_id: "1726"
+  id: "145"
+  element_type: Composer
+  annotation_id: "73"
+  documentation: 
+  version: "1"
+annotation_versions_670: 
+  updated_at: 2009-01-18 23:03:46.0
+  element_id: "80426"
+  id: "670"
+  element_type: Composer
+  annotation_id: "335"
+  documentation: LEContact.setEffectiveTo()
+  version: "2"
+annotation_versions_908: 
+  updated_at: 2009-01-18 23:43:30.0
+  element_id: "91302"
+  id: "908"
+  element_type: Composer
+  annotation_id: "454"
+  documentation: Definition of calypso CommodityUnitConversion object
+  version: "2"
+annotation_versions_146: 
+  updated_at: 2009-01-18 18:52:07.0
+  element_id: "1726"
+  id: "146"
+  element_type: Composer
+  annotation_id: "73"
+  documentation: The type of the account (SETTLE or DEBIT for instance).
+  version: "2"
+annotation_versions_902: 
+  updated_at: 2009-01-18 23:40:26.0
+  element_id: "90514"
+  id: "902"
+  element_type: Composer
+  annotation_id: "451"
+  documentation: Definition of calypso CommoditySwap2 object
+  version: "2"
+annotation_versions_671: 
+  updated_at: 2009-01-18 23:03:46.0
+  element_id: "80427"
+  id: "671"
+  element_type: Composer
+  annotation_id: "336"
+  documentation: 
+  version: "1"
+annotation_versions_672: 
+  updated_at: 2009-01-18 23:03:46.0
+  element_id: "80427"
+  id: "672"
+  element_type: Composer
+  annotation_id: "336"
+  documentation: LEContact.setLastName()
+  version: "2"
+annotation_versions_901: 
+  updated_at: 2009-01-18 23:40:26.0
+  element_id: "90514"
+  id: "901"
+  element_type: Composer
+  annotation_id: "451"
+  documentation: 
+  version: "1"
+annotation_versions_900: 
+  updated_at: 2009-01-18 23:39:43.0
+  element_id: "90298"
+  id: "900"
+  element_type: Composer
+  annotation_id: "450"
+  documentation: Definition of calypso CommodityBasedTradeProduct object
+  version: "2"
+annotation_versions_673: 
+  updated_at: 2009-01-18 23:03:47.0
+  element_id: "80430"
+  id: "673"
+  element_type: Composer
+  annotation_id: "337"
+  documentation: 
+  version: "1"
+annotation_versions_905: 
+  updated_at: 2009-01-18 23:43:22.0
+  element_id: "91262"
+  id: "905"
+  element_type: Composer
+  annotation_id: "453"
+  documentation: 
+  version: "1"
+annotation_versions_674: 
+  updated_at: 2009-01-18 23:03:47.0
+  element_id: "80430"
+  id: "674"
+  element_type: Composer
+  annotation_id: "337"
+  documentation: LEContact.setFirstName()
+  version: "2"
+annotation_versions_591: 
+  updated_at: 2009-01-18 21:29:01.0
+  element_id: "52909"
+  id: "591"
+  element_type: Composer
+  annotation_id: "296"
+  documentation: 
+  version: "1"
+annotation_versions_870: 
+  updated_at: 2009-01-18 23:28:56.0
+  element_id: "87447"
+  id: "870"
+  element_type: Composer
+  annotation_id: "435"
+  documentation: Definition of calypso CommodityLeg object
+  version: "2"
+annotation_versions_590: 
+  updated_at: 2009-01-18 21:25:23.0
+  element_id: "51787"
+  id: "590"
+  element_type: Composer
+  annotation_id: "295"
+  documentation: This is the definition of a Credit Default Swap Nth Loss.
+  version: "2"
+annotation_versions_904: 
+  updated_at: 2009-01-18 23:42:01.0
+  element_id: "90912"
+  id: "904"
+  element_type: Composer
+  annotation_id: "452"
+  documentation: Definition of calypso CommodityOTCOption2 object
+  version: "2"
+annotation_versions_903: 
+  updated_at: 2009-01-18 23:42:01.0
+  element_id: "90912"
+  id: "903"
+  element_type: Composer
+  annotation_id: "452"
+  documentation: 
+  version: "1"
+annotation_versions_675: 
+  updated_at: 2009-01-18 23:03:47.0
+  element_id: "80433"
+  id: "675"
+  element_type: Composer
+  annotation_id: "338"
+  documentation: 
+  version: "1"
+annotation_versions_871: 
+  updated_at: 2009-01-18 23:29:14.0
+  element_id: "87542"
+  id: "871"
+  element_type: Composer
+  annotation_id: "436"
+  documentation: 
+  version: "1"
+annotation_versions_425: 
+  updated_at: 2009-01-18 19:04:14.0
+  element_id: "5412"
+  id: "425"
+  element_type: Composer
+  annotation_id: "213"
+  documentation: 
+  version: "1"
+annotation_versions_426: 
+  updated_at: 2009-01-18 19:04:14.0
+  element_id: "5412"
+  id: "426"
+  element_type: Composer
+  annotation_id: "213"
+  documentation: This is the representation of a Trade Fee.
+  version: "2"
+annotation_versions_428: 
+  updated_at: 2009-01-18 19:06:07.0
+  element_id: "6059"
+  id: "428"
+  element_type: Composer
+  annotation_id: "214"
+  documentation: This is the definition of a Calypso Mutation object.
+  version: "2"
+annotation_versions_427: 
+  updated_at: 2009-01-18 19:06:07.0
+  element_id: "6059"
+  id: "427"
+  element_type: Composer
+  annotation_id: "214"
+  documentation: 
+  version: "1"
+annotation_versions_429: 
+  updated_at: 2009-01-18 19:06:26.0
+  element_id: "6173"
+  id: "429"
+  element_type: Composer
+  annotation_id: "215"
+  documentation: 
+  version: "1"
+annotation_versions_744: 
+  updated_at: 2009-01-18 23:04:12.0
+  element_id: "80544"
+  id: "744"
+  element_type: Composer
+  annotation_id: "372"
+  documentation: AccountingRule.setFirstLastB()
+  version: "2"
+annotation_versions_745: 
+  updated_at: 2009-01-18 23:04:12.0
+  element_id: "80545"
+  id: "745"
+  element_type: Composer
+  annotation_id: "373"
+  documentation: 
+  version: "1"
+annotation_versions_741: 
+  updated_at: 2009-01-18 23:04:11.0
+  element_id: "80537"
+  id: "741"
+  element_type: Composer
+  annotation_id: "371"
+  documentation: 
+  version: "1"
+annotation_versions_743: 
+  updated_at: 2009-01-18 23:04:12.0
+  element_id: "80544"
+  id: "743"
+  element_type: Composer
+  annotation_id: "372"
+  documentation: 
+  version: "1"
+annotation_versions_742: 
+  updated_at: 2009-01-18 23:04:11.0
+  element_id: "80537"
+  id: "742"
+  element_type: Composer
+  annotation_id: "371"
+  documentation: AccountingRule.setPricingEnvName()
+  version: "2"
+annotation_versions_749: 
+  updated_at: 2009-01-18 23:04:13.0
+  element_id: "80548"
+  id: "749"
+  element_type: Composer
+  annotation_id: "375"
+  documentation: 
+  version: "1"
+annotation_versions_747: 
+  updated_at: 2009-01-18 23:04:12.0
+  element_id: "80546"
+  id: "747"
+  element_type: Composer
+  annotation_id: "374"
+  documentation: 
+  version: "1"
+annotation_versions_746: 
+  updated_at: 2009-01-18 23:04:12.0
+  element_id: "80545"
+  id: "746"
+  element_type: Composer
+  annotation_id: "373"
+  documentation: AccountingRule.setCheckPricingEnvB()
+  version: "2"
+annotation_versions_748: 
+  updated_at: 2009-01-18 23:04:12.0
+  element_id: "80546"
+  id: "748"
+  element_type: Composer
+  annotation_id: "374"
+  documentation: AccountingRule.setdateRule()
+  version: "2"
+annotation_versions_740: 
+  updated_at: 2009-01-18 23:04:10.0
+  element_id: "80535"
+  id: "740"
+  element_type: Composer
+  annotation_id: "370"
+  documentation: AccountingRule.setReversalRule()
+  version: "2"
+annotation_versions_263: 
+  updated_at: 2009-01-18 18:53:53.0
+  element_id: "2305"
+  id: "263"
+  element_type: Composer
+  annotation_id: "132"
+  documentation: 
+  version: "1"
+annotation_versions_594: 
+  updated_at: 2009-01-18 21:29:38.0
+  element_id: "53120"
+  id: "594"
+  element_type: Composer
+  annotation_id: "297"
+  documentation: This is the definition of a CDSIndexDefinition.
+  version: "2"
+annotation_versions_262: 
+  updated_at: 2009-01-18 18:53:52.0
+  element_id: "2303"
+  id: "262"
+  element_type: Composer
+  annotation_id: "131"
+  documentation: Used in some cases when the currency pair is split.
+  version: "2"
+annotation_versions_595: 
+  updated_at: 2009-01-18 21:33:31.0
+  element_id: "54286"
+  id: "595"
+  element_type: Composer
+  annotation_id: "298"
+  documentation: 
+  version: "1"
+annotation_versions_261: 
+  updated_at: 2009-01-18 18:53:52.0
+  element_id: "2303"
+  id: "261"
+  element_type: Composer
+  annotation_id: "131"
+  documentation: 
+  version: "1"
+annotation_versions_596: 
+  updated_at: 2009-01-18 21:33:31.0
+  element_id: "54286"
+  id: "596"
+  element_type: Composer
+  annotation_id: "298"
+  documentation: This is the definition of a Credit Default Swaption.
+  version: "2"
+annotation_versions_265: 
+  updated_at: 2009-01-18 18:53:53.0
+  element_id: "2306"
+  id: "265"
+  element_type: Composer
+  annotation_id: "133"
+  documentation: 
+  version: "1"
+annotation_versions_592: 
+  updated_at: 2009-01-18 21:29:01.0
+  element_id: "52909"
+  id: "592"
+  element_type: Composer
+  annotation_id: "296"
+  documentation: This is the definition of a CDS Index.
+  version: "2"
+annotation_versions_264: 
+  updated_at: 2009-01-18 18:53:53.0
+  element_id: "2305"
+  id: "264"
+  element_type: Composer
+  annotation_id: "132"
+  documentation: The first date when the pair can be used.
+  version: "2"
+annotation_versions_593: 
+  updated_at: 2009-01-18 21:29:38.0
+  element_id: "53120"
+  id: "593"
+  element_type: Composer
+  annotation_id: "297"
+  documentation: 
+  version: "1"
+annotation_versions_379: 
+  updated_at: 2009-01-18 19:00:14.0
+  element_id: "4567"
+  id: "379"
+  element_type: Composer
+  annotation_id: "190"
+  documentation: 
+  version: "1"
+annotation_versions_020: 
+  updated_at: 2009-01-18 18:47:39.0
+  element_id: "103"
+  id: "20"
+  element_type: Composer
+  annotation_id: "10"
+  documentation: "Identifies string values that should be part of a Calypso\n\t\t\t\
+    domain."
+  version: "2"
+annotation_versions_021: 
+  updated_at: 2009-01-18 18:47:39.0
+  element_id: "105"
+  id: "21"
+  element_type: Composer
+  annotation_id: "11"
+  documentation: 
+  version: "1"
+annotation_versions_599: 
+  updated_at: 2009-01-18 21:39:06.0
+  element_id: "56015"
+  id: "599"
+  element_type: Composer
+  annotation_id: "300"
+  documentation: 
+  version: "1"
+annotation_versions_378: 
+  updated_at: 2009-01-18 19:00:14.0
+  element_id: "4559"
+  id: "378"
+  element_type: Composer
+  annotation_id: "189"
+  documentation: SettleDeliveryInstruction.setIntermediaryId(Id of the Intermediary
+    referred by its short name or by its external reference)
+  version: "2"
+annotation_versions_260: 
+  updated_at: 2009-01-18 18:53:52.0
+  element_id: "2302"
+  id: "260"
+  element_type: Composer
+  annotation_id: "130"
+  documentation: Determines whether a Currency pair can be used in splits.
+  version: "2"
+annotation_versions_023: 
+  updated_at: 2009-01-18 18:47:40.0
+  element_id: "108"
+  id: "23"
+  element_type: Composer
+  annotation_id: "12"
+  documentation: 
+  version: "1"
+annotation_versions_597: 
+  updated_at: 2009-01-18 21:37:29.0
+  element_id: "55489"
+  id: "597"
+  element_type: Composer
+  annotation_id: "299"
+  documentation: 
+  version: "1"
+annotation_versions_598: 
+  updated_at: 2009-01-18 21:37:29.0
+  element_id: "55489"
+  id: "598"
+  element_type: Composer
+  annotation_id: "299"
+  documentation: This is the definition of a Total Return Swap.
+  version: "2"
+annotation_versions_022: 
+  updated_at: 2009-01-18 18:47:39.0
+  element_id: "105"
+  id: "22"
+  element_type: Composer
+  annotation_id: "11"
+  documentation: Defines a string type that preserves the white spaces.
+  version: "2"
+annotation_versions_690: 
+  updated_at: 2009-01-18 23:03:49.0
+  element_id: "80440"
+  id: "690"
+  element_type: Composer
+  annotation_id: "345"
+  documentation: LEContact.setTelex()
+  version: "2"
+annotation_versions_374: 
+  updated_at: 2009-01-18 19:00:12.0
+  element_id: "4556"
+  id: "374"
+  element_type: Composer
+  annotation_id: "187"
+  documentation: SettleDeliveryInstruction.setAgentSubAccount()
+  version: "2"
+annotation_versions_375: 
+  updated_at: 2009-01-18 19:00:12.0
+  element_id: "4557"
+  id: "375"
+  element_type: Composer
+  annotation_id: "188"
+  documentation: 
+  version: "1"
+annotation_versions_373: 
+  updated_at: 2009-01-18 19:00:12.0
+  element_id: "4556"
+  id: "373"
+  element_type: Composer
+  annotation_id: "187"
+  documentation: 
+  version: "1"
+annotation_versions_025: 
+  updated_at: 2009-01-18 18:47:40.0
+  element_id: "111"
+  id: "25"
+  element_type: Composer
+  annotation_id: "13"
+  documentation: 
+  version: "1"
+annotation_versions_691: 
+  updated_at: 2009-01-18 23:03:50.0
+  element_id: "80441"
+  id: "691"
+  element_type: Composer
+  annotation_id: "346"
+  documentation: 
+  version: "1"
+annotation_versions_024: 
+  updated_at: 2009-01-18 18:47:40.0
+  element_id: "108"
+  id: "24"
+  element_type: Composer
+  annotation_id: "12"
+  documentation: The string representation of a currency.
+  version: "2"
+annotation_versions_377: 
+  updated_at: 2009-01-18 19:00:14.0
+  element_id: "4559"
+  id: "377"
+  element_type: Composer
+  annotation_id: "189"
+  documentation: 
+  version: "1"
+annotation_versions_028: 
+  updated_at: 2009-01-18 18:47:46.0
+  element_id: "143"
+  id: "28"
+  element_type: Composer
+  annotation_id: "14"
+  documentation: The type that describes how a Date is adjusted.
+  version: "2"
+annotation_versions_027: 
+  updated_at: 2009-01-18 18:47:46.0
+  element_id: "143"
+  id: "27"
+  element_type: Composer
+  annotation_id: "14"
+  documentation: 
+  version: "1"
+annotation_versions_692: 
+  updated_at: 2009-01-18 23:03:50.0
+  element_id: "80441"
+  id: "692"
+  element_type: Composer
+  annotation_id: "346"
+  documentation: LEContact.setFax()
+  version: "2"
+annotation_versions_694: 
+  updated_at: 2009-01-18 23:03:50.0
+  element_id: "80442"
+  id: "694"
+  element_type: Composer
+  annotation_id: "347"
+  documentation: LEContact.setSwift()
+  version: "2"
+annotation_versions_376: 
+  updated_at: 2009-01-18 19:00:13.0
+  element_id: "4557"
+  id: "376"
+  element_type: Composer
+  annotation_id: "188"
+  documentation: This object is a generic layer for Intermediary and Intermediary
+    2
+  version: "2"
+annotation_versions_026: 
+  updated_at: 2009-01-18 18:47:40.0
+  element_id: "111"
+  id: "26"
+  element_type: Composer
+  annotation_id: "13"
+  documentation: Defines a list of holidays.
+  version: "2"
+annotation_versions_693: 
+  updated_at: 2009-01-18 23:03:50.0
+  element_id: "80442"
+  id: "693"
+  element_type: Composer
+  annotation_id: "347"
+  documentation: 
+  version: "1"
+annotation_versions_266: 
+  updated_at: 2009-01-18 18:53:53.0
+  element_id: "2306"
+  id: "266"
+  element_type: Composer
+  annotation_id: "133"
+  documentation: The last date when the pair can be used.
+  version: "2"
+annotation_versions_029: 
+  updated_at: 2009-01-18 18:47:48.0
+  element_id: "151"
+  id: "29"
+  element_type: Composer
+  annotation_id: "15"
+  documentation: 
+  version: "1"
+annotation_versions_267: 
+  updated_at: 2009-01-18 18:53:54.0
+  element_id: "2307"
+  id: "267"
+  element_type: Composer
+  annotation_id: "134"
+  documentation: 
+  version: "1"
+annotation_versions_269: 
+  updated_at: 2009-01-18 18:53:54.0
+  element_id: "2310"
+  id: "269"
+  element_type: Composer
+  annotation_id: "135"
+  documentation: 
+  version: "1"
+annotation_versions_372: 
+  updated_at: 2009-01-18 19:00:12.0
+  element_id: "4549"
+  id: "372"
+  element_type: Composer
+  annotation_id: "186"
+  documentation: SettleDeliveryInstruction.setGeneralLedgerAccount(Id of the Account
+    referred by its name or by its external reference)
+  version: "2"
+annotation_versions_370: 
+  updated_at: 2009-01-18 19:00:11.0
+  element_id: "4548"
+  id: "370"
+  element_type: Composer
+  annotation_id: "185"
+  documentation: SettleDeliveryInstruction.setMessageToAgent()
+  version: "2"
+annotation_versions_268: 
+  updated_at: 2009-01-18 18:53:54.0
+  element_id: "2307"
+  id: "268"
+  element_type: Composer
+  annotation_id: "134"
+  documentation: The currency family for the quote.
+  version: "2"
+annotation_versions_371: 
+  updated_at: 2009-01-18 19:00:12.0
+  element_id: "4549"
+  id: "371"
+  element_type: Composer
+  annotation_id: "186"
+  documentation: 
+  version: "1"
+annotation_versions_552: 
+  updated_at: 2009-01-18 20:29:22.0
+  element_id: "33504"
+  id: "552"
+  element_type: Composer
+  annotation_id: "276"
+  documentation: "This is the definition of a com.calypso.tk.product.Future object.\n\
+    \t\t\tProductDefinition extensions can not be distributed as independent Documents."
+  version: "2"
+annotation_versions_606: 
+  updated_at: 2009-01-18 21:42:20.0
+  element_id: "57040"
+  id: "606"
+  element_type: Composer
+  annotation_id: "303"
+  documentation: This is ABS Index.
+  version: "2"
+annotation_versions_634: 
+  updated_at: 2009-01-18 22:14:54.0
+  element_id: "66763"
+  id: "634"
+  element_type: Composer
+  annotation_id: "317"
+  documentation: This is the definition of a FXSwap.
+  version: "2"
+annotation_versions_635: 
+  updated_at: 2009-01-18 22:15:25.0
+  element_id: "66929"
+  id: "635"
+  element_type: Composer
+  annotation_id: "318"
+  documentation: 
+  version: "1"
+annotation_versions_719: 
+  updated_at: 2009-01-18 23:04:00.0
+  element_id: "80490"
+  id: "719"
+  element_type: Composer
+  annotation_id: "360"
+  documentation: 
+  version: "1"
+annotation_versions_551: 
+  updated_at: 2009-01-18 20:29:22.0
+  element_id: "33504"
+  id: "551"
+  element_type: Composer
+  annotation_id: "276"
+  documentation: 
+  version: "1"
+annotation_versions_550: 
+  updated_at: 2009-01-18 20:28:53.0
+  element_id: "33337"
+  id: "550"
+  element_type: Composer
+  annotation_id: "275"
+  documentation: This is the definition of a com.calypso.tk.product.FutureOptionContract
+    object.
+  version: "2"
+annotation_versions_605: 
+  updated_at: 2009-01-18 21:42:20.0
+  element_id: "57040"
+  id: "605"
+  element_type: Composer
+  annotation_id: "303"
+  documentation: 
+  version: "1"
+annotation_versions_636: 
+  updated_at: 2009-01-18 22:15:25.0
+  element_id: "66929"
+  id: "636"
+  element_type: Composer
+  annotation_id: "318"
+  documentation: This is the definition of a FXOptionSwap.
+  version: "2"
+annotation_versions_637: 
+  updated_at: 2009-01-18 22:16:01.0
+  element_id: "67101"
+  id: "637"
+  element_type: Composer
+  annotation_id: "319"
+  documentation: 
+  version: "1"
+annotation_versions_554: 
+  updated_at: 2009-01-18 20:29:50.0
+  element_id: "33664"
+  id: "554"
+  element_type: Composer
+  annotation_id: "277"
+  documentation: "This is the envelope that enables to distribute a FutureDefinition\n\
+    \t\t\tas an independent Document."
+  version: "2"
+annotation_versions_603: 
+  updated_at: 2009-01-18 21:40:25.0
+  element_id: "56451"
+  id: "603"
+  element_type: Composer
+  annotation_id: "302"
+  documentation: 
+  version: "1"
+annotation_versions_604: 
+  updated_at: 2009-01-18 21:40:25.0
+  element_id: "56451"
+  id: "604"
+  element_type: Composer
+  annotation_id: "302"
+  documentation: This is the definition of a CDSABS.
+  version: "2"
+annotation_versions_602: 
+  updated_at: 2009-01-18 21:39:21.0
+  element_id: "56102"
+  id: "602"
+  element_type: Composer
+  annotation_id: "301"
+  documentation: This is the definition of premium leg
+  version: "2"
+annotation_versions_638: 
+  updated_at: 2009-01-18 22:16:01.0
+  element_id: "67101"
+  id: "638"
+  element_type: Composer
+  annotation_id: "319"
+  documentation: This is the definition of a FXCash.
+  version: "2"
+annotation_versions_639: 
+  updated_at: 2009-01-18 22:16:29.0
+  element_id: "67255"
+  id: "639"
+  element_type: Composer
+  annotation_id: "320"
+  documentation: 
+  version: "1"
+annotation_versions_553: 
+  updated_at: 2009-01-18 20:29:49.0
+  element_id: "33664"
+  id: "553"
+  element_type: Composer
+  annotation_id: "277"
+  documentation: 
+  version: "1"
+annotation_versions_630: 
+  updated_at: 2009-01-18 22:13:26.0
+  element_id: "66316"
+  id: "630"
+  element_type: Composer
+  annotation_id: "315"
+  documentation: This is the definition of a FXNDF.
+  version: "2"
+annotation_versions_714: 
+  updated_at: 2009-01-18 23:03:59.0
+  element_id: "80484"
+  id: "714"
+  element_type: Composer
+  annotation_id: "357"
+  documentation: AccountingEventConfig.setEventClass()
+  version: "2"
+annotation_versions_716: 
+  updated_at: 2009-01-18 23:04:00.0
+  element_id: "80486"
+  id: "716"
+  element_type: Composer
+  annotation_id: "358"
+  documentation: AccountingEventConfig.setBookingType()
+  version: "2"
+annotation_versions_715: 
+  updated_at: 2009-01-18 23:04:00.0
+  element_id: "80486"
+  id: "715"
+  element_type: Composer
+  annotation_id: "358"
+  documentation: 
+  version: "1"
+annotation_versions_631: 
+  updated_at: 2009-01-18 22:14:03.0
+  element_id: "66499"
+  id: "631"
+  element_type: Composer
+  annotation_id: "316"
+  documentation: 
+  version: "1"
+annotation_versions_717: 
+  updated_at: 2009-01-18 23:04:00.0
+  element_id: "80488"
+  id: "717"
+  element_type: Composer
+  annotation_id: "359"
+  documentation: 
+  version: "1"
+annotation_versions_609: 
+  updated_at: 2009-01-18 21:44:36.0
+  element_id: "57733"
+  id: "609"
+  element_type: Composer
+  annotation_id: "305"
+  documentation: 
+  version: "1"
+annotation_versions_632: 
+  updated_at: 2009-01-18 22:14:03.0
+  element_id: "66499"
+  id: "632"
+  element_type: Composer
+  annotation_id: "316"
+  documentation: This is the definition of a FXOption.
+  version: "2"
+annotation_versions_607: 
+  updated_at: 2009-01-18 21:42:49.0
+  element_id: "57198"
+  id: "607"
+  element_type: Composer
+  annotation_id: "304"
+  documentation: 
+  version: "1"
+annotation_versions_633: 
+  updated_at: 2009-01-18 22:14:54.0
+  element_id: "66763"
+  id: "633"
+  element_type: Composer
+  annotation_id: "317"
+  documentation: 
+  version: "1"
+annotation_versions_608: 
+  updated_at: 2009-01-18 21:42:49.0
+  element_id: "57198"
+  id: "608"
+  element_type: Composer
+  annotation_id: "304"
+  documentation: This is the definition of a Total Return Swap Basket.
+  version: "2"
+annotation_versions_718: 
+  updated_at: 2009-01-18 23:04:00.0
+  element_id: "80488"
+  id: "718"
+  element_type: Composer
+  annotation_id: "359"
+  documentation: AccountingEventConfig.setEventProperty()
+  version: "2"
+annotation_versions_710: 
+  updated_at: 2009-01-18 23:03:58.0
+  element_id: "80480"
+  id: "710"
+  element_type: Composer
+  annotation_id: "355"
+  documentation: AccountingEventConfig.setProductType()
+  version: "2"
+annotation_versions_711: 
+  updated_at: 2009-01-18 23:03:59.0
+  element_id: "80482"
+  id: "711"
+  element_type: Composer
+  annotation_id: "356"
+  documentation: 
+  version: "1"
+annotation_versions_712: 
+  updated_at: 2009-01-18 23:03:59.0
+  element_id: "80482"
+  id: "712"
+  element_type: Composer
+  annotation_id: "356"
+  documentation: AccountingEventConfig.setRetroActivity()
+  version: "2"
+annotation_versions_713: 
+  updated_at: 2009-01-18 23:03:59.0
+  element_id: "80484"
+  id: "713"
+  element_type: Composer
+  annotation_id: "357"
+  documentation: 
+  version: "1"
+annotation_versions_601: 
+  updated_at: 2009-01-18 21:39:21.0
+  element_id: "56102"
+  id: "601"
+  element_type: Composer
+  annotation_id: "301"
+  documentation: 
+  version: "1"
+annotation_versions_600: 
+  updated_at: 2009-01-18 21:39:06.0
+  element_id: "56015"
+  id: "600"
+  element_type: Composer
+  annotation_id: "300"
+  documentation: This is the definition of protection leg
+  version: "2"
+annotation_versions_165: 
+  updated_at: 2009-01-18 18:52:15.0
+  element_id: "1767"
+  id: "165"
+  element_type: Composer
+  annotation_id: "83"
+  documentation: 
+  version: "1"
+annotation_versions_163: 
+  updated_at: 2009-01-18 18:52:15.0
+  element_id: "1760"
+  id: "163"
+  element_type: Composer
+  annotation_id: "82"
+  documentation: 
+  version: "1"
+annotation_versions_164: 
+  updated_at: 2009-01-18 18:52:15.0
+  element_id: "1760"
+  id: "164"
+  element_type: Composer
+  annotation_id: "82"
+  documentation: "The closing Account oforf this Account. It is used to clear the\n\
+    \t\t\t\t\t\t\tbalance of this Account when executing com.calypso.tk.util.ScheduledTaskBALANCE."
+  version: "2"
+annotation_versions_167: 
+  updated_at: 2009-01-18 18:52:16.0
+  element_id: "1768"
+  id: "167"
+  element_type: Composer
+  annotation_id: "84"
+  documentation: 
+  version: "1"
+annotation_versions_168: 
+  updated_at: 2009-01-18 18:52:16.0
+  element_id: "1768"
+  id: "168"
+  element_type: Composer
+  annotation_id: "84"
+  documentation: True when the account generates a balance
+  version: "2"
+annotation_versions_166: 
+  updated_at: 2009-01-18 18:52:15.0
+  element_id: "1767"
+  id: "166"
+  element_type: Composer
+  annotation_id: "83"
+  documentation: The last closing date for this account.
+  version: "2"
+annotation_versions_169: 
+  updated_at: 2009-01-18 18:52:16.0
+  element_id: "1769"
+  id: "169"
+  element_type: Composer
+  annotation_id: "85"
+  documentation: 
+  version: "1"
+annotation_versions_082: 
+  updated_at: 2009-01-18 18:50:00.0
+  element_id: "933"
+  id: "82"
+  element_type: Composer
+  annotation_id: "41"
+  documentation: Definition of a Calypso group object.
+  version: "2"
+annotation_versions_083: 
+  updated_at: 2009-01-18 18:50:06.0
+  element_id: "963"
+  id: "83"
+  element_type: Composer
+  annotation_id: "42"
+  documentation: 
+  version: "1"
+annotation_versions_081: 
+  updated_at: 2009-01-18 18:50:00.0
+  element_id: "933"
+  id: "81"
+  element_type: Composer
+  annotation_id: "41"
+  documentation: 
+  version: "1"
+annotation_versions_763: 
+  updated_at: 2009-01-18 23:04:27.0
+  element_id: "80620"
+  id: "763"
+  element_type: Composer
+  annotation_id: "382"
+  documentation: 
+  version: "1"
+annotation_versions_080: 
+  updated_at: 2009-01-18 18:49:59.0
+  element_id: "928"
+  id: "80"
+  element_type: Composer
+  annotation_id: "40"
+  documentation: "Definition of menu item listed in the menu\n\t\t\t\tconfiguration."
+  version: "2"
+annotation_versions_760: 
+  updated_at: 2009-01-18 23:04:26.0
+  element_id: "80618"
+  id: "760"
+  element_type: Composer
+  annotation_id: "380"
+  documentation: ReportTemplate.setHidden()
+  version: "2"
+annotation_versions_762: 
+  updated_at: 2009-01-18 23:04:27.0
+  element_id: "80619"
+  id: "762"
+  element_type: Composer
+  annotation_id: "381"
+  documentation: ReportTemplate.setPrivate()
+  version: "2"
+annotation_versions_761: 
+  updated_at: 2009-01-18 23:04:27.0
+  element_id: "80619"
+  id: "761"
+  element_type: Composer
+  annotation_id: "381"
+  documentation: 
+  version: "1"
+annotation_versions_160: 
+  updated_at: 2009-01-18 18:52:14.0
+  element_id: "1751"
+  id: "160"
+  element_type: Composer
+  annotation_id: "80"
+  documentation: The legal entity represented by the account. ALL if missing
+  version: "2"
+annotation_versions_088: 
+  updated_at: 2009-01-18 18:50:16.0
+  element_id: "1019"
+  id: "88"
+  element_type: Composer
+  annotation_id: "44"
+  documentation: Defintion of Trade window class configuration
+  version: "2"
+annotation_versions_767: 
+  updated_at: 2009-01-18 23:04:29.0
+  element_id: "80631"
+  id: "767"
+  element_type: Composer
+  annotation_id: "384"
+  documentation: 
+  version: "1"
+annotation_versions_086: 
+  updated_at: 2009-01-18 18:50:08.0
+  element_id: "969"
+  id: "86"
+  element_type: Composer
+  annotation_id: "43"
+  documentation: Definition of a workspace
+  version: "2"
+annotation_versions_769: 
+  updated_at: 2009-01-18 23:04:31.0
+  element_id: "80640"
+  id: "769"
+  element_type: Composer
+  annotation_id: "385"
+  documentation: 
+  version: "1"
+annotation_versions_087: 
+  updated_at: 2009-01-18 18:50:15.0
+  element_id: "1019"
+  id: "87"
+  element_type: Composer
+  annotation_id: "44"
+  documentation: 
+  version: "1"
+annotation_versions_768: 
+  updated_at: 2009-01-18 23:04:29.0
+  element_id: "80631"
+  id: "768"
+  element_type: Composer
+  annotation_id: "384"
+  documentation: This is the definition of a Calypso Accounting Event object.
+  version: "2"
+annotation_versions_085: 
+  updated_at: 2009-01-18 18:50:08.0
+  element_id: "969"
+  id: "85"
+  element_type: Composer
+  annotation_id: "43"
+  documentation: 
+  version: "1"
+annotation_versions_765: 
+  updated_at: 2009-01-18 23:04:27.0
+  element_id: "80623"
+  id: "765"
+  element_type: Composer
+  annotation_id: "383"
+  documentation: 
+  version: "1"
+annotation_versions_162: 
+  updated_at: 2009-01-18 18:52:14.0
+  element_id: "1759"
+  id: "162"
+  element_type: Composer
+  annotation_id: "81"
+  documentation: The date when the account was created.
+  version: "2"
+annotation_versions_764: 
+  updated_at: 2009-01-18 23:04:27.0
+  element_id: "80620"
+  id: "764"
+  element_type: Composer
+  annotation_id: "382"
+  documentation: ReportTemplate.setUser()
+  version: "2"
+annotation_versions_766: 
+  updated_at: 2009-01-18 23:04:27.0
+  element_id: "80623"
+  id: "766"
+  element_type: Composer
+  annotation_id: "383"
+  documentation: Creates a list of attributes made of a name and a value
+  version: "2"
+annotation_versions_161: 
+  updated_at: 2009-01-18 18:52:14.0
+  element_id: "1759"
+  id: "161"
+  element_type: Composer
+  annotation_id: "81"
+  documentation: 
+  version: "1"
+annotation_versions_084: 
+  updated_at: 2009-01-18 18:50:06.0
+  element_id: "963"
+  id: "84"
+  element_type: Composer
+  annotation_id: "42"
+  documentation: Definition of group access permission object.
+  version: "2"
+annotation_versions_114: 
+  updated_at: 2009-01-18 18:51:45.0
+  element_id: "1584"
+  id: "114"
+  element_type: Composer
+  annotation_id: "57"
+  documentation: "Means the LegalEntity can not be used\n\t\t\t\t\t\t\t\t\tanymore."
+  version: "2"
+annotation_versions_113: 
+  updated_at: 2009-01-18 18:51:45.0
+  element_id: "1584"
+  id: "113"
+  element_type: Composer
+  annotation_id: "57"
+  documentation: 
+  version: "1"
+annotation_versions_116: 
+  updated_at: 2009-01-18 18:51:45.0
+  element_id: "1588"
+  id: "116"
+  element_type: Composer
+  annotation_id: "58"
+  documentation: The name of the country of the LegalEntity.
+  version: "2"
+annotation_versions_115: 
+  updated_at: 2009-01-18 18:51:45.0
+  element_id: "1588"
+  id: "115"
+  element_type: Composer
+  annotation_id: "58"
+  documentation: 
+  version: "1"
+annotation_versions_112: 
+  updated_at: 2009-01-18 18:51:44.0
+  element_id: "1584"
+  id: "112"
+  element_type: Composer
+  annotation_id: "56"
+  documentation: "Means the LegalEntity must be approved\n\t\t\t\t\t\t\t\t\tbefore \
+    it can be used."
+  version: "2"
+annotation_versions_111: 
+  updated_at: 2009-01-18 18:51:44.0
+  element_id: "1584"
+  id: "111"
+  element_type: Composer
+  annotation_id: "56"
+  documentation: 
+  version: "1"
+annotation_versions_110: 
+  updated_at: 2009-01-18 18:51:44.0
+  element_id: "1584"
+  id: "110"
+  element_type: Composer
+  annotation_id: "55"
+  documentation: Means the LegalEntity can be used.
+  version: "2"
+annotation_versions_324: 
+  updated_at: 2009-01-18 18:59:43.0
+  element_id: "4387"
+  id: "324"
+  element_type: Composer
+  annotation_id: "162"
+  documentation: SettleDeliveryInstruction.setMethod()
+  version: "2"
+annotation_versions_325: 
+  updated_at: 2009-01-18 18:59:44.0
+  element_id: "4394"
+  id: "325"
+  element_type: Composer
+  annotation_id: "163"
+  documentation: 
+  version: "1"
+annotation_versions_537: 
+  updated_at: 2009-01-18 20:28:34.0
+  element_id: "33223"
+  id: "537"
+  element_type: Composer
+  annotation_id: "269"
+  documentation: 
+  version: "1"
+annotation_versions_538: 
+  updated_at: 2009-01-18 20:28:34.0
+  element_id: "33223"
+  id: "538"
+  element_type: Composer
+  annotation_id: "269"
+  documentation: The value (in the contract's currency) of a contract.
+  version: "2"
+annotation_versions_326: 
+  updated_at: 2009-01-18 18:59:44.0
+  element_id: "4394"
+  id: "326"
+  element_type: Composer
+  annotation_id: "163"
+  documentation: SettleDeliveryInstruction.setComments()
+  version: "2"
+annotation_versions_539: 
+  updated_at: 2009-01-18 20:28:35.0
+  element_id: "33224"
+  id: "539"
+  element_type: Composer
+  annotation_id: "270"
+  documentation: 
+  version: "1"
+annotation_versions_323: 
+  updated_at: 2009-01-18 18:59:43.0
+  element_id: "4387"
+  id: "323"
+  element_type: Composer
+  annotation_id: "162"
+  documentation: 
+  version: "1"
+annotation_versions_789: 
+  updated_at: 2009-01-18 23:10:55.0
+  element_id: "82452"
+  id: "789"
+  element_type: Composer
+  annotation_id: "395"
+  documentation: 
+  version: "1"
+annotation_versions_119: 
+  updated_at: 2009-01-18 18:51:46.0
+  element_id: "1598"
+  id: "119"
+  element_type: Composer
+  annotation_id: "60"
+  documentation: 
+  version: "1"
+annotation_versions_117: 
+  updated_at: 2009-01-18 18:51:46.0
+  element_id: "1591"
+  id: "117"
+  element_type: Composer
+  annotation_id: "59"
+  documentation: 
+  version: "1"
+annotation_versions_201: 
+  updated_at: 2009-01-18 18:53:34.0
+  element_id: "2203"
+  id: "201"
+  element_type: Composer
+  annotation_id: "101"
+  documentation: 
+  version: "1"
+annotation_versions_788: 
+  updated_at: 2009-01-18 23:10:55.0
+  element_id: "82450"
+  id: "788"
+  element_type: Composer
+  annotation_id: "394"
+  documentation: The type of the Warrant (Vanilla, Exotic, ...).
+  version: "2"
+annotation_versions_200: 
+  updated_at: 2009-01-18 18:53:32.0
+  element_id: "2186"
+  id: "200"
+  element_type: Composer
+  annotation_id: "100"
+  documentation: The processing organisation of the account. If not defined, ProcessingOrg
+    = ALL
+  version: "2"
+annotation_versions_118: 
+  updated_at: 2009-01-18 18:51:46.0
+  element_id: "1591"
+  id: "118"
+  element_type: Composer
+  annotation_id: "59"
+  documentation: "The list of holidays to which this LegalEntity\n\t\t\t\t\t\tis submitted."
+  version: "2"
+annotation_versions_327: 
+  updated_at: 2009-01-18 18:59:44.0
+  element_id: "4397"
+  id: "327"
+  element_type: Composer
+  annotation_id: "164"
+  documentation: 
+  version: "1"
+annotation_versions_328: 
+  updated_at: 2009-01-18 18:59:45.0
+  element_id: "4397"
+  id: "328"
+  element_type: Composer
+  annotation_id: "164"
+  documentation: This is the definition of a Calypso Accounting Event object.
+  version: "2"
+annotation_versions_329: 
+  updated_at: 2009-01-18 18:59:51.0
+  element_id: "4435"
+  id: "329"
+  element_type: Composer
+  annotation_id: "165"
+  documentation: 
+  version: "1"
+annotation_versions_784: 
+  updated_at: 2009-01-18 23:10:54.0
+  element_id: "82445"
+  id: "784"
+  element_type: Composer
+  annotation_id: "392"
+  documentation: The name of the Warrant.
+  version: "2"
+annotation_versions_783: 
+  updated_at: 2009-01-18 23:10:54.0
+  element_id: "82445"
+  id: "783"
+  element_type: Composer
+  annotation_id: "392"
+  documentation: 
+  version: "1"
+annotation_versions_205: 
+  updated_at: 2009-01-18 18:53:40.0
+  element_id: "2240"
+  id: "205"
+  element_type: Composer
+  annotation_id: "103"
+  documentation: 
+  version: "1"
+annotation_versions_203: 
+  updated_at: 2009-01-18 18:53:38.0
+  element_id: "2231"
+  id: "203"
+  element_type: Composer
+  annotation_id: "102"
+  documentation: 
+  version: "1"
+annotation_versions_204: 
+  updated_at: 2009-01-18 18:53:38.0
+  element_id: "2231"
+  id: "204"
+  element_type: Composer
+  annotation_id: "102"
+  documentation: This is the definition of a Calypso Currency Default object.
+  version: "2"
+annotation_versions_202: 
+  updated_at: 2009-01-18 18:53:34.0
+  element_id: "2203"
+  id: "202"
+  element_type: Composer
+  annotation_id: "101"
+  documentation: This is the definition of a Calypso Country object.
+  version: "2"
+annotation_versions_785: 
+  updated_at: 2009-01-18 23:10:54.0
+  element_id: "82447"
+  id: "785"
+  element_type: Composer
+  annotation_id: "393"
+  documentation: 
+  version: "1"
+annotation_versions_489: 
+  updated_at: 2009-01-18 19:23:06.0
+  element_id: "11373"
+  id: "489"
+  element_type: Composer
+  annotation_id: "245"
+  documentation: 
+  version: "1"
+annotation_versions_787: 
+  updated_at: 2009-01-18 23:10:55.0
+  element_id: "82450"
+  id: "787"
+  element_type: Composer
+  annotation_id: "394"
+  documentation: 
+  version: "1"
+annotation_versions_786: 
+  updated_at: 2009-01-18 23:10:55.0
+  element_id: "82447"
+  id: "786"
+  element_type: Composer
+  annotation_id: "393"
+  documentation: The currency in which of the Warrant is denominated.
+  version: "2"
+annotation_versions_322: 
+  updated_at: 2009-01-18 18:59:43.0
+  element_id: "4384"
+  id: "322"
+  element_type: Composer
+  annotation_id: "161"
+  documentation: SettleDeliveryInstruction.setCurrencyList(). If not defined, Currency=ANY
+  version: "2"
+annotation_versions_321: 
+  updated_at: 2009-01-18 18:59:43.0
+  element_id: "4384"
+  id: "321"
+  element_type: Composer
+  annotation_id: "161"
+  documentation: 
+  version: "1"
+annotation_versions_780: 
+  updated_at: 2009-01-18 23:10:19.0
+  element_id: "82268"
+  id: "780"
+  element_type: Composer
+  annotation_id: "390"
+  documentation: The reference to the processing org to which this attribute is attached.
+  version: "2"
+annotation_versions_678: 
+  updated_at: 2009-01-18 23:03:47.0
+  element_id: "80434"
+  id: "678"
+  element_type: Composer
+  annotation_id: "339"
+  documentation: LEContact.setMailingAddress()
+  version: "2"
+annotation_versions_209: 
+  updated_at: 2009-01-18 18:53:41.0
+  element_id: "2246"
+  id: "209"
+  element_type: Composer
+  annotation_id: "105"
+  documentation: 
+  version: "1"
+annotation_versions_679: 
+  updated_at: 2009-01-18 23:03:48.0
+  element_id: "80435"
+  id: "679"
+  element_type: Composer
+  annotation_id: "340"
+  documentation: 
+  version: "1"
+annotation_versions_320: 
+  updated_at: 2009-01-18 18:59:42.0
+  element_id: "4383"
+  id: "320"
+  element_type: Composer
+  annotation_id: "160"
+  documentation: SettleDeliveryInstruction.setBeneficiaryId(Id of the LegalEntity
+    referred by its short name or its external reference). If not defined, Beneficiary
+    = ALL
+  version: "2"
+annotation_versions_781: 
+  updated_at: 2009-01-18 23:10:24.0
+  element_id: "82299"
+  id: "781"
+  element_type: Composer
+  annotation_id: "391"
+  documentation: 
+  version: "1"
+annotation_versions_207: 
+  updated_at: 2009-01-18 18:53:41.0
+  element_id: "2243"
+  id: "207"
+  element_type: Composer
+  annotation_id: "104"
+  documentation: 
+  version: "1"
+annotation_versions_677: 
+  updated_at: 2009-01-18 23:03:47.0
+  element_id: "80434"
+  id: "677"
+  element_type: Composer
+  annotation_id: "339"
+  documentation: 
+  version: "1"
+annotation_versions_208: 
+  updated_at: 2009-01-18 18:53:41.0
+  element_id: "2243"
+  id: "208"
+  element_type: Composer
+  annotation_id: "104"
+  documentation: The ISO code of the currency.
+  version: "2"
+annotation_versions_206: 
+  updated_at: 2009-01-18 18:53:40.0
+  element_id: "2240"
+  id: "206"
+  element_type: Composer
+  annotation_id: "103"
+  documentation: "The Currency Code for the\n\t\t\t\t\t\t\t\tCurrencyDefault."
+  version: "2"
+annotation_versions_782: 
+  updated_at: 2009-01-18 23:10:24.0
+  element_id: "82299"
+  id: "782"
+  element_type: Composer
+  annotation_id: "391"
+  documentation: This is the definition of a Calypso Warrant object.
+  version: "2"
+annotation_versions_676: 
+  updated_at: 2009-01-18 23:03:47.0
+  element_id: "80433"
+  id: "676"
+  element_type: Composer
+  annotation_id: "338"
+  documentation: LEContact.setTitle()
+  version: "2"
+annotation_versions_482: 
+  updated_at: 2009-01-18 19:22:52.0
+  element_id: "11305"
+  id: "482"
+  element_type: Composer
+  annotation_id: "241"
+  documentation: The parameters to define the stub periods.
+  version: "2"
+annotation_versions_483: 
+  updated_at: 2009-01-18 19:22:53.0
+  element_id: "11312"
+  id: "483"
+  element_type: Composer
+  annotation_id: "242"
+  documentation: 
+  version: "1"
+annotation_versions_484: 
+  updated_at: 2009-01-18 19:22:53.0
+  element_id: "11312"
+  id: "484"
+  element_type: Composer
+  annotation_id: "242"
+  documentation: The parameters to define the payment dates.
+  version: "2"
+annotation_versions_480: 
+  updated_at: 2009-01-18 19:22:48.0
+  element_id: "11279"
+  id: "480"
+  element_type: Composer
+  annotation_id: "240"
+  documentation: The parameters to define the periods.
+  version: "2"
+annotation_versions_481: 
+  updated_at: 2009-01-18 19:22:52.0
+  element_id: "11305"
+  id: "481"
+  element_type: Composer
+  annotation_id: "241"
+  documentation: 
+  version: "1"
+annotation_versions_557: 
+  updated_at: 2009-01-18 20:30:55.0
+  element_id: "34029"
+  id: "557"
+  element_type: Composer
+  annotation_id: "279"
+  documentation: 
+  version: "1"
+annotation_versions_558: 
+  updated_at: 2009-01-18 20:30:55.0
+  element_id: "34029"
+  id: "558"
+  element_type: Composer
+  annotation_id: "279"
+  documentation: Provides strong typing for the FutureFX subclass of Future.
+  version: "2"
+annotation_versions_488: 
+  updated_at: 2009-01-18 19:23:00.0
+  element_id: "11343"
+  id: "488"
+  element_type: Composer
+  annotation_id: "244"
+  documentation: The parameters to define the Resets.
+  version: "2"
+annotation_versions_559: 
+  updated_at: 2009-01-18 20:31:29.0
+  element_id: "34212"
+  id: "559"
+  element_type: Composer
+  annotation_id: "280"
+  documentation: 
+  version: "1"
+annotation_versions_485: 
+  updated_at: 2009-01-18 19:23:00.0
+  element_id: "11342"
+  id: "485"
+  element_type: Composer
+  annotation_id: "243"
+  documentation: 
+  version: "1"
+annotation_versions_555: 
+  updated_at: 2009-01-18 20:30:22.0
+  element_id: "33846"
+  id: "555"
+  element_type: Composer
+  annotation_id: "278"
+  documentation: 
+  version: "1"
+annotation_versions_486: 
+  updated_at: 2009-01-18 19:23:00.0
+  element_id: "11342"
+  id: "486"
+  element_type: Composer
+  annotation_id: "243"
+  documentation: 5% is represented as 0.05.
+  version: "2"
+annotation_versions_556: 
+  updated_at: 2009-01-18 20:30:22.0
+  element_id: "33846"
+  id: "556"
+  element_type: Composer
+  annotation_id: "278"
+  documentation: Provides strong typing for the FutureMM subclass of Future.
+  version: "2"
+annotation_versions_487: 
+  updated_at: 2009-01-18 19:23:00.0
+  element_id: "11343"
+  id: "487"
+  element_type: Composer
+  annotation_id: "244"
+  documentation: 
+  version: "1"

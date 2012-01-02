@@ -1,0 +1,533 @@
+--- 
+types_005: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: minLength
+  id: "5"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_059: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:gMonth
+  id: "59"
+  meta: 
+  use: required
+types_004: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: length
+  id: "4"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_003: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:attributeGroup
+  id: "3"
+  meta: 
+  use: required
+types_058: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:gDay
+  id: "58"
+  meta: 
+  use: required
+types_002: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:complexContent
+  id: "2"
+  meta: 
+  use: required
+types_056: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:duration
+  id: "56"
+  meta: 
+  use: required
+types_001: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:element
+  id: "1"
+  meta: 
+  use: required
+types_057: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:time
+  id: "57"
+  meta: 
+  use: required
+types_062: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:gYearMonth
+  id: "62"
+  meta: 
+  use: required
+types_055: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:dateTime
+  id: "55"
+  meta: 
+  use: required
+types_061: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:gYear
+  id: "61"
+  meta: 
+  use: required
+types_060: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:gMonthDay
+  id: "60"
+  meta: 
+  use: required
+types_054: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:date
+  id: "54"
+  meta: 
+  use: required
+types_052: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:float
+  id: "52"
+  meta: 
+  use: required
+types_053: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:double
+  id: "53"
+  meta: 
+  use: required
+types_051: 
+  name_space: xsd
+  base: xsd:nonNegativeInteger
+  abstract: "0"
+  name: xsd:unsignedShort
+  id: "51"
+  meta: 
+  use: required
+types_039: 
+  name_space: xsd
+  base: xsd:decimal
+  abstract: "0"
+  name: xsd:integer
+  id: "39"
+  meta: 
+  use: required
+types_043: 
+  name_space: xsd
+  base: xsd:nonPositiveInteger
+  abstract: "0"
+  name: xsd:negativeInteger
+  id: "43"
+  meta: 
+  use: required
+types_038: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: xsd:decimal
+  id: "38"
+  meta: 
+  use: required
+types_044: 
+  name_space: xsd
+  base: xsd:integer
+  abstract: "0"
+  name: xsd:long
+  id: "44"
+  meta: 
+  use: required
+types_042: 
+  name_space: xsd
+  base: xsd:nonNegativeInteger
+  abstract: "0"
+  name: xsd:positiveInteger
+  id: "42"
+  meta: 
+  use: required
+types_046: 
+  name_space: xsd
+  base: xsd:int
+  abstract: "0"
+  name: xsd:short
+  id: "46"
+  meta: 
+  use: required
+types_045: 
+  name_space: xsd
+  base: xsd:long
+  abstract: "0"
+  name: xsd:int
+  id: "45"
+  meta: 
+  use: required
+types_023: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: minExclusive
+  id: "23"
+  meta: 
+  use: required
+types_011: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: minExclusive
+  id: "11"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_033: 
+  name_space: xsd
+  base: xsd:NMTOKEN
+  abstract: "0"
+  name: xsd:NMTOKENS
+  id: "33"
+  meta: 
+  use: required
+types_049: 
+  name_space: xsd
+  base: xsd:nonNegativeInteger
+  abstract: "0"
+  name: xsd:unsignedInt
+  id: "49"
+  meta: 
+  use: required
+types_021: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: whiteSpace
+  id: "21"
+  meta: 
+  use: required
+types_035: 
+  name_space: xsd
+  base: xsd:NCName
+  abstract: "0"
+  name: xsd:ID
+  id: "35"
+  meta: 
+  use: required
+types_047: 
+  name_space: xsd
+  base: xsd:short
+  abstract: "0"
+  name: xsd:byte
+  id: "47"
+  meta: 
+  use: required
+types_010: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: minInclusive
+  id: "10"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_022: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: minInclusive
+  id: "22"
+  meta: 
+  use: required
+types_034: 
+  name_space: xsd
+  base: xsd:Name
+  abstract: "0"
+  name: xsd:NCName
+  id: "34"
+  meta: 
+  use: required
+types_048: 
+  name_space: xsd
+  base: xsd:nonNegativeInteger
+  abstract: "0"
+  name: xsd:unsignedByte
+  id: "48"
+  meta: 
+  use: required
+types_020: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: enumeration
+  id: "20"
+  meta: 
+  use: required
+types_014: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: "totalDigits "
+  id: "14"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_036: 
+  name_space: xsd
+  base: xsd:NCName
+  abstract: "0"
+  name: xsd:IDREF
+  id: "36"
+  meta: 
+  use: required
+types_013: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: maxExclusive
+  id: "13"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_037: 
+  name_space: xsd
+  base: xsd:NCName
+  abstract: "0"
+  name: xsd:IDREFS
+  id: "37"
+  meta: 
+  use: required
+types_012: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: maxInclusive
+  id: "12"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_015: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: fractionDigits
+  id: "15"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_016: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: length
+  id: "16"
+  meta: 
+  use: required
+types_017: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: minLength
+  id: "17"
+  meta: 
+  use: required
+types_018: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: maxLength
+  id: "18"
+  meta: 
+  use: required
+types_032: 
+  name_space: xsd
+  base: xsd:token
+  abstract: "0"
+  name: xsd:Name
+  id: "32"
+  meta: 
+  use: required
+types_030: 
+  name_space: xsd
+  base: xsd:token
+  abstract: "0"
+  name: xsd:language
+  id: "30"
+  meta: 
+  use: required
+types_019: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: pattern
+  id: "19"
+  meta: 
+  use: required
+types_031: 
+  name_space: xsd
+  base: xsd:token
+  abstract: "0"
+  name: xsd:NMTOKEN
+  id: "31"
+  meta: 
+  use: required
+types_040: 
+  name_space: xsd
+  base: xsd:integer
+  abstract: "0"
+  name: xsd:nonNegativeInteger
+  id: "40"
+  meta: 
+  use: required
+types_041: 
+  name_space: xsd
+  base: xsd:integer
+  abstract: "0"
+  name: xsd:nonPositiveInteger
+  id: "41"
+  meta: 
+  use: required
+types_050: 
+  name_space: xsd
+  base: xsd:nonNegativeInteger
+  abstract: "0"
+  name: xsd:unsignedLong
+  id: "50"
+  meta: 
+  use: required
+types_029: 
+  name_space: xsd
+  base: xsd:normalizedString
+  abstract: "0"
+  name: xsd:token
+  id: "29"
+  meta: 
+  use: required
+types_025: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: maxExclusive
+  id: "25"
+  meta: 
+  use: required
+types_006: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: maxLength
+  id: "6"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_026: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: "totalDigits "
+  id: "26"
+  meta: 
+  use: required
+types_007: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: pattern
+  id: "7"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_024: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: maxInclusive
+  id: "24"
+  meta: 
+  use: required
+types_008: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: enumeration
+  id: "8"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_028: 
+  name_space: xsd
+  base: xsd:string
+  abstract: "0"
+  name: xsd:normalizedString
+  id: "28"
+  meta: 
+  use: required
+types_009: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: whiteSpace
+  id: "9"
+  meta: |
+    value
+    fixed
+    id
+  use: required
+types_027: 
+  name_space: xsd
+  base: 
+  abstract: "0"
+  name: fractionDigits
+  id: "27"
+  meta: 
+  use: required

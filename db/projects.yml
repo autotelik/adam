@@ -1,0 +1,19 @@
+--- 
+projects_002: 
+  status: "1"
+  updated_at: 2008-12-30 10:49:10.0
+  is_public: "1"
+  name: TEST_BED
+  id: "2"
+  identifier: tstb
+  description: general public test bed
+  created_at: 2008-12-30 10:49:10.0
+projects_001: 
+  status: "1"
+  updated_at: 2008-12-30 10:49:10.0
+  is_public: "1"
+  name: CalypsoSchemas
+  id: "1"
+  identifier: calypsoxsd
+  description: Mappings from Calypso XSD
+  created_at: 2008-12-30 10:49:10.0

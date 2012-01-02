@@ -1,0 +1,7 @@
+Manifest.txt
+Rakefile
+README.txt
+LICENSE.txt
+lib/jdbc
+lib/sqlite-jdbc-3.7.2.jar
+lib/jdbc/sqlite3.rb

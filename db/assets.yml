@@ -1,0 +1,4217 @@
+--- 
+assets_341: 
+  name_space: 
+  updated_at: 2009-01-18 21:00:09.0
+  project_id: "1"
+  name: AssetPerformanceSwap
+  id: "350"
+  created_at: 2009-01-18 21:00:09.0
+  version: "1"
+assets_390: 
+  name_space: 
+  updated_at: 2009-01-18 22:17:34.0
+  project_id: "1"
+  name: Collateral
+  id: "399"
+  created_at: 2009-01-18 22:17:34.0
+  version: "1"
+assets_187: 
+  name_space: 
+  updated_at: 2009-01-18 19:31:14.0
+  project_id: "1"
+  name: QuotableVariableOverride
+  id: "196"
+  created_at: 2009-01-18 19:31:14.0
+  version: "1"
+assets_186: 
+  name_space: 
+  updated_at: 2009-01-18 19:31:12.0
+  project_id: "1"
+  name: ArrayVariable
+  id: "195"
+  created_at: 2009-01-18 19:31:12.0
+  version: "1"
+assets_392: 
+  name_space: 
+  updated_at: 2009-01-18 22:18:40.0
+  project_id: "1"
+  name: Cash
+  id: "401"
+  created_at: 2009-01-18 22:18:40.0
+  version: "1"
+assets_391: 
+  name_space: 
+  updated_at: 2009-01-18 22:18:09.0
+  project_id: "1"
+  name: SimpleMoneyMarket
+  id: "400"
+  created_at: 2009-01-18 22:18:09.0
+  version: "1"
+assets_340: 
+  name_space: 
+  updated_at: 2009-01-18 20:59:17.0
+  project_id: "1"
+  name: VarianceSwap
+  id: "349"
+  created_at: 2009-01-18 20:59:17.0
+  version: "1"
+assets_185: 
+  name_space: 
+  updated_at: 2009-01-18 19:31:11.0
+  project_id: "1"
+  name: DatedFormula
+  id: "194"
+  created_at: 2009-01-18 19:31:11.0
+  version: "1"
+assets_184: 
+  name_space: 
+  updated_at: 2009-01-18 19:30:46.0
+  project_id: "1"
+  name: ExoticConfigurableType
+  id: "193"
+  created_at: 2009-01-18 19:30:46.0
+  version: "1"
+assets_510: 
+  name_space: 
+  updated_at: 2009-01-18 23:43:30.0
+  project_id: "1"
+  name: CommodityUnitConversion
+  id: "519"
+  created_at: 2009-01-18 23:43:30.0
+  version: "1"
+assets_183: 
+  name_space: 
+  updated_at: 2009-01-18 19:30:44.0
+  project_id: "1"
+  name: CalypsoComponentConfig
+  id: "192"
+  created_at: 2009-01-18 19:30:44.0
+  version: "1"
+assets_182: 
+  name_space: 
+  updated_at: 2009-01-18 19:30:42.0
+  project_id: "1"
+  name: CalypsoUIConfig
+  id: "191"
+  created_at: 2009-01-18 19:30:42.0
+  version: "1"
+assets_346: 
+  name_space: 
+  updated_at: 2009-01-18 21:02:11.0
+  project_id: "1"
+  name: APSBasketProductInfo
+  id: "355"
+  created_at: 2009-01-18 21:02:11.0
+  version: "1"
+assets_511: 
+  name_space: 
+  updated_at: 2009-01-18 23:43:32.0
+  project_id: "1"
+  name: PreciousMetalDepositLease
+  id: "520"
+  created_at: 2009-01-18 23:43:32.0
+  version: "1"
+assets_347: 
+  name_space: 
+  updated_at: 2009-01-18 21:02:16.0
+  project_id: "1"
+  name: APSBasketAdjustment
+  id: "356"
+  created_at: 2009-01-18 21:02:16.0
+  version: "1"
+assets_181: 
+  name_space: 
+  updated_at: 2009-01-18 19:26:30.0
+  project_id: "1"
+  name: GenericOption
+  id: "190"
+  created_at: 2009-01-18 19:26:30.0
+  version: "1"
+assets_345: 
+  name_space: 
+  updated_at: 2009-01-18 21:02:11.0
+  project_id: "1"
+  name: APSBasketNode
+  id: "354"
+  created_at: 2009-01-18 21:02:11.0
+  version: "1"
+assets_512: 
+  name_space: 
+  updated_at: 2009-01-18 23:44:10.0
+  project_id: "1"
+  name: PreciousMetalLeaseRateSwap
+  id: "521"
+  created_at: 2009-01-18 23:44:10.0
+  version: "1"
+assets_180: 
+  name_space: 
+  updated_at: 2009-01-18 19:26:24.0
+  project_id: "1"
+  name: GenericOptionInfo
+  id: "189"
+  created_at: 2009-01-18 19:26:24.0
+  version: "1"
+assets_513: 
+  name_space: 
+  updated_at: 2009-01-18 23:45:04.0
+  project_id: "1"
+  name: SwapSettlementInfo
+  id: "522"
+  created_at: 2009-01-18 23:45:04.0
+  version: "1"
+assets_514: 
+  name_space: 
+  updated_at: 2009-01-18 23:46:32.0
+  project_id: "1"
+  name: NettingConfig
+  id: "523"
+  created_at: 2009-01-18 23:46:32.0
+  version: "1"
+assets_344: 
+  name_space: 
+  updated_at: 2009-01-18 21:02:09.0
+  project_id: "1"
+  name: APSBasket
+  id: "353"
+  created_at: 2009-01-18 21:02:09.0
+  version: "1"
+assets_342: 
+  name_space: 
+  updated_at: 2009-01-18 21:01:49.0
+  project_id: "1"
+  name: AssetPerformanceLeg
+  id: "351"
+  created_at: 2009-01-18 21:01:49.0
+  version: "1"
+assets_515: 
+  name_space: 
+  updated_at: 2009-01-18 23:46:34.0
+  project_id: "1"
+  name: NettingConfigRecord
+  id: "524"
+  created_at: 2009-01-18 23:46:34.0
+  version: "1"
+assets_343: 
+  name_space: 
+  updated_at: 2009-01-18 21:02:08.0
+  project_id: "1"
+  name: APSUnderlying
+  id: "352"
+  created_at: 2009-01-18 21:02:08.0
+  version: "1"
+assets_516: 
+  name_space: 
+  updated_at: 2009-01-18 23:46:36.0
+  project_id: "1"
+  name: NettingMethod
+  id: "525"
+  created_at: 2009-01-18 23:46:36.0
+  version: "1"
+assets_517: 
+  name_space: 
+  updated_at: 2009-01-18 23:46:47.0
+  project_id: "1"
+  name: EventConfig
+  id: "526"
+  created_at: 2009-01-18 23:46:47.0
+  version: "1"
+assets_518: 
+  name_space: 
+  updated_at: 2009-01-18 23:46:52.0
+  project_id: "1"
+  name: EventConfigRecord
+  id: "527"
+  created_at: 2009-01-18 23:46:52.0
+  version: "1"
+assets_519: 
+  name_space: 
+  updated_at: 2009-01-18 23:46:55.0
+  project_id: "1"
+  name: ScheduledTask
+  id: "528"
+  created_at: 2009-01-18 23:46:55.0
+  version: "1"
+assets_188: 
+  name_space: 
+  updated_at: 2009-01-18 19:31:15.0
+  project_id: "1"
+  name: TimeSeriesVariable
+  id: "197"
+  created_at: 2009-01-18 19:31:15.0
+  version: "1"
+assets_189: 
+  name_space: 
+  updated_at: 2009-01-18 19:31:20.0
+  project_id: "1"
+  name: ExoticInterestStream
+  id: "198"
+  created_at: 2009-01-18 19:31:20.0
+  version: "1"
+assets_106: 
+  name_space: 
+  updated_at: 2009-01-18 18:57:35.0
+  project_id: "1"
+  name: CashflowCouponPeriod
+  id: "115"
+  created_at: 2009-01-18 18:57:35.0
+  version: "1"
+assets_385: 
+  name_space: 
+  updated_at: 2009-01-18 22:14:54.0
+  project_id: "1"
+  name: FXSwap
+  id: "394"
+  created_at: 2009-01-18 22:14:54.0
+  version: "1"
+assets_469: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:54.0
+  project_id: "1"
+  name: ScenarioRulePUI
+  id: "478"
+  created_at: 2009-01-18 23:21:54.0
+  version: "1"
+assets_107: 
+  name_space: 
+  updated_at: 2009-01-18 18:57:37.0
+  project_id: "1"
+  name: CashflowCouponPeriodSchedule
+  id: "116"
+  created_at: 2009-01-18 18:57:37.0
+  version: "1"
+assets_384: 
+  name_space: 
+  updated_at: 2009-01-18 22:14:03.0
+  project_id: "1"
+  name: FXOption
+  id: "393"
+  created_at: 2009-01-18 22:14:03.0
+  version: "1"
+assets_109: 
+  name_space: 
+  updated_at: 2009-01-18 18:57:58.0
+  project_id: "1"
+  name: CompoundPeriod
+  id: "118"
+  created_at: 2009-01-18 18:57:58.0
+  version: "1"
+assets_525: 
+  name_space: 
+  updated_at: 2009-01-18 23:47:42.0
+  project_id: "1"
+  name: Folder
+  id: "534"
+  created_at: 2009-01-18 23:47:42.0
+  version: "1"
+assets_388: 
+  name_space: 
+  updated_at: 2009-01-18 22:16:29.0
+  project_id: "1"
+  name: FXCompoundOption
+  id: "397"
+  created_at: 2009-01-18 22:16:29.0
+  version: "1"
+assets_108: 
+  name_space: 
+  updated_at: 2009-01-18 18:57:38.0
+  project_id: "1"
+  name: CashflowSimpleAvg
+  id: "117"
+  created_at: 2009-01-18 18:57:38.0
+  version: "1"
+assets_527: 
+  name_space: 
+  updated_at: 2009-01-18 23:48:02.0
+  project_id: "1"
+  name: CalypsoDocument
+  id: "536"
+  created_at: 2009-01-18 23:48:02.0
+  version: "1"
+assets_386: 
+  name_space: 
+  updated_at: 2009-01-18 22:15:24.0
+  project_id: "1"
+  name: FXOptionSwap
+  id: "395"
+  created_at: 2009-01-18 22:15:24.0
+  version: "1"
+assets_526: 
+  name_space: 
+  updated_at: 2009-01-18 23:47:48.0
+  project_id: "1"
+  name: RiskAggregation
+  id: "535"
+  created_at: 2009-01-18 23:47:48.0
+  version: "1"
+assets_387: 
+  name_space: 
+  updated_at: 2009-01-18 22:16:00.0
+  project_id: "1"
+  name: FXCash
+  id: "396"
+  created_at: 2009-01-18 22:16:00.0
+  version: "1"
+assets_209: 
+  name_space: 
+  updated_at: 2009-01-18 19:46:05.0
+  project_id: "1"
+  name: BondConvertibleDefinition
+  id: "218"
+  created_at: 2009-01-18 19:46:05.0
+  version: "1"
+assets_389: 
+  name_space: 
+  updated_at: 2009-01-18 22:17:01.0
+  project_id: "1"
+  name: FXCashflow
+  id: "398"
+  created_at: 2009-01-18 22:17:01.0
+  version: "1"
+assets_320: 
+  name_space: 
+  updated_at: 2009-01-18 20:54:40.0
+  project_id: "1"
+  name: CFDData
+  id: "329"
+  created_at: 2009-01-18 20:54:40.0
+  version: "1"
+assets_321: 
+  name_space: 
+  updated_at: 2009-01-18 20:54:42.0
+  project_id: "1"
+  name: CorporateAction
+  id: "330"
+  created_at: 2009-01-18 20:54:42.0
+  version: "1"
+assets_399: 
+  name_space: 
+  updated_at: 2009-01-18 22:22:37.0
+  project_id: "1"
+  name: MoneyMarketInterest
+  id: "408"
+  created_at: 2009-01-18 22:22:37.0
+  version: "1"
+assets_322: 
+  name_space: 
+  updated_at: 2009-01-18 20:54:46.0
+  project_id: "1"
+  name: CorporateActionDefinition
+  id: "331"
+  created_at: 2009-01-18 20:54:46.0
+  version: "1"
+assets_398: 
+  name_space: 
+  updated_at: 2009-01-18 22:22:32.0
+  project_id: "1"
+  name: MoneyMarketDiscount
+  id: "407"
+  created_at: 2009-01-18 22:22:32.0
+  version: "1"
+assets_323: 
+  name_space: 
+  updated_at: 2009-01-18 20:55:19.0
+  project_id: "1"
+  name: CFDConvertibleArbitrage
+  id: "332"
+  created_at: 2009-01-18 20:55:19.0
+  version: "1"
+assets_522: 
+  name_space: 
+  updated_at: 2009-01-18 23:47:30.0
+  project_id: "1"
+  name: RatingValues
+  id: "531"
+  created_at: 2009-01-18 23:47:30.0
+  version: "1"
+assets_324: 
+  name_space: 
+  updated_at: 2009-01-18 20:55:23.0
+  project_id: "1"
+  name: CFDConvertibleArbitrageDefinition
+  id: "333"
+  created_at: 2009-01-18 20:55:23.0
+  version: "1"
+assets_325: 
+  name_space: 
+  updated_at: 2009-01-18 20:55:56.0
+  project_id: "1"
+  name: CFDDirectional
+  id: "334"
+  created_at: 2009-01-18 20:55:56.0
+  version: "1"
+assets_523: 
+  name_space: 
+  updated_at: 2009-01-18 23:47:36.0
+  project_id: "1"
+  name: Tree
+  id: "532"
+  created_at: 2009-01-18 23:47:36.0
+  version: "1"
+assets_397: 
+  name_space: 
+  updated_at: 2009-01-18 22:21:53.0
+  project_id: "1"
+  name: MoneyMarketDefinition
+  id: "406"
+  created_at: 2009-01-18 22:21:53.0
+  version: "1"
+assets_395: 
+  name_space: 
+  updated_at: 2009-01-18 22:21:10.0
+  project_id: "1"
+  name: IntraDayMoneyMarket
+  id: "404"
+  created_at: 2009-01-18 22:21:10.0
+  version: "1"
+assets_524: 
+  name_space: 
+  updated_at: 2009-01-18 23:47:40.0
+  project_id: "1"
+  name: AbstractNode
+  id: "533"
+  created_at: 2009-01-18 23:47:40.0
+  version: "1"
+assets_396: 
+  name_space: 
+  updated_at: 2009-01-18 22:21:49.0
+  project_id: "1"
+  name: MoneyMarket
+  id: "405"
+  created_at: 2009-01-18 22:21:49.0
+  version: "1"
+assets_326: 
+  name_space: 
+  updated_at: 2009-01-18 20:56:00.0
+  project_id: "1"
+  name: CFDDirectionalDefinition
+  id: "335"
+  created_at: 2009-01-18 20:56:00.0
+  version: "1"
+assets_394: 
+  name_space: 
+  updated_at: 2009-01-18 22:20:32.0
+  project_id: "1"
+  name: CashCommodity
+  id: "403"
+  created_at: 2009-01-18 22:20:32.0
+  version: "1"
+assets_327: 
+  name_space: 
+  updated_at: 2009-01-18 20:56:33.0
+  project_id: "1"
+  name: CFDPairTrading
+  id: "336"
+  created_at: 2009-01-18 20:56:33.0
+  version: "1"
+assets_520: 
+  name_space: 
+  updated_at: 2009-01-18 23:47:16.0
+  project_id: "1"
+  name: TaskWorkflowConfig
+  id: "529"
+  created_at: 2009-01-18 23:47:16.0
+  version: "1"
+assets_521: 
+  name_space: 
+  updated_at: 2009-01-18 23:47:28.0
+  project_id: "1"
+  name: CustomRule
+  id: "530"
+  created_at: 2009-01-18 23:47:28.0
+  version: "1"
+assets_328: 
+  name_space: 
+  updated_at: 2009-01-18 20:56:37.0
+  project_id: "1"
+  name: CFDPairTradingDefinition
+  id: "337"
+  created_at: 2009-01-18 20:56:37.0
+  version: "1"
+assets_329: 
+  name_space: 
+  updated_at: 2009-01-18 20:57:10.0
+  project_id: "1"
+  name: CFDRiskArbitrage
+  id: "338"
+  created_at: 2009-01-18 20:57:10.0
+  version: "1"
+assets_393: 
+  name_space: 
+  updated_at: 2009-01-18 22:19:31.0
+  project_id: "1"
+  name: CallNotice
+  id: "402"
+  created_at: 2009-01-18 22:19:31.0
+  version: "1"
+assets_310: 
+  name_space: 
+  updated_at: 2009-01-18 20:52:04.0
+  project_id: "1"
+  name: OTCEquityOption
+  id: "319"
+  created_at: 2009-01-18 20:52:04.0
+  version: "1"
+assets_404: 
+  name_space: 
+  updated_at: 2009-01-18 22:26:59.0
+  project_id: "1"
+  name: SecurityBasketDefinition
+  id: "413"
+  created_at: 2009-01-18 22:26:59.0
+  version: "1"
+assets_021: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:49.0
+  project_id: "1"
+  name: Payment
+  id: "30"
+  created_at: 2009-01-18 18:47:49.0
+  version: "1"
+assets_405: 
+  name_space: 
+  updated_at: 2009-01-18 22:30:31.0
+  project_id: "1"
+  name: DateRule
+  id: "414"
+  created_at: 2009-01-18 22:30:31.0
+  version: "1"
+assets_022: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:51.0
+  project_id: "1"
+  name: Attribute
+  id: "31"
+  created_at: 2009-01-18 18:47:51.0
+  version: "1"
+assets_311: 
+  name_space: 
+  updated_at: 2009-01-18 20:52:54.0
+  project_id: "1"
+  name: OTCEquityOptionVanilla
+  id: "320"
+  created_at: 2009-01-18 20:52:54.0
+  version: "1"
+assets_312: 
+  name_space: 
+  updated_at: 2009-01-18 20:53:34.0
+  project_id: "1"
+  name: OTCOptionSampleDate
+  id: "321"
+  created_at: 2009-01-18 20:53:34.0
+  version: "1"
+assets_406: 
+  name_space: 
+  updated_at: 2009-01-18 22:30:44.0
+  project_id: "1"
+  name: FXReset
+  id: "415"
+  created_at: 2009-01-18 22:30:44.0
+  version: "1"
+assets_023: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:51.0
+  project_id: "1"
+  name: PutCallDate
+  id: "32"
+  created_at: 2009-01-18 18:47:51.0
+  version: "1"
+assets_271: 
+  name_space: 
+  updated_at: 2009-01-18 20:32:35.0
+  project_id: "1"
+  name: FutureEquityIndex
+  id: "280"
+  created_at: 2009-01-18 20:32:35.0
+  version: "1"
+assets_407: 
+  name_space: 
+  updated_at: 2009-01-18 22:30:51.0
+  project_id: "1"
+  name: CorrelationSurfaceUnderlying
+  id: "416"
+  created_at: 2009-01-18 22:30:51.0
+  version: "1"
+assets_270: 
+  name_space: 
+  updated_at: 2009-01-18 20:32:02.0
+  project_id: "1"
+  name: FutureBond
+  id: "279"
+  created_at: 2009-01-18 20:32:02.0
+  version: "1"
+assets_024: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:55.0
+  project_id: "1"
+  name: PayoutFormula
+  id: "33"
+  created_at: 2009-01-18 18:47:55.0
+  version: "1"
+assets_313: 
+  name_space: 
+  updated_at: 2009-01-18 20:53:37.0
+  project_id: "1"
+  name: CFD
+  id: "322"
+  created_at: 2009-01-18 20:53:37.0
+  version: "1"
+assets_314: 
+  name_space: 
+  updated_at: 2009-01-18 20:53:40.0
+  project_id: "1"
+  name: CFDDefinition
+  id: "323"
+  created_at: 2009-01-18 20:53:40.0
+  version: "1"
+assets_025: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:56.0
+  project_id: "1"
+  name: ProductReset
+  id: "34"
+  created_at: 2009-01-18 18:47:56.0
+  version: "1"
+assets_026: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:57.0
+  project_id: "1"
+  name: Rate
+  id: "35"
+  created_at: 2009-01-18 18:47:57.0
+  version: "1"
+assets_315: 
+  name_space: 
+  updated_at: 2009-01-18 20:54:11.0
+  project_id: "1"
+  name: CFDContractDefinition
+  id: "324"
+  created_at: 2009-01-18 20:54:11.0
+  version: "1"
+assets_408: 
+  name_space: 
+  updated_at: 2009-01-18 22:30:55.0
+  project_id: "1"
+  name: CorrSurfUnderlyingCDSIndexTranche
+  id: "417"
+  created_at: 2009-01-18 22:30:55.0
+  version: "1"
+assets_409: 
+  name_space: 
+  updated_at: 2009-01-18 22:31:02.0
+  project_id: "1"
+  name: SimpleRepo
+  id: "418"
+  created_at: 2009-01-18 22:31:02.0
+  version: "1"
+assets_316: 
+  name_space: 
+  updated_at: 2009-01-18 20:54:19.0
+  project_id: "1"
+  name: CFDContractDetail
+  id: "325"
+  created_at: 2009-01-18 20:54:19.0
+  version: "1"
+assets_027: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:58.0
+  project_id: "1"
+  name: ResetSampleDate
+  id: "36"
+  created_at: 2009-01-18 18:47:58.0
+  version: "1"
+assets_028: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:00.0
+  project_id: "1"
+  name: FXResetSampleDate
+  id: "37"
+  created_at: 2009-01-18 18:48:00.0
+  version: "1"
+assets_317: 
+  name_space: 
+  updated_at: 2009-01-18 20:54:23.0
+  project_id: "1"
+  name: CFDFinancialGrid
+  id: "326"
+  created_at: 2009-01-18 20:54:23.0
+  version: "1"
+assets_229: 
+  name_space: 
+  updated_at: 2009-01-18 20:19:23.0
+  project_id: "1"
+  name: CurveUnderlyingSwap
+  id: "238"
+  created_at: 2009-01-18 20:19:23.0
+  version: "1"
+assets_318: 
+  name_space: 
+  updated_at: 2009-01-18 20:54:29.0
+  project_id: "1"
+  name: CFDCountryGrid
+  id: "327"
+  created_at: 2009-01-18 20:54:29.0
+  version: "1"
+assets_228: 
+  name_space: 
+  updated_at: 2009-01-18 20:19:16.0
+  project_id: "1"
+  name: CurveUnderlyingFRA
+  id: "237"
+  created_at: 2009-01-18 20:19:16.0
+  version: "1"
+assets_029: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:02.0
+  project_id: "1"
+  name: ProductExchangeCode
+  id: "38"
+  created_at: 2009-01-18 18:48:02.0
+  version: "1"
+assets_319: 
+  name_space: 
+  updated_at: 2009-01-18 20:54:38.0
+  project_id: "1"
+  name: CFDDepositAnnex
+  id: "328"
+  created_at: 2009-01-18 20:54:38.0
+  version: "1"
+assets_227: 
+  name_space: 
+  updated_at: 2009-01-18 20:19:10.0
+  project_id: "1"
+  name: CurveUnderlyingSpread
+  id: "236"
+  created_at: 2009-01-18 20:19:10.0
+  version: "1"
+assets_200: 
+  name_space: 
+  updated_at: 2009-01-18 19:36:37.0
+  project_id: "1"
+  name: BondAssetBackedDefinition
+  id: "209"
+  created_at: 2009-01-18 19:36:37.0
+  version: "1"
+assets_201: 
+  name_space: 
+  updated_at: 2009-01-18 19:38:27.0
+  project_id: "1"
+  name: BondBrady
+  id: "210"
+  created_at: 2009-01-18 19:38:27.0
+  version: "1"
+assets_202: 
+  name_space: 
+  updated_at: 2009-01-18 19:38:32.0
+  project_id: "1"
+  name: BondBradyDefinition
+  id: "211"
+  created_at: 2009-01-18 19:38:32.0
+  version: "1"
+assets_204: 
+  name_space: 
+  updated_at: 2009-01-18 19:40:50.0
+  project_id: "1"
+  name: BondCertificate
+  id: "213"
+  created_at: 2009-01-18 19:40:50.0
+  version: "1"
+assets_104: 
+  name_space: 
+  updated_at: 2009-01-18 18:56:39.0
+  project_id: "1"
+  name: CashflowOptionExotic
+  id: "113"
+  created_at: 2009-01-18 18:56:39.0
+  version: "1"
+assets_105: 
+  name_space: 
+  updated_at: 2009-01-18 18:57:08.0
+  project_id: "1"
+  name: CashflowOptionCoupon
+  id: "114"
+  created_at: 2009-01-18 18:57:08.0
+  version: "1"
+assets_203: 
+  name_space: 
+  updated_at: 2009-01-18 19:40:49.0
+  project_id: "1"
+  name: BondBradyInfo
+  id: "212"
+  created_at: 2009-01-18 19:40:49.0
+  version: "1"
+assets_381: 
+  name_space: 
+  updated_at: 2009-01-18 22:12:19.0
+  project_id: "1"
+  name: FXForward
+  id: "390"
+  created_at: 2009-01-18 22:12:19.0
+  version: "1"
+assets_103: 
+  name_space: 
+  updated_at: 2009-01-18 18:56:14.0
+  project_id: "1"
+  name: CashflowOptionInterest
+  id: "112"
+  created_at: 2009-01-18 18:56:14.0
+  version: "1"
+assets_205: 
+  name_space: 
+  updated_at: 2009-01-18 19:40:58.0
+  project_id: "1"
+  name: BondCertificateDefinition
+  id: "214"
+  created_at: 2009-01-18 19:40:58.0
+  version: "1"
+assets_383: 
+  name_space: 
+  updated_at: 2009-01-18 22:13:26.0
+  project_id: "1"
+  name: FXNDF
+  id: "392"
+  created_at: 2009-01-18 22:13:26.0
+  version: "1"
+assets_400: 
+  name_space: 
+  updated_at: 2009-01-18 22:22:41.0
+  project_id: "1"
+  name: MoneyMarketInterestDefinition
+  id: "409"
+  created_at: 2009-01-18 22:22:41.0
+  version: "1"
+assets_382: 
+  name_space: 
+  updated_at: 2009-01-18 22:12:51.0
+  project_id: "1"
+  name: FXOptionForward
+  id: "391"
+  created_at: 2009-01-18 22:12:51.0
+  version: "1"
+assets_402: 
+  name_space: 
+  updated_at: 2009-01-18 22:25:56.0
+  project_id: "1"
+  name: SecurityBasket
+  id: "411"
+  created_at: 2009-01-18 22:25:56.0
+  version: "1"
+assets_206: 
+  name_space: 
+  updated_at: 2009-01-18 19:43:51.0
+  project_id: "1"
+  name: BondCLN
+  id: "215"
+  created_at: 2009-01-18 19:43:51.0
+  version: "1"
+assets_401: 
+  name_space: 
+  updated_at: 2009-01-18 22:25:52.0
+  project_id: "1"
+  name: Basket
+  id: "410"
+  created_at: 2009-01-18 22:25:52.0
+  version: "1"
+assets_102: 
+  name_space: 
+  updated_at: 2009-01-18 18:55:58.0
+  project_id: "1"
+  name: CashflowCompoundAvg
+  id: "111"
+  created_at: 2009-01-18 18:55:58.0
+  version: "1"
+assets_208: 
+  name_space: 
+  updated_at: 2009-01-18 19:46:01.0
+  project_id: "1"
+  name: BondConvertible
+  id: "217"
+  created_at: 2009-01-18 19:46:01.0
+  version: "1"
+assets_380: 
+  name_space: 
+  updated_at: 2009-01-18 22:11:25.0
+  project_id: "1"
+  name: FXOptionStrip
+  id: "389"
+  created_at: 2009-01-18 22:11:25.0
+  version: "1"
+assets_403: 
+  name_space: 
+  updated_at: 2009-01-18 22:26:00.0
+  project_id: "1"
+  name: BasketDefinition
+  id: "412"
+  created_at: 2009-01-18 22:26:00.0
+  version: "1"
+assets_100: 
+  name_space: 
+  updated_at: 2009-01-18 18:55:12.0
+  project_id: "1"
+  name: CashflowCoupon
+  id: "109"
+  created_at: 2009-01-18 18:55:12.0
+  version: "1"
+assets_101: 
+  name_space: 
+  updated_at: 2009-01-18 18:55:46.0
+  project_id: "1"
+  name: CashflowCompound
+  id: "110"
+  created_at: 2009-01-18 18:55:46.0
+  version: "1"
+assets_207: 
+  name_space: 
+  updated_at: 2009-01-18 19:43:55.0
+  project_id: "1"
+  name: BondCLNDefinition
+  id: "216"
+  created_at: 2009-01-18 19:43:55.0
+  version: "1"
+assets_277: 
+  name_space: 
+  updated_at: 2009-01-18 20:35:50.0
+  project_id: "1"
+  name: FutureOptionEquity
+  id: "286"
+  created_at: 2009-01-18 20:35:50.0
+  version: "1"
+assets_348: 
+  name_space: 
+  updated_at: 2009-01-18 21:16:43.0
+  project_id: "1"
+  name: AssetSwap
+  id: "357"
+  created_at: 2009-01-18 21:16:43.0
+  version: "1"
+assets_278: 
+  name_space: 
+  updated_at: 2009-01-18 20:36:24.0
+  project_id: "1"
+  name: FutureOptionEquityIndex
+  id: "287"
+  created_at: 2009-01-18 20:36:24.0
+  version: "1"
+assets_349: 
+  name_space: 
+  updated_at: 2009-01-18 21:18:37.0
+  project_id: "1"
+  name: CreditDefaultSwap
+  id: "358"
+  created_at: 2009-01-18 21:18:37.0
+  version: "1"
+assets_279: 
+  name_space: 
+  updated_at: 2009-01-18 20:36:58.0
+  project_id: "1"
+  name: FutureOptionFX
+  id: "288"
+  created_at: 2009-01-18 20:36:58.0
+  version: "1"
+assets_272: 
+  name_space: 
+  updated_at: 2009-01-18 20:33:10.0
+  project_id: "1"
+  name: FutureCDSIndex
+  id: "281"
+  created_at: 2009-01-18 20:33:10.0
+  version: "1"
+assets_273: 
+  name_space: 
+  updated_at: 2009-01-18 20:33:43.0
+  project_id: "1"
+  name: FutureOptionDefinition
+  id: "282"
+  created_at: 2009-01-18 20:33:43.0
+  version: "1"
+assets_274: 
+  name_space: 
+  updated_at: 2009-01-18 20:34:10.0
+  project_id: "1"
+  name: FutureOption
+  id: "283"
+  created_at: 2009-01-18 20:34:10.0
+  version: "1"
+assets_275: 
+  name_space: 
+  updated_at: 2009-01-18 20:34:44.0
+  project_id: "1"
+  name: FutureOptionBond
+  id: "284"
+  created_at: 2009-01-18 20:34:44.0
+  version: "1"
+assets_276: 
+  name_space: 
+  updated_at: 2009-01-18 20:35:17.0
+  project_id: "1"
+  name: FutureOptionCommodity
+  id: "285"
+  created_at: 2009-01-18 20:35:17.0
+  version: "1"
+assets_281: 
+  name_space: 
+  updated_at: 2009-01-18 20:38:05.0
+  project_id: "1"
+  name: FutureOptionMM
+  id: "290"
+  created_at: 2009-01-18 20:38:05.0
+  version: "1"
+assets_357: 
+  name_space: 
+  updated_at: 2009-01-18 21:39:06.0
+  project_id: "1"
+  name: CDSABSProtectionLeg
+  id: "366"
+  created_at: 2009-01-18 21:39:06.0
+  version: "1"
+assets_484: 
+  name_space: 
+  updated_at: 2009-01-18 23:23:29.0
+  project_id: "1"
+  name: RiskConfigItem
+  id: "493"
+  created_at: 2009-01-18 23:23:29.0
+  version: "1"
+assets_486: 
+  name_space: 
+  updated_at: 2009-01-18 23:23:52.0
+  project_id: "1"
+  name: PerformanceSwap
+  id: "495"
+  created_at: 2009-01-18 23:23:52.0
+  version: "1"
+assets_358: 
+  name_space: 
+  updated_at: 2009-01-18 21:39:21.0
+  project_id: "1"
+  name: CDSABSPremiumLeg
+  id: "367"
+  created_at: 2009-01-18 21:39:21.0
+  version: "1"
+assets_485: 
+  name_space: 
+  updated_at: 2009-01-18 23:23:44.0
+  project_id: "1"
+  name: SenderConfig
+  id: "494"
+  created_at: 2009-01-18 23:23:44.0
+  version: "1"
+assets_282: 
+  name_space: 
+  updated_at: 2009-01-18 20:38:39.0
+  project_id: "1"
+  name: CorrelationSurface
+  id: "291"
+  created_at: 2009-01-18 20:38:39.0
+  version: "1"
+assets_359: 
+  name_space: 
+  updated_at: 2009-01-18 21:40:24.0
+  project_id: "1"
+  name: CreditDefaultSwapABS
+  id: "368"
+  created_at: 2009-01-18 21:40:24.0
+  version: "1"
+assets_482: 
+  name_space: 
+  updated_at: 2009-01-18 23:23:19.0
+  project_id: "1"
+  name: ScenarioHierarchyNode
+  id: "491"
+  created_at: 2009-01-18 23:23:19.0
+  version: "1"
+assets_284: 
+  name_space: 
+  updated_at: 2009-01-18 20:39:24.0
+  project_id: "1"
+  name: FXVolatilitySurface
+  id: "293"
+  created_at: 2009-01-18 20:39:24.0
+  version: "1"
+assets_481: 
+  name_space: 
+  updated_at: 2009-01-18 23:23:18.0
+  project_id: "1"
+  name: ScenarioHierarchy
+  id: "490"
+  created_at: 2009-01-18 23:23:18.0
+  version: "1"
+assets_283: 
+  name_space: 
+  updated_at: 2009-01-18 20:38:58.0
+  project_id: "1"
+  name: VolatilitySurface
+  id: "292"
+  created_at: 2009-01-18 20:38:58.0
+  version: "1"
+assets_483: 
+  name_space: 
+  updated_at: 2009-01-18 23:23:23.0
+  project_id: "1"
+  name: RiskConfig
+  id: "492"
+  created_at: 2009-01-18 23:23:23.0
+  version: "1"
+assets_285: 
+  name_space: 
+  updated_at: 2009-01-18 20:39:52.0
+  project_id: "1"
+  name: OneFactorModelSurface
+  id: "294"
+  created_at: 2009-01-18 20:39:52.0
+  version: "1"
+assets_049: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:50.0
+  project_id: "1"
+  name: PoolFactorScheduleEntry
+  id: "58"
+  created_at: 2009-01-18 18:48:50.0
+  version: "1"
+assets_286: 
+  name_space: 
+  updated_at: 2009-01-18 20:40:19.0
+  project_id: "1"
+  name: CorrelationMatrix
+  id: "295"
+  created_at: 2009-01-18 20:40:19.0
+  version: "1"
+assets_288: 
+  name_space: 
+  updated_at: 2009-01-18 20:40:33.0
+  project_id: "1"
+  name: SurfaceUnderlyingCap
+  id: "297"
+  created_at: 2009-01-18 20:40:33.0
+  version: "1"
+assets_480: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:59.0
+  project_id: "1"
+  name: ScenarioParameters
+  id: "489"
+  created_at: 2009-01-18 23:22:59.0
+  version: "1"
+assets_287: 
+  name_space: 
+  updated_at: 2009-01-18 20:40:29.0
+  project_id: "1"
+  name: SurfaceUnderlying
+  id: "296"
+  created_at: 2009-01-18 20:40:29.0
+  version: "1"
+assets_289: 
+  name_space: 
+  updated_at: 2009-01-18 20:40:42.0
+  project_id: "1"
+  name: SurfaceUnderlyingSwaption
+  id: "298"
+  created_at: 2009-01-18 20:40:42.0
+  version: "1"
+assets_142: 
+  name_space: 
+  updated_at: 2009-01-18 19:03:52.0
+  project_id: "1"
+  name: Trade
+  id: "151"
+  created_at: 2009-01-18 19:03:52.0
+  version: "1"
+assets_019: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:48.0
+  project_id: "1"
+  name: Rounding
+  id: "28"
+  created_at: 2009-01-18 18:47:48.0
+  version: "1"
+assets_018: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:46.0
+  project_id: "1"
+  name: DateAdjustment
+  id: "27"
+  created_at: 2009-01-18 18:47:46.0
+  version: "1"
+assets_249: 
+  name_space: 
+  updated_at: 2009-01-18 20:22:55.0
+  project_id: "1"
+  name: CurveZero
+  id: "258"
+  created_at: 2009-01-18 20:22:55.0
+  version: "1"
+assets_150: 
+  name_space: 
+  updated_at: 2009-01-18 19:05:45.0
+  project_id: "1"
+  name: TradeFilter
+  id: "159"
+  created_at: 2009-01-18 19:05:45.0
+  version: "1"
+assets_044: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:41.0
+  project_id: "1"
+  name: Code
+  id: "53"
+  created_at: 2009-01-18 18:48:41.0
+  version: "1"
+assets_247: 
+  name_space: 
+  updated_at: 2009-01-18 20:22:31.0
+  project_id: "1"
+  name: CreditRating
+  id: "256"
+  created_at: 2009-01-18 20:22:31.0
+  version: "1"
+assets_250: 
+  name_space: 
+  updated_at: 2009-01-18 20:23:17.0
+  project_id: "1"
+  name: CurveVolatility
+  id: "259"
+  created_at: 2009-01-18 20:23:17.0
+  version: "1"
+assets_046: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:44.0
+  project_id: "1"
+  name: FilterSet
+  id: "55"
+  created_at: 2009-01-18 18:48:44.0
+  version: "1"
+assets_045: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:42.0
+  project_id: "1"
+  name: CouponDate
+  id: "54"
+  created_at: 2009-01-18 18:48:42.0
+  version: "1"
+assets_143: 
+  name_space: 
+  updated_at: 2009-01-18 19:04:13.0
+  project_id: "1"
+  name: Fee
+  id: "152"
+  created_at: 2009-01-18 19:04:13.0
+  version: "1"
+assets_017: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:45.0
+  project_id: "1"
+  name: Adjustment
+  id: "26"
+  created_at: 2009-01-18 18:47:45.0
+  version: "1"
+assets_248: 
+  name_space: 
+  updated_at: 2009-01-18 20:22:35.0
+  project_id: "1"
+  name: Curve
+  id: "257"
+  created_at: 2009-01-18 20:22:35.0
+  version: "1"
+assets_047: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:47.0
+  project_id: "1"
+  name: FilterElement
+  id: "56"
+  created_at: 2009-01-18 18:48:47.0
+  version: "1"
+assets_145: 
+  name_space: 
+  updated_at: 2009-01-18 19:04:23.0
+  project_id: "1"
+  name: FeeBillingRule
+  id: "154"
+  created_at: 2009-01-18 19:04:23.0
+  version: "1"
+assets_246: 
+  name_space: 
+  updated_at: 2009-01-18 20:21:37.0
+  project_id: "1"
+  name: PricerConfiguration
+  id: "255"
+  created_at: 2009-01-18 20:21:37.0
+  version: "1"
+assets_144: 
+  name_space: 
+  updated_at: 2009-01-18 19:04:20.0
+  project_id: "1"
+  name: FeeDefinition
+  id: "153"
+  created_at: 2009-01-18 19:04:20.0
+  version: "1"
+assets_218: 
+  name_space: 
+  updated_at: 2009-01-18 19:53:16.0
+  project_id: "1"
+  name: BondMMInterestDefinition
+  id: "227"
+  created_at: 2009-01-18 19:53:16.0
+  version: "1"
+assets_251: 
+  name_space: 
+  updated_at: 2009-01-18 20:23:39.0
+  project_id: "1"
+  name: CurveRepo
+  id: "260"
+  created_at: 2009-01-18 20:23:39.0
+  version: "1"
+assets_146: 
+  name_space: 
+  updated_at: 2009-01-18 19:04:36.0
+  project_id: "1"
+  name: TradeBundle
+  id: "155"
+  created_at: 2009-01-18 19:04:36.0
+  version: "1"
+assets_219: 
+  name_space: 
+  updated_at: 2009-01-18 19:54:59.0
+  project_id: "1"
+  name: BondRevolver
+  id: "228"
+  created_at: 2009-01-18 19:54:59.0
+  version: "1"
+assets_253: 
+  name_space: 
+  updated_at: 2009-01-18 20:24:26.0
+  project_id: "1"
+  name: CurveRisky
+  id: "262"
+  created_at: 2009-01-18 20:24:26.0
+  version: "1"
+assets_245: 
+  name_space: 
+  updated_at: 2009-01-18 20:21:31.0
+  project_id: "1"
+  name: PricingParameters
+  id: "254"
+  created_at: 2009-01-18 20:21:31.0
+  version: "1"
+assets_252: 
+  name_space: 
+  updated_at: 2009-01-18 20:24:02.0
+  project_id: "1"
+  name: CurveBasis
+  id: "261"
+  created_at: 2009-01-18 20:24:02.0
+  version: "1"
+assets_048: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:49.0
+  project_id: "1"
+  name: Audit
+  id: "57"
+  created_at: 2009-01-18 18:48:49.0
+  version: "1"
+assets_147: 
+  name_space: 
+  updated_at: 2009-01-18 19:04:39.0
+  project_id: "1"
+  name: StructuredProduct
+  id: "156"
+  created_at: 2009-01-18 19:04:39.0
+  version: "1"
+assets_013: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:39.0
+  project_id: "1"
+  name: Comment
+  id: "22"
+  created_at: 2009-01-18 18:47:39.0
+  version: "1"
+assets_149: 
+  name_space: 
+  updated_at: 2009-01-18 19:05:14.0
+  project_id: "1"
+  name: CompoundOption
+  id: "158"
+  created_at: 2009-01-18 19:05:14.0
+  version: "1"
+assets_012: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:39.0
+  project_id: "1"
+  name: DomainValue
+  id: "21"
+  created_at: 2009-01-18 18:47:39.0
+  version: "1"
+assets_040: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:26.0
+  project_id: "1"
+  name: EqualAmortization
+  id: "49"
+  created_at: 2009-01-18 18:48:26.0
+  version: "1"
+assets_148: 
+  name_space: 
+  updated_at: 2009-01-18 19:05:07.0
+  project_id: "1"
+  name: BasicProduct
+  id: "157"
+  created_at: 2009-01-18 19:05:07.0
+  version: "1"
+assets_042: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:33.0
+  project_id: "1"
+  name: ScheduleAmortization
+  id: "51"
+  created_at: 2009-01-18 18:48:33.0
+  version: "1"
+assets_016: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:41.0
+  project_id: "1"
+  name: SimpleTypedObject
+  id: "25"
+  created_at: 2009-01-18 18:47:41.0
+  version: "1"
+assets_041: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:29.0
+  project_id: "1"
+  name: MortgageAmortization
+  id: "50"
+  created_at: 2009-01-18 18:48:29.0
+  version: "1"
+assets_015: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:40.0
+  project_id: "1"
+  name: Holidays
+  id: "24"
+  created_at: 2009-01-18 18:47:40.0
+  version: "1"
+assets_043: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:37.0
+  project_id: "1"
+  name: StepDownAmortization
+  id: "52"
+  created_at: 2009-01-18 18:48:37.0
+  version: "1"
+assets_014: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:40.0
+  project_id: "1"
+  name: CurrencyCode
+  id: "23"
+  created_at: 2009-01-18 18:47:40.0
+  version: "1"
+assets_159: 
+  name_space: 
+  updated_at: 2009-01-18 19:07:51.0
+  project_id: "1"
+  name: Swap
+  id: "168"
+  created_at: 2009-01-18 19:07:51.0
+  version: "1"
+assets_211: 
+  name_space: 
+  updated_at: 2009-01-18 19:47:54.0
+  project_id: "1"
+  name: BondFRN
+  id: "220"
+  created_at: 2009-01-18 19:47:54.0
+  version: "1"
+assets_210: 
+  name_space: 
+  updated_at: 2009-01-18 19:47:52.0
+  project_id: "1"
+  name: ConversionReset
+  id: "219"
+  created_at: 2009-01-18 19:47:52.0
+  version: "1"
+assets_259: 
+  name_space: 
+  updated_at: 2009-01-18 20:26:57.0
+  project_id: "1"
+  name: CurveDividend
+  id: "268"
+  created_at: 2009-01-18 20:26:57.0
+  version: "1"
+assets_156: 
+  name_space: 
+  updated_at: 2009-01-18 19:06:30.0
+  project_id: "1"
+  name: TradeTransferRuleParty
+  id: "165"
+  created_at: 2009-01-18 19:06:30.0
+  version: "1"
+assets_010: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:37.0
+  project_id: "1"
+  name: MarketDataIdentifiers
+  id: "19"
+  created_at: 2009-01-18 18:47:37.0
+  version: "1"
+assets_158: 
+  name_space: 
+  updated_at: 2009-01-18 19:06:33.0
+  project_id: "1"
+  name: CashSettlementInfo
+  id: "167"
+  created_at: 2009-01-18 19:06:33.0
+  version: "1"
+assets_157: 
+  name_space: 
+  updated_at: 2009-01-18 19:06:32.0
+  project_id: "1"
+  name: CashSettlementDate
+  id: "166"
+  created_at: 2009-01-18 19:06:32.0
+  version: "1"
+assets_011: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:38.0
+  project_id: "1"
+  name: Name
+  id: "20"
+  created_at: 2009-01-18 18:47:38.0
+  version: "1"
+assets_154: 
+  name_space: 
+  updated_at: 2009-01-18 19:06:07.0
+  project_id: "1"
+  name: Mutation
+  id: "163"
+  created_at: 2009-01-18 19:06:07.0
+  version: "1"
+assets_217: 
+  name_space: 
+  updated_at: 2009-01-18 19:53:13.0
+  project_id: "1"
+  name: BondMMInterest
+  id: "226"
+  created_at: 2009-01-18 19:53:13.0
+  version: "1"
+assets_255: 
+  name_space: 
+  updated_at: 2009-01-18 20:25:21.0
+  project_id: "1"
+  name: CurveRecovery
+  id: "264"
+  created_at: 2009-01-18 20:25:21.0
+  version: "1"
+assets_153: 
+  name_space: 
+  updated_at: 2009-01-18 19:06:05.0
+  project_id: "1"
+  name: TradeFilterCriterionMinMaxDate
+  id: "162"
+  created_at: 2009-01-18 19:06:05.0
+  version: "1"
+assets_216: 
+  name_space: 
+  updated_at: 2009-01-18 19:51:29.0
+  project_id: "1"
+  name: BondMMDiscountAUDDefinition
+  id: "225"
+  created_at: 2009-01-18 19:51:29.0
+  version: "1"
+assets_155: 
+  name_space: 
+  updated_at: 2009-01-18 19:06:23.0
+  project_id: "1"
+  name: TradeTransferRule
+  id: "164"
+  created_at: 2009-01-18 19:06:23.0
+  version: "1"
+assets_215: 
+  name_space: 
+  updated_at: 2009-01-18 19:51:26.0
+  project_id: "1"
+  name: BondMMDiscountAUD
+  id: "224"
+  created_at: 2009-01-18 19:51:26.0
+  version: "1"
+assets_254: 
+  name_space: 
+  updated_at: 2009-01-18 20:24:54.0
+  project_id: "1"
+  name: CurveProbability
+  id: "263"
+  created_at: 2009-01-18 20:24:54.0
+  version: "1"
+assets_151: 
+  name_space: 
+  updated_at: 2009-01-18 19:06:03.0
+  project_id: "1"
+  name: TradeFilterCriterion
+  id: "160"
+  created_at: 2009-01-18 19:06:03.0
+  version: "1"
+assets_214: 
+  name_space: 
+  updated_at: 2009-01-18 19:49:43.0
+  project_id: "1"
+  name: BondMMDiscountDefinition
+  id: "223"
+  created_at: 2009-01-18 19:49:43.0
+  version: "1"
+assets_258: 
+  name_space: 
+  updated_at: 2009-01-18 20:26:35.0
+  project_id: "1"
+  name: CurveInflation
+  id: "267"
+  created_at: 2009-01-18 20:26:35.0
+  version: "1"
+assets_213: 
+  name_space: 
+  updated_at: 2009-01-18 19:49:40.0
+  project_id: "1"
+  name: BondMMDiscount
+  id: "222"
+  created_at: 2009-01-18 19:49:40.0
+  version: "1"
+assets_256: 
+  name_space: 
+  updated_at: 2009-01-18 20:25:47.0
+  project_id: "1"
+  name: CurveFX
+  id: "265"
+  created_at: 2009-01-18 20:25:47.0
+  version: "1"
+assets_152: 
+  name_space: 
+  updated_at: 2009-01-18 19:06:03.0
+  project_id: "1"
+  name: TradeFilterCriterionMinMax
+  id: "161"
+  created_at: 2009-01-18 19:06:03.0
+  version: "1"
+assets_257: 
+  name_space: 
+  updated_at: 2009-01-18 20:26:11.0
+  project_id: "1"
+  name: CurveZeroFXDerived
+  id: "266"
+  created_at: 2009-01-18 20:26:11.0
+  version: "1"
+assets_212: 
+  name_space: 
+  updated_at: 2009-01-18 19:47:57.0
+  project_id: "1"
+  name: BondFRNDefinition
+  id: "221"
+  created_at: 2009-01-18 19:47:57.0
+  version: "1"
+assets_020: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:48.0
+  project_id: "1"
+  name: Amount
+  id: "29"
+  created_at: 2009-01-18 18:47:48.0
+  version: "1"
+assets_350: 
+  name_space: 
+  updated_at: 2009-01-18 21:21:44.0
+  project_id: "1"
+  name: CDSNthLoss
+  id: "359"
+  created_at: 2009-01-18 21:21:44.0
+  version: "1"
+assets_220: 
+  name_space: 
+  updated_at: 2009-01-18 19:55:03.0
+  project_id: "1"
+  name: BondRevolverDefinition
+  id: "229"
+  created_at: 2009-01-18 19:55:03.0
+  version: "1"
+assets_222: 
+  name_space: 
+  updated_at: 2009-01-18 19:56:47.0
+  project_id: "1"
+  name: RevolverDrawn
+  id: "231"
+  created_at: 2009-01-18 19:56:47.0
+  version: "1"
+assets_353: 
+  name_space: 
+  updated_at: 2009-01-18 21:29:34.0
+  project_id: "1"
+  name: CDSIndexDefinition
+  id: "362"
+  created_at: 2009-01-18 21:29:34.0
+  version: "1"
+assets_221: 
+  name_space: 
+  updated_at: 2009-01-18 19:56:47.0
+  project_id: "1"
+  name: Drawn
+  id: "230"
+  created_at: 2009-01-18 19:56:47.0
+  version: "1"
+assets_352: 
+  name_space: 
+  updated_at: 2009-01-18 21:29:01.0
+  project_id: "1"
+  name: CDSIndex
+  id: "361"
+  created_at: 2009-01-18 21:29:01.0
+  version: "1"
+assets_223: 
+  name_space: 
+  updated_at: 2009-01-18 20:18:48.0
+  project_id: "1"
+  name: CurveUnderlying
+  id: "232"
+  created_at: 2009-01-18 20:18:48.0
+  version: "1"
+assets_351: 
+  name_space: 
+  updated_at: 2009-01-18 21:25:23.0
+  project_id: "1"
+  name: CDSNthDefault
+  id: "360"
+  created_at: 2009-01-18 21:25:23.0
+  version: "1"
+assets_356: 
+  name_space: 
+  updated_at: 2009-01-18 21:37:29.0
+  project_id: "1"
+  name: TotalReturnSwap
+  id: "365"
+  created_at: 2009-01-18 21:37:29.0
+  version: "1"
+assets_224: 
+  name_space: 
+  updated_at: 2009-01-18 20:18:52.0
+  project_id: "1"
+  name: CurveUnderlyingFuture
+  id: "233"
+  created_at: 2009-01-18 20:18:52.0
+  version: "1"
+assets_355: 
+  name_space: 
+  updated_at: 2009-01-18 21:33:31.0
+  project_id: "1"
+  name: CreditDefaultSwaption
+  id: "364"
+  created_at: 2009-01-18 21:33:31.0
+  version: "1"
+assets_226: 
+  name_space: 
+  updated_at: 2009-01-18 20:19:04.0
+  project_id: "1"
+  name: CurveUnderlyingBondFuture
+  id: "235"
+  created_at: 2009-01-18 20:19:04.0
+  version: "1"
+assets_354: 
+  name_space: 
+  updated_at: 2009-01-18 21:29:38.0
+  project_id: "1"
+  name: CDSIndexDefinitionDefinition
+  id: "363"
+  created_at: 2009-01-18 21:29:38.0
+  version: "1"
+assets_225: 
+  name_space: 
+  updated_at: 2009-01-18 20:18:58.0
+  project_id: "1"
+  name: CurveUnderlyingBond
+  id: "234"
+  created_at: 2009-01-18 20:18:58.0
+  version: "1"
+assets_371: 
+  name_space: 
+  updated_at: 2009-01-18 21:52:04.0
+  project_id: "1"
+  name: CreditDefaultSwapLoan
+  id: "380"
+  created_at: 2009-01-18 21:52:04.0
+  version: "1"
+assets_260: 
+  name_space: 
+  updated_at: 2009-01-18 20:27:19.0
+  project_id: "1"
+  name: CurvePrepay
+  id: "269"
+  created_at: 2009-01-18 20:27:19.0
+  version: "1"
+assets_262: 
+  name_space: 
+  updated_at: 2009-01-18 20:28:05.0
+  project_id: "1"
+  name: CurveDelinquency
+  id: "271"
+  created_at: 2009-01-18 20:28:05.0
+  version: "1"
+assets_261: 
+  name_space: 
+  updated_at: 2009-01-18 20:27:43.0
+  project_id: "1"
+  name: CurveDefault
+  id: "270"
+  created_at: 2009-01-18 20:27:43.0
+  version: "1"
+assets_370: 
+  name_space: 
+  updated_at: 2009-01-18 21:51:47.0
+  project_id: "1"
+  name: CDSSettlementMatrix
+  id: "379"
+  created_at: 2009-01-18 21:51:47.0
+  version: "1"
+assets_373: 
+  name_space: 
+  updated_at: 2009-01-18 21:55:38.0
+  project_id: "1"
+  name: CDSABSIndexDefinitionDefinition
+  id: "382"
+  created_at: 2009-01-18 21:55:38.0
+  version: "1"
+assets_179: 
+  name_space: 
+  updated_at: 2009-01-18 19:26:22.0
+  project_id: "1"
+  name: ObservableVariable
+  id: "188"
+  created_at: 2009-01-18 19:26:22.0
+  version: "1"
+assets_374: 
+  name_space: 
+  updated_at: 2009-01-18 21:57:47.0
+  project_id: "1"
+  name: CDSABSIndexTrancheDefinition
+  id: "383"
+  created_at: 2009-01-18 21:57:47.0
+  version: "1"
+assets_372: 
+  name_space: 
+  updated_at: 2009-01-18 21:55:35.0
+  project_id: "1"
+  name: CDSABSIndexDefinition
+  id: "381"
+  created_at: 2009-01-18 21:55:35.0
+  version: "1"
+assets_363: 
+  name_space: 
+  updated_at: 2009-01-18 21:46:02.0
+  project_id: "1"
+  name: CDSIndexTranche
+  id: "372"
+  created_at: 2009-01-18 21:46:02.0
+  version: "1"
+assets_365: 
+  name_space: 
+  updated_at: 2009-01-18 21:47:43.0
+  project_id: "1"
+  name: CDSIndexTrancheOption
+  id: "374"
+  created_at: 2009-01-18 21:47:43.0
+  version: "1"
+assets_364: 
+  name_space: 
+  updated_at: 2009-01-18 21:46:38.0
+  project_id: "1"
+  name: CDSIndexOption
+  id: "373"
+  created_at: 2009-01-18 21:46:38.0
+  version: "1"
+assets_199: 
+  name_space: 
+  updated_at: 2009-01-18 19:36:33.0
+  project_id: "1"
+  name: BondAssetBacked
+  id: "208"
+  created_at: 2009-01-18 19:36:33.0
+  version: "1"
+assets_361: 
+  name_space: 
+  updated_at: 2009-01-18 21:42:49.0
+  project_id: "1"
+  name: TotalReturnSwapBasket
+  id: "370"
+  created_at: 2009-01-18 21:42:49.0
+  version: "1"
+assets_360: 
+  name_space: 
+  updated_at: 2009-01-18 21:42:19.0
+  project_id: "1"
+  name: CDSABSIndex
+  id: "369"
+  created_at: 2009-01-18 21:42:19.0
+  version: "1"
+assets_198: 
+  name_space: 
+  updated_at: 2009-01-18 19:36:01.0
+  project_id: "1"
+  name: BondSpreadDefinition
+  id: "207"
+  created_at: 2009-01-18 19:36:01.0
+  version: "1"
+assets_362: 
+  name_space: 
+  updated_at: 2009-01-18 21:44:36.0
+  project_id: "1"
+  name: TotalReturnStream
+  id: "371"
+  created_at: 2009-01-18 21:44:36.0
+  version: "1"
+assets_197: 
+  name_space: 
+  updated_at: 2009-01-18 19:35:57.0
+  project_id: "1"
+  name: BondSpread
+  id: "206"
+  created_at: 2009-01-18 19:35:57.0
+  version: "1"
+assets_171: 
+  name_space: 
+  updated_at: 2009-01-18 19:18:10.0
+  project_id: "1"
+  name: BondOption
+  id: "180"
+  created_at: 2009-01-18 19:18:10.0
+  version: "1"
+assets_196: 
+  name_space: 
+  updated_at: 2009-01-18 19:34:17.0
+  project_id: "1"
+  name: BondDefinition
+  id: "205"
+  created_at: 2009-01-18 19:34:17.0
+  version: "1"
+assets_295: 
+  name_space: 
+  updated_at: 2009-01-18 20:41:32.0
+  project_id: "1"
+  name: Equity
+  id: "304"
+  created_at: 2009-01-18 20:41:32.0
+  version: "1"
+assets_172: 
+  name_space: 
+  updated_at: 2009-01-18 19:18:59.0
+  project_id: "1"
+  name: Swaption
+  id: "181"
+  created_at: 2009-01-18 19:18:59.0
+  version: "1"
+assets_297: 
+  name_space: 
+  updated_at: 2009-01-18 20:41:39.0
+  project_id: "1"
+  name: EquityDefinition
+  id: "306"
+  created_at: 2009-01-18 20:41:39.0
+  version: "1"
+assets_173: 
+  name_space: 
+  updated_at: 2009-01-18 19:20:25.0
+  project_id: "1"
+  name: TriggerSwaption
+  id: "182"
+  created_at: 2009-01-18 19:20:25.0
+  version: "1"
+assets_195: 
+  name_space: 
+  updated_at: 2009-01-18 19:34:13.0
+  project_id: "1"
+  name: Bond
+  id: "204"
+  created_at: 2009-01-18 19:34:13.0
+  version: "1"
+assets_296: 
+  name_space: 
+  updated_at: 2009-01-18 20:41:35.0
+  project_id: "1"
+  name: ADR
+  id: "305"
+  created_at: 2009-01-18 20:41:35.0
+  version: "1"
+assets_193: 
+  name_space: 
+  updated_at: 2009-01-18 19:32:42.0
+  project_id: "1"
+  name: ProductQVarI
+  id: "202"
+  created_at: 2009-01-18 19:32:42.0
+  version: "1"
+assets_298: 
+  name_space: 
+  updated_at: 2009-01-18 20:42:12.0
+  project_id: "1"
+  name: ADRDefinition
+  id: "307"
+  created_at: 2009-01-18 20:42:12.0
+  version: "1"
+assets_194: 
+  name_space: 
+  updated_at: 2009-01-18 19:32:46.0
+  project_id: "1"
+  name: FXQVar
+  id: "203"
+  created_at: 2009-01-18 19:32:46.0
+  version: "1"
+assets_192: 
+  name_space: 
+  updated_at: 2009-01-18 19:32:37.0
+  project_id: "1"
+  name: InterestRateQVar
+  id: "201"
+  created_at: 2009-01-18 19:32:37.0
+  version: "1"
+assets_170: 
+  name_space: 
+  updated_at: 2009-01-18 19:17:31.0
+  project_id: "1"
+  name: FRA
+  id: "179"
+  created_at: 2009-01-18 19:17:31.0
+  version: "1"
+assets_299: 
+  name_space: 
+  updated_at: 2009-01-18 20:43:17.0
+  project_id: "1"
+  name: EquityIndex
+  id: "308"
+  created_at: 2009-01-18 20:43:17.0
+  version: "1"
+assets_290: 
+  name_space: 
+  updated_at: 2009-01-18 20:40:56.0
+  project_id: "1"
+  name: SurfaceUnderlyingFutureOption
+  id: "299"
+  created_at: 2009-01-18 20:40:56.0
+  version: "1"
+assets_191: 
+  name_space: 
+  updated_at: 2009-01-18 19:32:34.0
+  project_id: "1"
+  name: QuotableVariableI
+  id: "200"
+  created_at: 2009-01-18 19:32:34.0
+  version: "1"
+assets_493: 
+  name_space: 
+  updated_at: 2009-01-18 23:29:14.0
+  project_id: "1"
+  name: TotalReturnCommodityInterestStream
+  id: "502"
+  created_at: 2009-01-18 23:29:14.0
+  version: "1"
+assets_177: 
+  name_space: 
+  updated_at: 2009-01-18 19:24:19.0
+  project_id: "1"
+  name: SingleSwapLeg
+  id: "186"
+  created_at: 2009-01-18 19:24:19.0
+  version: "1"
+assets_178: 
+  name_space: 
+  updated_at: 2009-01-18 19:25:54.0
+  project_id: "1"
+  name: InitialPrice
+  id: "187"
+  created_at: 2009-01-18 19:25:54.0
+  version: "1"
+assets_495: 
+  name_space: 
+  updated_at: 2009-01-18 23:30:54.0
+  project_id: "1"
+  name: OTCCommodityOption
+  id: "504"
+  created_at: 2009-01-18 23:30:54.0
+  version: "1"
+assets_494: 
+  name_space: 
+  updated_at: 2009-01-18 23:29:21.0
+  project_id: "1"
+  name: CommoditySwap
+  id: "503"
+  created_at: 2009-01-18 23:29:21.0
+  version: "1"
+assets_190: 
+  name_space: 
+  updated_at: 2009-01-18 19:32:33.0
+  project_id: "1"
+  name: VariableI
+  id: "199"
+  created_at: 2009-01-18 19:32:33.0
+  version: "1"
+assets_291: 
+  name_space: 
+  updated_at: 2009-01-18 20:41:03.0
+  project_id: "1"
+  name: SurfaceUnderlyingETO
+  id: "300"
+  created_at: 2009-01-18 20:41:03.0
+  version: "1"
+assets_174: 
+  name_space: 
+  updated_at: 2009-01-18 19:21:53.0
+  project_id: "1"
+  name: Stream
+  id: "183"
+  created_at: 2009-01-18 19:21:53.0
+  version: "1"
+assets_491: 
+  name_space: 
+  updated_at: 2009-01-18 23:28:17.0
+  project_id: "1"
+  name: CommodityIndexDefinition
+  id: "500"
+  created_at: 2009-01-18 23:28:17.0
+  version: "1"
+assets_293: 
+  name_space: 
+  updated_at: 2009-01-18 20:41:18.0
+  project_id: "1"
+  name: SurfaceUnderlyingOTCEquityOption
+  id: "302"
+  created_at: 2009-01-18 20:41:18.0
+  version: "1"
+assets_490: 
+  name_space: 
+  updated_at: 2009-01-18 23:28:13.0
+  project_id: "1"
+  name: CommodityIndex
+  id: "499"
+  created_at: 2009-01-18 23:28:13.0
+  version: "1"
+assets_292: 
+  name_space: 
+  updated_at: 2009-01-18 20:41:11.0
+  project_id: "1"
+  name: SurfaceUnderlyingOTCEquity
+  id: "301"
+  created_at: 2009-01-18 20:41:11.0
+  version: "1"
+assets_492: 
+  name_space: 
+  updated_at: 2009-01-18 23:28:56.0
+  project_id: "1"
+  name: CommodityInterestStream
+  id: "501"
+  created_at: 2009-01-18 23:28:56.0
+  version: "1"
+assets_294: 
+  name_space: 
+  updated_at: 2009-01-18 20:41:24.0
+  project_id: "1"
+  name: SurfaceUnderlyingFXOption
+  id: "303"
+  created_at: 2009-01-18 20:41:24.0
+  version: "1"
+assets_175: 
+  name_space: 
+  updated_at: 2009-01-18 19:22:18.0
+  project_id: "1"
+  name: InterestStream
+  id: "184"
+  created_at: 2009-01-18 19:22:18.0
+  version: "1"
+assets_176: 
+  name_space: 
+  updated_at: 2009-01-18 19:23:14.0
+  project_id: "1"
+  name: SpreadInterestStream
+  id: "185"
+  created_at: 2009-01-18 19:23:14.0
+  version: "1"
+assets_068: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:18.0
+  project_id: "1"
+  name: CreditCurveBlotterConfig
+  id: "77"
+  created_at: 2009-01-18 18:50:18.0
+  version: "1"
+assets_438: 
+  name_space: 
+  updated_at: 2009-01-18 23:08:51.0
+  project_id: "1"
+  name: InterestBearing
+  id: "447"
+  created_at: 2009-01-18 23:08:51.0
+  version: "1"
+assets_067: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:17.0
+  project_id: "1"
+  name: TradeWindowClass
+  id: "76"
+  created_at: 2009-01-18 18:50:17.0
+  version: "1"
+assets_498: 
+  name_space: 
+  updated_at: 2009-01-18 23:35:45.0
+  project_id: "1"
+  name: CommodityForward
+  id: "507"
+  created_at: 2009-01-18 23:35:45.0
+  version: "1"
+assets_436: 
+  name_space: 
+  updated_at: 2009-01-18 23:08:06.0
+  project_id: "1"
+  name: TransferAgent
+  id: "445"
+  created_at: 2009-01-18 23:08:06.0
+  version: "1"
+assets_069: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:21.0
+  project_id: "1"
+  name: MainEntryProperties
+  id: "78"
+  created_at: 2009-01-18 18:50:21.0
+  version: "1"
+assets_499: 
+  name_space: 
+  updated_at: 2009-01-18 23:36:46.0
+  project_id: "1"
+  name: CommodityIndexSwap
+  id: "508"
+  created_at: 2009-01-18 23:36:46.0
+  version: "1"
+assets_437: 
+  name_space: 
+  updated_at: 2009-01-18 23:08:47.0
+  project_id: "1"
+  name: InterestBearingEntry
+  id: "446"
+  created_at: 2009-01-18 23:08:47.0
+  version: "1"
+assets_497: 
+  name_space: 
+  updated_at: 2009-01-18 23:33:05.0
+  project_id: "1"
+  name: CommoditySwaption
+  id: "506"
+  created_at: 2009-01-18 23:33:05.0
+  version: "1"
+assets_439: 
+  name_space: 
+  updated_at: 2009-01-18 23:09:39.0
+  project_id: "1"
+  name: LegalAgreement
+  id: "448"
+  created_at: 2009-01-18 23:09:39.0
+  version: "1"
+assets_496: 
+  name_space: 
+  updated_at: 2009-01-18 23:31:58.0
+  project_id: "1"
+  name: CommodityCapFloor
+  id: "505"
+  created_at: 2009-01-18 23:31:58.0
+  version: "1"
+assets_432: 
+  name_space: 
+  updated_at: 2009-01-18 23:05:05.0
+  project_id: "1"
+  name: Brokerage
+  id: "441"
+  created_at: 2009-01-18 23:05:05.0
+  version: "1"
+assets_140: 
+  name_space: 
+  updated_at: 2009-01-18 19:03:08.0
+  project_id: "1"
+  name: Product
+  id: "149"
+  created_at: 2009-01-18 19:03:08.0
+  version: "1"
+assets_240: 
+  name_space: 
+  updated_at: 2009-01-18 20:20:56.0
+  project_id: "1"
+  name: Quote
+  id: "249"
+  created_at: 2009-01-18 20:20:56.0
+  version: "1"
+assets_433: 
+  name_space: 
+  updated_at: 2009-01-18 23:05:56.0
+  project_id: "1"
+  name: CustomerTransfer
+  id: "442"
+  created_at: 2009-01-18 23:05:56.0
+  version: "1"
+assets_141: 
+  name_space: 
+  updated_at: 2009-01-18 19:03:12.0
+  project_id: "1"
+  name: ProductDefinition
+  id: "150"
+  created_at: 2009-01-18 19:03:12.0
+  version: "1"
+assets_241: 
+  name_space: 
+  updated_at: 2009-01-18 20:21:02.0
+  project_id: "1"
+  name: AdjustedQuote
+  id: "250"
+  created_at: 2009-01-18 20:21:02.0
+  version: "1"
+assets_431: 
+  name_space: 
+  updated_at: 2009-01-18 23:04:33.0
+  project_id: "1"
+  name: SimpleTransfer
+  id: "440"
+  created_at: 2009-01-18 23:04:33.0
+  version: "1"
+assets_435: 
+  name_space: 
+  updated_at: 2009-01-18 23:07:27.0
+  project_id: "1"
+  name: Pledge
+  id: "444"
+  created_at: 2009-01-18 23:07:27.0
+  version: "1"
+assets_242: 
+  name_space: 
+  updated_at: 2009-01-18 20:21:06.0
+  project_id: "1"
+  name: QuoteSet
+  id: "251"
+  created_at: 2009-01-18 20:21:06.0
+  version: "1"
+assets_244: 
+  name_space: 
+  updated_at: 2009-01-18 20:21:23.0
+  project_id: "1"
+  name: PricingEnvironment
+  id: "253"
+  created_at: 2009-01-18 20:21:23.0
+  version: "1"
+assets_434: 
+  name_space: 
+  updated_at: 2009-01-18 23:06:47.0
+  project_id: "1"
+  name: MarginCall
+  id: "443"
+  created_at: 2009-01-18 23:06:47.0
+  version: "1"
+assets_243: 
+  name_space: 
+  updated_at: 2009-01-18 20:21:12.0
+  project_id: "1"
+  name: FullQuoteSet
+  id: "252"
+  created_at: 2009-01-18 20:21:12.0
+  version: "1"
+assets_430: 
+  name_space: 
+  updated_at: 2009-01-18 23:04:29.0
+  project_id: "1"
+  name: ReportView
+  id: "439"
+  created_at: 2009-01-18 23:04:29.0
+  version: "1"
+assets_060: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:43.0
+  project_id: "1"
+  name: User
+  id: "69"
+  created_at: 2009-01-18 18:49:43.0
+  version: "1"
+assets_061: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:53.0
+  project_id: "1"
+  name: UserPreferences
+  id: "70"
+  created_at: 2009-01-18 18:49:53.0
+  version: "1"
+assets_488: 
+  name_space: 
+  updated_at: 2009-01-18 23:27:33.0
+  project_id: "1"
+  name: Commodity
+  id: "497"
+  created_at: 2009-01-18 23:27:33.0
+  version: "1"
+assets_062: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:59.0
+  project_id: "1"
+  name: UserMenuItem
+  id: "71"
+  created_at: 2009-01-18 18:49:59.0
+  version: "1"
+assets_375: 
+  name_space: 
+  updated_at: 2009-01-18 21:57:51.0
+  project_id: "1"
+  name: CDSABSIndexTrancheDefinitionDefinition
+  id: "384"
+  created_at: 2009-01-18 21:57:51.0
+  version: "1"
+assets_280: 
+  name_space: 
+  updated_at: 2009-01-18 20:37:31.0
+  project_id: "1"
+  name: FutureOptionIndex
+  id: "289"
+  created_at: 2009-01-18 20:37:31.0
+  version: "1"
+assets_063: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:00.0
+  project_id: "1"
+  name: Group
+  id: "72"
+  created_at: 2009-01-18 18:50:00.0
+  version: "1"
+assets_487: 
+  name_space: 
+  updated_at: 2009-01-18 23:25:35.0
+  project_id: "1"
+  name: PerformanceSwapStream
+  id: "496"
+  created_at: 2009-01-18 23:25:35.0
+  version: "1"
+assets_376: 
+  name_space: 
+  updated_at: 2009-01-18 22:00:03.0
+  project_id: "1"
+  name: CDSABSIndexTranche
+  id: "385"
+  created_at: 2009-01-18 22:00:03.0
+  version: "1"
+assets_064: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:06.0
+  project_id: "1"
+  name: GroupAccess
+  id: "73"
+  created_at: 2009-01-18 18:50:06.0
+  version: "1"
+assets_378: 
+  name_space: 
+  updated_at: 2009-01-18 22:10:53.0
+  project_id: "1"
+  name: FX
+  id: "387"
+  created_at: 2009-01-18 22:10:53.0
+  version: "1"
+assets_065: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:07.0
+  project_id: "1"
+  name: Workspace
+  id: "74"
+  created_at: 2009-01-18 18:50:07.0
+  version: "1"
+assets_377: 
+  name_space: 
+  updated_at: 2009-01-18 22:00:38.0
+  project_id: "1"
+  name: SubordinationDate
+  id: "386"
+  created_at: 2009-01-18 22:00:38.0
+  version: "1"
+assets_489: 
+  name_space: 
+  updated_at: 2009-01-18 23:27:37.0
+  project_id: "1"
+  name: CommodityDefinition
+  id: "498"
+  created_at: 2009-01-18 23:27:37.0
+  version: "1"
+assets_066: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:15.0
+  project_id: "1"
+  name: TradeWindowClassConfiguration
+  id: "75"
+  created_at: 2009-01-18 18:50:15.0
+  version: "1"
+assets_379: 
+  name_space: 
+  updated_at: 2009-01-18 22:10:57.0
+  project_id: "1"
+  name: FXDefinition
+  id: "388"
+  created_at: 2009-01-18 22:10:57.0
+  version: "1"
+assets_122: 
+  name_space: 
+  updated_at: 2009-01-18 19:00:12.0
+  project_id: "1"
+  name: Intermediary
+  id: "131"
+  created_at: 2009-01-18 19:00:12.0
+  version: "1"
+assets_123: 
+  name_space: 
+  updated_at: 2009-01-18 19:00:20.0
+  project_id: "1"
+  name: Registration
+  id: "132"
+  created_at: 2009-01-18 19:00:20.0
+  version: "1"
+assets_121: 
+  name_space: 
+  updated_at: 2009-01-18 19:00:07.0
+  project_id: "1"
+  name: Agent
+  id: "130"
+  created_at: 2009-01-18 19:00:07.0
+  version: "1"
+assets_120: 
+  name_space: 
+  updated_at: 2009-01-18 19:00:00.0
+  project_id: "1"
+  name: ManualSettlementDeliveryInstruction
+  id: "129"
+  created_at: 2009-01-18 19:00:00.0
+  version: "1"
+assets_115: 
+  name_space: 
+  updated_at: 2009-01-18 18:59:23.0
+  project_id: "1"
+  name: HolidayCode
+  id: "124"
+  created_at: 2009-01-18 18:59:23.0
+  version: "1"
+assets_116: 
+  name_space: 
+  updated_at: 2009-01-18 18:59:28.0
+  project_id: "1"
+  name: HolidayRule
+  id: "125"
+  created_at: 2009-01-18 18:59:28.0
+  version: "1"
+assets_118: 
+  name_space: 
+  updated_at: 2009-01-18 18:59:39.0
+  project_id: "1"
+  name: SettlementDeliveryInstruction
+  id: "127"
+  created_at: 2009-01-18 18:59:39.0
+  version: "1"
+assets_117: 
+  name_space: 
+  updated_at: 2009-01-18 18:59:32.0
+  project_id: "1"
+  name: CityCode
+  id: "126"
+  created_at: 2009-01-18 18:59:32.0
+  version: "1"
+assets_119: 
+  name_space: 
+  updated_at: 2009-01-18 18:59:44.0
+  project_id: "1"
+  name: AssetSettlementDeliveryInstruction
+  id: "128"
+  created_at: 2009-01-18 18:59:44.0
+  version: "1"
+assets_263: 
+  name_space: 
+  updated_at: 2009-01-18 20:28:27.0
+  project_id: "1"
+  name: FutureContract
+  id: "272"
+  created_at: 2009-01-18 20:28:27.0
+  version: "1"
+assets_264: 
+  name_space: 
+  updated_at: 2009-01-18 20:28:53.0
+  project_id: "1"
+  name: FutureOptionContract
+  id: "273"
+  created_at: 2009-01-18 20:28:53.0
+  version: "1"
+assets_266: 
+  name_space: 
+  updated_at: 2009-01-18 20:29:49.0
+  project_id: "1"
+  name: Future
+  id: "275"
+  created_at: 2009-01-18 20:29:49.0
+  version: "1"
+assets_265: 
+  name_space: 
+  updated_at: 2009-01-18 20:29:22.0
+  project_id: "1"
+  name: FutureDefinition
+  id: "274"
+  created_at: 2009-01-18 20:29:22.0
+  version: "1"
+assets_267: 
+  name_space: 
+  updated_at: 2009-01-18 20:30:22.0
+  project_id: "1"
+  name: FutureMM
+  id: "276"
+  created_at: 2009-01-18 20:30:22.0
+  version: "1"
+assets_366: 
+  name_space: 
+  updated_at: 2009-01-18 21:48:10.0
+  project_id: "1"
+  name: OptionComponent
+  id: "375"
+  created_at: 2009-01-18 21:48:10.0
+  version: "1"
+assets_268: 
+  name_space: 
+  updated_at: 2009-01-18 20:30:55.0
+  project_id: "1"
+  name: FutureFX
+  id: "277"
+  created_at: 2009-01-18 20:30:55.0
+  version: "1"
+assets_367: 
+  name_space: 
+  updated_at: 2009-01-18 21:48:14.0
+  project_id: "1"
+  name: NotionalDate
+  id: "376"
+  created_at: 2009-01-18 21:48:14.0
+  version: "1"
+assets_269: 
+  name_space: 
+  updated_at: 2009-01-18 20:31:29.0
+  project_id: "1"
+  name: FutureCommodity
+  id: "278"
+  created_at: 2009-01-18 20:31:29.0
+  version: "1"
+assets_369: 
+  name_space: 
+  updated_at: 2009-01-18 21:51:44.0
+  project_id: "1"
+  name: MatrixMapping
+  id: "378"
+  created_at: 2009-01-18 21:51:44.0
+  version: "1"
+assets_368: 
+  name_space: 
+  updated_at: 2009-01-18 21:48:14.0
+  project_id: "1"
+  name: CMCDS
+  id: "377"
+  created_at: 2009-01-18 21:48:14.0
+  version: "1"
+assets_111: 
+  name_space: 
+  updated_at: 2009-01-18 18:58:14.0
+  project_id: "1"
+  name: CashflowBrady
+  id: "120"
+  created_at: 2009-01-18 18:58:14.0
+  version: "1"
+assets_110: 
+  name_space: 
+  updated_at: 2009-01-18 18:58:08.0
+  project_id: "1"
+  name: CashflowDividend
+  id: "119"
+  created_at: 2009-01-18 18:58:08.0
+  version: "1"
+assets_113: 
+  name_space: 
+  updated_at: 2009-01-18 18:59:16.0
+  project_id: "1"
+  name: HolidayConfiguration
+  id: "122"
+  created_at: 2009-01-18 18:59:16.0
+  version: "1"
+assets_114: 
+  name_space: 
+  updated_at: 2009-01-18 18:59:18.0
+  project_id: "1"
+  name: Holiday
+  id: "123"
+  created_at: 2009-01-18 18:59:18.0
+  version: "1"
+assets_112: 
+  name_space: 
+  updated_at: 2009-01-18 18:58:41.0
+  project_id: "1"
+  name: CashflowCommodity
+  id: "121"
+  created_at: 2009-01-18 18:58:41.0
+  version: "1"
+assets_160: 
+  name_space: 
+  updated_at: 2009-01-18 19:08:28.0
+  project_id: "1"
+  name: CancellableSwap
+  id: "169"
+  created_at: 2009-01-18 19:08:28.0
+  version: "1"
+assets_161: 
+  name_space: 
+  updated_at: 2009-01-18 19:09:07.0
+  project_id: "1"
+  name: ExtendibleSwap
+  id: "170"
+  created_at: 2009-01-18 19:09:07.0
+  version: "1"
+assets_162: 
+  name_space: 
+  updated_at: 2009-01-18 19:09:46.0
+  project_id: "1"
+  name: SpreadSwap
+  id: "171"
+  created_at: 2009-01-18 19:09:46.0
+  version: "1"
+assets_163: 
+  name_space: 
+  updated_at: 2009-01-18 19:10:25.0
+  project_id: "1"
+  name: CappedSwap
+  id: "172"
+  created_at: 2009-01-18 19:10:25.0
+  version: "1"
+assets_164: 
+  name_space: 
+  updated_at: 2009-01-18 19:11:06.0
+  project_id: "1"
+  name: SpreadLock
+  id: "173"
+  created_at: 2009-01-18 19:11:06.0
+  version: "1"
+assets_165: 
+  name_space: 
+  updated_at: 2009-01-18 19:12:27.0
+  project_id: "1"
+  name: CrossCurrencySwap
+  id: "174"
+  created_at: 2009-01-18 19:12:27.0
+  version: "1"
+assets_166: 
+  name_space: 
+  updated_at: 2009-01-18 19:13:59.0
+  project_id: "1"
+  name: CancellableCrossCurrencySwap
+  id: "175"
+  created_at: 2009-01-18 19:13:59.0
+  version: "1"
+assets_167: 
+  name_space: 
+  updated_at: 2009-01-18 19:15:19.0
+  project_id: "1"
+  name: CapFloor
+  id: "176"
+  created_at: 2009-01-18 19:15:19.0
+  version: "1"
+assets_168: 
+  name_space: 
+  updated_at: 2009-01-18 19:16:07.0
+  project_id: "1"
+  name: SpreadCapFloor
+  id: "177"
+  created_at: 2009-01-18 19:16:07.0
+  version: "1"
+assets_169: 
+  name_space: 
+  updated_at: 2009-01-18 19:16:45.0
+  project_id: "1"
+  name: ExoticCapFloor
+  id: "178"
+  created_at: 2009-01-18 19:16:45.0
+  version: "1"
+assets_339: 
+  name_space: 
+  updated_at: 2009-01-18 20:59:08.0
+  project_id: "1"
+  name: VarianceSwapTerminationHistory
+  id: "348"
+  created_at: 2009-01-18 20:59:08.0
+  version: "1"
+assets_306: 
+  name_space: 
+  updated_at: 2009-01-18 20:48:15.0
+  project_id: "1"
+  name: PerformanceStream
+  id: "315"
+  created_at: 2009-01-18 20:48:15.0
+  version: "1"
+assets_334: 
+  name_space: 
+  updated_at: 2009-01-18 20:57:53.0
+  project_id: "1"
+  name: UnderlyingEquityIndex
+  id: "343"
+  created_at: 2009-01-18 20:57:53.0
+  version: "1"
+assets_421: 
+  name_space: 
+  updated_at: 2009-01-18 22:57:10.0
+  project_id: "1"
+  name: Loan
+  id: "430"
+  created_at: 2009-01-18 22:57:10.0
+  version: "1"
+assets_418: 
+  name_space: 
+  updated_at: 2009-01-18 22:56:06.0
+  project_id: "1"
+  name: Issuance
+  id: "427"
+  created_at: 2009-01-18 22:56:06.0
+  version: "1"
+assets_307: 
+  name_space: 
+  updated_at: 2009-01-18 20:49:31.0
+  project_id: "1"
+  name: EquityStream
+  id: "316"
+  created_at: 2009-01-18 20:49:31.0
+  version: "1"
+assets_333: 
+  name_space: 
+  updated_at: 2009-01-18 20:57:51.0
+  project_id: "1"
+  name: UnderlyingEquity
+  id: "342"
+  created_at: 2009-01-18 20:57:51.0
+  version: "1"
+assets_420: 
+  name_space: 
+  updated_at: 2009-01-18 22:56:39.0
+  project_id: "1"
+  name: TreasuryLock
+  id: "429"
+  created_at: 2009-01-18 22:56:39.0
+  version: "1"
+assets_335: 
+  name_space: 
+  updated_at: 2009-01-18 20:57:56.0
+  project_id: "1"
+  name: UnderlyingFX
+  id: "344"
+  created_at: 2009-01-18 20:57:56.0
+  version: "1"
+assets_070: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:21.0
+  project_id: "1"
+  name: UserAccessPermission
+  id: "79"
+  created_at: 2009-01-18 18:50:21.0
+  version: "1"
+assets_308: 
+  name_space: 
+  updated_at: 2009-01-18 20:50:55.0
+  project_id: "1"
+  name: ObservedData
+  id: "317"
+  created_at: 2009-01-18 20:50:55.0
+  version: "1"
+assets_419: 
+  name_space: 
+  updated_at: 2009-01-18 22:56:10.0
+  project_id: "1"
+  name: IssuanceDefinition
+  id: "428"
+  created_at: 2009-01-18 22:56:10.0
+  version: "1"
+assets_336: 
+  name_space: 
+  updated_at: 2009-01-18 20:58:26.0
+  project_id: "1"
+  name: UnderlyingCommodity
+  id: "345"
+  created_at: 2009-01-18 20:58:26.0
+  version: "1"
+assets_309: 
+  name_space: 
+  updated_at: 2009-01-18 20:51:28.0
+  project_id: "1"
+  name: OTCOption
+  id: "318"
+  created_at: 2009-01-18 20:51:28.0
+  version: "1"
+assets_338: 
+  name_space: 
+  updated_at: 2009-01-18 20:59:04.0
+  project_id: "1"
+  name: VarianceSwapTerminationRecord
+  id: "347"
+  created_at: 2009-01-18 20:59:04.0
+  version: "1"
+assets_337: 
+  name_space: 
+  updated_at: 2009-01-18 20:58:56.0
+  project_id: "1"
+  name: EqDEventTypeActionSchedule
+  id: "346"
+  created_at: 2009-01-18 20:58:56.0
+  version: "1"
+assets_301: 
+  name_space: 
+  updated_at: 2009-01-18 20:44:21.0
+  project_id: "1"
+  name: ETO
+  id: "310"
+  created_at: 2009-01-18 20:44:21.0
+  version: "1"
+assets_413: 
+  name_space: 
+  updated_at: 2009-01-18 22:38:56.0
+  project_id: "1"
+  name: FacilityRepo
+  id: "422"
+  created_at: 2009-01-18 22:38:56.0
+  version: "1"
+assets_074: 
+  name_space: 
+  updated_at: 2009-01-18 18:51:37.0
+  project_id: "1"
+  name: LegalEntity
+  id: "83"
+  created_at: 2009-01-18 18:51:37.0
+  version: "1"
+assets_414: 
+  name_space: 
+  updated_at: 2009-01-18 22:43:28.0
+  project_id: "1"
+  name: GCFRepo
+  id: "423"
+  created_at: 2009-01-18 22:43:28.0
+  version: "1"
+assets_058: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:23.0
+  project_id: "1"
+  name: UserConfiguration
+  id: "67"
+  created_at: 2009-01-18 18:49:23.0
+  version: "1"
+assets_075: 
+  name_space: 
+  updated_at: 2009-01-18 18:51:48.0
+  project_id: "1"
+  name: LegalEntityAttribute
+  id: "84"
+  created_at: 2009-01-18 18:51:48.0
+  version: "1"
+assets_302: 
+  name_space: 
+  updated_at: 2009-01-18 20:44:25.0
+  project_id: "1"
+  name: ETODefinition
+  id: "311"
+  created_at: 2009-01-18 20:44:25.0
+  version: "1"
+assets_330: 
+  name_space: 
+  updated_at: 2009-01-18 20:57:14.0
+  project_id: "1"
+  name: CFDRiskArbitrageDefinition
+  id: "339"
+  created_at: 2009-01-18 20:57:14.0
+  version: "1"
+assets_303: 
+  name_space: 
+  updated_at: 2009-01-18 20:45:19.0
+  project_id: "1"
+  name: ETOEquityIndex
+  id: "312"
+  created_at: 2009-01-18 20:45:19.0
+  version: "1"
+assets_415: 
+  name_space: 
+  updated_at: 2009-01-18 22:46:50.0
+  project_id: "1"
+  name: JGBRepo
+  id: "424"
+  created_at: 2009-01-18 22:46:50.0
+  version: "1"
+assets_059: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:26.0
+  project_id: "1"
+  name: UserDefaults
+  id: "68"
+  created_at: 2009-01-18 18:49:26.0
+  version: "1"
+assets_071: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:26.0
+  project_id: "1"
+  name: StatusAccess
+  id: "80"
+  created_at: 2009-01-18 18:50:26.0
+  version: "1"
+assets_331: 
+  name_space: 
+  updated_at: 2009-01-18 20:57:47.0
+  project_id: "1"
+  name: Underlying
+  id: "340"
+  created_at: 2009-01-18 20:57:47.0
+  version: "1"
+assets_416: 
+  name_space: 
+  updated_at: 2009-01-18 22:50:15.0
+  project_id: "1"
+  name: PLIRepo
+  id: "425"
+  created_at: 2009-01-18 22:50:15.0
+  version: "1"
+assets_304: 
+  name_space: 
+  updated_at: 2009-01-18 20:45:22.0
+  project_id: "1"
+  name: ETOEquityIndexDefinition
+  id: "313"
+  created_at: 2009-01-18 20:45:22.0
+  version: "1"
+assets_305: 
+  name_space: 
+  updated_at: 2009-01-18 20:46:22.0
+  project_id: "1"
+  name: EquityLinkedSwap
+  id: "314"
+  created_at: 2009-01-18 20:46:22.0
+  version: "1"
+assets_417: 
+  name_space: 
+  updated_at: 2009-01-18 22:53:40.0
+  project_id: "1"
+  name: SecurityLending
+  id: "426"
+  created_at: 2009-01-18 22:53:40.0
+  version: "1"
+assets_072: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:27.0
+  project_id: "1"
+  name: StatusAccessDefinition
+  id: "81"
+  created_at: 2009-01-18 18:50:27.0
+  version: "1"
+assets_073: 
+  name_space: 
+  updated_at: 2009-01-18 18:50:29.0
+  project_id: "1"
+  name: BookAccess
+  id: "82"
+  created_at: 2009-01-18 18:50:29.0
+  version: "1"
+assets_332: 
+  name_space: 
+  updated_at: 2009-01-18 20:57:48.0
+  project_id: "1"
+  name: UnderlyingAbstract
+  id: "341"
+  created_at: 2009-01-18 20:57:48.0
+  version: "1"
+assets_055: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:08.0
+  project_id: "1"
+  name: Book
+  id: "64"
+  created_at: 2009-01-18 18:49:08.0
+  version: "1"
+assets_054: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:04.0
+  project_id: "1"
+  name: FeedAddress
+  id: "63"
+  created_at: 2009-01-18 18:49:04.0
+  version: "1"
+assets_079: 
+  name_space: 
+  updated_at: 2009-01-18 18:52:33.0
+  project_id: "1"
+  name: AccountStatementConfig
+  id: "88"
+  created_at: 2009-01-18 18:52:33.0
+  version: "1"
+assets_053: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:00.0
+  project_id: "1"
+  name: FeedConfig
+  id: "62"
+  created_at: 2009-01-18 18:49:00.0
+  version: "1"
+assets_411: 
+  name_space: 
+  updated_at: 2009-01-18 22:32:22.0
+  project_id: "1"
+  name: Repo
+  id: "420"
+  created_at: 2009-01-18 22:32:22.0
+  version: "1"
+assets_077: 
+  name_space: 
+  updated_at: 2009-01-18 18:52:01.0
+  project_id: "1"
+  name: Account
+  id: "86"
+  created_at: 2009-01-18 18:52:01.0
+  version: "1"
+assets_057: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:21.0
+  project_id: "1"
+  name: BookHierarchyNode
+  id: "66"
+  created_at: 2009-01-18 18:49:21.0
+  version: "1"
+assets_076: 
+  name_space: 
+  updated_at: 2009-01-18 18:51:51.0
+  project_id: "1"
+  name: LegalEntityRegistration
+  id: "85"
+  created_at: 2009-01-18 18:51:51.0
+  version: "1"
+assets_429: 
+  name_space: 
+  updated_at: 2009-01-18 23:04:21.0
+  project_id: "1"
+  name: ReportTemplate
+  id: "438"
+  created_at: 2009-01-18 23:04:21.0
+  version: "1"
+assets_410: 
+  name_space: 
+  updated_at: 2009-01-18 22:31:39.0
+  project_id: "1"
+  name: BuySellBack
+  id: "419"
+  created_at: 2009-01-18 22:31:39.0
+  version: "1"
+assets_078: 
+  name_space: 
+  updated_at: 2009-01-18 18:52:27.0
+  project_id: "1"
+  name: AccountingBook
+  id: "87"
+  created_at: 2009-01-18 18:52:27.0
+  version: "1"
+assets_300: 
+  name_space: 
+  updated_at: 2009-01-18 20:43:21.0
+  project_id: "1"
+  name: EquityIndexDefinition
+  id: "309"
+  created_at: 2009-01-18 20:43:21.0
+  version: "1"
+assets_427: 
+  name_space: 
+  updated_at: 2009-01-18 23:03:53.0
+  project_id: "1"
+  name: AccountingEventConfig
+  id: "436"
+  created_at: 2009-01-18 23:03:53.0
+  version: "1"
+assets_412: 
+  name_space: 
+  updated_at: 2009-01-18 22:35:36.0
+  project_id: "1"
+  name: DBVRepo
+  id: "421"
+  created_at: 2009-01-18 22:35:36.0
+  version: "1"
+assets_056: 
+  name_space: 
+  updated_at: 2009-01-18 18:49:17.0
+  project_id: "1"
+  name: BookHierarchy
+  id: "65"
+  created_at: 2009-01-18 18:49:17.0
+  version: "1"
+assets_428: 
+  name_space: 
+  updated_at: 2009-01-18 23:04:01.0
+  project_id: "1"
+  name: AccountingRule
+  id: "437"
+  created_at: 2009-01-18 23:04:01.0
+  version: "1"
+assets_426: 
+  name_space: 
+  updated_at: 2009-01-18 23:03:35.0
+  project_id: "1"
+  name: LEContact
+  id: "435"
+  created_at: 2009-01-18 23:03:35.0
+  version: "1"
+assets_425: 
+  name_space: 
+  updated_at: 2009-01-18 22:59:31.0
+  project_id: "1"
+  name: MarginCallConfig
+  id: "434"
+  created_at: 2009-01-18 22:59:31.0
+  version: "1"
+assets_423: 
+  name_space: 
+  updated_at: 2009-01-18 22:58:58.0
+  project_id: "1"
+  name: CollateralPool
+  id: "432"
+  created_at: 2009-01-18 22:58:58.0
+  version: "1"
+assets_052: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:59.0
+  project_id: "1"
+  name: EngineConfigurationRecord
+  id: "61"
+  created_at: 2009-01-18 18:48:59.0
+  version: "1"
+assets_424: 
+  name_space: 
+  updated_at: 2009-01-18 22:59:02.0
+  project_id: "1"
+  name: CollateralPoolDefinition
+  id: "433"
+  created_at: 2009-01-18 22:59:02.0
+  version: "1"
+assets_422: 
+  name_space: 
+  updated_at: 2009-01-18 22:57:14.0
+  project_id: "1"
+  name: LoanDefinition
+  id: "431"
+  created_at: 2009-01-18 22:57:14.0
+  version: "1"
+assets_051: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:58.0
+  project_id: "1"
+  name: EngineConfiguration
+  id: "60"
+  created_at: 2009-01-18 18:48:58.0
+  version: "1"
+assets_050: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:51.0
+  project_id: "1"
+  name: PoolFactorEntry
+  id: "59"
+  created_at: 2009-01-18 18:48:51.0
+  version: "1"
+assets_470: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:59.0
+  project_id: "1"
+  name: ScenarioRuleSeqPi
+  id: "479"
+  created_at: 2009-01-18 23:21:59.0
+  version: "1"
+assets_471: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:04.0
+  project_id: "1"
+  name: ScenarioRuleSimPi
+  id: "480"
+  created_at: 2009-01-18 23:22:04.0
+  version: "1"
+assets_130: 
+  name_space: 
+  updated_at: 2009-01-18 19:01:29.0
+  project_id: "1"
+  name: ReferenceEntityBasketDefinition
+  id: "139"
+  created_at: 2009-01-18 19:01:29.0
+  version: "1"
+assets_132: 
+  name_space: 
+  updated_at: 2009-01-18 19:01:44.0
+  project_id: "1"
+  name: ReferenceEntityNthDefaultDefinition
+  id: "141"
+  created_at: 2009-01-18 19:01:44.0
+  version: "1"
+assets_131: 
+  name_space: 
+  updated_at: 2009-01-18 19:01:37.0
+  project_id: "1"
+  name: ReferenceEntityTrancheDefinition
+  id: "140"
+  created_at: 2009-01-18 19:01:37.0
+  version: "1"
+assets_475: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:21.0
+  project_id: "1"
+  name: ScenarioRuleVolatility
+  id: "484"
+  created_at: 2009-01-18 23:22:21.0
+  version: "1"
+assets_476: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:26.0
+  project_id: "1"
+  name: ScenarioRuleEquityVolatility
+  id: "485"
+  created_at: 2009-01-18 23:22:26.0
+  version: "1"
+assets_477: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:30.0
+  project_id: "1"
+  name: AnalysisParameters
+  id: "486"
+  created_at: 2009-01-18 23:22:30.0
+  version: "1"
+assets_472: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:08.0
+  project_id: "1"
+  name: ScenarioRuleQuotes
+  id: "481"
+  created_at: 2009-01-18 23:22:08.0
+  version: "1"
+assets_473: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:13.0
+  project_id: "1"
+  name: ScenarioRuleQuotesFromDataSet
+  id: "482"
+  created_at: 2009-01-18 23:22:13.0
+  version: "1"
+assets_001: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:26.0
+  project_id: "1"
+  name: StandardAttributes.atts
+  id: "10"
+  created_at: 2009-01-18 18:47:26.0
+  version: "1"
+assets_474: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:17.0
+  project_id: "1"
+  name: ScenarioRuleResetRisk
+  id: "483"
+  created_at: 2009-01-18 23:22:17.0
+  version: "1"
+assets_002: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:28.0
+  project_id: "1"
+  name: IdentifierAttributes.atts
+  id: "11"
+  created_at: 2009-01-18 18:47:28.0
+  version: "1"
+assets_456: 
+  name_space: 
+  updated_at: 2009-01-18 23:20:56.0
+  project_id: "1"
+  name: ScenarioRule
+  id: "465"
+  created_at: 2009-01-18 23:20:56.0
+  version: "1"
+assets_030: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:04.0
+  project_id: "1"
+  name: Dividend
+  id: "39"
+  created_at: 2009-01-18 18:48:04.0
+  version: "1"
+assets_455: 
+  name_space: 
+  updated_at: 2009-01-18 23:20:52.0
+  project_id: "1"
+  name: ScenarioMarketData
+  id: "464"
+  created_at: 2009-01-18 23:20:52.0
+  version: "1"
+assets_031: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:05.0
+  project_id: "1"
+  name: CreditDefinition
+  id: "40"
+  created_at: 2009-01-18 18:48:05.0
+  version: "1"
+assets_454: 
+  name_space: 
+  updated_at: 2009-01-18 23:20:49.0
+  project_id: "1"
+  name: Scenario
+  id: "463"
+  created_at: 2009-01-18 23:20:49.0
+  version: "1"
+assets_032: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:07.0
+  project_id: "1"
+  name: ScheduleParams
+  id: "41"
+  created_at: 2009-01-18 18:48:07.0
+  version: "1"
+assets_459: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:10.0
+  project_id: "1"
+  name: ScenarioRuleCSC
+  id: "468"
+  created_at: 2009-01-18 23:21:10.0
+  version: "1"
+assets_458: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:05.0
+  project_id: "1"
+  name: ScenarioRuleComposite
+  id: "467"
+  created_at: 2009-01-18 23:21:05.0
+  version: "1"
+assets_033: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:10.0
+  project_id: "1"
+  name: Deliverable
+  id: "42"
+  created_at: 2009-01-18 18:48:10.0
+  version: "1"
+assets_034: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:13.0
+  project_id: "1"
+  name: StaticDataFilter
+  id: "43"
+  created_at: 2009-01-18 18:48:13.0
+  version: "1"
+assets_457: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:01.0
+  project_id: "1"
+  name: ScenarioCustomRule
+  id: "466"
+  created_at: 2009-01-18 23:21:01.0
+  version: "1"
+assets_451: 
+  name_space: 
+  updated_at: 2009-01-18 23:16:12.0
+  project_id: "1"
+  name: MarketIndex
+  id: "460"
+  created_at: 2009-01-18 23:16:12.0
+  version: "1"
+assets_035: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:17.0
+  project_id: "1"
+  name: StaticDataFilterElement
+  id: "44"
+  created_at: 2009-01-18 18:48:17.0
+  version: "1"
+assets_450: 
+  name_space: 
+  updated_at: 2009-01-18 23:15:59.0
+  project_id: "1"
+  name: Fund
+  id: "459"
+  created_at: 2009-01-18 23:15:59.0
+  version: "1"
+assets_036: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:18.0
+  project_id: "1"
+  name: EventTypeAction
+  id: "45"
+  created_at: 2009-01-18 18:48:18.0
+  version: "1"
+assets_037: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:22.0
+  project_id: "1"
+  name: Term
+  id: "46"
+  created_at: 2009-01-18 18:48:22.0
+  version: "1"
+assets_453: 
+  name_space: 
+  updated_at: 2009-01-18 23:20:05.0
+  project_id: "1"
+  name: TemplateInfo
+  id: "462"
+  created_at: 2009-01-18 23:20:05.0
+  version: "1"
+assets_038: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:23.0
+  project_id: "1"
+  name: Amortization
+  id: "47"
+  created_at: 2009-01-18 18:48:23.0
+  version: "1"
+assets_039: 
+  name_space: 
+  updated_at: 2009-01-18 18:48:23.0
+  project_id: "1"
+  name: AnnuityAmortization
+  id: "48"
+  created_at: 2009-01-18 18:48:23.0
+  version: "1"
+assets_452: 
+  name_space: 
+  updated_at: 2009-01-18 23:16:16.0
+  project_id: "1"
+  name: MarketIndexDefinition
+  id: "461"
+  created_at: 2009-01-18 23:16:16.0
+  version: "1"
+assets_444: 
+  name_space: 
+  updated_at: 2009-01-18 23:10:19.0
+  project_id: "1"
+  name: Warrant
+  id: "453"
+  created_at: 2009-01-18 23:10:19.0
+  version: "1"
+assets_443: 
+  name_space: 
+  updated_at: 2009-01-18 23:10:12.0
+  project_id: "1"
+  name: LERelation
+  id: "452"
+  created_at: 2009-01-18 23:10:12.0
+  version: "1"
+assets_442: 
+  name_space: 
+  updated_at: 2009-01-18 23:09:56.0
+  project_id: "1"
+  name: LegalAgreementSecurityLending
+  id: "451"
+  created_at: 2009-01-18 23:09:56.0
+  version: "1"
+assets_441: 
+  name_space: 
+  updated_at: 2009-01-18 23:09:55.0
+  project_id: "1"
+  name: LegalAgreementDocument
+  id: "450"
+  created_at: 2009-01-18 23:09:55.0
+  version: "1"
+assets_440: 
+  name_space: 
+  updated_at: 2009-01-18 23:09:54.0
+  project_id: "1"
+  name: LegalAgreementDocuments
+  id: "449"
+  created_at: 2009-01-18 23:09:54.0
+  version: "1"
+assets_449: 
+  name_space: 
+  updated_at: 2009-01-18 23:14:39.0
+  project_id: "1"
+  name: UnitizedFundDefinition
+  id: "458"
+  created_at: 2009-01-18 23:14:39.0
+  version: "1"
+assets_448: 
+  name_space: 
+  updated_at: 2009-01-18 23:14:35.0
+  project_id: "1"
+  name: UnitizedFund
+  id: "457"
+  created_at: 2009-01-18 23:14:35.0
+  version: "1"
+assets_447: 
+  name_space: 
+  updated_at: 2009-01-18 23:11:26.0
+  project_id: "1"
+  name: CertificateDefinition
+  id: "456"
+  created_at: 2009-01-18 23:11:26.0
+  version: "1"
+assets_446: 
+  name_space: 
+  updated_at: 2009-01-18 23:11:22.0
+  project_id: "1"
+  name: Certificate
+  id: "455"
+  created_at: 2009-01-18 23:11:22.0
+  version: "1"
+assets_445: 
+  name_space: 
+  updated_at: 2009-01-18 23:10:24.0
+  project_id: "1"
+  name: WarrantDefinition
+  id: "454"
+  created_at: 2009-01-18 23:10:24.0
+  version: "1"
+assets_139: 
+  name_space: 
+  updated_at: 2009-01-18 19:02:56.0
+  project_id: "1"
+  name: TerminationEvent
+  id: "148"
+  created_at: 2009-01-18 19:02:56.0
+  version: "1"
+assets_138: 
+  name_space: 
+  updated_at: 2009-01-18 19:02:53.0
+  project_id: "1"
+  name: FeeDate
+  id: "147"
+  created_at: 2009-01-18 19:02:53.0
+  version: "1"
+assets_479: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:41.0
+  project_id: "1"
+  name: EconomicPLParameters
+  id: "488"
+  created_at: 2009-01-18 23:22:41.0
+  version: "1"
+assets_478: 
+  name_space: 
+  updated_at: 2009-01-18 23:22:33.0
+  project_id: "1"
+  name: AnalysisParametersStandard
+  id: "487"
+  created_at: 2009-01-18 23:22:33.0
+  version: "1"
+assets_134: 
+  name_space: 
+  updated_at: 2009-01-18 19:02:05.0
+  project_id: "1"
+  name: TradeParty
+  id: "143"
+  created_at: 2009-01-18 19:02:05.0
+  version: "1"
+assets_133: 
+  name_space: 
+  updated_at: 2009-01-18 19:01:49.0
+  project_id: "1"
+  name: ReferenceEntitySingleDefinition
+  id: "142"
+  created_at: 2009-01-18 19:01:49.0
+  version: "1"
+assets_137: 
+  name_space: 
+  updated_at: 2009-01-18 19:02:41.0
+  project_id: "1"
+  name: CallInfo
+  id: "146"
+  created_at: 2009-01-18 19:02:41.0
+  version: "1"
+assets_135: 
+  name_space: 
+  updated_at: 2009-01-18 19:02:11.0
+  project_id: "1"
+  name: CreditEvent
+  id: "144"
+  created_at: 2009-01-18 19:02:11.0
+  version: "1"
+assets_136: 
+  name_space: 
+  updated_at: 2009-01-18 19:02:22.0
+  project_id: "1"
+  name: CreditContingencyInfo
+  id: "145"
+  created_at: 2009-01-18 19:02:22.0
+  version: "1"
+assets_468: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:50.0
+  project_id: "1"
+  name: ScenarioRuleParametricInterest
+  id: "477"
+  created_at: 2009-01-18 23:21:50.0
+  version: "1"
+assets_467: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:45.0
+  project_id: "1"
+  name: ScenarioRuleInterest
+  id: "476"
+  created_at: 2009-01-18 23:21:45.0
+  version: "1"
+assets_466: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:41.0
+  project_id: "1"
+  name: ScenarioRuleFX
+  id: "475"
+  created_at: 2009-01-18 23:21:41.0
+  version: "1"
+assets_465: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:37.0
+  project_id: "1"
+  name: ScenarioRuleFutEq
+  id: "474"
+  created_at: 2009-01-18 23:21:37.0
+  version: "1"
+assets_464: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:32.0
+  project_id: "1"
+  name: ScenarioRuleDate
+  id: "473"
+  created_at: 2009-01-18 23:21:32.0
+  version: "1"
+assets_463: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:28.0
+  project_id: "1"
+  name: ScenarioRuleCrossSensitivity
+  id: "472"
+  created_at: 2009-01-18 23:21:28.0
+  version: "1"
+assets_085: 
+  name_space: 
+  updated_at: 2009-01-18 18:53:23.0
+  project_id: "1"
+  name: AdviceConfig
+  id: "94"
+  created_at: 2009-01-18 18:53:23.0
+  version: "1"
+assets_092: 
+  name_space: 
+  updated_at: 2009-01-18 18:54:14.0
+  project_id: "1"
+  name: DomainItem
+  id: "101"
+  created_at: 2009-01-18 18:54:14.0
+  version: "1"
+assets_462: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:23.0
+  project_id: "1"
+  name: ScenarioRuleCorrelationSurface
+  id: "471"
+  created_at: 2009-01-18 23:21:23.0
+  version: "1"
+assets_086: 
+  name_space: 
+  updated_at: 2009-01-18 18:53:34.0
+  project_id: "1"
+  name: Country
+  id: "95"
+  created_at: 2009-01-18 18:53:34.0
+  version: "1"
+assets_461: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:19.0
+  project_id: "1"
+  name: ScenarioRuleCorrelationMatrix
+  id: "470"
+  created_at: 2009-01-18 23:21:19.0
+  version: "1"
+assets_087: 
+  name_space: 
+  updated_at: 2009-01-18 18:53:38.0
+  project_id: "1"
+  name: CurrencyDefault
+  id: "96"
+  created_at: 2009-01-18 18:53:38.0
+  version: "1"
+assets_093: 
+  name_space: 
+  updated_at: 2009-01-18 18:54:16.0
+  project_id: "1"
+  name: FixingMethod
+  id: "102"
+  created_at: 2009-01-18 18:54:16.0
+  version: "1"
+assets_460: 
+  name_space: 
+  updated_at: 2009-01-18 23:21:14.0
+  project_id: "1"
+  name: ScenarioRuleMatrix
+  id: "469"
+  created_at: 2009-01-18 23:21:14.0
+  version: "1"
+assets_088: 
+  name_space: 
+  updated_at: 2009-01-18 18:53:48.0
+  project_id: "1"
+  name: CurrencyPair
+  id: "97"
+  created_at: 2009-01-18 18:53:48.0
+  version: "1"
+assets_089: 
+  name_space: 
+  updated_at: 2009-01-18 18:53:55.0
+  project_id: "1"
+  name: RateIndex
+  id: "98"
+  created_at: 2009-01-18 18:53:55.0
+  version: "1"
+assets_091: 
+  name_space: 
+  updated_at: 2009-01-18 18:54:11.0
+  project_id: "1"
+  name: Domain
+  id: "100"
+  created_at: 2009-01-18 18:54:11.0
+  version: "1"
+assets_090: 
+  name_space: 
+  updated_at: 2009-01-18 18:53:59.0
+  project_id: "1"
+  name: RateIndexDefault
+  id: "99"
+  created_at: 2009-01-18 18:53:59.0
+  version: "1"
+assets_097: 
+  name_space: 
+  updated_at: 2009-01-18 18:54:34.0
+  project_id: "1"
+  name: CashflowPrincipal
+  id: "106"
+  created_at: 2009-01-18 18:54:34.0
+  version: "1"
+assets_080: 
+  name_space: 
+  updated_at: 2009-01-18 18:52:38.0
+  project_id: "1"
+  name: AccountInterest
+  id: "89"
+  created_at: 2009-01-18 18:52:38.0
+  version: "1"
+assets_082: 
+  name_space: 
+  updated_at: 2009-01-18 18:52:41.0
+  project_id: "1"
+  name: AccountSweepingConfig
+  id: "91"
+  created_at: 2009-01-18 18:52:41.0
+  version: "1"
+assets_098: 
+  name_space: 
+  updated_at: 2009-01-18 18:54:39.0
+  project_id: "1"
+  name: CashflowPriceChange
+  id: "107"
+  created_at: 2009-01-18 18:54:39.0
+  version: "1"
+assets_099: 
+  name_space: 
+  updated_at: 2009-01-18 18:54:49.0
+  project_id: "1"
+  name: CashflowSimple
+  id: "108"
+  created_at: 2009-01-18 18:54:49.0
+  version: "1"
+assets_081: 
+  name_space: 
+  updated_at: 2009-01-18 18:52:40.0
+  project_id: "1"
+  name: AccountLimit
+  id: "90"
+  created_at: 2009-01-18 18:52:40.0
+  version: "1"
+assets_083: 
+  name_space: 
+  updated_at: 2009-01-18 18:52:52.0
+  project_id: "1"
+  name: AccountInterestConfigRange
+  id: "92"
+  created_at: 2009-01-18 18:52:52.0
+  version: "1"
+assets_094: 
+  name_space: 
+  updated_at: 2009-01-18 18:54:19.0
+  project_id: "1"
+  name: SpreadInfo
+  id: "103"
+  created_at: 2009-01-18 18:54:19.0
+  version: "1"
+assets_095: 
+  name_space: 
+  updated_at: 2009-01-18 18:54:23.0
+  project_id: "1"
+  name: Cashflow
+  id: "104"
+  created_at: 2009-01-18 18:54:23.0
+  version: "1"
+assets_084: 
+  name_space: 
+  updated_at: 2009-01-18 18:52:56.0
+  project_id: "1"
+  name: AccountInterestConfig
+  id: "93"
+  created_at: 2009-01-18 18:52:56.0
+  version: "1"
+assets_096: 
+  name_space: 
+  updated_at: 2009-01-18 18:54:26.0
+  project_id: "1"
+  name: CashflowInterest
+  id: "105"
+  created_at: 2009-01-18 18:54:26.0
+  version: "1"
+assets_237: 
+  name_space: 
+  updated_at: 2009-01-18 20:20:41.0
+  project_id: "1"
+  name: CurveUnderlyingFXForward
+  id: "246"
+  created_at: 2009-01-18 20:20:41.0
+  version: "1"
+assets_236: 
+  name_space: 
+  updated_at: 2009-01-18 20:20:33.0
+  project_id: "1"
+  name: CurveUnderlyingETOEquityIndex
+  id: "245"
+  created_at: 2009-01-18 20:20:33.0
+  version: "1"
+assets_239: 
+  name_space: 
+  updated_at: 2009-01-18 20:20:53.0
+  project_id: "1"
+  name: QuoteValue
+  id: "248"
+  created_at: 2009-01-18 20:20:53.0
+  version: "1"
+assets_238: 
+  name_space: 
+  updated_at: 2009-01-18 20:20:46.0
+  project_id: "1"
+  name: CurveUnderlyingEquityIndex
+  id: "247"
+  created_at: 2009-01-18 20:20:46.0
+  version: "1"
+assets_230: 
+  name_space: 
+  updated_at: 2009-01-18 20:19:37.0
+  project_id: "1"
+  name: CurveUnderlyingBasisSwap
+  id: "239"
+  created_at: 2009-01-18 20:19:37.0
+  version: "1"
+assets_231: 
+  name_space: 
+  updated_at: 2009-01-18 20:19:54.0
+  project_id: "1"
+  name: CurveUnderlyingCDS
+  id: "240"
+  created_at: 2009-01-18 20:19:54.0
+  version: "1"
+assets_501: 
+  name_space: 
+  updated_at: 2009-01-18 23:39:01.0
+  project_id: "1"
+  name: PaymentFrequency
+  id: "510"
+  created_at: 2009-01-18 23:39:01.0
+  version: "1"
+assets_500: 
+  name_space: 
+  updated_at: 2009-01-18 23:38:58.0
+  project_id: "1"
+  name: FixingDatePolicy
+  id: "509"
+  created_at: 2009-01-18 23:38:58.0
+  version: "1"
+assets_232: 
+  name_space: 
+  updated_at: 2009-01-18 20:20:06.0
+  project_id: "1"
+  name: CurveUnderlyingMoneyMarket
+  id: "241"
+  created_at: 2009-01-18 20:20:06.0
+  version: "1"
+assets_233: 
+  name_space: 
+  updated_at: 2009-01-18 20:20:13.0
+  project_id: "1"
+  name: CurveUnderlyingETO
+  id: "242"
+  created_at: 2009-01-18 20:20:13.0
+  version: "1"
+assets_234: 
+  name_space: 
+  updated_at: 2009-01-18 20:20:21.0
+  project_id: "1"
+  name: CurveUnderlyingSpecificMMkt
+  id: "243"
+  created_at: 2009-01-18 20:20:21.0
+  version: "1"
+assets_235: 
+  name_space: 
+  updated_at: 2009-01-18 20:20:26.0
+  project_id: "1"
+  name: CurveUnderlyingETOEquity
+  id: "244"
+  created_at: 2009-01-18 20:20:26.0
+  version: "1"
+assets_505: 
+  name_space: 
+  updated_at: 2009-01-18 23:39:24.0
+  project_id: "1"
+  name: CommodityInterestStream2
+  id: "514"
+  created_at: 2009-01-18 23:39:24.0
+  version: "1"
+assets_504: 
+  name_space: 
+  updated_at: 2009-01-18 23:39:12.0
+  project_id: "1"
+  name: CashFlowCommodity2
+  id: "513"
+  created_at: 2009-01-18 23:39:12.0
+  version: "1"
+assets_506: 
+  name_space: 
+  updated_at: 2009-01-18 23:39:43.0
+  project_id: "1"
+  name: CommodityBasedTradeProduct
+  id: "515"
+  created_at: 2009-01-18 23:39:43.0
+  version: "1"
+assets_502: 
+  name_space: 
+  updated_at: 2009-01-18 23:39:01.0
+  project_id: "1"
+  name: CashFlowScheduleGenParams
+  id: "511"
+  created_at: 2009-01-18 23:39:01.0
+  version: "1"
+assets_503: 
+  name_space: 
+  updated_at: 2009-01-18 23:39:10.0
+  project_id: "1"
+  name: CommodityFixing
+  id: "512"
+  created_at: 2009-01-18 23:39:10.0
+  version: "1"
+assets_007: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:34.0
+  project_id: "1"
+  name: Identifier
+  id: "16"
+  created_at: 2009-01-18 18:47:34.0
+  version: "1"
+assets_124: 
+  name_space: 
+  updated_at: 2009-01-18 19:00:20.0
+  project_id: "1"
+  name: SDIParty
+  id: "133"
+  created_at: 2009-01-18 19:00:20.0
+  version: "1"
+assets_509: 
+  name_space: 
+  updated_at: 2009-01-18 23:43:22.0
+  project_id: "1"
+  name: CommodityReset
+  id: "518"
+  created_at: 2009-01-18 23:43:22.0
+  version: "1"
+assets_125: 
+  name_space: 
+  updated_at: 2009-01-18 19:00:26.0
+  project_id: "1"
+  name: ManualSDIParty
+  id: "134"
+  created_at: 2009-01-18 19:00:26.0
+  version: "1"
+assets_006: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:33.0
+  project_id: "1"
+  name: VersionedIdentifiers
+  id: "15"
+  created_at: 2009-01-18 18:47:33.0
+  version: "1"
+assets_005: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:33.0
+  project_id: "1"
+  name: Identifiers
+  id: "14"
+  created_at: 2009-01-18 18:47:33.0
+  version: "1"
+assets_126: 
+  name_space: 
+  updated_at: 2009-01-18 19:00:33.0
+  project_id: "1"
+  name: DefaultSDIParty
+  id: "135"
+  created_at: 2009-01-18 19:00:33.0
+  version: "1"
+assets_127: 
+  name_space: 
+  updated_at: 2009-01-18 19:01:08.0
+  project_id: "1"
+  name: Ticker
+  id: "136"
+  created_at: 2009-01-18 19:01:08.0
+  version: "1"
+assets_004: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:30.0
+  project_id: "1"
+  name: IdentifiedObject
+  id: "13"
+  created_at: 2009-01-18 18:47:30.0
+  version: "1"
+assets_003: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:29.0
+  project_id: "1"
+  name: Object
+  id: "12"
+  created_at: 2009-01-18 18:47:29.0
+  version: "1"
+assets_507: 
+  name_space: 
+  updated_at: 2009-01-18 23:40:26.0
+  project_id: "1"
+  name: CommoditySwap2
+  id: "516"
+  created_at: 2009-01-18 23:40:26.0
+  version: "1"
+assets_508: 
+  name_space: 
+  updated_at: 2009-01-18 23:42:01.0
+  project_id: "1"
+  name: CommodityOTCOption2
+  id: "517"
+  created_at: 2009-01-18 23:42:01.0
+  version: "1"
+assets_128: 
+  name_space: 
+  updated_at: 2009-01-18 19:01:20.0
+  project_id: "1"
+  name: ReferenceEntity
+  id: "137"
+  created_at: 2009-01-18 19:01:20.0
+  version: "1"
+assets_129: 
+  name_space: 
+  updated_at: 2009-01-18 19:01:26.0
+  project_id: "1"
+  name: ReferenceEntityDefinition
+  id: "138"
+  created_at: 2009-01-18 19:01:26.0
+  version: "1"
+assets_009: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:35.0
+  project_id: "1"
+  name: LegalEntityIdentifiers
+  id: "18"
+  created_at: 2009-01-18 18:47:35.0
+  version: "1"
+assets_008: 
+  name_space: 
+  updated_at: 2009-01-18 18:47:35.0
+  project_id: "1"
+  name: VersionedIdentifier
+  id: "17"
+  created_at: 2009-01-18 18:47:35.0
+  version: "1"

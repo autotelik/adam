@@ -1,0 +1,66 @@
+1. As a (role) I want (something) so that (benefit).
+
+2. Make them testable. 
+
+
+
+An ASSET is an atomic information unit, where the unit is some internal or external concept meaningful to the user or  organisation, such as Product, Company, Name, 
+
+ADAM is interested in the *structure* or meta-data of such an atomic information unit
+
+It is a representational unit that can have real, meaningful  data attached. It can convey information enabling it to be translated and transformed into many other representations. It can convey information enabling real data attached it, to be mapped to alternative forms or values.
+
+
+
+user wants to be able to represent an atomic unit of information in a neautral format
+
+
+user wants to take an Excel spreedsheet and automatically load the representation so that existing data can be stored
+
+user wants to take an XSD and automatically load the representation so that existing data can be stored
+
+user wants to take XML and automatically load the representation so that existing data can be stored
+
+user wants to take CSV and automatically load the representation so that existing data can be stored
+
+user wants to take a database table schema and automatically load the representation so that existing data can be stored
+
+TODO - What is 'data' , what forms can it take ? Can we define a generic structure that supports all such forms ?
+Can an XSD represent all such forms ? Should this be the basis of the internal representation ? If an ASSET can be viewed as a complex data TYPE, how do we enable other ASSETS to share that type?
+
+
+user wants to group related Assets together in Projects so that views of the assets can be logically grouped, permissioned  and shared.
+
+
+Assets should support compositional elements that enable construction of groups and deep hierarchies, and nodes which support real meaningful data
+
+user wants to be able to take an Excel spreedsheet and automatically load selected rows/columns that represent the struheader or format representation so that existing data can be stored
+
+user wants to take an XSD and automatically load the representation so that existing data can be stored
+
+user wants to take XML and automatically load the representation so that existing data can be stored
+
+user wants to take CSV and automatically load the representation so that existing data can be stored
+
+user opens app and sees navigator view of projects, and assets with a selected project
+
+user opens app and sees tabs presenting different views of an assetof system so that 
+
+
+user selects a project and and asset and can drill down into the representation of that Asset in a convienent manner so that the representation can be edited, by dragging and dropping structures.
+
+
+user wants to be able to generate an Excel spreedsheet of an Asset
+
+
+user wants to define an output schema for an asset
+selects asset
+chooses nodes for viewing in that format
+saves schema
+
+
+user wants a representation of an ADAM asset in a particular format
+
+generates output
+
+

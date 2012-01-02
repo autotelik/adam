@@ -1,0 +1,27 @@
+# MySQL.  Versions 4.1 and 5.0 are recommended.
+#
+#
+# Be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+
+
+<% adapter = 'jdbcmysql' %>
+<% adapter = 'jdbcsqlite3' %>
+
+
+development:
+  adapter: <%= adapter %>
+  encoding: utf8
+  database:  <%= ADAM_ROOT_PATH + '/db/adam_development' %>
+  username: test
+  password: test
+  host: localhost
+
+
+production:
+  adapter: <%= adapter %>
+  encoding: utf8
+  database:  <%= ADAM_ROOT_PATH + '/db/adam_production' %>
+  username: test
+  password: test
+  host: localhost

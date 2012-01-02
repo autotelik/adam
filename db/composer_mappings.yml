@@ -1,0 +1,70 @@
+ComposerMapping.create
+  reference=> 'acclimit',
+  asset_id=> 90,
+  composer_id=> 1911,
+  value=> 1,
+  system_key_field_id=> 1
+  
+ComposerMapping.create
+  reference=> 'acclimit'
+  asset_id=> 90,
+  composer_id=> 1910,
+  value=> 3,
+  system_key_field_id=> 2
+  
+ComposerMapping.create>
+  reference=> 'acclimit'
+  asset_id=> 90,
+  composer_id=> 1908,
+  value=> 1,
+  system_key_field_id=> 1
+  
+ComposerMapping.create
+  reference=> 'acclimit'
+  asset_id=> 90,
+  composer_id=> 1906,
+  value=> 0,
+  system_key_field_id=> 2
+  
+ComposerMapping.create
+  reference=> 'acclimit'
+  asset_id=> 90,
+  composer_id=> 1911,
+  value=> 4,
+  system_key_field_id=> 2
+  
+ComposerMapping.create
+  reference=> 'acclimit'
+  asset_id=> 90,
+  composer_id=> 1910,
+  value=> 1,
+  system_key_field_id=> 1
+  
+ComposerMapping.create
+  reference=> 'acclimit'
+  asset_id=> 90,
+  composer_id=> 1909,
+  value=> 2,
+  system_key_field_id=> 2
+  
+ComposerMapping.create
+  reference=> 'acclimit'
+  asset_id=> 90,
+  composer_id=> 1906,
+  value=> 1,
+  system_key_field_id=> 1
+  
+ComposerMapping.create
+  reference=> 'acclimit'
+  asset_id=> 90,
+  composer_id=> 1909,
+  value=> 1,
+  system_key_field_id=> 1
+  
+ComposerMapping.create
+  reference=> 'acclimit'
+  asset_id=> 90,
+  composer_id=> 1908,
+  value=> 1,
+  system_key_field_id=> 2
+  

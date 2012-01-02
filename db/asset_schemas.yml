@@ -1,0 +1,91 @@
+--- 
+asset_schemas_004: 
+  updated_at: 2009-01-25 20:08:19.0
+  asset_id: "90"
+  property_id: 
+  id: "4"
+  system_id: "2"
+  viewable_id: "1910"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:19.0
+asset_schemas_005: 
+  updated_at: 2009-01-25 20:08:19.0
+  asset_id: "90"
+  property_id: 
+  id: "5"
+  system_id: "2"
+  viewable_id: "1911"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:19.0
+asset_schemas_008: 
+  updated_at: 2009-01-25 20:08:40.0
+  asset_id: "90"
+  property_id: 
+  id: "8"
+  system_id: "5"
+  viewable_id: "1909"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:40.0
+asset_schemas_003: 
+  updated_at: 2009-01-25 20:08:19.0
+  asset_id: "90"
+  property_id: 
+  id: "3"
+  system_id: "2"
+  viewable_id: "1909"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:19.0
+asset_schemas_009: 
+  updated_at: 2009-01-25 20:08:41.0
+  asset_id: "90"
+  property_id: 
+  id: "9"
+  system_id: "5"
+  viewable_id: "1910"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:41.0
+asset_schemas_007: 
+  updated_at: 2009-01-25 20:08:40.0
+  asset_id: "90"
+  property_id: 
+  id: "7"
+  system_id: "5"
+  viewable_id: "1908"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:40.0
+asset_schemas_010: 
+  updated_at: 2009-01-25 20:08:41.0
+  asset_id: "90"
+  property_id: 
+  id: "10"
+  system_id: "5"
+  viewable_id: "1911"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:41.0
+asset_schemas_002: 
+  updated_at: 2009-01-25 20:08:18.0
+  asset_id: "90"
+  property_id: 
+  id: "2"
+  system_id: "2"
+  viewable_id: "1908"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:18.0
+asset_schemas_006: 
+  updated_at: 2009-01-25 20:08:39.0
+  asset_id: "90"
+  property_id: 
+  id: "6"
+  system_id: "5"
+  viewable_id: "1906"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:39.0
+asset_schemas_001: 
+  updated_at: 2009-01-25 20:08:18.0
+  asset_id: "90"
+  property_id: 
+  id: "1"
+  system_id: "2"
+  viewable_id: "1906"
+  viewable_type: Composer
+  created_at: 2009-01-25 20:08:18.0
