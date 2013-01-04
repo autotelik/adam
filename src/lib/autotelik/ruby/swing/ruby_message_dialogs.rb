@@ -5,7 +5,7 @@
 #
 class RubyMessageDialog
 
-  include_class javax.swing.JOptionPane
+  java_import javax.swing.JOptionPane
 
   def self.show( msg )
     JOptionPane.showMessageDialog(nil, msg)
@@ -15,7 +15,7 @@ class RubyMessageDialog
 
 class RubyInputDialog
 
-  include_class javax.swing.JOptionPane
+  java_import javax.swing.JOptionPane
 
   def self.show( msg, title = "Input Dialog" )
     JOptionPane.showInputDialog(nil, msg, title, JOptionPane::QUESTION_MESSAGE)

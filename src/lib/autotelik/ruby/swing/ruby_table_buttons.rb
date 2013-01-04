@@ -5,12 +5,12 @@
 #
 # Classes to support embedding a JButton within a JTable
 # 
-# Note include_class followed by include in class definition - is equivalent to 'implements'
+# Note java_import followed by include in class definition - is equivalent to 'implements'
 
-include_class javax.swing.table.TableCellRenderer
-include_class java.awt.Point
-include_class java.awt.event.MouseListener
-include_class java.awt.event.ActionEvent
+java_import javax.swing.table.TableCellRenderer
+java_import java.awt.Point
+java_import java.awt.event.MouseListener
+java_import java.awt.event.ActionEvent
 
 class RubyTableButtonRenderer
   include TableCellRenderer
@@ -34,7 +34,7 @@ end
 # and then forward onto the usual
 #
 class JTableButtonMouseListener
-  include_class javax.swing.SwingUtilities
+  java_import javax.swing.SwingUtilities
   
   include MouseListener
   

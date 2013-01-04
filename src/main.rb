@@ -54,8 +54,8 @@ end
 # Your application code goes here
 
 begin
-  include_class javax.swing.UIManager
-  include_class org.jvnet.substance.skin.SubstanceOfficeSilver2007LookAndFeel
+  java_import javax.swing.UIManager
+  java_import org.jvnet.substance.skin.SubstanceOfficeSilver2007LookAndFeel
 
   #javax.swing.UIManager.set_look_and_feel javax.swing.UIManager.getSystemLookAndFeelClassName
   javax.swing.UIManager.set_look_and_feel "org.jvnet.substance.skin.SubstanceOfficeSilver2007LookAndFeel"
@@ -75,6 +75,7 @@ ActiveRecord::Base.logger = log
 
 Boot::setup
 
+# require all our models etc
 Boot::models
 Boot::controllers
 

@@ -8,12 +8,12 @@ require 'ruby_table'
 require 'mapping_helper'
 require 'system_helper'
 
-include_class javax.swing.DefaultCellEditor
-include_class javax.swing.JButton
-include_class javax.swing.table.TableCellRenderer
-include_class javax.swing.JComboBox
-include_class java.awt.event.ActionListener
-include_class java.awt.event.ActionEvent
+java_import javax.swing.DefaultCellEditor
+java_import javax.swing.JButton
+java_import javax.swing.table.TableCellRenderer
+java_import javax.swing.JComboBox
+java_import java.awt.event.ActionListener
+java_import java.awt.event.ActionEvent
 
 require 'ruby_table_buttons'
 require 'ruby_table_combo_boxes'
@@ -60,9 +60,9 @@ end
 
 class RubyConversionTableModel < RubyTableModel
 
-  include_class javax.swing.DefaultCellEditor
-  include_class javax.swing.JComboBox
-  include_class javax.swing.SwingConstants
+  java_import javax.swing.DefaultCellEditor
+  java_import javax.swing.JComboBox
+  java_import javax.swing.SwingConstants
   
   attr_accessor :asset_box, :system_box, :buttons
   attr_reader   :control_column, :nodes, :output_column

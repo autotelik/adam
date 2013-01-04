@@ -1,0 +1,23 @@
+language: ruby
+script: bundle exec rake test_$DB
+rvm:
+  - jruby-18mode
+  - jruby-19mode
+env:
+  - DB=mysql
+  - DB=postgresql
+  - DB=h2
+  - DB=hsqldb
+  - DB=sqlite3
+  - DB=jndi
+gemfile:
+  - gemfiles/rails23.gemfile
+  - gemfiles/rails30.gemfile
+  - gemfiles/rails31.gemfile
+  - gemfiles/rails32.gemfile
+branches:
+  only:
+    - master
+matrix:
+  allow_failures:
+    - gemfile: gemfiles/rails23.gemfile

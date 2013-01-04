@@ -5,15 +5,15 @@
 
 class JExcelFile
 
-  include_class 'org.apache.poi.poifs.filesystem.POIFSFileSystem'
-  include_class 'org.apache.poi.hssf.usermodel.HSSFCell'
-  include_class 'org.apache.poi.hssf.usermodel.HSSFWorkbook'
-  include_class 'org.apache.poi.hssf.usermodel.HSSFCellStyle'
-  include_class 'org.apache.poi.hssf.usermodel.HSSFDataFormat'
+  java_import 'org.apache.poi.poifs.filesystem.POIFSFileSystem'
+  java_import 'org.apache.poi.hssf.usermodel.HSSFCell'
+  java_import 'org.apache.poi.hssf.usermodel.HSSFWorkbook'
+  java_import 'org.apache.poi.hssf.usermodel.HSSFCellStyle'
+  java_import 'org.apache.poi.hssf.usermodel.HSSFDataFormat'
 
-  include_class 'java.io.ByteArrayOutputStream'
-  include_class 'java.util.Date'
-  include_class 'java.io.FileInputStream'
+  java_import 'java.io.ByteArrayOutputStream'
+  java_import 'java.util.Date'
+  java_import 'java.io.FileInputStream'
 
   attr_accessor :book, :row
   
@@ -110,13 +110,13 @@ end
 module ExcelHelper
   require 'java'
 
-  include_class 'org.apache.poi.poifs.filesystem.POIFSFileSystem'
-  include_class 'org.apache.poi.hssf.usermodel.HSSFCell'
-  include_class 'org.apache.poi.hssf.usermodel.HSSFWorkbook'
-  include_class 'org.apache.poi.hssf.usermodel.HSSFCellStyle'
-  include_class 'org.apache.poi.hssf.usermodel.HSSFDataFormat'
-  include_class 'java.io.ByteArrayOutputStream'
-  include_class 'java.util.Date'
+  java_import 'org.apache.poi.poifs.filesystem.POIFSFileSystem'
+  java_import 'org.apache.poi.hssf.usermodel.HSSFCell'
+  java_import 'org.apache.poi.hssf.usermodel.HSSFWorkbook'
+  java_import 'org.apache.poi.hssf.usermodel.HSSFCellStyle'
+  java_import 'org.apache.poi.hssf.usermodel.HSSFDataFormat'
+  java_import 'java.io.ByteArrayOutputStream'
+  java_import 'java.util.Date'
 
   # ActiveRecord Helper - Export model data to XLS file format
   #

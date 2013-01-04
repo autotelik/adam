@@ -2,7 +2,7 @@ module ActiveRecord
   # = Active Record Counter Cache
   module CounterCache
     # Resets one or more counter caches to their correct value using an SQL
-    # count query.  This is useful when adding new counter caches, or if the
+    # count query. This is useful when adding new counter caches, or if the
     # counter has been corrupted or modified directly by SQL.
     #
     # ==== Parameters
@@ -19,20 +19,26 @@ module ActiveRecord
       counters.each do |association|
         has_many_association = reflect_on_association(association.to_sym)
 
-        expected_name = if has_many_association.options[:as]
+        if has_many_association.options[:as]
           has_many_association.options[:as].to_s.classify
         else
           self.name
         end
 
+        if has_many_association.is_a? ActiveRecord::Reflection::ThroughReflection
+          has_many_association = has_many_association.through_reflection
+        end
+
+        foreign_key  = has_many_association.foreign_key.to_s
         child_class  = has_many_association.klass
         belongs_to   = child_class.reflect_on_all_associations(:belongs_to)
-        reflection   = belongs_to.find { |e| e.class_name == expected_name }
+        reflection   = belongs_to.find { |e| e.foreign_key.to_s == foreign_key && e.options[:counter_cache].present? }
         counter_name = reflection.counter_cache_column
 
-        self.unscoped.where(arel_table[self.primary_key].eq(object.id)).arel.update({
+        stmt = unscoped.where(arel_table[primary_key].eq(object.id)).arel.compile_update({
           arel_table[counter_name] => object.send(association).count
         })
+        connection.update stmt
       end
       return true
     end
@@ -56,15 +62,15 @@ module ActiveRecord
     #   Post.update_counters 5, :comment_count => -1, :action_count => 1
     #   # Executes the following SQL:
     #   # UPDATE posts
-    #   #    SET comment_count = comment_count - 1,
-    #   #        action_count = action_count + 1
+    #   #    SET comment_count = COALESCE(comment_count, 0) - 1,
+    #   #        action_count = COALESCE(action_count, 0) + 1
     #   #  WHERE id = 5
     #
     #   # For the Posts with id of 10 and 15, increment the comment_count by 1
     #   Post.update_counters [10, 15], :comment_count => 1
     #   # Executes the following SQL:
     #   # UPDATE posts
-    #   #    SET comment_count = comment_count + 1,
+    #   #    SET comment_count = COALESCE(comment_count, 0) + 1
     #   #  WHERE id IN (10, 15)
     def update_counters(id, counters)
       updates = counters.map do |counter_name, value|
@@ -72,6 +78,8 @@ module ActiveRecord
         quoted_column = connection.quote_column_name(counter_name)
         "#{quoted_column} = COALESCE(#{quoted_column}, 0) #{operator} #{value.abs}"
       end
+
+      IdentityMap.remove_by_id(symbolized_base_class, id) if IdentityMap.enabled?
 
       update_all(updates.join(', '), primary_key => id )
     end

@@ -3,8 +3,8 @@
 # Date ::     Dec 2008
 # License::   MIT ?
 #
-include_class java.util.Enumeration
-include_class javax.swing.tree.TreeNode
+java_import java.util.Enumeration
+java_import javax.swing.tree.TreeNode
 
 class RubyAssetTreeNode <  javax.swing.tree.DefaultMutableTreeNode
 
@@ -48,7 +48,7 @@ class RubyAssetTreeModel < javax.swing.tree.DefaultTreeModel
 end   # END MODEL CLASS
 
 module KSE
-  include_class 'autotelik.swing.DnDJTree'
+  java_import 'autotelik.swing.DnDJTree'
 end
 
 class RubyAssetTree < KSE::DnDJTree

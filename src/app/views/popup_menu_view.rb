@@ -3,8 +3,8 @@
 # Date ::     Nov 2008
 # License::   MIT ?
 #
-include_class javax.swing.JMenuItem
-include_class javax.swing.JPopupMenu
+java_import javax.swing.JMenuItem
+java_import javax.swing.JPopupMenu
 
 class PopupMenuView < ApplicationView
   set_java_class 'javax.swing.JPopupMenu'

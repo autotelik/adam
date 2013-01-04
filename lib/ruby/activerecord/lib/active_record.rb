@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2004-2010 David Heinemeier Hansson
+# Copyright (c) 2004-2011 David Heinemeier Hansson
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -21,13 +21,6 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
 
-
-activesupport_path = File.expand_path('../../../activesupport/lib', __FILE__)
-$:.unshift(activesupport_path) if File.directory?(activesupport_path) && !$:.include?(activesupport_path)
-
-activemodel_path = File.expand_path('../../../activemodel/lib', __FILE__)
-$:.unshift(activemodel_path) if File.directory?(activemodel_path) && !$:.include?(activemodel_path)
-
 require 'active_support'
 require 'active_support/i18n'
 require 'active_model'
@@ -38,14 +31,25 @@ require 'active_record/version'
 module ActiveRecord
   extend ActiveSupport::Autoload
 
+  # ActiveRecord::SessionStore depends on the abstract store in Action Pack.
+  # Eager loading this class would break client code that eager loads Active
+  # Record standalone.
+  #
+  # Note that the Rails application generator creates an initializer specific
+  # for setting the session store. Thus, albeit in theory this autoload would
+  # not be thread-safe, in practice it is because if the application uses this
+  # session store its autoload happens at boot time.
+  autoload :SessionStore
+
   eager_autoload do
     autoload :ActiveRecordError, 'active_record/errors'
     autoload :ConnectionNotEstablished, 'active_record/errors'
+    autoload :ConnectionAdapters, 'active_record/connection_adapters/abstract_adapter'
 
     autoload :Aggregations
-    autoload :AssociationPreload
     autoload :Associations
     autoload :AttributeMethods
+    autoload :AttributeAssignment
     autoload :AutosaveAssociation
 
     autoload :Relation
@@ -57,28 +61,45 @@ module ActiveRecord
       autoload :PredicateBuilder
       autoload :SpawnMethods
       autoload :Batches
+      autoload :Explain
+      autoload :Delegation
     end
 
     autoload :Base
     autoload :Callbacks
     autoload :CounterCache
+    autoload :DynamicMatchers
     autoload :DynamicFinderMatch
     autoload :DynamicScopeMatch
+    autoload :Explain
+    autoload :IdentityMap
+    autoload :Inheritance
+    autoload :Integration
     autoload :Migration
     autoload :Migrator, 'active_record/migration'
-    autoload :NamedScope
+    autoload :ModelSchema
     autoload :NestedAttributes
     autoload :Observer
     autoload :Persistence
     autoload :QueryCache
+    autoload :Querying
+    autoload :ReadonlyAttributes
     autoload :Reflection
+    autoload :Result
+    autoload :Sanitization
     autoload :Schema
     autoload :SchemaDumper
+    autoload :Scoping
     autoload :Serialization
-    autoload :SessionStore
+    autoload :Store
     autoload :Timestamp
     autoload :Transactions
+    autoload :Translation
     autoload :Validations
+  end
+
+  module Coders
+    autoload :YAMLColumn, 'active_record/coders/yaml_column'
   end
 
   module AttributeMethods
@@ -92,6 +113,8 @@ module ActiveRecord
       autoload :Read
       autoload :TimeZoneConversion
       autoload :Write
+      autoload :Serialization
+      autoload :DeprecatedUnderscoreRead
     end
   end
 
@@ -110,6 +133,15 @@ module ActiveRecord
     eager_autoload do
       autoload :AbstractAdapter
       autoload :ConnectionManagement, "active_record/connection_adapters/abstract/connection_pool"
+    end
+  end
+
+  module Scoping
+    extend ActiveSupport::Autoload
+
+    eager_autoload do
+      autoload :Named
+      autoload :Default
     end
   end
 

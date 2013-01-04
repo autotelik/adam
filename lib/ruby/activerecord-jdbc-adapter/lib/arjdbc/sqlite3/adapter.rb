@@ -16,7 +16,7 @@ module ::ArJdbc
 
     module Column
       def init_column(name, default, *args)
-        @default = '' if default =~ /NULL/
+        @default = nil if default =~ /NULL/
       end
 
       def type_cast(value)
@@ -80,8 +80,8 @@ module ::ArJdbc
       'SQLite'
     end
 
-    def arel2_visitors
-      {'jdbcsqlite3' => ::Arel::Visitors::SQLite}
+    def self.arel2_visitors(config)
+      {}.tap {|v| %w(sqlite3 jdbcsqlite3).each {|x| v[x] = ::Arel::Visitors::SQLite } }
     end
 
     def supports_ddl_transactions?
@@ -119,8 +119,17 @@ module ::ArJdbc
       tp
     end
 
+    def quote(value, column = nil)
+      if value.kind_of?(String) && column && column.type == :binary && column.class.respond_to?(:string_to_binary)
+        s = column.class.string_to_binary(value).unpack("H*")[0]
+        "x'#{s}'"
+      else
+        super
+      end
+    end
+
     def quote_column_name(name) #:nodoc:
-      %Q("#{name}")
+      %Q("#{name.to_s.gsub('"', '""')}") # "' kludge for emacs font-lock
     end
 
     def quote_string(str)
@@ -145,13 +154,14 @@ module ::ArJdbc
       end
     end
 
-    def insert_sql(sql, name = nil, pk = nil, id_value = nil, sequence_name = nil) #:nodoc:
-      @connection.execute_update(sql)
+    def insert_sql(sql, name = nil, pk = nil, id_value = nil, sequence_name = nil, binds = []) #:nodoc:
+      sql = substitute_binds(sql, binds)
+      log(sql, name) { @connection.execute_update(sql) }
       id_value || last_insert_id
     end
 
     def last_insert_id
-      Integer(select_value("SELECT last_insert_rowid()"))
+      @connection.last_insert_row_id
     end
 
     def tables(name = nil) #:nodoc:
@@ -180,12 +190,7 @@ module ::ArJdbc
       end
     end
 
-    def primary_key(table_name) #:nodoc:
-      column = table_structure(table_name).find {|field| field['pk'].to_i == 1}
-      column ? column['name'] : nil
-    end
-
-    def recreate_database(name)
+    def recreate_database(name, options = {})
       tables.each{ |table| drop_table(table) }
     end
 
@@ -194,8 +199,8 @@ module ::ArJdbc
       ActiveRecord::ConnectionAdapters::JdbcConnection::insert?(sql) ? last_insert_id : result
     end
 
-    def select(sql, name=nil)
-      execute(sql, name).map do |row|
+    def select(sql, name=nil, binds = [])
+      execute(sql, name, binds).map do |row|
         record = {}
         row.each_key do |key|
           if key.is_a?(String)
@@ -207,9 +212,12 @@ module ::ArJdbc
     end
 
     def table_structure(table_name)
-      structure = @connection.execute_query("PRAGMA table_info(#{quote_table_name(table_name)})")
-      raise ActiveRecord::StatementInvalid, "Could not find table '#{table_name}'" if structure.empty?
-      structure
+      sql = "PRAGMA table_info(#{quote_table_name(table_name)})"
+      log(sql, 'SCHEMA') { @connection.execute_query(sql) }
+    rescue ActiveRecord::JDBCError => error
+      e = ActiveRecord::StatementInvalid.new("Could not find table '#{table_name}'")
+      e.set_backtrace error.backtrace
+      raise e
     end
 
     def jdbc_columns(table_name, name = nil) #:nodoc:
@@ -282,6 +290,8 @@ module ::ArJdbc
           self.limit   = options[:limit] if options.include?(:limit)
           self.default = options[:default] if include_default
           self.null    = options[:null] if options.include?(:null)
+          self.precision = options[:precision] if options.include?(:precision)
+          self.scale   = options[:scale] if options.include?(:scale)
         end
       end
     end
@@ -335,28 +345,19 @@ module ActiveRecord::ConnectionAdapters
     end
 
     def self.string_to_binary(value)
-      "\000b64" + [value].pack('m*').split("\n").join('')
+      value
     end
 
     def self.binary_to_string(value)
       if value.respond_to?(:force_encoding) && value.encoding != Encoding::ASCII_8BIT
         value = value.force_encoding(Encoding::ASCII_8BIT)
       end
-
-      if value[0..3] == "\000b64"
-        value[4..-1].unpack('m*').first
-      else
-        value
-      end
+      value
     end
   end
 
   class SQLite3Adapter < JdbcAdapter
     include ArJdbc::SQLite3
-
-    def adapter_spec(config)
-      # return nil to avoid extending ArJdbc::SQLite3, which we've already done
-    end
 
     def jdbc_connection_class(spec)
       ::ArJdbc::SQLite3.jdbc_connection_class
@@ -367,6 +368,12 @@ module ActiveRecord::ConnectionAdapters
     end
 
     alias_chained_method :columns, :query_cache, :jdbc_columns
+
+    protected
+
+    def last_inserted_id(result)
+      last_insert_id
+    end
   end
 
   SQLiteAdapter = SQLite3Adapter

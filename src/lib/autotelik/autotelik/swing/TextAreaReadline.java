@@ -387,7 +387,8 @@ public class TextAreaReadline implements KeyListener {
         
         if (!Readline.getHistory(Readline.getHolder(runtime)).previous()) return;
         
-        String oldLine = Readline.getHistory(Readline.getHolder(runtime)).current().trim();
+        String oldLine = Readline.getHistory(Readline.getHolder(runtime)).current().toString();
+        oldLine.trim();
         replaceText(startPos, area.getDocument().getLength(), oldLine);
     }
     
@@ -408,7 +409,7 @@ public class TextAreaReadline implements KeyListener {
             oldLine = currentLine;
         else {
             Readline.getHistory(Readline.getHolder(runtime)).previous(); // undo check
-            oldLine = Readline.getHistory(Readline.getHolder(runtime)).current().trim();
+            oldLine = Readline.getHistory(Readline.getHolder(runtime)).current().toString().trim();
         }
         
         replaceText(startPos, area.getDocument().getLength(), oldLine);

@@ -4,6 +4,7 @@ module Arel
   module Visitors
     class SQLServer < Arel::Visitors::ToSql
       include ArJdbc::MsSQL::LimitHelpers::SqlServerReplaceLimitOffset
+      include ArJdbc::MsSQL::LockHelpers::SqlServerAddLock
 
       def select_count? o
         sel = o.cores.length == 1 && o.cores.first
@@ -33,7 +34,15 @@ module Arel
         else
           sql = super
         end
+        add_lock!(sql, :lock => o.lock && true)
         sql
+      end
+
+      # MS-SQL doesn't support "SELECT...FOR UPDATE".  Instead, it needs
+      # WITH(ROWLOCK,UPDLOCK) specified after each table in the FROM clause.
+      #
+      # So, we return nothing here and add the appropriate stuff using add_lock! above.
+      def visit_Arel_Nodes_Lock o
       end
     end
 

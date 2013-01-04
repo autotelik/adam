@@ -5,31 +5,52 @@ class Object
   # *Unlike* that method however, a +NoMethodError+ exception will *not* be raised
   # and +nil+ will be returned instead, if the receiving object is a +nil+ object or NilClass.
   #
+  # If try is called without a method to call, it will yield any given block with the object.
+  #
+  # Please also note that +try+ is defined on +Object+, therefore it won't work with
+  # subclasses of +BasicObject+. For example, using try with +SimpleDelegator+ will
+  # delegate +try+ to target instead of calling it on delegator itself.
+  #
   # ==== Examples
   #
-  # Without try
+  # Without +try+
   #   @person && @person.name
   # or
   #   @person ? @person.name : nil
   #
-  # With try
+  # With +try+
   #   @person.try(:name)
   #
   # +try+ also accepts arguments and/or a block, for the method it is trying
   #   Person.try(:find, 1)
   #   @people.try(:collect) {|p| p.name}
+  #
+  # Without a method argument try will yield to the block unless the receiver is nil.
+  #   @person.try { |p| "#{p.first_name} #{p.last_name}" }
   #--
-  # This method definition below is for rdoc purposes only. The alias_method call
-  # below overrides it as an optimization since +try+ behaves like +Object#send+,
-  # unless called on +NilClass+.
-  def try(method, *args, &block)
-    send(method, *args, &block)
+  # +try+ behaves like +Object#send+, unless called on +NilClass+.
+  def try(*a, &b)
+    if a.empty? && block_given?
+      yield self
+    else
+      __send__(*a, &b)
+    end
   end
-  remove_method :try
-  alias_method :try, :__send__
 end
 
-class NilClass #:nodoc:
+class NilClass
+  # Calling +try+ on +nil+ always returns +nil+.
+  # It becomes specially helpful when navigating through associations that may return +nil+.
+  #
+  # === Examples
+  #
+  #   nil.try(:name) # => nil
+  #
+  # Without +try+
+  #   @person && !@person.children.blank? && @person.children.first.name
+  #
+  # With +try+
+  #   @person.try(:children).try(:first).try(:name)
   def try(*args)
     nil
   end

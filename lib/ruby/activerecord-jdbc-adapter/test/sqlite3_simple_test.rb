@@ -6,12 +6,15 @@ require 'models/validates_uniqueness_of_string'
 class SQLite3SimpleTest < Test::Unit::TestCase
   include SimpleTestMethods
   include ActiveRecord3TestMethods
+  include ColumnNameQuotingTests
+  include DirtyAttributeTests
+  include XmlColumnTests
 
   def test_recreate_database
     assert @connection.tables.include?(Entry.table_name)
     db = @connection.database_name
     @connection.recreate_database(db)
-    assert (not @connection.tables.include? Entry.table_name)
+    assert !@connection.tables.include?(Entry.table_name)
     self.setup # avoid teardown complaining
   end
 
@@ -125,6 +128,20 @@ class SQLite3SimpleTest < Test::Unit::TestCase
     assert_equal ["name"], indexes.first.columns
   end
 
+  def test_column_default
+    assert_nothing_raised do
+      ActiveRecord::Schema.define do
+        add_column "entries", "test_column_default", :string
+      end
+    end
+
+    cols = ActiveRecord::Base.connection.columns("entries")
+    col = cols.find{|col| col.name == "test_column_default"}
+    assert col
+    assert_equal col.default, nil
+
+  end
+
   def test_change_column_default
     assert_nothing_raised do
       ActiveRecord::Schema.define do
@@ -173,6 +190,37 @@ class SQLite3SimpleTest < Test::Unit::TestCase
     assert_equal col.type, :integer
   end
 
+  def test_change_column_with_new_precision_and_scale
+    Entry.delete_all
+    Entry.
+      connection.
+      change_column "entries", "rating", :decimal, :precision => 9, :scale => 7
+    Entry.reset_column_information
+    change_column = Entry.columns_hash["rating"]
+    assert_equal 9, change_column.precision
+    assert_equal 7, change_column.scale
+  end
+
+  def test_change_column_preserve_other_column_precision_and_scale
+    Entry.delete_all
+    Entry.
+      connection.
+      change_column "entries", "rating", :decimal, :precision => 9, :scale => 7
+    Entry.reset_column_information
+
+    rating_column = Entry.columns_hash["rating"]
+    assert_equal 9, rating_column.precision
+    assert_equal 7, rating_column.scale
+
+    Entry.
+      connection.
+      change_column "entries", "title", :string, :null => false
+    Entry.reset_column_information
+
+    rating_column = Entry.columns_hash["rating"]
+    assert_equal 9, rating_column.precision
+    assert_equal 7, rating_column.scale
+  end
 end
 
 # assert_raise ActiveRecord::RecordInvalid do
@@ -204,6 +252,14 @@ class SQLite3TypeConversionTest < Test::Unit::TestCase
       :sample_decimal => JInteger::MAX_VALUE + 1,
       :sample_small_decimal => 3.14,
       :sample_binary => TEST_BINARY)
+    DbType.create(
+      :sample_timestamp => TEST_TIME,
+      :sample_datetime => TEST_TIME,
+      :sample_time => TEST_TIME,
+      :sample_date => TEST_TIME,
+      :sample_decimal => JInteger::MAX_VALUE + 1,
+      :sample_small_decimal => 1.0,
+      :sample_binary => TEST_BINARY)
   end
 
   def teardown
@@ -230,4 +286,16 @@ class SQLite3TypeConversionTest < Test::Unit::TestCase
     assert_equal(TEST_BINARY, types.sample_binary)
   end
 
+  def test_small_decimal
+    types = DbType.find(:all, :order => ["sample_small_decimal desc"])
+    assert_equal(3.14, types[0].sample_small_decimal)
+    assert_equal(1.0, types[1].sample_small_decimal)
+  end
+
+  def test_small_decimal_with_ordering
+    types = DbType.find(:all, :order => ["sample_small_decimal asc"])
+    types[1].sample_small_decimal
+    assert_equal(1.0, types[0].sample_small_decimal)
+    assert_equal(3.14, types[1].sample_small_decimal)
+  end
 end

@@ -1,5 +1,4 @@
 require 'jdbc_common'
-require 'db/postgres'
 
 class CreateUrls < ActiveRecord::Migration
   def self.up
@@ -15,7 +14,7 @@ class CreateUrls < ActiveRecord::Migration
 end
 
 class Url < ActiveRecord::Base
-  set_primary_key :uhash
+  self.primary_key = :uhash
   #Shouldn't be needed: set_sequence_name nil
 end
 

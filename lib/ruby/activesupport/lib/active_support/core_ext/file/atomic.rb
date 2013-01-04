@@ -1,5 +1,5 @@
 class File
-  # Write to a file atomically.  Useful for situations where you don't
+  # Write to a file atomically. Useful for situations where you don't
   # want other processes or threads to see half-written files.
   #
   #   File.atomic_write("important.file") do |file|
@@ -17,6 +17,7 @@ class File
     require 'fileutils' unless defined?(FileUtils)
 
     temp_file = Tempfile.new(basename(file_name), temp_dir)
+    temp_file.binmode
     yield temp_file
     temp_file.close
 

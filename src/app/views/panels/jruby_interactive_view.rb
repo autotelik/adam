@@ -9,8 +9,8 @@ require 'ruby_property_listener'
 # so use this Iframe setup to represent a single irb session
 require 'textpane_iframe'
 
-include_class javax.swing.JLayeredPane
-include_class javax.swing.GroupLayout
+java_import javax.swing.JLayeredPane
+java_import javax.swing.GroupLayout
 
 
 # Manage a set of irb sessions
@@ -19,8 +19,8 @@ class JRubyInteractiveView < ApplicationView
 
   set_java_class 'app.java.panels.JRubyInteractivePanel'
 
-  include_class 'app.java.panels.JRubyInteractiveWorker'
-  include_class java.awt.event.KeyEvent
+  java_import 'app.java.panels.JRubyInteractiveWorker'
+  java_import java.awt.event.KeyEvent
 
   #  # The Sub View in which user can interact with a Calypso connection via JRuby
   #  #

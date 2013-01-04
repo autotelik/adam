@@ -8,7 +8,7 @@
 require 'system'
 
 module TCal
-  include_class com.calypso.tk.service
+  java_import com.calypso.tk.service
   #.DSConnection
 end
  

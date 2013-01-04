@@ -12,7 +12,7 @@ def redefine_task(*args, &block)
     existing_task.instance_variable_set "@actions", []
   end
   redefined_task = task(*args, &block)
-  enhancements.each {|enhancement| redefined_task.actions << enhancement}
+  enhancements.each {|enhancement| redefined_task.actions << enhancement} unless enhancements.nil?
 end
 
 def rails_env
@@ -83,7 +83,7 @@ namespace :db do
         end
 
         ActiveRecord::Base.establish_connection(config.merge({'database' => nil, 'url' => url}))
-        ActiveRecord::Base.connection.create_database(config['database'])
+        ActiveRecord::Base.connection.create_database(config['database'], config)
         ActiveRecord::Base.establish_connection(config)
       rescue => e
         raise e unless config['adapter'] =~ /mysql|postgresql|sqlite/
@@ -100,9 +100,19 @@ namespace :db do
     redefine_task :dump => :environment do
       abcs = ActiveRecord::Base.configurations
       ActiveRecord::Base.establish_connection(abcs[rails_env])
-      File.open("db/#{rails_env}_structure.sql", "w+") { |f| f << ActiveRecord::Base.connection.structure_dump }
+      filename = ENV['DB_STRUCTURE'] || "db/#{rails_env}_structure.sql"
+      File.open(filename, "w+") { |f| f << ActiveRecord::Base.connection.structure_dump }
       if ActiveRecord::Base.connection.supports_migrations?
-        File.open("db/#{rails_env}_structure.sql", "a") { |f| f << ActiveRecord::Base.connection.dump_schema_information }
+        File.open(filename, "a") { |f| f << ActiveRecord::Base.connection.dump_schema_information }
+      end
+    end
+
+    redefine_task :load => :environment do
+      abcs = ActiveRecord::Base.configurations
+      ActiveRecord::Base.establish_connection(abcs[rails_env])
+      filename = ENV['DB_STRUCTURE'] || "db/#{rails_env}_structure.sql"
+      IO.read(filename).split(/;\n*/m).each do |ddl|
+        ActiveRecord::Base.connection.execute(ddl)
       end
     end
   end
@@ -125,7 +135,7 @@ namespace :db do
     redefine_task :purge => :environment do
       abcs = ActiveRecord::Base.configurations
       db = find_database_name(abcs['test'])
-      ActiveRecord::Base.connection.recreate_database(db)
+      ActiveRecord::Base.connection.recreate_database(db, abcs['test'])
     end
   end
 end

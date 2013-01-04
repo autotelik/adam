@@ -1,5 +1,4 @@
 module ActiveModel
-
   # == Active Model Acceptance Validator
   module Validations
     class AcceptanceValidator < EachValidator
@@ -14,8 +13,6 @@ module ActiveModel
       end
 
       def setup(klass)
-        # Note: instance_methods.map(&:to_s) is important for 1.9 compatibility
-        # as instance_methods returns symbols unlike 1.8 which returns strings.
         attr_readers = attributes.reject { |name| klass.attribute_method?(name) }
         attr_writers = attributes.reject { |name| klass.attribute_method?("#{name}=") }
         klass.send(:attr_reader, *attr_readers)
@@ -39,9 +36,9 @@ module ActiveModel
       # Configuration options:
       # * <tt>:message</tt> - A custom error message (default is: "must be
       #   accepted").
-      # * <tt>:on</tt> - Specifies when this validation is active (default is
-      #   <tt>:save</tt>, other options are <tt>:create</tt> and
-      #   <tt>:update</tt>).
+      # * <tt>:on</tt> - Specifies when this validation is active. Runs in all
+      #   validation contexts by default (+nil+), other options are <tt>:create</tt>
+      #   and <tt>:update</tt>.
       # * <tt>:allow_nil</tt> - Skip validation if attribute is +nil+ (default
       #   is true).
       # * <tt>:accept</tt> - Specifies value that is considered accepted.
@@ -51,7 +48,7 @@ module ActiveModel
       #   before validation.
       # * <tt>:if</tt> - Specifies a method, proc or string to call to determine
       #   if the validation should occur (e.g. <tt>:if => :allow_validation</tt>,
-      #   or <tt>:if => Proc.new { |user| user.signup_step > 2 }</tt>).  The
+      #   or <tt>:if => Proc.new { |user| user.signup_step > 2 }</tt>). The
       #   method, proc or string should return or evaluate to a true or false
       #   value.
       # * <tt>:unless</tt> - Specifies a method, proc or string to call to
@@ -60,6 +57,8 @@ module ActiveModel
       #   <tt>:unless => Proc.new { |user| user.signup_step <= 2 }</tt>).
       #   The method, proc or string should return or evaluate to a true or
       #   false value.
+      # * <tt>:strict</tt> - Specifies whether validation should be strict. 
+      #   See <tt>ActiveModel::Validation#validates!</tt> for more information.
       def validates_acceptance_of(*attr_names)
         validates_with AcceptanceValidator, _merge_attributes(attr_names)
       end

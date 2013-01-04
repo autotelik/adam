@@ -1,5 +1,4 @@
 require "active_support"
-require "rails"
 require "active_support/i18n_railtie"
 
 module ActiveSupport
@@ -46,7 +45,7 @@ module ActiveSupport
     # If assigned value cannot be matched to a TimeZone, an exception will be raised.
     initializer "active_support.initialize_time_zone" do |app|
       require 'active_support/core_ext/time/zones'
-      zone_default = Time.__send__(:get_zone, app.config.time_zone)
+      zone_default = Time.find_zone!(app.config.time_zone)
 
       unless zone_default
         raise \

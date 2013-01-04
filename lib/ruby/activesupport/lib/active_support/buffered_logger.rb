@@ -1,5 +1,9 @@
 require 'thread'
+require 'logger'
+require 'active_support/core_ext/logger'
 require 'active_support/core_ext/class/attribute_accessors'
+require 'active_support/deprecation'
+require 'fileutils'
 
 module ActiveSupport
   # Inspired by the buffered logger idea by Ezra
@@ -26,58 +30,68 @@ module ActiveSupport
     def silence(temporary_level = ERROR)
       if silencer
         begin
-          old_logger_level, self.level = level, temporary_level
-          yield self
+          logger = self.class.new @log_dest.dup, temporary_level
+          yield logger
         ensure
-          self.level = old_logger_level
+          logger.close
         end
       else
         yield self
       end
     end
+    deprecate :silence
 
-    attr_accessor :level
     attr_reader :auto_flushing
+    deprecate :auto_flushing
 
     def initialize(log, level = DEBUG)
-      @level         = level
-      @buffer        = Hash.new { |h,k| h[k] = [] }
-      @auto_flushing = 1
-      @guard = Mutex.new
+      @log_dest      = log
 
-      if log.respond_to?(:write)
-        @log = log
-      elsif File.exist?(log)
-        @log = open_log(log, (File::WRONLY | File::APPEND))
-      else
-        FileUtils.mkdir_p(File.dirname(log))
-        @log = open_log(log, (File::WRONLY | File::APPEND | File::CREAT))
+      unless log.respond_to?(:write)
+        unless File.exist?(File.dirname(log))
+          ActiveSupport::Deprecation.warn(<<-eowarn)
+Automatic directory creation for '#{log}' is deprecated.  Please make sure the directory for your log file exists before creating the logger.
+          eowarn
+          FileUtils.mkdir_p(File.dirname(log))
+        end
       end
+
+      @log = open_logfile log
+      self.level = level
+    end
+
+    def open_log(log, mode)
+      open(log, mode).tap do |open_log|
+        open_log.set_encoding(Encoding::BINARY) if open_log.respond_to?(:set_encoding)
+        open_log.sync = true
+      end
+    end
+    deprecate :open_log
+
+    def level
+      @log.level
+    end
+
+    def level=(l)
+      @log.level = l
     end
 
     def add(severity, message = nil, progname = nil, &block)
-      return if @level > severity
-      message = (message || (block && block.call) || progname).to_s
-      # If a newline is necessary then create a new message ending with a newline.
-      # Ensures that the original message is not mutated.
-      message = "#{message}\n" unless message[-1] == ?\n
-      buffer << message
-      auto_flush
-      message
+      @log.add(severity, message, progname, &block)
     end
 
     # Dynamically add methods such as:
     # def info
     # def warn
     # def debug
-    for severity in Severity.constants
+    Severity.constants.each do |severity|
       class_eval <<-EOT, __FILE__, __LINE__ + 1
         def #{severity.downcase}(message = nil, progname = nil, &block) # def debug(message = nil, progname = nil, &block)
           add(#{severity}, message, progname, &block)                   #   add(DEBUG, message, progname, &block)
         end                                                             # end
 
         def #{severity.downcase}?                                       # def debug?
-          #{severity} >= @level                                         #   DEBUG >= @level
+          #{severity} >= level                                         #   DEBUG >= level
         end                                                             # end
       EOT
     end
@@ -87,53 +101,25 @@ module ActiveSupport
     # never auto-flush. If you turn auto-flushing off, be sure to regularly
     # flush the log yourself -- it will eat up memory until you do.
     def auto_flushing=(period)
-      @auto_flushing =
-        case period
-        when true;                1
-        when false, nil, 0;       MAX_BUFFER_SIZE
-        when Integer;             period
-        else raise ArgumentError, "Unrecognized auto_flushing period: #{period.inspect}"
-        end
     end
+    deprecate :auto_flushing=
 
     def flush
-      @guard.synchronize do
-        buffer.each do |content|
-          @log.write(content)
-        end
+    end
+    deprecate :flush
 
-        # Important to do this even if buffer was empty or else @buffer will
-        # accumulate empty arrays for each request where nothing was logged.
-        clear_buffer
-      end
+    def respond_to?(method, include_private = false)
+      return false if method.to_s == "flush"
+      super
     end
 
     def close
-      flush
-      @log.close if @log.respond_to?(:close)
-      @log = nil
+      @log.close
     end
 
-    protected
-      def auto_flush
-        flush if buffer.size >= @auto_flushing
-      end
-
-      def buffer
-        @buffer[Thread.current]
-      end
-
-      def clear_buffer
-        @buffer.delete(Thread.current)
-      end
-
     private
-
-    def open_log(log, mode)
-      open(log, mode).tap do |log|
-        log.set_encoding(Encoding::BINARY) if log.respond_to?(:set_encoding)
-        log.sync = true
-      end
+    def open_logfile(log)
+      Logger.new log
     end
   end
 end

@@ -40,6 +40,10 @@ module ActiveRecord
       def header(stream)
         define_params = @version ? ":version => #{@version}" : ""
 
+        if stream.respond_to?(:external_encoding) && stream.external_encoding
+          stream.puts "# encoding: #{stream.external_encoding.name}"
+        end
+
         stream.puts <<HEADER
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -66,8 +70,8 @@ HEADER
         @connection.tables.sort.each do |tbl|
           next if ['schema_migrations', ignore_tables].flatten.any? do |ignored|
             case ignored
-            when String; tbl == ignored
-            when Regexp; tbl =~ ignored
+            when String; remove_prefix_and_suffix(tbl) == ignored
+            when Regexp; remove_prefix_and_suffix(tbl) =~ ignored
             else
               raise StandardError, 'ActiveRecord::SchemaDumper.ignore_tables accepts an array of String and / or Regexp values.'
             end
@@ -83,12 +87,12 @@ HEADER
 
           # first dump primary key column
           if @connection.respond_to?(:pk_and_sequence_for)
-            pk, pk_seq = @connection.pk_and_sequence_for(table)
+            pk, _ = @connection.pk_and_sequence_for(table)
           elsif @connection.respond_to?(:primary_key)
             pk = @connection.primary_key(table)
           end
 
-          tbl.print "  create_table #{table.inspect}"
+          tbl.print "  create_table #{remove_prefix_and_suffix(table).inspect}"
           if columns.detect { |c| c.name == pk }
             if pk != 'id'
               tbl.print %Q(, :primary_key => "#{pk}")
@@ -106,7 +110,7 @@ HEADER
             spec = {}
             spec[:name]      = column.name.inspect
 
-            # AR has an optimisation which handles zero-scale decimals as integers.  This
+            # AR has an optimization which handles zero-scale decimals as integers. This
             # code ensures that the dumper still dumps the column as a decimal.
             spec[:type]      = if column.type == :integer && [/^numeric/, /^decimal/].any? { |e| e.match(column.sql_type) }
                                  'decimal'
@@ -114,9 +118,9 @@ HEADER
                                  column.type.to_s
                                end
             spec[:limit]     = column.limit.inspect if column.limit != @types[column.type][:limit] && spec[:type] != 'decimal'
-            spec[:precision] = column.precision.inspect if !column.precision.nil?
-            spec[:scale]     = column.scale.inspect if !column.scale.nil?
-            spec[:null]      = 'false' if !column.null
+            spec[:precision] = column.precision.inspect if column.precision
+            spec[:scale]     = column.scale.inspect if column.scale
+            spec[:null]      = 'false' unless column.null
             spec[:default]   = default_string(column.default) if column.has_default?
             (spec.keys - [:name, :type]).each{ |k| spec[k].insert(0, "#{k.inspect} => ")}
             spec
@@ -176,13 +180,18 @@ HEADER
       def indexes(table, stream)
         if (indexes = @connection.indexes(table)).any?
           add_index_statements = indexes.map do |index|
-            statement_parts = [ ('add_index ' + index.table.inspect) ]
-            statement_parts << index.columns.inspect
-            statement_parts << (':name => ' + index.name.inspect)
+            statement_parts = [
+              ('add_index ' + remove_prefix_and_suffix(index.table).inspect),
+              index.columns.inspect,
+              (':name => ' + index.name.inspect),
+            ]
             statement_parts << ':unique => true' if index.unique
 
-            index_lengths = index.lengths.compact if index.lengths.is_a?(Array)
-            statement_parts << (':length => ' + Hash[*index.columns.zip(index.lengths).flatten].inspect) if index_lengths.present?
+            index_lengths = (index.lengths || []).compact
+            statement_parts << (':length => ' + Hash[index.columns.zip(index.lengths)].inspect) unless index_lengths.empty?
+
+            index_orders = (index.orders || {})
+            statement_parts << (':order => ' + index.orders.inspect) unless index_orders.empty?
 
             '  ' + statement_parts.join(', ')
           end
@@ -190,6 +199,10 @@ HEADER
           stream.puts add_index_statements.sort.join("\n")
           stream.puts
         end
+      end
+
+      def remove_prefix_and_suffix(table)
+        table.gsub(/^(#{ActiveRecord::Base.table_name_prefix})(.+)(#{ActiveRecord::Base.table_name_suffix})$/,  "\\2")
       end
   end
 end

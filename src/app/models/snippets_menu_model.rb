@@ -5,7 +5,7 @@
 #
 require 'snippet'
 
-include_class javax.swing.AbstractAction
+java_import javax.swing.AbstractAction
 
 class SnippetAction < javax.swing.AbstractAction
 

@@ -1,5 +1,4 @@
 require 'active_model/attribute_methods'
-require 'active_support/concern'
 require 'active_support/hash_with_indifferent_access'
 require 'active_support/core_ext/object/duplicable'
 
@@ -9,7 +8,7 @@ module ActiveModel
   # Provides a way to track changes in your object in the same way as
   # Active Record does.
   #
-  # The requirements to implement ActiveModel::Dirty are to:
+  # The requirements for implementing ActiveModel::Dirty are:
   #
   # * <tt>include ActiveModel::Dirty</tt> in your object
   # * Call <tt>define_attribute_methods</tt> passing each method you want to
@@ -94,12 +93,12 @@ module ActiveModel
       attribute_method_affix :prefix => 'reset_', :suffix => '!'
     end
 
-    # Do any attributes have unsaved changes?
+    # Returns true if any attribute have unsaved changes, false otherwise.
     #   person.changed? # => false
     #   person.name = 'bob'
     #   person.changed? # => true
     def changed?
-      !changed_attributes.empty?
+      changed_attributes.any?
     end
 
     # List of attributes with unsaved changes.
@@ -115,7 +114,7 @@ module ActiveModel
     #   person.name = 'bob'
     #   person.changes # => { 'name' => ['bill', 'bob'] }
     def changes
-      changed.inject(HashWithIndifferentAccess.new){ |h, attr| h[attr] = attribute_change(attr); h }
+      HashWithIndifferentAccess[changed.map { |attr| [attr, attribute_change(attr)] }]
     end
 
     # Map of attributes that were changed when the model was saved.
@@ -157,7 +156,7 @@ module ActiveModel
         rescue TypeError, NoMethodError
         end
 
-        changed_attributes[attr] = value
+        changed_attributes[attr] = value unless changed_attributes.include?(attr)
       end
 
       # Handle <tt>reset_*!</tt> for +method_missing+.

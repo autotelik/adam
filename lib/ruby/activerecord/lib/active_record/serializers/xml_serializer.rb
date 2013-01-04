@@ -75,7 +75,7 @@ module ActiveRecord #:nodoc:
     #   </firm>
     #
     # Additionally, the record being serialized will be passed to a Proc's second
-    # parameter.  This allows for ad hoc additions to the resultant document that
+    # parameter. This allows for ad hoc additions to the resultant document that
     # incorporate the context of the record being serialized. And by leveraging the
     # closure created by a Proc, to_xml can be used to add elements that normally fall
     # outside of the scope of the model -- for example, generating and appending URLs
@@ -163,8 +163,9 @@ module ActiveRecord #:nodoc:
     #
     #   class IHaveMyOwnXML < ActiveRecord::Base
     #     def to_xml(options = {})
+    #       require 'builder'
     #       options[:indent] ||= 2
-    #       xml = options[:builder] ||= Builder::XmlMarkup.new(:indent => options[:indent])
+    #       xml = options[:builder] ||= ::Builder::XmlMarkup.new(:indent => options[:indent])
     #       xml.instruct! unless options[:skip_instruct]
     #       xml.level_one do
     #         xml.tag!(:second_level, 'content')
@@ -179,64 +180,22 @@ module ActiveRecord #:nodoc:
   class XmlSerializer < ActiveModel::Serializers::Xml::Serializer #:nodoc:
     def initialize(*args)
       super
-      options[:except] |= Array.wrap(@serializable.class.inheritance_column)
-    end
-
-    def add_extra_behavior
-      add_includes
-    end
-
-    def add_includes
-      procs = options.delete(:procs)
-      @serializable.send(:serializable_add_includes, options) do |association, records, opts|
-        add_associations(association, records, opts)
-      end
-      options[:procs] = procs
-    end
-
-    # TODO This can likely be cleaned up to simple use ActiveSupport::XmlMini.to_tag as well.
-    def add_associations(association, records, opts)
-      association_name = association.to_s.singularize
-      merged_options   = options.merge(opts).merge!(:root => association_name, :skip_instruct => true)
-
-      if records.is_a?(Enumerable)
-        tag  = ActiveSupport::XmlMini.rename_key(association.to_s, options)
-        type = options[:skip_types] ? { } : {:type => "array"}
-
-        if records.empty?
-          @builder.tag!(tag, type)
-        else
-          @builder.tag!(tag, type) do
-            records.each do |record|
-              if options[:skip_types]
-                record_type = {}
-              else
-                record_class = (record.class.to_s.underscore == association_name) ? nil : record.class.name
-                record_type = {:type => record_class}
-              end
-
-              record.to_xml merged_options.merge(record_type)
-            end
-          end
-        end
-      elsif record = @serializable.send(association)
-        record.to_xml(merged_options)
-      end
+      options[:except] = Array.wrap(options[:except]) | Array.wrap(@serializable.class.inheritance_column)
     end
 
     class Attribute < ActiveModel::Serializers::Xml::Serializer::Attribute #:nodoc:
       def compute_type
-        type = @serializable.class.serialized_attributes.has_key?(name) ?
-          super : @serializable.class.columns_hash[name].type
+        klass = @serializable.class
+        type = if klass.serialized_attributes.key?(name)
+                 super
+               elsif klass.columns_hash.key?(name)
+                 klass.columns_hash[name].type
+               else
+                 NilClass
+               end
 
-        case type
-        when :text
-          :string
-        when :time
-          :datetime
-        else
-          type
-        end
+        { :text => :string,
+          :time => :datetime }[type] || type
       end
       protected :compute_type
     end

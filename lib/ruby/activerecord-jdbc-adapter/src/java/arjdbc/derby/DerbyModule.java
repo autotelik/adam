@@ -1,5 +1,5 @@
 /***** BEGIN LICENSE BLOCK *****
- * Copyright (c) 2006-2007, 2010 Nick Sieger <nick@nicksieger.com>
+ * Copyright (c) 2006-2011 Nick Sieger <nick@nicksieger.com>
  * Copyright (c) 2006-2007 Ola Bini <ola.bini@gmail.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining
@@ -29,13 +29,8 @@ import java.sql.SQLException;
 import arjdbc.jdbc.RubyJdbcConnection;
 
 import org.jruby.Ruby;
-import org.jruby.RubyBigDecimal;
-import org.jruby.RubyBignum;
 import org.jruby.RubyBoolean;
-import org.jruby.RubyFixnum;
-import org.jruby.RubyFloat;
 import org.jruby.RubyModule;
-import org.jruby.RubyNumeric;
 import org.jruby.RubyObjectAdapter;
 import org.jruby.RubyRange;
 import org.jruby.RubyString;
@@ -66,39 +61,39 @@ public class DerbyModule {
             String type = rubyApi.getInstanceVariable(recv, "@type").toString();
 
             switch (type.charAt(0)) {
-                case 's': //string
+            case 's': //string
+                return value;
+            case 't': //text, timestamp, time
+                if (type.equals("text")) {
                     return value;
-                case 't': //text, timestamp, time
-                    if (type.equals("text")) {
-                        return value;
-                    } else if (type.equals("timestamp")) {
-                        return rubyApi.callMethod(recv.getMetaClass(), "string_to_time", value);
-                    } else { //time
-                        return rubyApi.callMethod(recv.getMetaClass(), "string_to_dummy_time", value);
-                    }
-                case 'i': //integer
-                case 'p': //primary key
-                    if (value.respondsTo("to_i")) {
-                        return rubyApi.callMethod(value, "to_i");
-                    } else {
-                        return runtime.newFixnum(value.isTrue() ? 1 : 0);
-                    }
-                case 'd': //decimal, datetime, date
-                    if (type.equals("datetime")) {
-                        return rubyApi.callMethod(recv.getMetaClass(), "string_to_time", value);
-                    } else if (type.equals("date")) {
-                        return rubyApi.callMethod(recv.getMetaClass(), "string_to_date", value);
-                    } else {
-                        return rubyApi.callMethod(recv.getMetaClass(), "value_to_decimal", value);
-                    }
-                case 'f': //float
-                    return rubyApi.callMethod(value, "to_f");
-                case 'b': //binary, boolean
-                    if (type.equals("binary")) {
-                        return rubyApi.callMethod(recv.getMetaClass(), "binary_to_string", value);
-                    } else {
-                        return rubyApi.callMethod(recv.getMetaClass(), "value_to_boolean", value);
-                    }
+                } else if (type.equals("timestamp")) {
+                    return rubyApi.callMethod(recv.getMetaClass(), "string_to_time", value);
+                } else { //time
+                    return rubyApi.callMethod(recv.getMetaClass(), "string_to_dummy_time", value);
+                }
+            case 'i': //integer
+            case 'p': //primary key
+                if (value.respondsTo("to_i")) {
+                    return rubyApi.callMethod(value, "to_i");
+                } else {
+                    return runtime.newFixnum(value.isTrue() ? 1 : 0);
+                }
+            case 'd': //decimal, datetime, date
+                if (type.equals("datetime")) {
+                    return rubyApi.callMethod(recv.getMetaClass(), "string_to_time", value);
+                } else if (type.equals("date")) {
+                    return rubyApi.callMethod(recv.getMetaClass(), "string_to_date", value);
+                } else {
+                    return rubyApi.callMethod(recv.getMetaClass(), "value_to_decimal", value);
+                }
+            case 'f': //float
+                return rubyApi.callMethod(value, "to_f");
+            case 'b': //binary, boolean
+                if (type.equals("binary")) {
+                    return rubyApi.callMethod(recv.getMetaClass(), "binary_to_string", value);
+                } else {
+                    return rubyApi.callMethod(recv.getMetaClass(), "value_to_boolean", value);
+                }
             }
             return value;
         }
@@ -115,6 +110,8 @@ public class DerbyModule {
             if (type.equals("text") || type.equals("string")) {
             	value = make_ruby_string_for_text_column(context, recv, runtime, value);
             }
+            String metaClass = value.getMetaClass().getName();
+
             if (value instanceof RubyString) {
                 if (type.equals("string")) {
                     return quote_string_with_surround(runtime, "'", (RubyString)value, "'");
@@ -130,7 +127,7 @@ public class DerbyModule {
                         return super_quote(context, recv, runtime, value, col);
                     }
                 }
-            } else if ((value instanceof RubyFloat) || (value instanceof RubyFixnum) || (value instanceof RubyBignum)) {
+            } else if (metaClass.equals("Float") || metaClass.equals("Fixnum") || metaClass.equals("Bignum")) {
                 if (type.equals("string")) {
                     return quote_string_with_surround(runtime, "'", RubyString.objAsString(context, value), "'");
                 }
@@ -139,49 +136,54 @@ public class DerbyModule {
         return super_quote(context, recv, runtime, value, runtime.getNil());
     }
 
-    /* 
+    /*
      * Derby is not permissive like MySql. Try and send an Integer to a CLOB or VARCHAR column and Derby will vomit.
      * This method turns non stringy things into strings.
      */
     private static IRubyObject make_ruby_string_for_text_column(ThreadContext context, IRubyObject recv, Ruby runtime, IRubyObject value) {
-    	RubyModule multibyteChars = (RubyModule) 
-        ((RubyModule) ((RubyModule) runtime.getModule("ActiveSupport")).getConstant("Multibyte")).getConstantAt("Chars");
-		if (value instanceof RubyString || rubyApi.isKindOf(value, multibyteChars) || value.isNil()) {
-			return value;
-		}
-		if (value instanceof RubyBoolean) {
-            return value.isTrue() ? runtime.newString("1") : runtime.newString("0");
-		} else if (value instanceof RubyFloat || value instanceof RubyFixnum || value instanceof RubyBignum) {
-			return RubyString.objAsString(context, value);
-		} else if ( value instanceof RubyBigDecimal) {
-			return rubyApi.callMethod(value, "to_s", runtime.newString("F"));
-		} else {
-			if (rubyApi.callMethod(value, "acts_like?", runtime.newString("date")).isTrue() || rubyApi.callMethod(value, "acts_like?", runtime.newString("time")).isTrue()) {
-	            return (RubyString)rubyApi.callMethod(recv, "quoted_date", value); 
-	        } else {
-	            return (RubyString)rubyApi.callMethod(value, "to_yaml");
-	        }
-		}
-	}
+    	RubyModule multibyteChars = (RubyModule)
+            ((RubyModule) ((RubyModule) runtime.getModule("ActiveSupport")).getConstant("Multibyte")).getConstantAt("Chars");
+        if (value instanceof RubyString || rubyApi.isKindOf(value, multibyteChars) || value.isNil()) {
+            return value;
+        }
 
-	private final static ByteList NULL = new ByteList("NULL".getBytes());
+        String metaClass = value.getMetaClass().getName();
+
+        if (value instanceof RubyBoolean) {
+            return value.isTrue() ? runtime.newString("1") : runtime.newString("0");
+        } else if (metaClass.equals("Float") || metaClass.equals("Fixnum") || metaClass.equals("Bignum")) {
+            return RubyString.objAsString(context, value);
+        } else if (metaClass.equals("BigDecimal")) {
+            return rubyApi.callMethod(value, "to_s", runtime.newString("F"));
+        } else {
+            if (rubyApi.callMethod(value, "acts_like?", runtime.newString("date")).isTrue() || rubyApi.callMethod(value, "acts_like?", runtime.newString("time")).isTrue()) {
+                return (RubyString)rubyApi.callMethod(recv, "quoted_date", value);
+            } else {
+                return (RubyString)rubyApi.callMethod(value, "to_yaml");
+            }
+        }
+    }
+
+    private final static ByteList NULL = new ByteList("NULL".getBytes());
 
     private static IRubyObject super_quote(ThreadContext context, IRubyObject recv, Ruby runtime, IRubyObject value, IRubyObject col) {
         if (value.respondsTo("quoted_id")) {
             return rubyApi.callMethod(value, "quoted_id");
         }
 
+        String metaClass = value.getMetaClass().getName();
+
         IRubyObject type = (col.isNil()) ? col : rubyApi.callMethod(col, "type");
         RubyModule multibyteChars = (RubyModule)
-                ((RubyModule) ((RubyModule) runtime.getModule("ActiveSupport")).getConstant("Multibyte")).getConstantAt("Chars");
+            ((RubyModule) ((RubyModule) runtime.getModule("ActiveSupport")).getConstant("Multibyte")).getConstantAt("Chars");
         if (value instanceof RubyString || rubyApi.isKindOf(value, multibyteChars)) {
             RubyString svalue = RubyString.objAsString(context, value);
             if (type == runtime.newSymbol("binary") && col.getType().respondsTo("string_to_binary")) {
                 return quote_string_with_surround(runtime, "'", (RubyString)(rubyApi.callMethod(col.getType(), "string_to_binary", svalue)), "'");
             } else if (type == runtime.newSymbol("integer") || type == runtime.newSymbol("float")) {
                 return RubyString.objAsString(context, ((type == runtime.newSymbol("integer")) ?
-                                               rubyApi.callMethod(svalue, "to_i") :
-                                               rubyApi.callMethod(svalue, "to_f")));
+                                                        rubyApi.callMethod(svalue, "to_i") :
+                                                        rubyApi.callMethod(svalue, "to_f")));
             } else {
                 return quote_string_with_surround(runtime, "'", svalue, "'");
             }
@@ -191,9 +193,9 @@ public class DerbyModule {
             return (value.isTrue() ?
                     (type == runtime.newSymbol(":integer")) ? runtime.newString("1") : rubyApi.callMethod(recv, "quoted_true") :
                     (type == runtime.newSymbol(":integer")) ? runtime.newString("0") : rubyApi.callMethod(recv, "quoted_false"));
-        } else if((value instanceof RubyFloat) || (value instanceof RubyFixnum) || (value instanceof RubyBignum)) {
+        } else if (metaClass.equals("Float") || metaClass.equals("Fixnum") || metaClass.equals("Bignum")) {
             return RubyString.objAsString(context, value);
-        } else if(value instanceof RubyBigDecimal) {
+        } else if (metaClass.equals("BigDecimal")) {
             return rubyApi.callMethod(value, "to_s", runtime.newString("F"));
         } else if (rubyApi.callMethod(value, "acts_like?", runtime.newString("date")).isTrue() || rubyApi.callMethod(value, "acts_like?", runtime.newString("time")).isTrue()) {
             return quote_string_with_surround(runtime, "'", (RubyString)(rubyApi.callMethod(recv, "quoted_date", value)), "'");
@@ -237,8 +239,8 @@ public class DerbyModule {
             output.append(lower);
             written += 2;
             if(written >= 16334) { // max hex length = 16334
-              output.append("'||X'".getBytes());
-              written = 0;
+                output.append("'||X'".getBytes());
+                written = 0;
             }
         }
 

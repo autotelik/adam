@@ -13,11 +13,11 @@
 
 #ENV['CLASSPATH'] << 'C:/SoftwareDev/JRuby/ADAM/lib/java/log4j.jar'
 
-#include_class org.apache.log4j.Level
+#java_import org.apache.log4j.Level
 
-include_class com.calypso.tk.service.DSConnection
-include_class com.calypso.tk.util.ConnectionUtil
-include_class com.calypso.tk.util.ConnectException
+java_import com.calypso.tk.service.DSConnection
+java_import com.calypso.tk.util.ConnectionUtil
+java_import com.calypso.tk.util.ConnectException
 
 require 'singleton'
 

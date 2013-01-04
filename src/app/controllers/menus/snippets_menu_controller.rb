@@ -7,8 +7,8 @@ require 'ruby_action_listener'
 
 class SnippetsMenuController < ApplicationController
 
-  include_class java.awt.event.ActionListener
-  include_class java.awt.event.ActionEvent
+  java_import java.awt.event.ActionListener
+  java_import java.awt.event.ActionEvent
 
   set_view  'SnippetsMenuView'
   set_model 'SnippetsMenuModel'

@@ -1,11 +1,11 @@
 class RubyImportXSDDialog
 
-  include_class java.awt.GridLayout
-  include_class javax::swing::JFileChooser
-  include_class javax.swing.BorderFactory
+  java_import java.awt.GridLayout
+  java_import javax::swing::JFileChooser
+  java_import javax.swing.BorderFactory
 
   module JavaFile
-    include_class java::io::File
+    java_import java::io::File
   end
 
   @@last_dir = 'C:\\SoftwareDev\\JRuby\\ADAM\\test\\fixtures'

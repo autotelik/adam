@@ -1,13 +1,23 @@
 require 'active_support/core_ext/hash/keys'
 
 # This class has dubious semantics and we only have it so that
-# people can write params[:key] instead of params['key']
+# people can write <tt>params[:key]</tt> instead of <tt>params['key']</tt>
 # and they get the same value for both keys.
 
 module ActiveSupport
   class HashWithIndifferentAccess < Hash
+    
+    # Always returns true, so that <tt>Array#extract_options!</tt> finds members of this class.
     def extractable_options?
       true
+    end
+
+    def with_indifferent_access
+      dup
+    end
+
+    def nested_under_indifferent_access
+      self
     end
 
     def initialize(constructor = {})
@@ -28,7 +38,7 @@ module ActiveSupport
     end
 
     def self.new_from_hash_copying_default(hash)
-      ActiveSupport::HashWithIndifferentAccess.new(hash).tap do |new_hash|
+      new(hash).tap do |new_hash|
         new_hash.default = hash.default
       end
     end
@@ -58,8 +68,12 @@ module ActiveSupport
     #   hash_1.update(hash_2) # => {"key"=>"New Value!"}
     #
     def update(other_hash)
-      other_hash.each_pair { |key, value| regular_writer(convert_key(key), convert_value(value)) }
-      self
+      if other_hash.is_a? HashWithIndifferentAccess
+        super(other_hash)
+      else
+        other_hash.each_pair { |key, value| regular_writer(convert_key(key), convert_value(value)) }
+        self
+      end
     end
 
     alias_method :merge!, :update
@@ -79,7 +93,17 @@ module ActiveSupport
     alias_method :has_key?, :key?
     alias_method :member?, :key?
 
-    # Fetches the value for the specified key, same as doing hash[key]
+    # Same as <tt>Hash#fetch</tt> where the key passed as argument can be
+    # either a string or a symbol:
+    #
+    #   counters = HashWithIndifferentAccess.new
+    #   counters[:foo] = 1
+    #
+    #   counters.fetch("foo")          # => 1
+    #   counters.fetch(:bar, 0)        # => 0
+    #   counters.fetch(:bar) {|key| 0} # => 0
+    #   counters.fetch(:zoo)           # => KeyError: key not found: "zoo"
+    #
     def fetch(key, *extras)
       super(convert_key(key), *extras)
     end
@@ -97,17 +121,19 @@ module ActiveSupport
 
     # Returns an exact copy of the hash.
     def dup
-      HashWithIndifferentAccess.new(self)
+      self.class.new(self).tap do |new_hash|
+        new_hash.default = default
+      end
     end
 
-    # Merges the instantized and the specified hashes together, giving precedence to the values from the second hash
+    # Merges the instantized and the specified hashes together, giving precedence to the values from the second hash.
     # Does not overwrite the existing hash.
     def merge(hash)
       self.dup.update(hash)
     end
 
     # Performs the opposite of merge, with the keys and values from the first hash taking precedence over the second.
-    # This overloaded definition prevents returning a regular hash, if reverse_merge is called on a HashWithDifferentAccess.
+    # This overloaded definition prevents returning a regular hash, if reverse_merge is called on a <tt>HashWithDifferentAccess</tt>.
     def reverse_merge(other_hash)
       super self.class.new_from_hash_copying_default(other_hash)
     end
@@ -138,8 +164,8 @@ module ActiveSupport
       end
 
       def convert_value(value)
-        if value.class == Hash
-          self.class.new_from_hash_copying_default(value)
+        if value.is_a? Hash
+          value.nested_under_indifferent_access
         elsif value.is_a?(Array)
           value.dup.replace(value.map { |e| convert_value(e) })
         else

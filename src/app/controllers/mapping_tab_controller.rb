@@ -8,7 +8,7 @@ class MappingTabController < ApplicationController
   set_view  'MappingTabView'
   set_close_action :close
 
-  include_class java.awt.event.ItemEvent
+  java_import java.awt.event.ItemEvent
 
   ##################
   # FORWARDED EVENTS (from main AdamController)

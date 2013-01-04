@@ -5,6 +5,8 @@ require 'active_support/core_ext/date/zones'
 require 'active_support/core_ext/time/zones'
 
 class Date
+  DAYS_INTO_WEEK = { :monday => 0, :tuesday => 1, :wednesday => 2, :thursday => 3, :friday => 4, :saturday => 5, :sunday => 6 }
+
   if RUBY_VERSION < '1.9'
     undef :>>
 
@@ -101,7 +103,7 @@ class Date
   alias_method :minus_without_duration, :-
   alias_method :-, :minus_with_duration
 
-  # Provides precise Date calculations for years, months, and days.  The +options+ parameter takes a hash with
+  # Provides precise Date calculations for years, months, and days. The +options+ parameter takes a hash with
   # any of these keys: <tt>:years</tt>, <tt>:months</tt>, <tt>:weeks</tt>, <tt>:days</tt>.
   def advance(options)
     options = options.dup
@@ -125,6 +127,11 @@ class Date
       options[:month] || self.month,
       options[:day]   || self.day
     )
+  end
+
+  # Returns a new Date/DateTime representing the time a number of specified weeks ago.
+  def weeks_ago(weeks)
+    advance(:weeks => -weeks)
   end
 
   # Returns a new Date/DateTime representing the time a number of specified months ago.
@@ -167,34 +174,62 @@ class Date
     months_since(1)
   end unless method_defined?(:next_month)
 
-  # Returns a new Date/DateTime representing the "start" of this week (i.e, Monday; DateTime objects will have time set to 0:00).
-  def beginning_of_week
-    days_to_monday = self.wday!=0 ? self.wday-1 : 6
-    result = self - days_to_monday
-    self.acts_like?(:time) ? result.midnight : result
+  # Returns number of days to start of this week. Week is assumed to start on
+  # +start_day+, default is +:monday+.
+  def days_to_week_start(start_day = :monday)
+    start_day_number = DAYS_INTO_WEEK[start_day]
+    current_day_number = wday != 0 ? wday - 1 : 6
+    (current_day_number - start_day_number) % 7
   end
-  alias :monday :beginning_of_week
+
+  # Returns a new +Date+/+DateTime+ representing the start of this week. Week is
+  # assumed to start on +start_day+, default is +:monday+. +DateTime+ objects
+  # have their time set to 0:00.
+  def beginning_of_week(start_day = :monday)
+    days_to_start = days_to_week_start(start_day)
+    result = self - days_to_start
+    acts_like?(:time) ? result.midnight : result
+  end
   alias :at_beginning_of_week :beginning_of_week
 
-  # Returns a new Date/DateTime representing the end of this week (Sunday, DateTime objects will have time set to 23:59:59).
-  def end_of_week
-    days_to_sunday = self.wday!=0 ? 7-self.wday : 0
-    result = self + days_to_sunday.days
+  # Returns a new +Date+/+DateTime+ representing the start of this week. Week is
+  # assumed to start on a Monday. +DateTime+ objects have their time set to 0:00.
+  def monday
+    beginning_of_week
+  end
+
+  # Returns a new +Date+/+DateTime+ representing the end of this week. Week is
+  # assumed to start on +start_day+, default is +:monday+. +DateTime+ objects
+  # have their time set to 23:59:59.
+  def end_of_week(start_day = :monday)
+    days_to_end = 6 - days_to_week_start(start_day)
+    result = self + days_to_end.days
     self.acts_like?(:time) ? result.end_of_day : result
   end
-  alias :sunday :end_of_week
   alias :at_end_of_week :end_of_week
 
-  # Returns a new Date/DateTime representing the start of the given day in next week (default is Monday).
+  # Returns a new +Date+/+DateTime+ representing the end of this week. Week is
+  # assumed to start on a Monday. +DateTime+ objects have their time set to 23:59:59.
+  def sunday
+    end_of_week
+  end
+
+  # Returns a new +Date+/+DateTime+ representing the given +day+ in the previous
+  # week. Default is +:monday+. +DateTime+ objects have their time set to 0:00.
+  def prev_week(day = :monday)
+    result = (self - 7).beginning_of_week + DAYS_INTO_WEEK[day]
+    self.acts_like?(:time) ? result.change(:hour => 0) : result
+  end
+
+  # Returns a new Date/DateTime representing the start of the given day in next week (default is :monday).
   def next_week(day = :monday)
-    days_into_week = { :monday => 0, :tuesday => 1, :wednesday => 2, :thursday => 3, :friday => 4, :saturday => 5, :sunday => 6}
-    result = (self + 7).beginning_of_week + days_into_week[day]
+    result = (self + 7).beginning_of_week + DAYS_INTO_WEEK[day]
     self.acts_like?(:time) ? result.change(:hour => 0) : result
   end
 
   # Returns a new ; DateTime objects will have time set to 0:00DateTime representing the start of the month (1st of the month; DateTime objects will have time set to 0:00)
   def beginning_of_month
-    self.acts_like?(:time) ? change(:day => 1,:hour => 0, :min => 0, :sec => 0) : change(:day => 1)
+    self.acts_like?(:time) ? change(:day => 1, :hour => 0) : change(:day => 1)
   end
   alias :at_beginning_of_month :beginning_of_month
 
@@ -219,13 +254,13 @@ class Date
 
   # Returns a new Date/DateTime representing the start of the year (1st of january; DateTime objects will have time set to 0:00)
   def beginning_of_year
-    self.acts_like?(:time) ? change(:month => 1, :day => 1, :hour => 0, :min => 0, :sec => 0) : change(:month => 1, :day => 1)
+    self.acts_like?(:time) ? change(:month => 1, :day => 1, :hour => 0) : change(:month => 1, :day => 1)
   end
   alias :at_beginning_of_year :beginning_of_year
 
   # Returns a new Time representing the end of the year (31st of december; DateTime objects will have time set to 23:59:59)
   def end_of_year
-    self.acts_like?(:time) ? change(:month => 12,:day => 31,:hour => 23, :min => 59, :sec => 59) : change(:month => 12, :day => 31)
+    self.acts_like?(:time) ? change(:month => 12, :day => 31, :hour => 23, :min => 59, :sec => 59) : change(:month => 12, :day => 31)
   end
   alias :at_end_of_year :end_of_year
 

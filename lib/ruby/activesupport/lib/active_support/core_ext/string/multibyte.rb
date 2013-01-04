@@ -9,7 +9,7 @@ class String
     #
     # In Ruby 1.8 and older it creates and returns an instance of the ActiveSupport::Multibyte::Chars class which
     # encapsulates the original string. A Unicode safe version of all the String methods are defined on this proxy
-    # class. If the proxy class doesn't respond to a certain method, it's forwarded to the encapsuled string.
+    # class. If the proxy class doesn't respond to a certain method, it's forwarded to the encapsulated string.
     #
     #   name = 'Claus Müller'
     #   name.reverse # => "rell??M sualC"
@@ -35,7 +35,7 @@ class String
     # object. Interoperability problems can be resolved easily with a +to_s+ call.
     #
     # For more information about the methods defined on the Chars proxy see ActiveSupport::Multibyte::Chars. For
-    # information about how to change the default Multibyte behaviour see ActiveSupport::Multibyte.
+    # information about how to change the default Multibyte behavior see ActiveSupport::Multibyte.
     def mb_chars
       if ActiveSupport::Multibyte.proxy_class.consumes?(self)
         ActiveSupport::Multibyte.proxy_class.new(self)
@@ -44,7 +44,7 @@ class String
       end
     end
 
-    def is_utf8? #:nodoc
+    def is_utf8?
       case encoding
       when Encoding::UTF_8
         valid_encoding?

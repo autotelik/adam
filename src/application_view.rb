@@ -9,7 +9,7 @@ class ApplicationView < Monkeybars::View
 
   # Add content here that you want to be available to all the views in your application
 
-  include_class javax.swing.JOptionPane
+  java_import javax.swing.JOptionPane
 
   def input_dialog( msg, title = "Input Dialog" )
     JOptionPane.showInputDialog(@main_view_component, msg, title, JOptionPane::QUESTION_MESSAGE)

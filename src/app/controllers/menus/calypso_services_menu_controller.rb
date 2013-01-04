@@ -7,8 +7,8 @@ require 'ruby_action_listener'
 
 class CalypsoServicesMenuController < ApplicationController
 
-  include_class java.awt.event.ActionListener
-  include_class java.awt.event.ActionEvent
+  java_import java.awt.event.ActionListener
+  java_import java.awt.event.ActionEvent
 
   set_view  'CalypsoServicesMenuView'
   set_model 'CalypsoServicesMenuModel'

@@ -10,29 +10,68 @@ module ActiveRecord
         return value.quoted_id if value.respond_to?(:quoted_id)
 
         case value
-          when String, ActiveSupport::Multibyte::Chars
-            value = value.to_s
-            if column && column.type == :binary && column.class.respond_to?(:string_to_binary)
-              "'#{quote_string(column.class.string_to_binary(value))}'" # ' (for ruby-mode)
-            elsif column && [:integer, :float].include?(column.type)
-              value = column.type == :integer ? value.to_i : value.to_f
-              value.to_s
-            else
-              "'#{quote_string(value)}'" # ' (for ruby-mode)
-            end
-          when NilClass                 then "NULL"
-          when TrueClass                then (column && column.type == :integer ? '1' : quoted_true)
-          when FalseClass               then (column && column.type == :integer ? '0' : quoted_false)
-          when Float, Fixnum, Bignum    then value.to_s
-          # BigDecimals need to be output in a non-normalized form and quoted.
-          when BigDecimal               then value.to_s('F')
-          when Symbol                   then "'#{quote_string(value.to_s)}'"
+        when String, ActiveSupport::Multibyte::Chars
+          value = value.to_s
+          return "'#{quote_string(value)}'" unless column
+
+          case column.type
+          when :binary then "'#{quote_string(column.string_to_binary(value))}'"
+          when :integer then value.to_i.to_s
+          when :float then value.to_f.to_s
           else
-            if value.acts_like?(:date) || value.acts_like?(:time)
-              "'#{quoted_date(value)}'"
-            else
-              "'#{quote_string(value.to_yaml)}'"
-            end
+            "'#{quote_string(value)}'"
+          end
+
+        when true, false
+          if column && column.type == :integer
+            value ? '1' : '0'
+          else
+            value ? quoted_true : quoted_false
+          end
+          # BigDecimals need to be put in a non-normalized form and quoted.
+        when nil        then "NULL"
+        when BigDecimal then value.to_s('F')
+        when Numeric    then value.to_s
+        when Date, Time then "'#{quoted_date(value)}'"
+        when Symbol     then "'#{quote_string(value.to_s)}'"
+        else
+          "'#{quote_string(YAML.dump(value))}'"
+        end
+      end
+
+      # Cast a +value+ to a type that the database understands. For example,
+      # SQLite does not understand dates, so this method will convert a Date
+      # to a String.
+      def type_cast(value, column)
+        return value.id if value.respond_to?(:quoted_id)
+
+        case value
+        when String, ActiveSupport::Multibyte::Chars
+          value = value.to_s
+          return value unless column
+
+          case column.type
+          when :binary then value
+          when :integer then value.to_i
+          when :float then value.to_f
+          else
+            value
+          end
+
+        when true, false
+          if column && column.type == :integer
+            value ? 1 : 0
+          else
+            value ? 't' : 'f'
+          end
+          # BigDecimals need to be put in a non-normalized form and quoted.
+        when nil        then nil
+        when BigDecimal then value.to_s('F')
+        when Numeric    then value
+        when Date, Time then quoted_date(value)
+        when Symbol     then value.to_s
+        else
+          YAML.dump(value)
         end
       end
 
@@ -63,10 +102,13 @@ module ActiveRecord
       def quoted_date(value)
         if value.acts_like?(:time)
           zone_conversion_method = ActiveRecord::Base.default_timezone == :utc ? :getutc : :getlocal
-          value.respond_to?(zone_conversion_method) ? value.send(zone_conversion_method) : value
-        else
-          value
-        end.to_s(:db)
+
+          if value.respond_to?(zone_conversion_method)
+            value = value.send(zone_conversion_method)
+          end
+        end
+
+        value.to_s(:db)
       end
     end
   end

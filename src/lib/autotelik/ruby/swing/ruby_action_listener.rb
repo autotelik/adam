@@ -31,8 +31,8 @@
 require 'ruby_event_listener'
 
 class RubyActionListener < RubyEventListener
-  include_class java.awt.event.ActionListener
-  include_class java.awt.event.ActionEvent
+  java_import java.awt.event.ActionListener
+  java_import java.awt.event.ActionEvent
 
   def initialize( call_back_parent )
     super(call_back_parent)

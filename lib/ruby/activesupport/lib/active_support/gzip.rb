@@ -1,14 +1,15 @@
 require 'zlib'
 require 'stringio'
+require 'active_support/core_ext/string/encoding'
 
 module ActiveSupport
   # A convenient wrapper for the zlib standard library that allows compression/decompression of strings with gzip.
   module Gzip
     class Stream < StringIO
       def initialize(*)
-         super
-         set_encoding "BINARY" if "".encoding_aware?
-       end
+        super
+        set_encoding "BINARY" if "".encoding_aware?
+      end
       def close; rewind; end
     end
 

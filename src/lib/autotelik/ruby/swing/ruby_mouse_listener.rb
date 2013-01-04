@@ -8,7 +8,7 @@
 require 'ruby_event_listener'
 
 class RubyMouseListener < RubyEventListener
-  include_class java.awt.event.MouseListener
+  java_import java.awt.event.MouseListener
 
   #interface = eval "java.awt.event.MouseListener"
   java.awt.event.MouseListener.java_class.java_instance_methods.each do |method|

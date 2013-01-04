@@ -8,15 +8,15 @@ require 'ruby_table'
 require 'mapping_helper'
 require 'system_helper'
 
-include_class javax.swing.DefaultCellEditor
-include_class javax.swing.JComboBox
+java_import javax.swing.DefaultCellEditor
+java_import javax.swing.JComboBox
 
 class RubyMappingTable < RubyTable
-  include_class javax.swing.DefaultCellEditor
-  include_class javax.swing.DefaultListCellRenderer
-  include_class javax.swing.table.DefaultTableCellRenderer
-  include_class java.util.Vector
-  include_class javax.swing.JComboBox
+  java_import javax.swing.DefaultCellEditor
+  java_import javax.swing.DefaultListCellRenderer
+  java_import javax.swing.table.DefaultTableCellRenderer
+  java_import java.util.Vector
+  java_import javax.swing.JComboBox
   
   # Create a mapping table for the supplied System (the source of raw data)
   # to the Asset (receiver of the mapped data)
@@ -74,8 +74,8 @@ class RubyMappingTableModel < RubyTableModel
   @@strtype = BasicType.find_by_name_space_and_name( 'ruby', 'String')
   @@fixtype = BasicType.find_by_name_space_and_name( 'ruby', 'FixNum')
 
-  include_class javax.swing.DefaultCellEditor
-  include_class javax.swing.JComboBox
+  java_import javax.swing.DefaultCellEditor
+  java_import javax.swing.JComboBox
 
   attr_accessor :asset_box, :system_box
   attr_reader   :fixed_map_column

@@ -9,10 +9,12 @@
  * @author  stattert
  */
 
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import autotelik.swing.FilteredJList;
 import autotelik.swing.*;
 
 public class AdamMDIApplication extends javax.swing.JFrame {

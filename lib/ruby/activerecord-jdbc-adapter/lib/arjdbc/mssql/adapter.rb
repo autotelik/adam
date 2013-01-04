@@ -1,5 +1,7 @@
+require 'strscan'
 require 'arjdbc/mssql/tsql_helper'
 require 'arjdbc/mssql/limit_helpers'
+require 'arjdbc/mssql/lock_helpers'
 
 module ::ArJdbc
   module MsSQL
@@ -7,12 +9,18 @@ module ::ArJdbc
     include LimitHelpers
 
     def self.extended(mod)
-      unless @lob_callback_added
+      unless defined?(@lob_callback_added)
         ActiveRecord::Base.class_eval do
           def after_save_with_mssql_lob
             self.class.columns.select { |c| c.sql_type =~ /image/i }.each do |c|
               value = self[c.name]
-              value = value.to_yaml if unserializable_attribute?(c.name, c)
+              if coder = self.class.serialized_attributes[c.name]
+                if coder.respond_to?(:dump)
+                  value = coder.dump(value)
+                else
+                  value = value.to_yaml
+                end
+              end
               next if value.nil?  || (value == '')
 
               connection.write_large_object(c.type == :binary, c.name, self.class.table_name, self.class.primary_key, quote_value(id), value)
@@ -34,10 +42,10 @@ module ::ArJdbc
       ::ActiveRecord::ConnectionAdapters::MssqlJdbcConnection
     end
 
-    def arel2_visitors
+    def self.arel2_visitors(config)
       require 'arel/visitors/sql_server'
-      visitor_class = sqlserver_version == "2000" ? ::Arel::Visitors::SQLServer2000 : ::Arel::Visitors::SQLServer
-      { 'mssql' => visitor_class, 'sqlserver' => visitor_class, 'jdbcmssql' => visitor_class}
+      visitor_class = config[:sqlserver_version] == "2000" ? ::Arel::Visitors::SQLServer2000 : ::Arel::Visitors::SQLServer
+      {}.tap {|v| %w(mssql sqlserver jdbcmssql).each {|x| v[x] = visitor_class } }
     end
 
     def sqlserver_version
@@ -45,7 +53,8 @@ module ::ArJdbc
     end
 
     def add_version_specific_add_limit_offset
-      if sqlserver_version == "2000"
+      config[:sqlserver_version] = version = sqlserver_version
+      if version == "2000"
         extend LimitHelpers::SqlServer2000AddLimitOffset
       else
         extend LimitHelpers::SqlServerAddLimitOffset
@@ -55,11 +64,17 @@ module ::ArJdbc
     def modify_types(tp) #:nodoc:
       super(tp)
       tp[:string] = {:name => "NVARCHAR", :limit => 255}
+
       if sqlserver_version == "2000"
         tp[:text] = {:name => "NTEXT"}
       else
         tp[:text] = {:name => "NVARCHAR(MAX)"}
       end
+
+      tp[:primary_key] = "int NOT NULL IDENTITY(1, 1) PRIMARY KEY"
+      tp[:integer][:limit] = nil
+      tp[:boolean] = {:name => "bit"}
+      tp[:binary] = {:name => "image"}
       tp
     end
 
@@ -83,22 +98,26 @@ module ::ArJdbc
     end
 
     module Column
+      include LockHelpers::SqlServerAddLock
+
       attr_accessor :identity, :is_special
 
       def simplified_type(field_type)
         case field_type
-        when /int|bigint|smallint|tinyint/i                        then :integer
-        when /numeric/i                                            then (@scale.nil? || @scale == 0) ? :integer : :decimal
-        when /float|double|decimal|money|real|smallmoney/i         then :decimal
-        when /datetime|smalldatetime/i                             then :datetime
-        when /timestamp/i                                          then :timestamp
-        when /time/i                                               then :time
-        when /date/i                                               then :date
-        when /text|ntext|xml/i                                     then :text
-        when /binary|image|varbinary/i                             then :binary
-        when /char|nchar|nvarchar|string|varchar/i                 then (@limit == 1073741823 ? (@limit = nil; :text) : :string)
-        when /bit/i                                                then :boolean
-        when /uniqueidentifier/i                                   then :string
+        when /int|bigint|smallint|tinyint/i           then :integer
+        when /numeric/i                               then (@scale.nil? || @scale == 0) ? :integer : :decimal
+        when /float|double|money|real|smallmoney/i    then :decimal
+        when /datetime|smalldatetime/i                then :datetime
+        when /timestamp/i                             then :timestamp
+        when /time/i                                  then :time
+        when /date/i                                  then :date
+        when /text|ntext|xml/i                        then :text
+        when /binary|image|varbinary/i                then :binary
+        when /char|nchar|nvarchar|string|varchar/i    then (@limit == 1073741823 ? (@limit = nil; :text) : :string)
+        when /bit/i                                   then :boolean
+        when /uniqueidentifier/i                      then :string
+        else
+          super
         end
       end
 
@@ -108,9 +127,9 @@ module ::ArJdbc
       end
 
       def type_cast(value)
-        return nil if value.nil? || value == "(null)" || value == "(NULL)"
+        return nil if value.nil?
         case type
-        when :integer then value.to_i rescue unquote(value).to_i rescue value ? 1 : 0
+        when :integer then value.delete('()').to_i rescue unquote(value).to_i rescue value ? 1 : 0
         when :primary_key then value == true || value == false ? value == true ? 1 : 0 : value.to_i
         when :decimal   then self.class.value_to_decimal(unquote(value))
         when :datetime  then cast_to_datetime(value)
@@ -142,15 +161,7 @@ module ::ArJdbc
 
       def cast_to_time(value)
         return value if value.is_a?(Time)
-        time_array = ParseDate.parsedate(value)
-        return nil if !time_array.any?
-        time_array[0] ||= 2000
-        time_array[1] ||= 1
-        time_array[2] ||= 1
-        return Time.send(ActiveRecord::Base.default_timezone, *time_array) rescue nil
-
-        # Try DateTime instead - the date may be outside the time period support by Time.
-        DateTime.new(*time_array[0..5]) rescue nil
+        DateTime.parse(value).to_time rescue nil
       end
 
       def cast_to_date(value)
@@ -250,9 +261,9 @@ module ::ArJdbc
       true
     end
 
-    def recreate_database(name)
+    def recreate_database(name, options = {})
       drop_database(name)
-      create_database(name)
+      create_database(name, options)
     end
 
     def drop_database(name)
@@ -260,7 +271,7 @@ module ::ArJdbc
       execute "DROP DATABASE #{name}"
     end
 
-    def create_database(name)
+    def create_database(name, options={})
       execute "CREATE DATABASE #{name}"
       execute "USE #{name}"
     end
@@ -347,7 +358,7 @@ module ::ArJdbc
       table_name = table_name.gsub(/[\[\]]/, '')
 
       return [] if table_name =~ /^information_schema\./i
-      @table_columns = {} unless @table_columns
+      @table_columns ||= {}
       unless @table_columns[table_name]
         @table_columns[table_name] = super
         @table_columns[table_name].each do |col|
@@ -381,15 +392,11 @@ module ::ArJdbc
       end
     end
 
-    def select(sql, name = nil)
+    def select(sql, name = nil, binds = [])
+      sql = substitute_binds(sql, binds)
       log(sql, name) do
         @connection.execute_query(sql)
       end
-    end
-
-    #SELECT .. FOR UPDATE is not supported on Microsoft SQL Server
-    def add_lock!(sql, options)
-      sql
     end
 
     # Turns IDENTITY_INSERT ON for table during execution of the block
@@ -466,6 +473,10 @@ module ::ArJdbc
 
     def clear_cached_table(name)
       (@table_columns ||= {}).delete(name.to_s)
+    end
+
+    def reset_column_information
+      @table_columns = nil
     end
   end
 end

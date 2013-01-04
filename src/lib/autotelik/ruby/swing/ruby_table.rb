@@ -1,10 +1,10 @@
-# Copyright:: (c) Kubris & Autotelik Media Ltd 2008
+# Copyright:: (c) Autotelik Media Ltd 2013
 # Author ::   Tom Statter
 # Date ::     Jan 2009
-# License::   MIT ?
+# License::   MIT
 #
-include_class org.jdesktop.swingx.JXTable
-include_class javax.swing.table.DefaultTableModel
+java_import org.jdesktop.swingx.JXTable
+java_import javax.swing.table.DefaultTableModel
 
 class RubyTable < org.jdesktop.swingx.JXTable
   def initialize( )
@@ -15,7 +15,7 @@ end
 
 
 class RubyTableModel < javax.swing.table.DefaultTableModel # AbstractTableModel
-  include_class java.util.Vector
+  java_import java.util.Vector
   
   attr_reader   :columns, :rows
   attr_accessor :column_identifiers

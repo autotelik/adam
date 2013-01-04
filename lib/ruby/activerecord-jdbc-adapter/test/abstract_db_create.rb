@@ -8,6 +8,9 @@ module Rails
     def self.config
       @config ||= Object.new
     end
+    def self.paths
+      @paths ||= Hash.new { [] }
+    end
   end
   def self.application
     Rails::Application
@@ -15,6 +18,10 @@ module Rails
 end
 
 module AbstractDbCreate
+  def self.included(base)
+    base.module_eval { include Rake::DSL } if defined?(Rake::DSL)
+  end
+
   def setup
     @prevapp = Rake.application
     Rake.application = Rake::Application.new
@@ -75,8 +82,12 @@ module AbstractDbCreate
     end
     ar_version = $LOADED_FEATURES.grep(%r{active_record/version}).first
     ar_lib_path = $LOAD_PATH.detect {|p| p if File.exist?File.join(p, ar_version)}
+    # if the old style finder didn't work, assume we have the absolute path already
+    if ar_lib_path.nil? && File.exist?(ar_version)
+      ar_lib_path = ar_version.sub(%r{/active_record/version.*}, '')
+    end
     ar_lib_path = ar_lib_path.sub(%r{activerecord/lib}, 'railties/lib') # edge rails
-    rails_lib_path = ar_lib_path.sub(/activerecord/, 'rails') # gem rails
+    rails_lib_path = ar_lib_path.sub(/activerecord-([\d\.]+)/, 'rails-\1') # gem rails
     load "#{rails_lib_path}/tasks/databases.rake"
   end
 
@@ -85,8 +96,12 @@ module AbstractDbCreate
     (class << Rails::Application.config; self ; end).instance_eval do
       define_method(:database_configuration) { configs }
     end
+    require 'pathname'
     ar_version = $LOADED_FEATURES.grep(%r{active_record/version}).first
-    ar_lib_path = $LOAD_PATH.detect {|p| p if File.exist?File.join(p, ar_version)}
+    ar_lib_path = $LOAD_PATH.detect do |p|
+      Pathname.new(p).absolute? && ar_version.start_with?(p) ||
+        File.exist?(File.join(p, ar_version))
+    end
     load "#{ar_lib_path}/active_record/railties/databases.rake"
   end
 

@@ -5,12 +5,11 @@
 #
 require 'xml_ability'
 require 'schemable'
-require 'betternestedset/init.rb'
-
+require 'awesome_nested_set'
 
 class Composer < ActiveRecord::Base
   
-  include     Schemable
+  include Schemable
 
   # Note callbacks specified before associations to ensure entire calback Q is created/called
   

@@ -1,9 +1,9 @@
-# Copyright:: (c) Kubris & Autotelik Media Ltd 2008
+# Copyright:: (c) Autotelik Media Ltd 2013
 # Author ::   Tom Statter
 # Date ::     Jan 2009
 # License::   MIT ?
 #
-require 'acts_as_versioned/init.rb'
+require 'acts_as_versioned'
 
 class Annotation < ActiveRecord::Base
 

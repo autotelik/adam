@@ -1,5 +1,8 @@
 require 'active_record/connection_adapters/sqlite_adapter'
 
+gem 'sqlite3', '~> 1.3.5'
+require 'sqlite3'
+
 module ActiveRecord
   class Base
     # sqlite3 adapter reuses sqlite_connection.
@@ -20,16 +23,12 @@ module ActiveRecord
         raise ArgumentError, 'adapter name should be "sqlite3"'
       end
 
-      unless self.class.const_defined?(:SQLite3)
-        require_library_or_gem(config[:adapter])
-      end
-
       db = SQLite3::Database.new(
         config[:database],
         :results_as_hash => true
       )
 
-      db.busy_timeout(config[:timeout]) unless config[:timeout].nil?
+      db.busy_timeout(config[:timeout]) if config[:timeout]
 
       ConnectionAdapters::SQLite3Adapter.new(db, logger, config)
     end
@@ -48,12 +47,7 @@ module ActiveRecord
 
       # Returns the current database encoding format as a string, eg: 'UTF-8'
       def encoding
-        if @connection.respond_to?(:encoding)
-          @connection.encoding.to_s
-        else
-          encoding = @connection.execute('PRAGMA encoding')
-          encoding[0]['encoding']
-        end
+        @connection.encoding.to_s
       end
 
     end

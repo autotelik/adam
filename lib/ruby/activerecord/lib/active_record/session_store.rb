@@ -1,7 +1,9 @@
+require 'action_dispatch/middleware/session/abstract_store'
+
 module ActiveRecord
   # = Active Record Session Store
   #
-  # A session store backed by an Active Record class.  A default class is
+  # A session store backed by an Active Record class. A default class is
   # provided, but any object duck-typing to an Active Record Session class
   # with text +session_id+ and +data+ attributes is sufficient.
   #
@@ -23,7 +25,7 @@ module ActiveRecord
   #   ActiveRecord::SessionStore::Session.data_column_name = 'legacy_session_data'
   #
   # Note that setting the primary key to the +session_id+ frees you from
-  # having a separate +id+ column if you don't want it.  However, you must
+  # having a separate +id+ column if you don't want it. However, you must
   # set <tt>session.model.id = session.session_id</tt> by hand!  A before filter
   # on ApplicationController is a good place.
   #
@@ -40,29 +42,31 @@ module ActiveRecord
   # You must implement these methods:
   #
   #   self.find_by_session_id(session_id)
-  #   initialize(hash_of_session_id_and_data)
+  #   initialize(hash_of_session_id_and_data, options_hash = {})
   #   attr_reader :session_id
   #   attr_accessor :data
   #   save
   #   destroy
   #
-  # The example SqlBypass class is a generic SQL session store.  You may
+  # The example SqlBypass class is a generic SQL session store. You may
   # use it as a basis for high-performance database-specific stores.
   class SessionStore < ActionDispatch::Session::AbstractStore
     module ClassMethods # :nodoc:
       def marshal(data)
-        ActiveSupport::Base64.encode64(Marshal.dump(data)) if data
+        ::Base64.encode64(Marshal.dump(data)) if data
       end
 
       def unmarshal(data)
-        Marshal.load(ActiveSupport::Base64.decode64(data)) if data
+        Marshal.load(::Base64.decode64(data)) if data
       end
 
       def drop_table!
+        connection.schema_cache.clear_table_cache!(table_name)
         connection.drop_table table_name
       end
 
       def create_table!
+        connection.schema_cache.clear_table_cache!(table_name)
         connection.create_table(table_name) do |t|
           t.string session_id_column, :limit => 255
           t.text data_column_name
@@ -77,9 +81,11 @@ module ActiveRecord
 
       ##
       # :singleton-method:
-      # Customizable data column name.  Defaults to 'data'.
+      # Customizable data column name. Defaults to 'data'.
       cattr_accessor :data_column_name
       self.data_column_name = 'data'
+
+      attr_accessible :session_id, :data, :marshaled_data
 
       before_save :marshal_data!
       before_save :raise_on_session_data_overflow!
@@ -121,7 +127,7 @@ module ActiveRecord
           end
       end
 
-      def initialize(attributes = nil)
+      def initialize(attributes = nil, options = {})
         @data = nil
         super
       end
@@ -157,30 +163,25 @@ module ActiveRecord
     end
 
     # A barebones session store which duck-types with the default session
-    # store but bypasses Active Record and issues SQL directly.  This is
+    # store but bypasses Active Record and issues SQL directly. This is
     # an example session model class meant as a basis for your own classes.
     #
     # The database connection, table name, and session id and data columns
-    # are configurable class attributes.  Marshaling and unmarshaling
-    # are implemented as class methods that you may override.  By default,
+    # are configurable class attributes. Marshaling and unmarshaling
+    # are implemented as class methods that you may override. By default,
     # marshaling data is
     #
-    #   ActiveSupport::Base64.encode64(Marshal.dump(data))
+    #   ::Base64.encode64(Marshal.dump(data))
     #
     # and unmarshaling data is
     #
-    #   Marshal.load(ActiveSupport::Base64.decode64(data))
+    #   Marshal.load(::Base64.decode64(data))
     #
     # This marshaling behavior is intended to store the widest range of
-    # binary session data in a +text+ column.  For higher performance,
+    # binary session data in a +text+ column. For higher performance,
     # store in a +blob+ column instead and forgo the Base64 encoding.
     class SqlBypass
       extend ClassMethods
-
-      ##
-      # :singleton-method:
-      # Use the ActiveRecord::Base.connection by default.
-      cattr_accessor :connection
 
       ##
       # :singleton-method:
@@ -202,10 +203,19 @@ module ActiveRecord
 
       class << self
         alias :data_column_name :data_column
+        
+        # Use the ActiveRecord::Base.connection by default.
+        attr_writer :connection
+        
+        # Use the ActiveRecord::Base.connection_pool by default.
+        attr_writer :connection_pool
 
-        remove_method :connection
         def connection
-          @@connection ||= ActiveRecord::Base.connection
+          @connection ||= ActiveRecord::Base.connection
+        end
+
+        def connection_pool
+          @connection_pool ||= ActiveRecord::Base.connection_pool
         end
 
         # Look up a session by id and unmarshal its data if found.
@@ -215,6 +225,8 @@ module ActiveRecord
           end
         end
       end
+      
+      delegate :connection, :connection=, :connection_pool, :connection_pool=, :to => self
 
       attr_reader :session_id, :new_record
       alias :new_record? :new_record
@@ -282,24 +294,29 @@ module ActiveRecord
       end
     end
 
-    # The class used for session storage.  Defaults to
+    # The class used for session storage. Defaults to
     # ActiveRecord::SessionStore::Session
     cattr_accessor :session_class
     self.session_class = Session
 
     SESSION_RECORD_KEY = 'rack.session.record'
+    ENV_SESSION_OPTIONS_KEY = Rack::Session::Abstract::ENV_SESSION_OPTIONS_KEY
 
     private
       def get_session(env, sid)
         Base.silence do
-          sid ||= generate_sid
-          session = find_session(sid)
+          unless sid and session = @@session_class.find_by_session_id(sid)
+            # If the sid was nil or if there is no pre-existing session under the sid,
+            # force the generation of a new sid and associate a new session associated with the new sid
+            sid = generate_sid
+            session = @@session_class.new(:session_id => sid, :data => {})
+          end
           env[SESSION_RECORD_KEY] = session
           [sid, session.data]
         end
       end
 
-      def set_session(env, sid, session_data)
+      def set_session(env, sid, session_data, options)
         Base.silence do
           record = get_session_model(env, sid)
           record.data = session_data
@@ -316,12 +333,15 @@ module ActiveRecord
         sid
       end
 
-      def destroy(env)
+      def destroy_session(env, session_id, options)
         if sid = current_session_id(env)
           Base.silence do
             get_session_model(env, sid).destroy
+            env[SESSION_RECORD_KEY] = nil
           end
         end
+
+        generate_sid unless options[:drop]
       end
 
       def get_session_model(env, sid)

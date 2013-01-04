@@ -5,12 +5,16 @@ end
 module ::ArJdbc
   module Oracle
     def self.extended(mod)
-      unless @lob_callback_added
+      unless defined?(@lob_callback_added)
         ActiveRecord::Base.class_eval do
           def after_save_with_oracle_lob
             self.class.columns.select { |c| c.sql_type =~ /LOB\(|LOB$/i }.each do |c|
               value = self[c.name]
-              value = value.to_yaml if unserializable_attribute?(c.name, c)
+              if respond_to?(:unserializable_attribute?)
+                value = value.to_yaml if unserializable_attribute?(c.name, c)
+              else
+                value = value.to_yaml if value.is_a?(Hash)
+              end
               next if value.nil?  || (value == '')
 
               connection.write_large_object(c.type == :binary, c.name, self.class.table_name, self.class.primary_key, quote_value(id), value)
@@ -21,13 +25,23 @@ module ::ArJdbc
         ActiveRecord::Base.after_save :after_save_with_oracle_lob
         @lob_callback_added = true
       end
-      require 'arjdbc/jdbc/quoted_primary_key'
-      ActiveRecord::Base.extend ArJdbc::QuotedPrimaryKeyExtension
+
+      unless ActiveRecord::ConnectionAdapters::AbstractAdapter.instance_methods(false).detect {|m| m.to_s == "prefetch_primary_key?"}
+        require 'arjdbc/jdbc/quoted_primary_key'
+        ActiveRecord::Base.extend ArJdbc::QuotedPrimaryKeyExtension
+      end
+
       (class << mod; self; end).class_eval do
         alias_chained_method :insert, :query_dirty, :ora_insert
         alias_chained_method :columns, :query_cache, :ora_columns
+        
+        # Prevent ORA-01795 for in clauses with more than 1000 
+        def in_clause_length
+          1000
+        end
       end
     end
+    
 
     def self.column_selector
       [/oracle/i, lambda {|cfg,col| col.extend(::ArJdbc::Oracle::Column)}]
@@ -51,6 +65,13 @@ module ::ArJdbc
         when :datetime then ArJdbc::Oracle::Column.string_to_time(value, self.class)
         else
           super
+        end
+      end
+
+      def extract_limit(sql_type)
+        case sql_type
+        when /^(clob|date)/i; nil
+        else super
         end
       end
 
@@ -110,14 +131,13 @@ module ::ArJdbc
       'Oracle'
     end
 
-    def arel2_visitors
+    def self.arel2_visitors(config)
       { 'oracle' => Arel::Visitors::Oracle }
     end
 
-    # TODO: use this instead of the QuotedPrimaryKey logic and execute_id_insert?
-    # def prefetch_primary_key?(table_name = nil)
-    #   columns(table_name).detect {|c| c.primary } if table_name
-    # end
+    def prefetch_primary_key?(table_name = nil)
+      columns(table_name).detect {|c| c.primary } if table_name
+    end
 
     def table_alias_length
       30
@@ -146,7 +166,7 @@ module ::ArJdbc
       execute "DROP SEQUENCE #{seq_name}" rescue nil
     end
 
-    def recreate_database(name)
+    def recreate_database(name, options = {})
       tables.each{ |table| drop_table(table) }
     end
 
@@ -163,12 +183,12 @@ module ::ArJdbc
       defined?(::Arel::SqlLiteral) && ::Arel::SqlLiteral === value
     end
 
-    def ora_insert(sql, name = nil, pk = nil, id_value = nil, sequence_name = nil) #:nodoc:
+    def ora_insert(sql, name = nil, pk = nil, id_value = nil, sequence_name = nil, binds = []) #:nodoc:
       if (id_value && !sql_literal?(id_value)) || pk.nil?
         # Pre-assigned id or table without a primary key
         # Presence of #to_sql means an Arel literal bind variable
         # that should use #execute_id_insert below
-        execute sql, name
+        execute sql, name, binds
       else
         # Assume the sql contains a bind-variable for the id
         # Extract the table from the insert sql. Yuck.
@@ -406,8 +426,8 @@ module ::ArJdbc
       end
     end
 
-    def select(sql, name=nil)
-      records = execute(sql,name)
+    def select(sql, name = nil, binds = [])
+      records = execute(sql, name, binds)
       records.each do |col|
           col.delete('raw_rnum_')
       end

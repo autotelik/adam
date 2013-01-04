@@ -5,13 +5,10 @@
 // About::
 //
 package autotelik.swing;
-
-import java.io.PrintStream;
 import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.text.Document;
 
 public class FilteredJList extends JList
 {
@@ -115,7 +112,6 @@ public class FilteredJList extends JList
         } else
         {
             super.setModel(m);
-            return;
         }
     }
 

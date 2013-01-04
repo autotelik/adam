@@ -7,18 +7,35 @@ class Object
   # provided. Each method called on the block variable must take an options
   # hash as its final argument.
   #
-  #   with_options :order => 'created_at', :class_name => 'Comment' do |post|
-  #     post.has_many :comments, :conditions => ['approved = ?', true], :dependent => :delete_all
-  #     post.has_many :unapproved_comments, :conditions => ['approved = ?', false]
-  #     post.has_many :all_comments
+  # Without <tt>with_options></tt>, this code contains duplication:
+  #
+  #   class Account < ActiveRecord::Base
+  #     has_many :customers, :dependent => :destroy
+  #     has_many :products,  :dependent => :destroy
+  #     has_many :invoices,  :dependent => :destroy
+  #     has_many :expenses,  :dependent => :destroy
   #   end
   #
-  # Can also be used with an explicit receiver:
+  # Using <tt>with_options</tt>, we can remove the duplication:
   #
-  #   map.with_options :controller => "people" do |people|
-  #     people.connect "/people",     :action => "index"
-  #     people.connect "/people/:id", :action => "show"
+  #   class Account < ActiveRecord::Base
+  #     with_options :dependent => :destroy do |assoc|
+  #       assoc.has_many :customers
+  #       assoc.has_many :products
+  #       assoc.has_many :invoices
+  #       assoc.has_many :expenses
+  #     end
   #   end
+  #
+  # It can also be used with an explicit receiver:
+  #
+  #   I18n.with_options :locale => user.locale, :scope => "newsletter" do |i18n|
+  #     subject i18n.t :subject
+  #     body    i18n.t :body, :user_name => user.name
+  #   end
+  #
+  # <tt>with_options</tt> can also be nested since the call is forwarded to its receiver.
+  # Each nesting level will merge inherited defaults in addition to their own.
   #
   def with_options(options)
     yield ActiveSupport::OptionMerger.new(self, options)

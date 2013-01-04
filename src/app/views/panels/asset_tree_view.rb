@@ -7,7 +7,7 @@
 #
 
 class AssetTreeView < ApplicationView
-  include_class java.awt.event.MouseAdapter
+  java_import java.awt.event.MouseAdapter
 
 
   def create_main_view_component

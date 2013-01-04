@@ -7,7 +7,7 @@ class ConversionView < ApplicationView
   set_java_class 'app.java.dialogs.ConversionDialog'
 
   module JavaFile
-    include_class java::io::File
+    java_import java::io::File
   end
 
   # N.B Direction of conversion methods :using => [:from_model (update_view), :to_model]
@@ -138,7 +138,7 @@ class ConversionView < ApplicationView
 
   def browse_for_data_source(model, transfer)
 
-    include_class javax::swing::JFileChooser
+    java_import javax::swing::JFileChooser
 
     chooser = JFileChooser.new
     chooser.setCurrentDirectory( JavaFile::File.new( @@last_dir ) ) if @@last_dir

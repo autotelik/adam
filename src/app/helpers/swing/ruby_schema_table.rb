@@ -3,19 +3,19 @@
 # Date ::     Dec 2008
 # License::   MIT ?
 #
-#include_class javax.swing.JTable
-#include_class org.jdesktop.swingx.treetable.*
-include_class org.jdesktop.swingx.treetable.DefaultTreeTableModel
+#java_import javax.swing.JTable
+#java_import org.jdesktop.swingx.treetable.*
+java_import org.jdesktop.swingx.treetable.DefaultTreeTableModel
 
 require 'system'
 require 'schemable'
 
 class RubySchemaTable <  org.jdesktop.swingx.JXTreeTable
 
-  include_class org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode
-  include_class org.jdesktop.swingx.renderer.DefaultTreeRenderer
+  java_import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode
+  java_import org.jdesktop.swingx.renderer.DefaultTreeRenderer
 
-  #include_class org.jvnet.substance.SubstanceDefaultTableCellRenderer#.BooleanRenderer
+  #java_import org.jvnet.substance.SubstanceDefaultTableCellRenderer#.BooleanRenderer
 
   attr_accessor :start_data_index
 
@@ -75,7 +75,7 @@ end   # END TABLE
 
 class RubySchemaTableModel < org.jdesktop.swingx.treetable.DefaultTreeTableModel 
   
-  include_class org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode
+  java_import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode
     
   attr_accessor :start_data_index
  

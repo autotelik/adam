@@ -1,9 +1,80 @@
+require 'uri'
+
 module ActiveRecord
   class Base
     class ConnectionSpecification #:nodoc:
       attr_reader :config, :adapter_method
       def initialize (config, adapter_method)
         @config, @adapter_method = config, adapter_method
+      end
+
+      ##
+      # Builds a ConnectionSpecification from user input
+      class Resolver # :nodoc:
+        attr_reader :config, :klass, :configurations
+
+        def initialize(config, configurations)
+          @config         = config
+          @configurations = configurations
+        end
+
+        def spec
+          case config
+          when nil
+            raise AdapterNotSpecified unless defined?(Rails.env)
+            resolve_string_connection Rails.env
+          when Symbol, String
+            resolve_string_connection config.to_s
+          when Hash
+            resolve_hash_connection config
+          end
+        end
+
+        private
+        def resolve_string_connection(spec) # :nodoc:
+          hash = configurations.fetch(spec) do |k|
+            connection_url_to_hash(k)
+          end
+
+          raise(AdapterNotSpecified, "#{spec} database is not configured") unless hash
+
+          resolve_hash_connection hash
+        end
+
+        def resolve_hash_connection(spec) # :nodoc:
+          spec = spec.symbolize_keys
+
+          raise(AdapterNotSpecified, "database configuration does not specify adapter") unless spec.key?(:adapter)
+
+          begin
+            require "active_record/connection_adapters/#{spec[:adapter]}_adapter"
+          rescue LoadError => e
+            raise LoadError, "Please install the #{spec[:adapter]} adapter: `gem install activerecord-#{spec[:adapter]}-adapter` (#{e.message})", e.backtrace
+          end
+
+          adapter_method = "#{spec[:adapter]}_connection"
+
+          ConnectionSpecification.new(spec, adapter_method)
+        end
+
+        def connection_url_to_hash(url) # :nodoc:
+          config = URI.parse url
+          adapter = config.scheme
+          adapter = "postgresql" if adapter == "postgres"
+          spec = { :adapter  => adapter,
+                   :username => config.user,
+                   :password => config.password,
+                   :port     => config.port,
+                   :database => config.path.sub(%r{^/},""),
+                   :host     => config.host }
+          spec.reject!{ |_,value| value.blank? }
+          spec.map { |key,value| spec[key] = URI.unescape(value) if value.is_a?(String) }
+          if config.query
+            options = Hash[config.query.split("&").map{ |pair| pair.split("=") }].symbolize_keys
+            spec.merge!(options)
+          end
+          spec
+        end
       end
     end
 
@@ -46,39 +117,24 @@ module ActiveRecord
     #     "database"  => "path/to/dbfile"
     #   )
     #
+    # Or a URL:
+    #
+    #   ActiveRecord::Base.establish_connection(
+    #     "postgres://myuser:mypass@localhost/somedatabase"
+    #   )
+    #
     # The exceptions AdapterNotSpecified, AdapterNotFound and ArgumentError
     # may be returned on an error.
-    def self.establish_connection(spec = nil)
-      case spec
-        when nil
-          raise AdapterNotSpecified unless defined?(Rails.env)
-          establish_connection(Rails.env)
-        when ConnectionSpecification
-          self.connection_handler.establish_connection(name, spec)
-        when Symbol, String
-          if configuration = configurations[spec.to_s]
-            establish_connection(configuration)
-          else
-            raise AdapterNotSpecified, "#{spec} database is not configured"
-          end
-        else
-          spec = spec.symbolize_keys
-          unless spec.key?(:adapter) then raise AdapterNotSpecified, "database configuration does not specify adapter" end
+    def self.establish_connection(spec = ENV["DATABASE_URL"])
+      resolver = ConnectionSpecification::Resolver.new spec, configurations
+      spec = resolver.spec
 
-          begin
-            require "active_record/connection_adapters/#{spec[:adapter]}_adapter"
-          rescue LoadError => e
-            raise "Please install the #{spec[:adapter]} adapter: `gem install activerecord-#{spec[:adapter]}-adapter` (#{e})"
-          end
-
-          adapter_method = "#{spec[:adapter]}_connection"
-          if !respond_to?(adapter_method)
-            raise AdapterNotFound, "database configuration specifies nonexistent #{spec[:adapter]} adapter"
-          end
-
-          remove_connection
-          establish_connection(ConnectionSpecification.new(spec, adapter_method))
+      unless respond_to?(spec.adapter_method)
+        raise AdapterNotFound, "database configuration specifies nonexistent #{spec.config[:adapter]} adapter"
       end
+
+      remove_connection
+      connection_handler.establish_connection name, spec
     end
 
     class << self
@@ -89,8 +145,26 @@ module ActiveRecord
         retrieve_connection
       end
 
+      def connection_id
+        Thread.current['ActiveRecord::Base.connection_id']
+      end
+
+      def connection_id=(connection_id)
+        Thread.current['ActiveRecord::Base.connection_id'] = connection_id
+      end
+
+      # Returns the configuration of the associated connection as a hash:
+      #
+      #  ActiveRecord::Base.connection_config
+      #  # => {:pool=>5, :timeout=>5000, :database=>"db/development.sqlite3", :adapter=>"sqlite3"}
+      #
+      # Please use only for reading.
+      def connection_config
+        connection_pool.spec.config
+      end
+
       def connection_pool
-        connection_handler.retrieve_connection_pool(self)
+        connection_handler.retrieve_connection_pool(self) or raise ConnectionNotEstablished
       end
 
       def retrieve_connection
@@ -106,7 +180,11 @@ module ActiveRecord
         connection_handler.remove_connection(klass)
       end
 
-      delegate :clear_active_connections!, :clear_reloadable_connections!,
+      def clear_active_connections!
+        connection_handler.clear_active_connections!
+      end
+
+      delegate :clear_reloadable_connections!,
         :clear_all_connections!,:verify_active_connections!, :to => :connection_handler
     end
   end

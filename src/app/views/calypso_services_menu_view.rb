@@ -5,7 +5,7 @@
 #
 require 'menu_bases'
 
-include_class java.awt.event.InputEvent
+java_import java.awt.event.InputEvent
 
 class CalypsoServicesMenuView < ApplicationView
 

@@ -1,23 +1,33 @@
 require 'active_support/inflector/methods'
-require 'active_support/inflector/inflections'
 require 'active_support/inflector/transliterate'
 
 # String inflections define new methods on the String class to transform names for different purposes.
-# For instance, you can figure out the name of a database from the name of a class.
+# For instance, you can figure out the name of a table from the name of a class.
 #
 #   "ScaleScore".tableize # => "scale_scores"
 #
 class String
   # Returns the plural form of the word in the string.
   #
+  # If the optional parameter +count+ is specified,
+  # the singular form will be returned if <tt>count == 1</tt>.
+  # For any other value of +count+ the plural will be returned.
+  #
+  # ==== Examples
   #   "post".pluralize             # => "posts"
   #   "octopus".pluralize          # => "octopi"
   #   "sheep".pluralize            # => "sheep"
   #   "words".pluralize            # => "words"
   #   "the blue mailman".pluralize # => "the blue mailmen"
   #   "CamelOctopus".pluralize     # => "CamelOctopi"
-  def pluralize
-    ActiveSupport::Inflector.pluralize(self)
+  #   "apple".pluralize(1)         # => "apple"
+  #   "apple".pluralize(2)         # => "apples"
+  def pluralize(count = nil)
+    if count == 1
+      self
+    else
+      ActiveSupport::Inflector.pluralize(self)
+    end
   end
 
   # The reverse of +pluralize+, returns the singular form of a word in a string.
@@ -34,13 +44,26 @@ class String
 
   # +constantize+ tries to find a declared constant with the name specified
   # in the string. It raises a NameError when the name is not in CamelCase
-  # or is not initialized.
+  # or is not initialized.  See ActiveSupport::Inflector.constantize
   #
   # Examples
-  #   "Module".constantize # => Module
-  #   "Class".constantize  # => Class
+  #   "Module".constantize  # => Module
+  #   "Class".constantize   # => Class
+  #   "blargle".constantize # => NameError: wrong constant name blargle
   def constantize
     ActiveSupport::Inflector.constantize(self)
+  end
+
+  # +safe_constantize+ tries to find a declared constant with the name specified
+  # in the string. It returns nil when the name is not in CamelCase
+  # or is not initialized.  See ActiveSupport::Inflector.safe_constantize
+  #
+  # Examples
+  #   "Module".safe_constantize  # => Module
+  #   "Class".safe_constantize   # => Class
+  #   "blargle".safe_constantize # => nil
+  def safe_constantize
+    ActiveSupport::Inflector.safe_constantize(self)
   end
 
   # By default, +camelize+ converts strings to UpperCamelCase. If the argument to camelize
@@ -77,8 +100,8 @@ class String
   #
   # +underscore+ will also change '::' to '/' to convert namespaces to paths.
   #
-  #   "ActiveRecord".underscore         # => "active_record"
-  #   "ActiveRecord::Errors".underscore # => active_record/errors
+  #   "ActiveModel".underscore         # => "active_model"
+  #   "ActiveModel::Errors".underscore # => "active_model/errors"
   def underscore
     ActiveSupport::Inflector.underscore(self)
   end
@@ -94,8 +117,23 @@ class String
   #
   #   "ActiveRecord::CoreExtensions::String::Inflections".demodulize # => "Inflections"
   #   "Inflections".demodulize                                       # => "Inflections"
+  #
+  # See also +deconstantize+.
   def demodulize
     ActiveSupport::Inflector.demodulize(self)
+  end
+
+  # Removes the rightmost segment from the constant expression in the string.
+  #
+  #   "Net::HTTP".deconstantize   # => "Net"
+  #   "::Net::HTTP".deconstantize # => "::Net"
+  #   "String".deconstantize      # => ""
+  #   "::String".deconstantize    # => ""
+  #   "".deconstantize            # => ""
+  #
+  # See also +demodulize+.
+  def deconstantize
+    ActiveSupport::Inflector.deconstantize(self)
   end
 
   # Replaces special characters in a string so that it may be used as part of a 'pretty' URL.
@@ -111,7 +149,7 @@ class String
   #   @person = Person.find(1)
   #   # => #<Person id: 1, name: "Donald E. Knuth">
   #
-  #   <%= link_to(@person.name, person_path %>
+  #   <%= link_to(@person.name, person_path) %>
   #   # => <a href="/person/1-donald-e-knuth">Donald E. Knuth</a>
   def parameterize(sep = '-')
     ActiveSupport::Inflector.parameterize(self, sep)

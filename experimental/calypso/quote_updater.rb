@@ -1,10 +1,10 @@
 require 'data_server'
 
-include_class com.calypso.tk.marketdata.QuoteValue
-include_class com.calypso.tk.marketdata.QuoteSet
-include_class com.calypso.tk.core.JDate
-include_class com.calypso.tk.core.JDatetime
-include_class java.lang.IndexOutOfBoundsException
+java_import com.calypso.tk.marketdata.QuoteValue
+java_import com.calypso.tk.marketdata.QuoteSet
+java_import com.calypso.tk.core.JDate
+java_import com.calypso.tk.core.JDatetime
+java_import java.lang.IndexOutOfBoundsException
 import com.calypso.tk.core.Log
 
 class QuoteUpdater

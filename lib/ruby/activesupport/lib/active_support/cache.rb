@@ -16,8 +16,7 @@ module ActiveSupport
     autoload :FileStore, 'active_support/cache/file_store'
     autoload :MemoryStore, 'active_support/cache/memory_store'
     autoload :MemCacheStore, 'active_support/cache/mem_cache_store'
-    autoload :SynchronizedMemoryStore, 'active_support/cache/synchronized_memory_store'
-    autoload :CompressedMemCacheStore, 'active_support/cache/compressed_mem_cache_store'
+    autoload :NullStore, 'active_support/cache/null_store'
 
     # These options mean something to all cache implementations. Individual cache
     # implementations may support additional options.
@@ -27,75 +26,74 @@ module ActiveSupport
       autoload :LocalCache, 'active_support/cache/strategy/local_cache'
     end
 
-    # Creates a new CacheStore object according to the given options.
-    #
-    # If no arguments are passed to this method, then a new
-    # ActiveSupport::Cache::MemoryStore object will be returned.
-    #
-    # If you pass a Symbol as the first argument, then a corresponding cache
-    # store class under the ActiveSupport::Cache namespace will be created.
-    # For example:
-    #
-    #   ActiveSupport::Cache.lookup_store(:memory_store)
-    #   # => returns a new ActiveSupport::Cache::MemoryStore object
-    #
-    #   ActiveSupport::Cache.lookup_store(:mem_cache_store)
-    #   # => returns a new ActiveSupport::Cache::MemCacheStore object
-    #
-    # Any additional arguments will be passed to the corresponding cache store
-    # class's constructor:
-    #
-    #   ActiveSupport::Cache.lookup_store(:file_store, "/tmp/cache")
-    #   # => same as: ActiveSupport::Cache::FileStore.new("/tmp/cache")
-    #
-    # If the first argument is not a Symbol, then it will simply be returned:
-    #
-    #   ActiveSupport::Cache.lookup_store(MyOwnCacheStore.new)
-    #   # => returns MyOwnCacheStore.new
-    def self.lookup_store(*store_option)
-      store, *parameters = *Array.wrap(store_option).flatten
+    class << self
+      # Creates a new CacheStore object according to the given options.
+      #
+      # If no arguments are passed to this method, then a new
+      # ActiveSupport::Cache::MemoryStore object will be returned.
+      #
+      # If you pass a Symbol as the first argument, then a corresponding cache
+      # store class under the ActiveSupport::Cache namespace will be created.
+      # For example:
+      #
+      #   ActiveSupport::Cache.lookup_store(:memory_store)
+      #   # => returns a new ActiveSupport::Cache::MemoryStore object
+      #
+      #   ActiveSupport::Cache.lookup_store(:mem_cache_store)
+      #   # => returns a new ActiveSupport::Cache::MemCacheStore object
+      #
+      # Any additional arguments will be passed to the corresponding cache store
+      # class's constructor:
+      #
+      #   ActiveSupport::Cache.lookup_store(:file_store, "/tmp/cache")
+      #   # => same as: ActiveSupport::Cache::FileStore.new("/tmp/cache")
+      #
+      # If the first argument is not a Symbol, then it will simply be returned:
+      #
+      #   ActiveSupport::Cache.lookup_store(MyOwnCacheStore.new)
+      #   # => returns MyOwnCacheStore.new
+      def lookup_store(*store_option)
+        store, *parameters = *Array.wrap(store_option).flatten
 
-      case store
-      when Symbol
-        store_class_name = store.to_s.camelize
-        store_class =
-          begin
-            require "active_support/cache/#{store}"
-          rescue LoadError => e
-            raise "Could not find cache store adapter for #{store} (#{e})"
-          else
-            ActiveSupport::Cache.const_get(store_class_name)
-          end
-        store_class.new(*parameters)
-      when nil
-        ActiveSupport::Cache::MemoryStore.new
-      else
-        store
-      end
-    end
-
-    def self.expand_cache_key(key, namespace = nil)
-      expanded_cache_key = namespace ? "#{namespace}/" : ""
-
-      prefix = ENV["RAILS_CACHE_ID"] || ENV["RAILS_APP_VERSION"]
-      if prefix
-        expanded_cache_key << "#{prefix}/"
+        case store
+        when Symbol
+          store_class_name = store.to_s.camelize
+          store_class =
+            begin
+              require "active_support/cache/#{store}"
+            rescue LoadError => e
+              raise "Could not find cache store adapter for #{store} (#{e})"
+            else
+              ActiveSupport::Cache.const_get(store_class_name)
+            end
+          store_class.new(*parameters)
+        when nil
+          ActiveSupport::Cache::MemoryStore.new
+        else
+          store
+        end
       end
 
-      expanded_cache_key <<
-        if key.respond_to?(:cache_key)
-          key.cache_key
-        elsif key.is_a?(Array)
-          if key.size > 1
-            key.collect { |element| expand_cache_key(element) }.to_param
-          else
-            key.first.to_param
-          end
-        elsif key
-          key.to_param
+      def expand_cache_key(key, namespace = nil)
+        expanded_cache_key = namespace ? "#{namespace}/" : ""
+
+        if prefix = ENV["RAILS_CACHE_ID"] || ENV["RAILS_APP_VERSION"]
+          expanded_cache_key << "#{prefix}/"
+        end
+
+        expanded_cache_key << retrieve_cache_key(key)
+        expanded_cache_key
+      end
+
+      private
+
+      def retrieve_cache_key(key)
+        case
+        when key.respond_to?(:cache_key) then key.cache_key
+        when key.is_a?(Array)            then key.map { |element| retrieve_cache_key(element) }.to_param
+        else                                  key.to_param
         end.to_s
-
-      expanded_cache_key
+      end
     end
 
     # An abstract cache store class. There are multiple cache store
@@ -116,31 +114,32 @@ module ActiveSupport
     #   cache.read("city")   # => "Duckburgh"
     #
     # Keys are always translated into Strings and are case sensitive. When an
-    # object is specified as a key, its +cache_key+ method will be called if it
-    # is defined. Otherwise, the +to_param+ method will be called. Hashes and
-    # Arrays can be used as keys. The elements will be delimited by slashes
-    # and Hashes elements will be sorted by key so they are consistent.
+    # object is specified as a key and has a +cache_key+ method defined, this
+    # method will be called to define the key.  Otherwise, the +to_param+
+    # method will be called. Hashes and Arrays can also be used as keys. The
+    # elements will be delimited by slashes, and the elements within a Hash
+    # will be sorted by key so they are consistent.
     #
     #   cache.read("city") == cache.read(:city)   # => true
     #
     # Nil values can be cached.
     #
-    # If your cache is on a shared infrastructure, you can define a namespace for
-    # your cache entries. If a namespace is defined, it will be prefixed on to every
-    # key. The namespace can be either a static value or a Proc. If it is a Proc, it
-    # will be invoked when each key is evaluated so that you can use application logic
-    # to invalidate keys.
+    # If your cache is on a shared infrastructure, you can define a namespace
+    # for your cache entries. If a namespace is defined, it will be prefixed on
+    # to every key. The namespace can be either a static value or a Proc. If it
+    # is a Proc, it will be invoked when each key is evaluated so that you can
+    # use application logic to invalidate keys.
     #
     #   cache.namespace = lambda { @last_mod_time }  # Set the namespace to a variable
     #   @last_mod_time = Time.now  # Invalidate the entire cache by changing namespace
     #
     #
-    # Caches can also store values in a compressed format to save space and reduce
-    # time spent sending data. Since there is some overhead, values must be large
-    # enough to warrant compression. To turn on compression either pass
-    # <tt>:compress => true</tt> in the initializer or to +fetch+ or +write+.
-    # To specify the threshold at which to compress values, set
-    # <tt>:compress_threshold</tt>. The default threshold is 32K.
+    # Caches can also store values in a compressed format to save space and
+    # reduce time spent sending data. Since there is overhead, values must be
+    # large enough to warrant compression. To turn on compression either pass
+    # <tt>:compress => true</tt> in the initializer or as an option to +fetch+
+    # or +write+. To specify the threshold at which to compress values, set the
+    # <tt>:compress_threshold</tt> option. The default threshold is 16K.
     class Store
 
       cattr_accessor :logger, :instance_writer => true
@@ -150,7 +149,7 @@ module ActiveSupport
 
       # Create a new cache. The options will be passed to any write method calls except
       # for :namespace which can be used to set the global namespace for the cache.
-      def initialize (options = nil)
+      def initialize(options = nil)
         @options = options ? options.dup : {}
       end
 
@@ -180,11 +179,11 @@ module ActiveSupport
       # Fetches data from the cache, using the given key. If there is data in
       # the cache with the given key, then that data is returned.
       #
-      # If there is no such data in the cache (a cache miss occurred),
-      # then nil will be returned. However, if a block has been passed, then
-      # that block will be run in the event of a cache miss. The return value
-      # of the block will be written to the cache under the given cache key,
-      # and that return value will be returned.
+      # If there is no such data in the cache (a cache miss), then nil will be
+      # returned. However, if a block has been passed, that block will be run
+      # in the event of a cache miss. The return value of the block will be
+      # written to the cache under the given cache key, and that return value
+      # will be returned.
       #
       #   cache.write("today", "Monday")
       #   cache.fetch("today")  # => "Monday"
@@ -205,10 +204,11 @@ module ActiveSupport
       # in a compressed format.
       #
       #
-      # Setting <tt>:expires_in</tt> will set an expiration time on the cache. All caches
-      # support auto expiring content after a specified number of seconds. This value can
-      # be specified as an option to the construction in which call all entries will be
-      # affected. Or it can be supplied to the +fetch+ or +write+ method for just one entry.
+      # Setting <tt>:expires_in</tt> will set an expiration time on the cache.
+      # All caches support auto-expiring content after a specified number of
+      # seconds. This value can be specified as an option to the constructor
+      # (in which case all entries will be affected), or it can be supplied to
+      # the +fetch+ or +write+ method to effect just one entry.
       #
       #   cache = ActiveSupport::Cache::MemoryStore.new(:expires_in => 5.minutes)
       #   cache.write(key, value, :expires_in => 1.minute)  # Set a lower value for one entry
@@ -230,7 +230,7 @@ module ActiveSupport
       # <tt>:race_condition_ttl</tt> does not play any role.
       #
       #   # Set all values to expire after one minute.
-      #   cache = ActiveSupport::Cache::MemoryCache.new(:expires_in => 1.minute)
+      #   cache = ActiveSupport::Cache::MemoryStore.new(:expires_in => 1.minute)
       #
       #   cache.write("foo", "original value")
       #   val_1 = nil
@@ -345,7 +345,7 @@ module ActiveSupport
           entry = read_entry(key, options)
           if entry
             if entry.expired?
-              delete_entry(key)
+              delete_entry(key, options)
             else
               results[name] = entry.value
             end
@@ -484,19 +484,20 @@ module ActiveSupport
         # object responds to +cache_key+. Otherwise, to_param method will be
         # called. If the key is a Hash, then keys will be sorted alphabetically.
         def expanded_key(key) # :nodoc:
-          if key.respond_to?(:cache_key)
-            key = key.cache_key.to_s
-          elsif key.is_a?(Array)
+          return key.cache_key.to_s if key.respond_to?(:cache_key)
+
+          case key
+          when Array
             if key.size > 1
-              key.collect{|element| expanded_key(element)}.to_param
+              key = key.collect{|element| expanded_key(element)}
             else
-              key.first.to_param
+              key = key.first
             end
-          elsif key.is_a?(Hash)
-            key = key.to_a.sort{|a,b| a.first.to_s <=> b.first.to_s}.collect{|k,v| "#{k}=#{v}"}.to_param
-          else
-            key = key.to_param
+          when Hash
+            key = key.sort_by { |k,_| k.to_s }.collect{|k,v| "#{k}=#{v}"}
           end
+
+          key.to_param
         end
 
         # Prefix a key with the namespace. Namespace and key will be delimited with a colon.
@@ -537,11 +538,11 @@ module ActiveSupport
         # Create an entry with internal attributes set. This method is intended to be
         # used by implementations that store cache entries in a native format instead
         # of as serialized Ruby objects.
-        def create (raw_value, created_at, options = {})
+        def create(raw_value, created_at, options = {})
           entry = new(nil)
           entry.instance_variable_set(:@value, raw_value)
           entry.instance_variable_set(:@created_at, created_at.to_f)
-          entry.instance_variable_set(:@compressed, !!options[:compressed])
+          entry.instance_variable_set(:@compressed, options[:compressed])
           entry.instance_variable_set(:@expires_in, options[:expires_in])
           entry
         end
@@ -554,15 +555,14 @@ module ActiveSupport
         @expires_in = options[:expires_in]
         @expires_in = @expires_in.to_f if @expires_in
         @created_at = Time.now.to_f
-        if value
-          if should_compress?(value, options)
-            @value = Zlib::Deflate.deflate(Marshal.dump(value))
-            @compressed = true
-          else
-            @value = value
-          end
-        else
+        if value.nil?
           @value = nil
+        else
+          @value = Marshal.dump(value)
+          if should_compress?(@value, options)
+            @value = Zlib::Deflate.deflate(@value)
+            @compressed = true
+          end
         end
       end
 
@@ -573,12 +573,21 @@ module ActiveSupport
 
       # Get the value stored in the cache.
       def value
+        # If the original value was exactly false @value is still true because
+        # it is marshalled and eventually compressed. Both operations yield
+        # strings.
         if @value
-          val = compressed? ? Marshal.load(Zlib::Inflate.inflate(@value)) : @value
-          unless val.frozen?
-            val.freeze rescue nil
+          # In rails 3.1 and earlier values in entries did not marshaled without
+          # options[:compress] and if it's Numeric.
+          # But after commit a263f377978fc07515b42808ebc1f7894fafaa3a
+          # all values in entries are marshalled. And after that code below expects
+          # that all values in entries will be marshaled (and will be strings). 
+          # So here we need a check for old ones.
+          begin
+            Marshal.load(compressed? ? Zlib::Inflate.inflate(@value) : @value)
+          rescue TypeError
+            compressed? ? Zlib::Inflate.inflate(@value) : @value
           end
-          val
         end
       end
 
@@ -589,11 +598,7 @@ module ActiveSupport
       # Check if the entry is expired. The +expires_in+ parameter can override the
       # value set when the entry was created.
       def expired?
-        if @expires_in && @created_at + @expires_in <= Time.now.to_f
-          true
-        else
-          false
-        end
+        @expires_in && @created_at + @expires_in <= Time.now.to_f
       end
 
       # Set a new time when the entry will expire.
@@ -615,21 +620,16 @@ module ActiveSupport
       def size
         if @value.nil?
           0
-        elsif @value.respond_to?(:bytesize)
-          @value.bytesize
         else
-          Marshal.dump(@value).bytesize
+          @value.bytesize
         end
       end
 
       private
-        def should_compress?(value, options)
-          if options[:compress] && value
-            unless value.is_a?(Numeric)
-              compress_threshold = options[:compress_threshold] || DEFAULT_COMPRESS_LIMIT
-              serialized_value = value.is_a?(String) ? value : Marshal.dump(value)
-              return true if serialized_value.size >= compress_threshold
-            end
+        def should_compress?(serialized_value, options)
+          if options[:compress]
+            compress_threshold = options[:compress_threshold] || DEFAULT_COMPRESS_LIMIT
+            return true if serialized_value.size >= compress_threshold
           end
           false
         end

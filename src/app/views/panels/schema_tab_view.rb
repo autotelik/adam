@@ -6,13 +6,13 @@
 require 'ruby_schema_table'
 require 'ruby_mouse_listener'
 
-#include_class java.awt.event.ActionListener
+#java_import java.awt.event.ActionListener
 
 class SchemaTabView < ApplicationView
 
-  include_class org.jdesktop.swingx.treetable.DefaultTreeTableModel
-  include_class org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode
-  include_class java.awt.event.MouseAdapter
+  java_import org.jdesktop.swingx.treetable.DefaultTreeTableModel
+  java_import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode
+  java_import java.awt.event.MouseAdapter
 
   set_java_class 'app.java.panels.SchemasTabPanel'
 

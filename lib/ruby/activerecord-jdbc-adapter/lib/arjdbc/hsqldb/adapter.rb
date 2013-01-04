@@ -11,7 +11,6 @@ module ::ArJdbc
         when /longvarchar/i then :text
         when /tinyint/i  then :boolean
         when /real/i     then :float
-        when /decimal/i  then :decimal
         else
           super
         end
@@ -27,6 +26,9 @@ module ::ArJdbc
 
       # Post process default value from JDBC into a Rails-friendly format (columns{-internal})
       def default_value(value)
+        # H2 auto-generated key default value
+        return nil if value =~ /^\(NEXT VALUE FOR/i
+
         # jdbc returns column default strings with actual single quotes around the value.
         return $1 if value =~ /^'(.*)'$/
 
@@ -38,9 +40,9 @@ module ::ArJdbc
       'Hsqldb'
     end
 
-    def arel2_visitors
+    def self.arel2_visitors(config)
       require 'arel/visitors/hsqldb'
-      {'hsqldb' => ::Arel::Visitors::HSQLDB, 'jdbchsqldb' => ::Arel::Visitors::HSQLDB}
+      {}.tap {|v| %w(hsqldb jdbchsqldb).each {|a| v[a] = ::Arel::Visitors::HSQLDB } }
     end
 
     def modify_types(tp)
@@ -68,7 +70,7 @@ module ::ArJdbc
         if respond_to?(:h2_adapter) && value.empty?
           "''"
         elsif column && column.type == :binary
-          "'#{value.unpack("H*")}'"
+          "X'#{value.unpack("H*")[0]}'"
         elsif column && (column.type == :integer ||
                          column.respond_to?(:primary) && column.primary && column.klass != String)
           value.to_i.to_s
@@ -131,7 +133,8 @@ module ::ArJdbc
     end
 
     def last_insert_id
-      Integer(select_value("CALL IDENTITY()"))
+      identity = select_value("CALL IDENTITY()")
+      Integer(identity.nil? ? 0 : identity)
     end
 
     def _execute(sql, name = nil)
@@ -165,7 +168,7 @@ module ::ArJdbc
       execute "DROP INDEX #{quote_column_name(index_name(table_name, options))}"
     end
 
-    def recreate_database(name)
+    def recreate_database(name, options = {})
       drop_database(name)
     end
     

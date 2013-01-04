@@ -1,16 +1,15 @@
 class <%= migration_class_name %> < ActiveRecord::Migration
-  def self.up
+  def change
     create_table :<%= table_name %> do |t|
-<% for attribute in attributes -%>
-      t.<%= attribute.type %> :<%= attribute.name %>
+<% attributes.each do |attribute| -%>
+      t.<%= attribute.type %> :<%= attribute.name %><%= attribute.inject_options %>
 <% end -%>
 <% if options[:timestamps] %>
       t.timestamps
 <% end -%>
     end
-  end
-
-  def self.down
-    drop_table :<%= table_name %>
+<% attributes_with_index.each do |attribute| -%>
+    add_index :<%= table_name %>, :<%= attribute.index_name %><%= attribute.inject_index_options %>
+<% end -%>
   end
 end

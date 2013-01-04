@@ -28,17 +28,22 @@ module ActiveSupport
       end
 
       module ForMiniTest
+        PASSTHROUGH_EXCEPTIONS = MiniTest::Unit::TestCase::PASSTHROUGH_EXCEPTIONS rescue [NoMemoryError, SignalException, Interrupt, SystemExit]
         def run(runner)
           result = '.'
           begin
-            _run_setup_callbacks do
+            run_callbacks :setup do
               result = super
             end
+          rescue *PASSTHROUGH_EXCEPTIONS => e
+            raise e
           rescue Exception => e
             result = runner.puke(self.class, method_name, e)
           ensure
             begin
-              _run_teardown_callbacks
+              run_callbacks :teardown
+            rescue *PASSTHROUGH_EXCEPTIONS => e
+              raise e
             rescue Exception => e
               result = runner.puke(self.class, method_name, e)
             end
@@ -62,7 +67,7 @@ module ActiveSupport
 
           begin
             begin
-              _run_setup_callbacks do
+              run_callbacks :setup do
                 setup
                 __send__(@method_name)
                 mocha_verify(mocha_counter) if mocha_counter
@@ -77,7 +82,7 @@ module ActiveSupport
             ensure
               begin
                 teardown
-                _run_teardown_callbacks
+                run_callbacks :teardown
               rescue Test::Unit::AssertionFailedError => e
                 add_failure(e.message, e.backtrace)
               rescue Exception => e
@@ -99,8 +104,10 @@ module ActiveSupport
           if respond_to?(:mocha_verify) # using mocha
             if defined?(Mocha::TestCaseAdapter::AssertionCounter)
               Mocha::TestCaseAdapter::AssertionCounter.new(result)
-            else
+            elsif defined?(Mocha::Integration::TestUnit::AssertionCounter)
               Mocha::Integration::TestUnit::AssertionCounter.new(result)
+            else
+              Mocha::MonkeyPatching::TestUnit::AssertionCounter.new(result)
             end
           end
         end

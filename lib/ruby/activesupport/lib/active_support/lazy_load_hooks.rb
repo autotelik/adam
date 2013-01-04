@@ -5,28 +5,28 @@
 #
 # Here is an example where +on_load+ method is called to register a hook.
 #
-#  initializer "active_record.initialize_timezone" do
-#    ActiveSupport.on_load(:active_record) do
-#      self.time_zone_aware_attributes = true
-#      self.default_timezone = :utc
-#    end
-#  end
+#   initializer "active_record.initialize_timezone" do
+#     ActiveSupport.on_load(:active_record) do
+#       self.time_zone_aware_attributes = true
+#       self.default_timezone = :utc
+#     end
+#   end
 #
 # When the entirety of +activerecord/lib/active_record/base.rb+ has been evaluated then +run_load_hooks+ is invoked.
 # The very last line of +activerecord/lib/active_record/base.rb+ is:
 #
-#  ActiveSupport.run_load_hooks(:active_record, ActiveRecord::Base)
+#   ActiveSupport.run_load_hooks(:active_record, ActiveRecord::Base)
 #
 module ActiveSupport
-  @load_hooks = Hash.new {|h,k| h[k] = [] }
-  @loaded = {}
+  @load_hooks = Hash.new { |h,k| h[k] = [] }
+  @loaded = Hash.new { |h,k| h[k] = [] }
 
   def self.on_load(name, options = {}, &block)
-    if base = @loaded[name]
+    @loaded[name].each do |base|
       execute_hook(base, options, block)
-    else
-      @load_hooks[name] << [block, options]
     end
+
+    @load_hooks[name] << [block, options]
   end
 
   def self.execute_hook(base, options, block)
@@ -38,7 +38,7 @@ module ActiveSupport
   end
 
   def self.run_load_hooks(name, base = Object)
-    @loaded[name] = base
+    @loaded[name] << base
     @load_hooks[name].each do |hook, options|
       execute_hook(base, options, hook)
     end

@@ -1,5 +1,6 @@
 require "active_support/values/time_zone"
 require 'active_support/core_ext/object/acts_like'
+require 'active_support/core_ext/object/inclusion'
 
 module ActiveSupport
   # A Time-like class that can represent a time in any time zone. Necessary because standard Ruby Time instances are
@@ -11,7 +12,7 @@ module ActiveSupport
   #
   #   Time.zone = 'Eastern Time (US & Canada)'        # => 'Eastern Time (US & Canada)'
   #   Time.zone.local(2007, 2, 10, 15, 30, 45)        # => Sat, 10 Feb 2007 15:30:45 EST -05:00
-  #   Time.zone.parse('2007-02-01 15:30:45')          # => Sat, 10 Feb 2007 15:30:45 EST -05:00
+  #   Time.zone.parse('2007-02-10 15:30:45')          # => Sat, 10 Feb 2007 15:30:45 EST -05:00
   #   Time.zone.at(1170361845)                        # => Sat, 10 Feb 2007 15:30:45 EST -05:00
   #   Time.zone.now                                   # => Sun, 18 May 2008 13:07:55 EDT -04:00
   #   Time.utc(2007, 2, 10, 20, 30, 45).in_time_zone  # => Sat, 10 Feb 2007 15:30:45 EST -05:00
@@ -32,6 +33,7 @@ module ActiveSupport
   #   t > Time.utc(1999)                    # => true
   #   t.is_a?(Time)                         # => true
   #   t.is_a?(ActiveSupport::TimeWithZone)  # => true
+  #
   class TimeWithZone
     def self.name
       'Time' # Report class name as 'Time' to thwart type checking
@@ -107,7 +109,7 @@ module ActiveSupport
 
     def xmlschema(fraction_digits = 0)
       fraction = if fraction_digits > 0
-        ".%i" % time.usec.to_s[0, fraction_digits]
+        (".%06i" % time.usec)[0, fraction_digits + 1]
       end
 
       "#{time.strftime("%Y-%m-%dT%H:%M:%S")}#{fraction}#{formatted_offset(true, 'Z')}"
@@ -127,6 +129,7 @@ module ActiveSupport
     #   # With ActiveSupport::JSON::Encoding.use_standard_json_time_format = false
     #   Time.utc(2005,2,1,15,15,10).in_time_zone.to_json
     #   # => "2005/02/01 15:15:10 +0000"
+    #
     def as_json(options = nil)
       if ActiveSupport::JSON::Encoding.use_standard_json_time_format
         xmlschema
@@ -174,7 +177,11 @@ module ActiveSupport
     # Replaces <tt>%Z</tt> and <tt>%z</tt> directives with +zone+ and +formatted_offset+, respectively, before passing to
     # Time#strftime, so that zone information is correct
     def strftime(format)
-      format = format.gsub('%Z', zone).gsub('%z', formatted_offset(false))
+      format = format.gsub('%Z', zone).
+                      gsub('%z',   formatted_offset(false)).
+                      gsub('%:z',  formatted_offset(true)).
+                      gsub('%::z', formatted_offset(true) + ":00")
+
       time.strftime(format)
     end
 
@@ -200,7 +207,11 @@ module ActiveSupport
     end
 
     def eql?(other)
-      utc == other
+      utc.eql?(other)
+    end
+
+    def hash
+      utc.hash
     end
 
     def +(other)
@@ -274,12 +285,11 @@ module ActiveSupport
     def to_i
       utc.to_i
     end
-    alias_method :hash, :to_i
     alias_method :tv_sec, :to_i
 
     # A TimeWithZone acts like a Time, so just return +self+.
     def to_time
-      self
+      utc
     end
 
     def to_datetime
@@ -307,7 +317,7 @@ module ActiveSupport
     end
 
     def marshal_load(variables)
-      initialize(variables[0].utc, ::Time.__send__(:get_zone, variables[1]), variables[2].utc)
+      initialize(variables[0].utc, ::Time.find_zone(variables[1]), variables[2].utc)
     end
 
     # Ensure proxy class responds to all methods that underlying time instance responds to.
@@ -342,7 +352,7 @@ module ActiveSupport
       end
 
       def duration_of_variable_length?(obj)
-        ActiveSupport::Duration === obj && obj.parts.any? {|p| [:years, :months, :days].include? p[0] }
+        ActiveSupport::Duration === obj && obj.parts.any? {|p| p[0].in?([:years, :months, :days]) }
       end
   end
 end

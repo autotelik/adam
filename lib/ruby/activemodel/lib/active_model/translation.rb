@@ -18,12 +18,12 @@ module ActiveModel
   #
   # This also provides the required class methods for hooking into the
   # Rails internationalization API, including being able to define a
-  # class based i18n_scope and lookup_ancestors to find translations in
+  # class based +i18n_scope+ and +lookup_ancestors+ to find translations in
   # parent classes.
   module Translation
     include ActiveModel::Naming
 
-    # Returns the i18n_scope for the class. Overwrite if you want custom lookup.
+    # Returns the +i18n_scope+ for the class. Overwrite if you want custom lookup.
     def i18n_scope
       :activemodel
     end
@@ -43,23 +43,28 @@ module ActiveModel
     #
     # Specify +options+ with additional translating options.
     def human_attribute_name(attribute, options = {})
-      defaults = lookup_ancestors.map do |klass|
-        [:"#{self.i18n_scope}.attributes.#{klass.model_name.i18n_key}.#{attribute}",
-         :"#{self.i18n_scope}.attributes.#{klass.model_name.i18n_key.to_s.tr('.', '/')}.#{attribute}"]
-      end.flatten
+      defaults  = []
+      parts     = attribute.to_s.split(".")
+      attribute = parts.pop
+      namespace = parts.join("/") unless parts.empty?
+
+      if namespace
+        lookup_ancestors.each do |klass|
+          defaults << :"#{self.i18n_scope}.attributes.#{klass.model_name.i18n_key}/#{namespace}.#{attribute}"
+        end
+        defaults << :"#{self.i18n_scope}.attributes.#{namespace}.#{attribute}"
+      else
+        lookup_ancestors.each do |klass|
+          defaults << :"#{self.i18n_scope}.attributes.#{klass.model_name.i18n_key}.#{attribute}"
+        end
+      end
 
       defaults << :"attributes.#{attribute}"
       defaults << options.delete(:default) if options[:default]
-      defaults << attribute.to_s.humanize
+      defaults << attribute.humanize
 
       options.reverse_merge! :count => 1, :default => defaults
       I18n.translate(defaults.shift, options)
-    end
-
-    # Model.human_name is deprecated. Use Model.model_name.human instead.
-    def human_name(*args)
-      ActiveSupport::Deprecation.warn("human_name has been deprecated, please use model_name.human instead", caller[0,5])
-      model_name.human(*args)
     end
   end
 end

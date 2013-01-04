@@ -1,28 +1,21 @@
 Dir.glob(File.expand_path(File.dirname(__FILE__) + "/**/*").gsub('%20', ' ')).each do |directory|
-  # File.directory? is broken in current JRuby for dirs inside jars
-  # http://jira.codehaus.org/browse/JRUBY-2289
-  $LOAD_PATH << directory unless directory =~ /\.\w+$/
+  #puts "DEBUG: ADD To LOAD PATH #{directory}" if File.directory?(directory)
+  $LOAD_PATH << directory if File.directory?(directory)
 end
-# Some JRuby $LOAD_PATH path bugs to check if you're having trouble:
-# http://jira.codehaus.org/browse/JRUBY-2518 - Dir.glob and Dir[] doesn't work
-#                                              for starting in a dir in a jar
-#                                              (such as Active-Record migrations)
-# http://jira.codehaus.org/browse/JRUBY-3247 - Compiled Ruby classes produce
-#                                              word substitutes for characters
-#                                              like - and . (to minus and dot).
-#                                              This is problematic with gems
-#                                              like ActiveSupport and Prawn
 
-#===============================================================================
 # Monkeybars requires, this pulls in the requisite libraries needed for
 # Monkeybars to operate.
 
 require 'resolver'
 
-case Monkeybars::Resolver.run_location
-when Monkeybars::Resolver::IN_FILE_SYSTEM
-  add_to_classpath '../lib/java/monkeybars-1.0.4.jar'
+def monkeybars_jar path
+  Dir.glob(path).select { |f| f =~ /(monkeybars-)(.+).jar$/}.first
 end
+
+#case Monkeybars::Resolver.run_location
+#when Monkeybars::Resolver::IN_FILE_SYSTEM
+#  add_to_classpath '../lib/java/monkeybars-1.0.4.jar'
+#end
 
 require 'monkeybars'
 require 'application_controller'
@@ -46,7 +39,6 @@ require 'application_view'
 #
 # add_to_load_path "../lib/java"
 
-
 case Monkeybars::Resolver.run_location
 when Monkeybars::Resolver::IN_FILE_SYSTEM
 
@@ -57,30 +49,50 @@ when Monkeybars::Resolver::IN_FILE_SYSTEM
   depth = File.exists?( base + '/../../src') ? '../..' : '..'
 
   ADAM_ROOT_PATH = File.expand_path( File.join(base, depth) )
+  ADAM_LIB_PATH  = File.expand_path( File.join(base, depth, 'lib') )
   ADAM_SRC_PATH  = File.expand_path( File.join(base, depth, 'src') )
+  
+  #puts "DEBUG: Add Main gem area to load PATH #{ADAM_LIB_PATH}/ruby"
+  #$:.unshift("#{ADAM_LIB_PATH}/ruby")
 
-  add_to_load_path( "#{depth}/lib/ruby" )
+  # These appear to be served out of the build/classes area
 
-  # 3rd party in vendor
-
-  Dir.entries("#{ADAM_SRC_PATH}/vendor").each { |plugin| $:.unshift("vendor/#{plugin}/lib") }
+  # 
+  # Add 3rd party gems in lib/ruby to LOAD_PATH
+  # The key is that many gems make assumptions about the load path. 
+  # In particular, they assume that gemname/lib is there, but not the subdirectories. 
+  # Gems often use a gem root-level file to manage the loading of additional files; 
+  # messing up the expected load path will bring sadness and pain.
+  
+  Dir.entries("#{ADAM_LIB_PATH}/ruby").each do |gemname|
+    
+    next if(gemname == '.' || gemname == '..')
+    gem_load_path = File.join('ruby', gemname, 'lib')
+    #puts "DEBUG: Add gem #{gem_load_path}"
+    $:.unshift("#{ADAM_LIB_PATH}/ruby/#{gemname}/lib")
+  end
 
   # 3rd party jars
-
+   
+  Dir.glob( File.join(ADAM_LIB_PATH, 'java', '*.jar') ).each do |f| 
+    next unless(File.file?(f))
+    puts "DEBUG: Add JAR #{f}"
+    $CLASSPATH << f 
+    require f
+  end
+    
   ['poi-3.7-20101029', 'substance'].each do |jar|
+    puts "DEBUG: Add JAR "#{depth}/lib/java/#{jar}.jar"
     add_to_classpath "#{depth}/lib/java/#{jar}.jar"
   end
 
 when Monkeybars::Resolver::IN_JAR_FILE
-  puts "IN JAR FILE"
-  # TODO - how to run from a jar !?
+  # TODO - Still only runs out of Netbeans (F6)
+  #puts "DEBUG IN JAR FILE"
+  add_to_load_path "activerecord/lib"
+  
+   # Files to be added only when run from inside a jar file something like...
+	 add_to_classpath "../build/classes" #location where Netbeans places compiled .class files
+	 add_to_classpath "../lib/swing-layout-1.0.3.jar" #needed to run layouts created using "Free Design"
 end
 
-# SET LOAD PATH FOR EXTERNAL GEMS/PLUGINS STORED IN lib/ruby
-
-$:.unshift('activemodel/lib')
-$:.unshift('activerecord/lib')
-$:.unshift('activesupport/lib')
-$:.unshift('arel-2.0.10/lib')
-$:.unshift('hpricot-0.8.4-java/lib')
-$:.unshift('i18n/lib')

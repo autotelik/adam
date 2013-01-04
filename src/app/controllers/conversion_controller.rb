@@ -8,7 +8,7 @@ class ConversionController < ApplicationController
   set_view  'ConversionView'
   set_model 'Conversion'
 
-  include_class java.awt.event.ItemEvent
+  java_import java.awt.event.ItemEvent
 
   set_close_action :close
 

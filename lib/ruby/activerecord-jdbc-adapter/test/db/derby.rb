@@ -1,3 +1,5 @@
+require 'jdbc_common'
+
 config = {
   :adapter => 'derby',
   :database => "derby-testdb"
@@ -5,8 +7,4 @@ config = {
 
 ActiveRecord::Base.establish_connection(config)
 
-at_exit {
-  # Clean up derby files
-  require 'fileutils'
-  FileUtils.rm_rf('derby-testdb')
-}
+at_exit { FileUtils.rm_rf('derby-testdb') }

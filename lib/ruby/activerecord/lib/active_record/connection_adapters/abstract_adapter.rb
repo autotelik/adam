@@ -2,19 +2,35 @@ require 'date'
 require 'bigdecimal'
 require 'bigdecimal/util'
 require 'active_support/core_ext/benchmark'
-
-# TODO: Autoload these files
-require 'active_record/connection_adapters/abstract/schema_definitions'
-require 'active_record/connection_adapters/abstract/schema_statements'
-require 'active_record/connection_adapters/abstract/database_statements'
-require 'active_record/connection_adapters/abstract/quoting'
-require 'active_record/connection_adapters/abstract/connection_pool'
-require 'active_record/connection_adapters/abstract/connection_specification'
-require 'active_record/connection_adapters/abstract/query_cache'
-require 'active_record/connection_adapters/abstract/database_limits'
+require 'active_support/deprecation'
+require 'active_record/connection_adapters/schema_cache'
+require 'monitor'
 
 module ActiveRecord
   module ConnectionAdapters # :nodoc:
+    extend ActiveSupport::Autoload
+
+    autoload :Column
+
+    autoload_under 'abstract' do
+      autoload :IndexDefinition,  'active_record/connection_adapters/abstract/schema_definitions'
+      autoload :ColumnDefinition, 'active_record/connection_adapters/abstract/schema_definitions'
+      autoload :TableDefinition,  'active_record/connection_adapters/abstract/schema_definitions'
+      autoload :Table,            'active_record/connection_adapters/abstract/schema_definitions'
+
+      autoload :SchemaStatements
+      autoload :DatabaseStatements
+      autoload :DatabaseLimits
+      autoload :Quoting
+
+      autoload :ConnectionPool
+      autoload :ConnectionHandler,       'active_record/connection_adapters/abstract/connection_pool'
+      autoload :ConnectionManagement,    'active_record/connection_adapters/abstract/connection_pool'
+      autoload :ConnectionSpecification
+
+      autoload :QueryCache
+    end
+
     # Active Record supports multiple database systems. AbstractAdapter and
     # related classes form the abstraction layer which makes this possible.
     # An AbstractAdapter represents a connection to a database, and provides an
@@ -33,66 +49,103 @@ module ActiveRecord
       include DatabaseLimits
       include QueryCache
       include ActiveSupport::Callbacks
+      include MonitorMixin
 
       define_callbacks :checkout, :checkin
 
-      def initialize(connection, logger = nil) #:nodoc:
-        @active = nil
-        @connection, @logger = connection, logger
+      attr_accessor :visitor, :pool
+      attr_reader :schema_cache, :last_use, :in_use, :logger
+      alias :in_use? :in_use
+
+      def initialize(connection, logger = nil, pool = nil) #:nodoc:
+        super()
+
+        @active              = nil
+        @connection          = connection
+        @in_use              = false
+        @instrumenter        = ActiveSupport::Notifications.instrumenter
+        @last_use            = false
+        @logger              = logger
+        @open_transactions   = 0
+        @pool                = pool
+        @query_cache         = Hash.new { |h,sql| h[sql] = {} }
         @query_cache_enabled = false
-        @query_cache = {}
-        @instrumenter = ActiveSupport::Notifications.instrumenter
+        @schema_cache        = SchemaCache.new self
+        @visitor             = nil
       end
 
-      # Returns the human-readable name of the adapter.  Use mixed case - one
+      def lease
+        synchronize do
+          unless in_use
+            @in_use   = true
+            @last_use = Time.now
+          end
+        end
+      end
+
+      def expire
+        @in_use = false
+      end
+
+      # Returns the human-readable name of the adapter. Use mixed case - one
       # can always use downcase if needed.
       def adapter_name
         'Abstract'
       end
 
-      # Does this adapter support migrations?  Backend specific, as the
+      # Does this adapter support migrations? Backend specific, as the
       # abstract adapter always returns +false+.
       def supports_migrations?
         false
       end
 
       # Can this adapter determine the primary key for tables not attached
-      # to an Active Record class, such as join tables?  Backend specific, as
+      # to an Active Record class, such as join tables? Backend specific, as
       # the abstract adapter always returns +false+.
       def supports_primary_key?
         false
       end
 
-      # Does this adapter support using DISTINCT within COUNT?  This is +true+
+      # Does this adapter support using DISTINCT within COUNT? This is +true+
       # for all adapters except sqlite.
       def supports_count_distinct?
         true
       end
 
-      # Does this adapter support DDL rollbacks in transactions?  That is, would
-      # CREATE TABLE or ALTER TABLE get rolled back by a transaction?  PostgreSQL,
-      # SQL Server, and others support this.  MySQL and others do not.
+      # Does this adapter support DDL rollbacks in transactions? That is, would
+      # CREATE TABLE or ALTER TABLE get rolled back by a transaction? PostgreSQL,
+      # SQL Server, and others support this. MySQL and others do not.
       def supports_ddl_transactions?
         false
       end
 
-      # Does this adapter support savepoints? PostgreSQL and MySQL do, SQLite
-      # does not.
+      def supports_bulk_alter?
+        false
+      end
+
+      # Does this adapter support savepoints? PostgreSQL and MySQL do,
+      # SQLite < 3.6.8 does not.
       def supports_savepoints?
         false
       end
 
       # Should primary key values be selected from their corresponding
-      # sequence before the insert statement?  If true, next_sequence_value
+      # sequence before the insert statement? If true, next_sequence_value
       # is called before each insert to set the record's primary key.
       # This is false for all adapters but Firebird.
       def prefetch_primary_key?(table_name = nil)
         false
       end
 
-      # Does this adapter restrict the number of ids you can use in a list. Oracle has a limit of 1000.
-      def ids_in_list_limit
-        nil
+      # Does this adapter support index sort order?
+      def supports_index_sort_order?
+        false
+      end
+
+      # Does this adapter support explain? As of this writing sqlite3,
+      # mysql2, and postgresql are the only ones that do.
+      def supports_explain?
+        false
       end
 
       # QUOTING ==================================================
@@ -100,6 +153,12 @@ module ActiveRecord
       # Override to return the quoted table name. Defaults to column quoting.
       def quote_table_name(name)
         quote_column_name(name)
+      end
+
+      # Returns a bind substitution value given a +column+ and list of current
+      # +binds+
+      def substitute_at(column, index)
+        Arel::Nodes::BindParam.new '?'
       end
 
       # REFERENTIAL INTEGRITY ====================================
@@ -140,6 +199,13 @@ module ActiveRecord
         # this should be overridden by concrete adapters
       end
 
+      ###
+      # Clear any caching the database adapter may be doing, for example
+      # clearing the prepared statement cache. This is database specific.
+      def clear_cache!
+        # this should be overridden by concrete adapters
+      end
+
       # Returns true if its required to reload the connection between requests for development mode.
       # This is not the case for Ruby/MySQL and it's not necessary for any adapters except SQLite.
       def requires_reloading?
@@ -163,12 +229,9 @@ module ActiveRecord
         @connection
       end
 
-      def open_transactions
-        @open_transactions ||= 0
-      end
+      attr_reader :open_transactions
 
       def increment_open_transactions
-        @open_transactions ||= 0
         @open_transactions += 1
       end
 
@@ -189,22 +252,38 @@ module ActiveRecord
       def release_savepoint
       end
 
+      def case_sensitive_modifier(node)
+        node
+      end
+
+      def case_insensitive_comparison(table, attribute, column, value)
+        table[attribute].lower.eq(table.lower(value))
+      end
+
       def current_savepoint_name
         "active_record_#{open_transactions}"
       end
 
+      # Check the connection back in to the connection pool
+      def close
+        pool.checkin self
+      end
+
       protected
 
-        def log(sql, name)
-          name ||= "SQL"
-          @instrumenter.instrument("sql.active_record",
-            :sql => sql, :name => name, :connection_id => object_id) do
-            yield
-          end
+        def log(sql, name = "SQL", binds = [])
+          @instrumenter.instrument(
+            "sql.active_record",
+            :sql           => sql,
+            :name          => name,
+            :connection_id => object_id,
+            :binds         => binds) { yield }
         rescue Exception => e
           message = "#{e.class.name}: #{e.message}: #{sql}"
           @logger.debug message if @logger
-          raise translate_exception(e, message)
+          exception = translate_exception(e, message)
+          exception.set_backtrace e.backtrace
+          raise exception
         end
 
         def translate_exception(e, message)

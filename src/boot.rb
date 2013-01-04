@@ -35,25 +35,11 @@ when /^win|mswin/i # Windows specific code
 when /linux/i # Linux specific code
 end
 
-
 require 'erb'
 require 'active_record'
 
 module Boot
   def self.db_connect( env = 'production')
-
-    # DB SPECIFIC LOAD PATHS
-    #
-    # VERSIONS
-    #   activerecord-jdbc-adapter-1.1.2
-    #   activerecord-jdbcsqlite3-adapter-1.1.2
-    #   jdbc-sqlite3-3.7.2
-
-    $:.unshift('activerecord-jdbc-adapter/lib')
-    $:.unshift('activerecord-jdbc-adapter/lib/arjdbc')
-    $:.unshift('activerecord-jdbcsqlite3-adapter/lib')
-    $:.unshift('jdbc-sqlite3/lib')
-    $:.unshift('jdbc-sqlite3/lib/jdbc')
 
     database_config = File.expand_path( File.join(ADAM_ROOT_PATH, '/config/database.yml'))
 
@@ -80,7 +66,7 @@ module Boot
     begin
       db_connect
     rescue => e
-      puts "ERRORR -Failed to connect to DB", e
+      puts "ERROR -Failed to connect to DB", e
     end 
   end
 

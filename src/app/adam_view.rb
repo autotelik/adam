@@ -5,16 +5,16 @@
 # => TBD one license (probably GPL) for free (no cost) programs
 # => TBD one for commercial programs
 #
-include_class java.util.Vector
-include_class javax.swing.JOptionPane
+java_import java.util.Vector
+java_import javax.swing.JOptionPane
 
 module KSE
-  include_class 'autotelik.swing.FilteredJList'
-  include_class 'autotelik.swing.AdamTreeNode'
+  java_import 'autotelik.swing.FilteredJList'
+  java_import 'autotelik.swing.AdamTreeNode'
 end
 
-include_class javax.swing.table.TableColumn;
-include_class javax.swing.table.TableCellRenderer;
+java_import javax.swing.table.TableColumn;
+java_import javax.swing.table.TableCellRenderer;
 
 require 'system'
 require 'ruby_asset_tree'

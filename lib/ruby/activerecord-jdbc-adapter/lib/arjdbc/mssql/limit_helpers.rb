@@ -12,6 +12,28 @@ module ::ArJdbc
         end
       end
 
+      def get_primary_key(order, table_name)
+        if order =~ /(\w*id\w*)/i
+          $1
+        else
+          table_name[/\[+(.*)\]+/i]
+
+          # rails 2 vs rails 3
+          if ActiveRecord::VERSION::MAJOR >= 3
+            models = ActiveRecord::Base.descendants
+          else
+            models = ActiveRecord::Base.send(:subclasses)
+          end
+
+          model = models.select{|model| model.table_name == $1}.first
+          if model then
+            model.primary_key
+          else
+           'id'
+          end
+        end
+      end
+
       module SqlServer2000ReplaceLimitOffset
         module_function
         def replace_limit_offset!(sql, limit, offset, order)
@@ -31,10 +53,13 @@ module ::ArJdbc
               rest = rest_of_query[/FROM/i=~ rest_of_query.. -1]
               #need the table name for avoiding amiguity
               table_name = LimitHelpers.get_table_name(sql)
-              primary_key = order[/(\w*id\w*)/i]
+              primary_key = LimitHelpers.get_primary_key(order, table_name)
               #I am not sure this will cover all bases.  but all the tests pass
-              new_order = "ORDER BY #{order}, #{table_name}.#{primary_key}" if order.index("#{table_name}.#{primary_key}").nil?
-              new_order ||= order
+              if order[/ORDER/].nil?
+                new_order = "ORDER BY #{order}, #{table_name}.#{primary_key}" if order.index("#{table_name}.#{primary_key}").nil?
+              else
+                new_order ||= order
+              end
 
               if (rest_of_query.match(/WHERE/).nil?)
                 new_sql = "#{select} TOP #{limit} #{rest_of_query} WHERE #{table_name}.#{primary_key} NOT IN (#{select} TOP #{offset} #{table_name}.#{primary_key} #{rest} #{new_order}) #{order} "
@@ -54,7 +79,7 @@ module ::ArJdbc
           if options[:limit]
             order = "ORDER BY #{options[:order] || determine_order_clause(sql)}"
             sql.sub!(/ ORDER BY.*$/i, '')
-            SqlServerReplaceLimitOffset.replace_limit_offset!(sql, options[:limit], options[:offset], order)
+            SqlServer2000ReplaceLimitOffset.replace_limit_offset!(sql, options[:limit], options[:offset], order)
           end
         end
       end
@@ -69,10 +94,10 @@ module ::ArJdbc
             find_select = /\b(SELECT(?:\s+DISTINCT)?)\b(.*)/im
             whole, select, rest_of_query = find_select.match(sql).to_a
             rest_of_query.strip!
-            if rest_of_query.first == "1"
+            if rest_of_query[0...1] == "1" && rest_of_query !~ /1 AS/i
               rest_of_query[0] = "*"
             end
-            if rest_of_query.first == "*"
+            if rest_of_query[0] == "*"
               from_table = LimitHelpers.get_table_name(rest_of_query)
               rest_of_query = from_table + '.' + rest_of_query
             end

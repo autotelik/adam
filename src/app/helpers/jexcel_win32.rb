@@ -11,8 +11,8 @@
 #
 #
 ##module Jacob
-##  include_class 'com.jacob.com.Dispatch'
-##  include_class 'com.jacob.activeX.ActiveXComponent'
+##  java_import 'com.jacob.com.Dispatch'
+##  java_import 'com.jacob.activeX.ActiveXComponent'
 ##end
 #
 require 'excel_win32'

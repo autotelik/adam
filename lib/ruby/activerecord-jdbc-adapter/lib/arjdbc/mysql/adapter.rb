@@ -1,9 +1,10 @@
+require 'bigdecimal'
 require 'active_record/connection_adapters/abstract/schema_definitions'
 
 module ::ArJdbc
   module MySQL
     def self.column_selector
-      [/mysql/i, lambda {|cfg,col| col.extend(::ArJdbc::MySQL::Column)}]
+      [/mysql/i, lambda {|cfg,col| col.extend(::ArJdbc::MySQL::ColumnExtensions)}]
     end
 
     def self.extended(adapter)
@@ -18,7 +19,7 @@ module ::ArJdbc
       ::ActiveRecord::ConnectionAdapters::MySQLJdbcConnection
     end
 
-    module Column
+    module ColumnExtensions
       def extract_default(default)
         if sql_type =~ /blob/i || type == :text
           if default.blank?
@@ -42,7 +43,7 @@ module ::ArJdbc
         case field_type
         when /tinyint\(1\)|bit/i then :boolean
         when /enum/i             then :string
-        when /decimal/i          then :decimal
+        when /year/i             then :integer
         else
           super
         end
@@ -61,6 +62,7 @@ module ::ArJdbc
           else
             nil # we could return 65535 here, but we leave it undecorated by default
           end
+        when /^enum/i;     255
         when /^bigint/i;    8
         when /^int/i;       4
         when /^mediumint/i; 3
@@ -98,12 +100,16 @@ module ::ArJdbc
       'MySQL'
     end
 
-    def arel2_visitors
-      {'jdbcmysql' => ::Arel::Visitors::MySQL}
+    def self.arel2_visitors(config)
+      {}.tap {|v| %w(mysql mysql2 jdbcmysql).each {|a| v[a] = ::Arel::Visitors::MySQL } }
     end
 
     def case_sensitive_equality_operator
       "= BINARY"
+    end
+
+    def case_sensitive_modifier(node)
+      Arel::Nodes::Bin.new(node)
     end
 
     def limited_update_conditions(where_sql, quoted_table_name, quoted_primary_key)
@@ -127,30 +133,16 @@ module ::ArJdbc
       end
     end
 
+    def quote_column_name(name)
+      "`#{name.to_s.gsub('`', '``')}`"
+    end
+
     def quoted_true
-        "1"
+      "1"
     end
 
     def quoted_false
-        "0"
-    end
-
-    def begin_db_transaction #:nodoc:
-      @connection.begin
-    rescue Exception
-      # Transactions aren't supported
-    end
-
-    def commit_db_transaction #:nodoc:
-      @connection.commit
-    rescue Exception
-      # Transactions aren't supported
-    end
-
-    def rollback_db_transaction #:nodoc:
-      @connection.rollback
-    rescue Exception
-      # Transactions aren't supported
+      "0"
     end
 
     def supports_savepoints? #:nodoc:
@@ -201,11 +193,52 @@ module ::ArJdbc
       end
     end
 
+    # based on:
+    # https://github.com/rails/rails/blob/3-1-stable/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb#L756
+    # Required for passing rails column caching tests
+    # Returns a table's primary key and belonging sequence.
+    def pk_and_sequence_for(table) #:nodoc:
+      keys = []
+      result = execute("SHOW INDEX FROM #{quote_table_name(table)} WHERE Key_name = 'PRIMARY'", 'SCHEMA')
+      result.each do |h|
+        keys << h["Column_name"]
+      end
+      keys.length == 1 ? [keys.first, nil] : nil
+    end
+
+    # based on:
+    # https://github.com/rails/rails/blob/3-1-stable/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb#L647
+    # Returns an array of indexes for the given table.
+    def indexes(table_name, name = nil)#:nodoc:
+      indexes = []
+      current_index = nil
+      result = execute("SHOW KEYS FROM #{quote_table_name(table_name)}", name)
+      result.each do |row|
+        key_name = row["Key_name"]
+        if current_index != key_name
+          next if key_name == "PRIMARY" # skip the primary key
+          current_index = key_name
+          indexes << ::ActiveRecord::ConnectionAdapters::IndexDefinition.new(
+            row["Table"], key_name, row["Non_unique"] == 0, [], [])
+        end
+
+        indexes.last.columns << row["Column_name"]
+        indexes.last.lengths << row["Sub_part"]
+      end
+      indexes
+    end
+
     def jdbc_columns(table_name, name = nil)#:nodoc:
       sql = "SHOW FIELDS FROM #{quote_table_name(table_name)}"
-      execute(sql, :skip_logging).map do |field|
+      execute(sql, 'SCHEMA').map do |field|
         ::ActiveRecord::ConnectionAdapters::MysqlColumn.new(field["Field"], field["Default"], field["Type"], field["Null"] == "YES")
       end
+    end
+
+    # Returns just a table's primary key
+    def primary_key(table)
+      pk_and_sequence = pk_and_sequence_for(table)
+      pk_and_sequence && pk_and_sequence.first
     end
 
     def recreate_database(name, options = {}) #:nodoc:
@@ -230,7 +263,7 @@ module ::ArJdbc
     end
 
     def create_table(name, options = {}) #:nodoc:
-      super(name, {:options => "ENGINE=InnoDB"}.merge(options))
+      super(name, {:options => "ENGINE=InnoDB DEFAULT CHARSET=utf8"}.merge(options))
     end
 
     def rename_table(name, new_name)
@@ -302,10 +335,33 @@ module ::ArJdbc
       sql
     end
 
+    # Taken from: https://github.com/gfmurphy/rails/blob/3-1-stable/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb#L540
+    #
+    # In the simple case, MySQL allows us to place JOINs directly into the UPDATE
+    # query. However, this does not allow for LIMIT, OFFSET and ORDER. To support
+    # these, we must use a subquery. However, MySQL is too stupid to create a
+    # temporary table for this automatically, so we have to give it some prompting
+    # in the form of a subsubquery. Ugh!
+    def join_to_update(update, select) #:nodoc:
+      if select.limit || select.offset || select.orders.any?
+        subsubselect = select.clone
+        subsubselect.projections = [update.key]
+
+        subselect = Arel::SelectManager.new(select.engine)
+        subselect.project Arel.sql(update.key.name)
+        subselect.from subsubselect.as('__active_record_temp')
+
+        update.where update.key.in(subselect)
+      else
+        update.table select.source
+        update.wheres = select.constraints
+      end
+    end
+
     def show_variable(var)
       res = execute("show variables like '#{var}'")
-      row = res.detect {|row| row["Variable_name"] == var }
-      row && row["Value"]
+      result_row = res.detect {|row| row["Variable_name"] == var }
+      result_row && result_row["Value"]
     end
 
     def charset
@@ -338,6 +394,19 @@ module ::ArJdbc
     end
 
     protected
+    def quoted_columns_for_index(column_names, options = {})
+      length = options[:length] if options.is_a?(Hash)
+
+      case length
+      when Hash
+        column_names.map { |name| length[name] ? "#{quote_column_name(name)}(#{length[name]})" : quote_column_name(name) }
+      when Fixnum
+        column_names.map { |name| "#{quote_column_name(name)}(#{length})" }
+      else
+        column_names.map { |name| quote_column_name(name) }
+      end
+    end
+
     def translate_exception(exception, message)
       return super unless exception.respond_to?(:errno)
 
@@ -369,47 +438,140 @@ module ::ArJdbc
   end
 end
 
-module ActiveRecord::ConnectionAdapters
-  # Remove any vestiges of core/Ruby MySQL adapter
-  remove_const(:MysqlColumn) if const_defined?(:MysqlColumn)
-  remove_const(:MysqlAdapter) if const_defined?(:MysqlAdapter)
+module ActiveRecord
+  module ConnectionAdapters
+    # Remove any vestiges of core/Ruby MySQL adapter
+    remove_const(:MysqlColumn) if const_defined?(:MysqlColumn)
+    remove_const(:MysqlAdapter) if const_defined?(:MysqlAdapter)
 
-  class MysqlColumn < JdbcColumn
-    include ArJdbc::MySQL::Column
+    class MysqlColumn < JdbcColumn
+      include ArJdbc::MySQL::ColumnExtensions
 
-    def initialize(name, *args)
-      if Hash === name
-        super
-      else
-        super(nil, name, *args)
+      def initialize(name, *args)
+        if Hash === name
+          super
+        else
+          super(nil, name, *args)
+        end
+      end
+
+      def call_discovered_column_callbacks(*)
       end
     end
 
-    def call_discovered_column_callbacks(*)
+    class MysqlAdapter < JdbcAdapter
+      include ArJdbc::MySQL
+
+      def initialize(*args)
+        super
+        configure_connection
+      end
+
+      ## EXPLAIN support lifted from the mysql2 gem with slight modifications
+      ## to work in the JDBC adapter gem.
+      def supports_explain?
+        true
+      end
+
+      def explain(arel, binds = [])
+        sql     = "EXPLAIN #{to_sql(arel, binds.dup)}"
+        start   = Time.now.to_f
+        raw_result  = execute(sql, "EXPLAIN")
+        ar_result = ActiveRecord::Result.new(raw_result[0].keys, raw_result)
+        elapsed = Time.now.to_f - start
+        ExplainPrettyPrinter.new.pp(ar_result, elapsed)
+      end
+
+      class ExplainPrettyPrinter # :nodoc:
+        # Pretty prints the result of a EXPLAIN in a way that resembles the output of the
+        # MySQL shell:
+        #
+        #   +----+-------------+-------+-------+---------------+---------+---------+-------+------+-------------+
+        #   | id | select_type | table | type  | possible_keys | key     | key_len | ref   | rows | Extra       |
+        #   +----+-------------+-------+-------+---------------+---------+---------+-------+------+-------------+
+        #   |  1 | SIMPLE      | users | const | PRIMARY       | PRIMARY | 4       | const |    1 |             |
+        #   |  1 | SIMPLE      | posts | ALL   | NULL          | NULL    | NULL    | NULL  |    1 | Using where |
+        #   +----+-------------+-------+-------+---------------+---------+---------+-------+------+-------------+
+        #   2 rows in set (0.00 sec)
+        #
+        # This is an exercise in Ruby hyperrealism :).
+        def pp(result, elapsed)
+          widths    = compute_column_widths(result)
+          separator = build_separator(widths)
+
+          pp = []
+
+          pp << separator
+          pp << build_cells(result.columns, widths)
+          pp << separator
+
+          result.rows.each do |row|
+            pp << build_cells(row.values, widths)
+          end
+
+          pp << separator
+          pp << build_footer(result.rows.length, elapsed)
+
+          pp.join("\n") + "\n"
+        end
+
+        private
+
+        def compute_column_widths(result)
+          [].tap do |widths|
+            result.columns.each do |col|
+              cells_in_column = [col] + result.rows.map {|r| r[col].nil? ? 'NULL' : r[col].to_s}
+              widths << cells_in_column.map(&:length).max
+            end
+          end
+          
+        end
+
+        def build_separator(widths)
+          padding = 1
+          '+' + widths.map {|w| '-' * (w + (padding*2))}.join('+') + '+'
+        end
+
+        def build_cells(items, widths)
+          cells = []
+          items.each_with_index do |item, i|
+            item = 'NULL' if item.nil?
+            justifier = item.is_a?(Numeric) ? 'rjust' : 'ljust'
+            cells << item.to_s.send(justifier, widths[i])
+          end
+          '| ' + cells.join(' | ') + ' |'
+        end
+
+        def build_footer(nrows, elapsed)
+          rows_label = nrows == 1 ? 'row' : 'rows'
+          "#{nrows} #{rows_label} in set (%.2f sec)" % elapsed
+        end
+      end
+
+      def jdbc_connection_class(spec)
+        ::ArJdbc::MySQL.jdbc_connection_class
+      end
+
+      def jdbc_column_class
+        ActiveRecord::ConnectionAdapters::MysqlColumn
+      end
+
+      alias_chained_method :columns, :query_cache, :jdbc_columns
+
+      protected
+      def exec_insert(sql, name, binds)
+        binds = binds.dup
+
+        # Pretend to support bind parameters
+        unless binds.empty?
+          sql = sql.gsub('?') { quote(*binds.shift.reverse) }
+        end
+        execute sql, name
+      end
+      alias :exec_update :exec_insert
+      alias :exec_delete :exec_insert
+
     end
-  end
-
-  class MysqlAdapter < JdbcAdapter
-    include ArJdbc::MySQL
-
-    def initialize(*args)
-      super
-      configure_connection
-    end
-
-    def adapter_spec(config)
-      # return nil to avoid extending ArJdbc::MySQL, which we've already done
-    end
-
-    def jdbc_connection_class(spec)
-      ::ArJdbc::MySQL.jdbc_connection_class
-    end
-
-    def jdbc_column_class
-      ActiveRecord::ConnectionAdapters::MysqlColumn
-    end
-
-    alias_chained_method :columns, :query_cache, :jdbc_columns
   end
 end
 

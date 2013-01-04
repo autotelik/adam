@@ -6,12 +6,21 @@ end
 require 'yaml'
 
 YAML.add_builtin_type("omap") do |type, val|
-  ActiveSupport::OrderedHash[val.map(&:to_a).map(&:first)]
+  ActiveSupport::OrderedHash[val.map{ |v| v.to_a.first }]
 end
 
-# OrderedHash is namespaced to prevent conflicts with other implementations
 module ActiveSupport
-  class OrderedHash < ::Hash #:nodoc:
+  # The order of iteration over hashes in Ruby 1.8 is undefined. For example, you do not know the
+  # order in which +keys+ will return keys, or +each+ yield pairs. <tt>ActiveSupport::OrderedHash</tt>
+  # implements a hash that preserves insertion order, as in Ruby 1.9:
+  #
+  #   oh = ActiveSupport::OrderedHash.new
+  #   oh[:a] = 1
+  #   oh[:b] = 2
+  #   oh.keys # => [:a, :b], this order is guaranteed
+  #
+  # <tt>ActiveSupport::OrderedHash</tt> is namespaced to prevent conflicts with other implementations.
+  class OrderedHash < ::Hash
     def to_yaml_type
       "!tag:yaml.org,2002:omap"
     end
@@ -32,6 +41,15 @@ module ActiveSupport
           end
         end
       end
+    end
+
+    def nested_under_indifferent_access
+      self
+    end
+
+    # Returns true to make sure that this hash is extractable via <tt>Array#extract_options!</tt>
+    def extractable_options?
+      true
     end
 
     # Hash is ordered in Ruby 1.9!
@@ -83,7 +101,7 @@ module ActiveSupport
       end
 
       def []=(key, value)
-        @keys << key if !has_key?(key)
+        @keys << key unless has_key?(key)
         super
       end
 
@@ -128,18 +146,30 @@ module ActiveSupport
       end
 
       def each_key
+        return to_enum(:each_key) unless block_given?
         @keys.each { |key| yield key }
+        self
       end
 
       def each_value
+        return to_enum(:each_value) unless block_given?
         @keys.each { |key| yield self[key]}
+        self
       end
 
       def each
+        return to_enum(:each) unless block_given?
         @keys.each {|key| yield [key, self[key]]}
+        self
       end
 
-      alias_method :each_pair, :each
+      def each_pair
+        return to_enum(:each_pair) unless block_given?
+        @keys.each {|key| yield key, self[key]}
+        self
+      end
+
+      alias_method :select, :find_all
 
       def clear
         super

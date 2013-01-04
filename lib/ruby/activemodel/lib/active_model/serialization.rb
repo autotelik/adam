@@ -1,5 +1,7 @@
 require 'active_support/core_ext/hash/except'
 require 'active_support/core_ext/hash/slice'
+require 'active_support/core_ext/array/wrap'
+
 
 module ActiveModel
   # == Active Model Serialization
@@ -15,7 +17,7 @@ module ActiveModel
   #     attr_accessor :name
   #
   #     def attributes
-  #       @attributes ||= {'name' => 'nil'}
+  #       {'name' => name}
   #     end
   #
   #   end
@@ -31,7 +33,7 @@ module ActiveModel
   # you want to serialize and their current value.
   #
   # Most of the time though, you will want to include the JSON or XML
-  # serializations.  Both of these modules automatically include the
+  # serializations. Both of these modules automatically include the
   # ActiveModel::Serialization module, so there is no need to explicitly
   # include it.
   #
@@ -45,7 +47,7 @@ module ActiveModel
   #     attr_accessor :name
   #
   #     def attributes
-  #       @attributes ||= {'name' => 'nil'}
+  #       {'name' => name}
   #     end
   #
   #   end
@@ -69,25 +71,69 @@ module ActiveModel
     def serializable_hash(options = nil)
       options ||= {}
 
-      only   = Array.wrap(options[:only]).map(&:to_s)
-      except = Array.wrap(options[:except]).map(&:to_s)
-
       attribute_names = attributes.keys.sort
-      if only.any?
-        attribute_names &= only
-      elsif except.any?
-        attribute_names -= except
+      if only = options[:only]
+        attribute_names &= Array.wrap(only).map(&:to_s)
+      elsif except = options[:except]
+        attribute_names -= Array.wrap(except).map(&:to_s)
       end
 
-      method_names = Array.wrap(options[:methods]).inject([]) do |methods, name|
-        methods << name if respond_to?(name.to_s)
-        methods
+      hash = {}
+      attribute_names.each { |n| hash[n] = read_attribute_for_serialization(n) }
+
+      method_names = Array.wrap(options[:methods]).select { |n| respond_to?(n) }
+      method_names.each { |n| hash[n] = send(n) }
+
+      serializable_add_includes(options) do |association, records, opts|
+        hash[association] = if records.is_a?(Enumerable)
+          records.map { |a| a.serializable_hash(opts) }
+        else
+          records.serializable_hash(opts)
+        end
       end
 
-      (attribute_names + method_names).inject({}) { |hash, name|
-        hash[name] = send(name)
-        hash
-      }
+      hash
     end
+
+    private
+
+      # Hook method defining how an attribute value should be retrieved for
+      # serialization. By default this is assumed to be an instance named after
+      # the attribute. Override this method in subclasses should you need to
+      # retrieve the value for a given attribute differently:
+      #
+      #   class MyClass
+      #     include ActiveModel::Validations
+      #
+      #     def initialize(data = {})
+      #       @data = data
+      #     end
+      #
+      #     def read_attribute_for_serialization(key)
+      #       @data[key]
+      #     end
+      #   end
+      #
+      alias :read_attribute_for_serialization :send
+
+      # Add associations specified via the <tt>:include</tt> option.
+      #
+      # Expects a block that takes as arguments:
+      #   +association+ - name of the association
+      #   +records+     - the association record(s) to be serialized
+      #   +opts+        - options for the association records
+      def serializable_add_includes(options = {}) #:nodoc:
+        return unless include = options[:include]
+
+        unless include.is_a?(Hash)
+          include = Hash[Array.wrap(include).map { |n| n.is_a?(Hash) ? n.to_a.first : [n, {}] }]
+        end
+
+        include.each do |association, opts|
+          if records = send(association)
+            yield association, records, opts
+          end
+        end
+      end
   end
 end

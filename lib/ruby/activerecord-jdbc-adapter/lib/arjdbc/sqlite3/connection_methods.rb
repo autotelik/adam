@@ -5,16 +5,18 @@ $LOADED_FEATURES << "active_record/connection_adapters/sqlite3_adapter.rb"
 class ActiveRecord::Base
   class << self
     def sqlite3_connection(config)
-      require "arjdbc/sqlite3"
+      require 'active_record/connection_adapters/jdbcsqlite3_adapter'
 
       parse_sqlite3_config!(config)
       database = config[:database]
       database = '' if database == ':memory:'
       config[:url] ||= "jdbc:sqlite:#{database}"
-      config[:driver] ||= "org.sqlite.JDBC"
+      config[:driver] ||= defined?(::Jdbc::SQLite3.driver_name) ? ::Jdbc::SQLite3.driver_name : 'org.sqlite.JDBC'
       config[:adapter_class] = ActiveRecord::ConnectionAdapters::SQLite3Adapter
+      config[:adapter_spec] = ::ArJdbc::SQLite3
       jdbc_connection(config)
     end
+    alias_method :jdbcsqlite3_connection, :sqlite3_connection
 
     def parse_sqlite3_config!(config)
       config[:database] ||= config[:dbfile]
@@ -28,7 +30,5 @@ class ActiveRecord::Base
         config[:database] = File.expand_path(config[:database], rails_root)
       end
     end
-
-    alias_method :jdbcsqlite3_connection, :sqlite3_connection
   end
 end

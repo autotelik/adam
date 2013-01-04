@@ -7,7 +7,7 @@ module ::ArJdbc
     end
 
     def self.monkey_rails
-      unless @already_monkeyd
+      unless defined?(@already_monkeyd)
         # Needed because Rails is broken wrt to quoting of
         # some values. Most databases are nice about it,
         # but not Derby. The real issue is that you can't
@@ -27,12 +27,17 @@ module ::ArJdbc
       end
     end
 
-    def self.extended(*args)
+    def self.extended(adapter)
       monkey_rails
+      adapter.configure_connection
     end
 
     def self.included(*args)
       monkey_rails
+    end
+
+    def configure_connection
+      execute("SET ISOLATION = SERIALIZABLE")   # This must be done or SELECT...FOR UPDATE won't work how we expect
     end
 
     module Column
@@ -40,7 +45,7 @@ module ::ArJdbc
         case field_type
         when /smallint/i  then :boolean
         when /real/i      then :float
-        when /decimal/i   then :decimal
+        when /^timestamp/i then :datetime
         else
           super
         end
@@ -50,7 +55,7 @@ module ::ArJdbc
       def default_value(value)
         # jdbc returns column default strings with actual single quotes around the value.
         return $1 if value =~ /^'(.*)'$/
-
+        return nil if value == "GENERATED_BY_DEFAULT"
         value
       end
     end
@@ -59,9 +64,9 @@ module ::ArJdbc
       'Derby'
     end
 
-    def arel2_visitors
+    def self.arel2_visitors(config)
       require 'arel/visitors/derby'
-      {'derby' => ::Arel::Visitors::Derby, 'jdbcderby' => ::Arel::Visitors::Derby}
+      {}.tap {|v| %w(derby jdbcderby).each {|a| v[a] = ::Arel::Visitors::Derby } }
     end
 
     include ArJdbc::MissingFunctionalityHelper
@@ -74,10 +79,10 @@ module ::ArJdbc
     # In Derby, the following cannot specify a limit:
     # - integer
     # - boolean (smallint)
-    # - timestamp
+    # - datetime (timestamp)
     # - date
     def type_to_sql(type, limit = nil, precision = nil, scale = nil) #:nodoc:
-      return super unless [:integer, :boolean, :timestamp, :date].include? type
+      return super unless [:integer, :boolean, :timestamp, :datetime, :date].include? type
 
       native = native_database_types[type.to_s.downcase.to_sym]
       native.is_a?(Hash) ? native[:name] : native
@@ -88,6 +93,7 @@ module ::ArJdbc
       tp[:string][:limit] = 256
       tp[:integer][:limit] = nil
       tp[:boolean] = {:name => "smallint"}
+      tp[:datetime] = {:name => "timestamp", :limit => nil}
       tp[:timestamp][:limit] = nil
       tp[:date][:limit] = nil
       tp
@@ -171,7 +177,8 @@ module ::ArJdbc
       execute(add_column_sql)
     end
 
-    def execute(sql, name = nil)
+    def execute(sql, name = nil, binds = [])
+      sql = extract_sql(sql)
       if sql =~ /\A\s*(UPDATE|INSERT)/i
         i = sql =~ /\swhere\s/im
         if i
@@ -196,8 +203,7 @@ module ::ArJdbc
 
       # construct a clean list of column names from the ORDER BY clause, removing
       # any asc/desc modifiers
-      order_columns = order_by.split(',').collect { |s| s.split.first }
-      order_columns.delete_if(&:blank?)
+      order_columns = [order_by].flatten.map{|o| o.split(',').collect { |s| s.split.first } }.flatten.reject(&:blank?)
       order_columns = order_columns.zip((0...order_columns.size).to_a).map { |s,i| "#{s} AS alias_#{i}" }
 
       # return a DISTINCT clause that's distinct on the columns we want but includes
@@ -309,14 +315,14 @@ module ::ArJdbc
       @connection.tables(nil, derby_schema)
     end
 
-    def recreate_database(db_name)
+    def recreate_database(db_name, options = {})
       tables.each do |t|
         drop_table t
       end
     end
 
     def quote_column_name(name) #:nodoc:
-      %Q{"#{name.to_s.upcase.gsub(/"/, '""')}"}
+      %Q{"#{name.to_s.upcase.gsub(/\"/, '""')}"}
     end
 
     def quoted_true

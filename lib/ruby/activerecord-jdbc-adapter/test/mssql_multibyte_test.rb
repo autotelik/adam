@@ -1,5 +1,4 @@
-#! /usr/bin/env jruby
-
+# encoding: utf-8
 require 'jdbc_common'
 require 'db/mssql'
 

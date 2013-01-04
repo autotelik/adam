@@ -5,7 +5,7 @@
 #
 require 'ruby_conversion_table'
 
-include_class java.awt.event.ActionListener
+java_import java.awt.event.ActionListener
 
 class ConversionTabView < ApplicationView
 

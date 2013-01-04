@@ -1,10 +1,5 @@
-MYSQL_CONFIG = {
-  :username => 'blog',
-  :password => '',
-  :adapter  => 'mysql',
-  :database => 'weblog_development',
-  :host     => 'localhost'
-}
+require 'jdbc_common'
+require 'db/mysql_config'
 
 ActiveRecord::Base.establish_connection(MYSQL_CONFIG)
 

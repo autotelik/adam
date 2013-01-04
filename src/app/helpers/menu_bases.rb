@@ -5,8 +5,8 @@
 #
 #             Base for nested Menus, added to the main application Menu
 
-include_class javax.swing.JMenu
-include_class javax.swing.JMenuItem
+java_import javax.swing.JMenu
+java_import javax.swing.JMenuItem
 
 module MenuView 
 

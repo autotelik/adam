@@ -1,3 +1,4 @@
+require 'active_support/core_ext/class/attribute'
 require 'active_support/core_ext/object/blank'
 
 module ActiveRecord
@@ -12,7 +13,7 @@ module ActiveRecord
           raise "You cannot include Dirty after Timestamp"
         end
 
-        superclass_delegating_accessor :partial_updates
+        class_attribute :partial_updates
         self.partial_updates = true
       end
 
@@ -21,6 +22,8 @@ module ActiveRecord
         if status = super
           @previously_changed = changes
           @changed_attributes.clear
+        elsif IdentityMap.enabled?
+          IdentityMap.remove(self)
         end
         status
       end
@@ -31,6 +34,9 @@ module ActiveRecord
           @previously_changed = changes
           @changed_attributes.clear
         end
+      rescue
+        IdentityMap.remove(self) if IdentityMap.enabled?
+        raise
       end
 
       # <tt>reload</tt> the record and clears changed attributes.
@@ -49,12 +55,12 @@ module ActiveRecord
         # The attribute already has an unsaved change.
         if attribute_changed?(attr)
           old = @changed_attributes[attr]
-          @changed_attributes.delete(attr) unless field_changed?(attr, old, value)
+          @changed_attributes.delete(attr) unless _field_changed?(attr, old, value)
         else
           old = clone_attribute_value(:read_attribute, attr)
           # Save Time objects as TimeWithZone if time_zone_aware_attributes == true
           old = old.in_time_zone if clone_with_time_zone_conversion_attribute?(attr, old)
-          @changed_attributes[attr] = old if field_changed?(attr, old, value)
+          @changed_attributes[attr] = old if _field_changed?(attr, old, value)
         end
 
         # Carry on.
@@ -71,13 +77,10 @@ module ActiveRecord
         end
       end
 
-      def field_changed?(attr, old, value)
+      def _field_changed?(attr, old, value)
         if column = column_for_attribute(attr)
-          if column.number? && column.null && (old.nil? || old == 0) && value.blank?
-            # For nullable numeric columns, NULL gets stored in database for blank (i.e. '') values.
-            # Hence we don't record it as a change if the value changes from nil to ''.
-            # If an old value of 0 is set to '' we want this to get changed to nil as otherwise it'll
-            # be typecast back to 0 (''.to_i => 0)
+          if column.number? && (changes_from_nil_to_empty_string?(column, old, value) ||
+                                changes_from_zero_to_string?(old, value))
             value = nil
           else
             value = column.type_cast(value)
@@ -88,7 +91,20 @@ module ActiveRecord
       end
 
       def clone_with_time_zone_conversion_attribute?(attr, old)
-        old.class.name == "Time" && time_zone_aware_attributes && !skip_time_zone_conversion_for_attributes.include?(attr.to_sym)
+        old.class.name == "Time" && time_zone_aware_attributes && !self.skip_time_zone_conversion_for_attributes.include?(attr.to_sym)
+      end
+
+      def changes_from_nil_to_empty_string?(column, old, value)
+        # For nullable numeric columns, NULL gets stored in database for blank (i.e. '') values.
+        # Hence we don't record it as a change if the value changes from nil to ''.
+        # If an old value of 0 is set to '' we want this to get changed to nil as otherwise it'll
+        # be typecast back to 0 (''.to_i => 0)
+        column.null && (old.nil? || old == 0) && value.blank?
+      end
+
+      def changes_from_zero_to_string?(old, value)
+        # For columns with old 0 and value non-empty string
+        old == 0 && value.is_a?(String) && value.present? && value != '0'
       end
     end
   end

@@ -1,7 +1,7 @@
 require 'active_support/core_ext/object/to_json'
 require 'active_support/core_ext/module/delegation'
-require 'active_support/deprecation'
 require 'active_support/json/variable'
+require 'active_support/ordered_hash'
 
 require 'bigdecimal'
 require 'active_support/core_ext/big_decimal/conversions' # for #to_s
@@ -13,6 +13,7 @@ require 'time'
 require 'active_support/core_ext/time/conversions'
 require 'active_support/core_ext/date_time/conversions'
 require 'active_support/core_ext/date/conversions'
+require 'set'
 
 module ActiveSupport
   class << self
@@ -37,8 +38,8 @@ module ActiveSupport
         attr_reader :options
 
         def initialize(options = nil)
-          @options = options
-          @seen = []
+          @options = options || {}
+          @seen = Set.new
         end
 
         def encode(value, use_options = true)
@@ -49,16 +50,16 @@ module ActiveSupport
         end
 
         # like encode, but only calls as_json, without encoding to string
-        def as_json(value)
+        def as_json(value, use_options = true)
           check_for_circular_references(value) do
-            value.as_json(options_for(value))
+            use_options ? value.as_json(options_for(value)) : value.as_json
           end
         end
 
         def options_for(value)
           if value.is_a?(Array) || value.is_a?(Hash)
             # hashes and arrays need to get encoder in the options, so that they can detect circular references
-            (options || {}).merge(:encoder => self)
+            options.merge(:encoder => self)
           else
             options
           end
@@ -70,13 +71,12 @@ module ActiveSupport
 
         private
           def check_for_circular_references(value)
-            if @seen.any? { |object| object.equal?(value) }
+            unless @seen.add?(value.__id__)
               raise CircularReferenceError, 'object references itself'
             end
-            @seen.unshift value
             yield
           ensure
-            @seen.shift
+            @seen.delete(value.__id__)
           end
       end
 
@@ -138,8 +138,6 @@ module ActiveSupport
       self.use_standard_json_time_format = true
       self.escape_html_entities_in_json  = false
     end
-
-    CircularReferenceError = Deprecation::DeprecatedConstantProxy.new('ActiveSupport::JSON::CircularReferenceError', Encoding::CircularReferenceError)
   end
 end
 
@@ -153,19 +151,25 @@ class Object
   end
 end
 
+class Struct #:nodoc:
+  def as_json(options = nil)
+    Hash[members.zip(values)]
+  end
+end
+
 class TrueClass
-  AS_JSON = ActiveSupport::JSON::Variable.new('true').freeze
-  def as_json(options = nil) AS_JSON end #:nodoc:
+  def as_json(options = nil) self end #:nodoc:
+  def encode_json(encoder) to_s end #:nodoc:
 end
 
 class FalseClass
-  AS_JSON = ActiveSupport::JSON::Variable.new('false').freeze
-  def as_json(options = nil) AS_JSON end #:nodoc:
+  def as_json(options = nil) self end #:nodoc:
+  def encode_json(encoder) to_s end #:nodoc:
 end
 
 class NilClass
-  AS_JSON = ActiveSupport::JSON::Variable.new('null').freeze
-  def as_json(options = nil) AS_JSON end #:nodoc:
+  def as_json(options = nil) self end #:nodoc:
+  def encode_json(encoder) 'null' end #:nodoc:
 end
 
 class String
@@ -199,14 +203,16 @@ class Regexp
 end
 
 module Enumerable
-  def as_json(options = nil) to_a end #:nodoc:
+  def as_json(options = nil) #:nodoc:
+    to_a.as_json(options)
+  end
 end
 
 class Array
   def as_json(options = nil) #:nodoc:
     # use encoder as a proxy to call as_json on all elements, to protect from circular references
     encoder = options && options[:encoder] || ActiveSupport::JSON::Encoding::Encoder.new(options)
-    map { |v| encoder.as_json(v) }
+    map { |v| encoder.as_json(v, options) }
   end
 
   def encode_json(encoder) #:nodoc:
@@ -232,9 +238,8 @@ class Hash
 
     # use encoder as a proxy to call as_json on all values in the subset, to protect from circular references
     encoder = options && options[:encoder] || ActiveSupport::JSON::Encoding::Encoder.new(options)
-    pairs = subset.map { |k, v| [k.to_s, encoder.as_json(v)] }
-    result = self.is_a?(ActiveSupport::OrderedHash) ? ActiveSupport::OrderedHash.new : Hash.new
-    pairs.inject(result) { |hash, pair| hash[pair.first] = pair.last; hash }
+    result = self.is_a?(ActiveSupport::OrderedHash) ? ActiveSupport::OrderedHash : Hash
+    result[subset.map { |k, v| [k.to_s, encoder.as_json(v, options)] }]
   end
 
   def encode_json(encoder)

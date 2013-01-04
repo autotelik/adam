@@ -1,5 +1,6 @@
 require 'active_support/core_ext/file/atomic'
 require 'active_support/core_ext/string/conversions'
+require 'active_support/core_ext/object/inclusion'
 require 'rack/utils'
 
 module ActiveSupport
@@ -7,20 +8,22 @@ module ActiveSupport
     # A cache store implementation which stores everything on the filesystem.
     #
     # FileStore implements the Strategy::LocalCache strategy which implements
-    # an in memory cache inside of a block.
+    # an in-memory cache inside of a block.
     class FileStore < Store
       attr_reader :cache_path
 
       DIR_FORMATTER = "%03X"
+      FILENAME_MAX_SIZE = 230 # max filename size on file system is 255, minus room for timestamp and random characters appended by Tempfile (used by atomic write)
+      EXCLUDED_DIRS = ['.', '..'].freeze
 
       def initialize(cache_path, options = nil)
         super(options)
-        @cache_path = cache_path
+        @cache_path = cache_path.to_s
         extend Strategy::LocalCache
       end
 
       def clear(options = nil)
-        root_dirs = Dir.entries(cache_path).reject{|f| ['.', '..'].include?(f)}
+        root_dirs = Dir.entries(cache_path).reject{|f| f.in?(EXCLUDED_DIRS)}
         FileUtils.rm_r(root_dirs.collect{|f| File.join(cache_path, f)})
       end
 
@@ -76,19 +79,7 @@ module ActiveSupport
         def read_entry(key, options)
           file_name = key_file_path(key)
           if File.exist?(file_name)
-            entry = File.open(file_name) { |f| Marshal.load(f) }
-            if entry && !entry.expired? && !entry.expires_in && !self.options[:expires_in]
-              # Check for deprecated use of +:expires_in+ option from versions < 3.0
-              deprecated_expires_in = options[:expires_in]
-              if deprecated_expires_in
-                ActiveSupport::Deprecation.warn('Setting :expires_in on read has been deprecated in favor of setting it on write.', caller)
-                if entry.created_at + deprecated_expires_in.to_f <= Time.now.to_f
-                  delete_entry(key, options)
-                  entry = nil
-                end
-              end
-            end
-            entry
+            File.open(file_name) { |f| Marshal.load(f) }
           end
         rescue
           nil
@@ -140,15 +131,13 @@ module ActiveSupport
           hash, dir_1 = hash.divmod(0x1000)
           dir_2 = hash.modulo(0x1000)
           fname_paths = []
-          # Make sure file name is < 255 characters so it doesn't exceed file system limits.
-          if fname.size <= 255
-            fname_paths << fname
-          else
-            while fname.size <= 255
-              fname_path << fname[0, 255]
-              fname = fname[255, -1]
-            end
-          end
+
+          # Make sure file name doesn't exceed file system limits.
+          begin
+            fname_paths << fname[0, FILENAME_MAX_SIZE]
+            fname = fname[FILENAME_MAX_SIZE..-1]
+          end until fname.blank?
+
           File.join(cache_path, DIR_FORMATTER % dir_1, DIR_FORMATTER % dir_2, *fname_paths)
         end
 
@@ -161,7 +150,7 @@ module ActiveSupport
         # Delete empty directories in the cache.
         def delete_empty_directories(dir)
           return if dir == cache_path
-          if Dir.entries(dir).reject{|f| ['.', '..'].include?(f)}.empty?
+          if Dir.entries(dir).reject{|f| f.in?(EXCLUDED_DIRS)}.empty?
             File.delete(dir) rescue nil
             delete_empty_directories(File.dirname(dir))
           end
@@ -173,8 +162,9 @@ module ActiveSupport
         end
 
         def search_dir(dir, &callback)
+          return if !File.exist?(dir)
           Dir.foreach(dir) do |d|
-            next if d == "." || d == ".."
+            next if d.in?(EXCLUDED_DIRS)
             name = File.join(dir, d)
             if File.directory?(name)
               search_dir(name, &callback)

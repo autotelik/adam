@@ -134,9 +134,9 @@ module ActiveSupport
       attribute_hash = {}
       attributes = element.attributes
       for i in 0...attributes.length
-        attribute_hash[CONTENT_KEY] ||= ''
-        attribute_hash[attributes.item(i).name] =  attributes.item(i).value
-      end
+         attribute_hash[CONTENT_KEY] ||= ''
+         attribute_hash[attributes.item(i).name] =  attributes.item(i).value
+       end
       attribute_hash
     end
 

@@ -3,10 +3,10 @@ class Array
   #
   #   %w( a b c d ).from(0)  # => %w( a b c d )
   #   %w( a b c d ).from(2)  # => %w( c d )
-  #   %w( a b c d ).from(10) # => nil
+  #   %w( a b c d ).from(10) # => %w()
   #   %w().from(0)           # => %w()
   def from(position)
-    self[position..-1]
+    self[position, length] || []
   end
 
   # Returns the beginning of the array up to +position+.
@@ -16,7 +16,7 @@ class Array
   #   %w( a b c d ).to(10) # => %w( a b c d )
   #   %w().to(0)           # => %w()
   def to(position)
-    self[0..position]
+    self.first position + 1
   end
 
   # Equal to <tt>self[1]</tt>.

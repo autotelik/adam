@@ -17,8 +17,8 @@ require 'ruby_event_listener'
 
 class RubyPropertyListener < RubyEventListener
 
-  include_class java.beans.PropertyChangeListener
-  include_class java.beans.PropertyChangeEvent
+  java_import java.beans.PropertyChangeListener
+  java_import java.beans.PropertyChangeEvent
 
 
   def initialize( call_back_parent )
