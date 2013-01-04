@@ -36,13 +36,13 @@ class RubyConversionTable < RubyTable
 
   def load()
     #puts "IN RubyConversionTable : load"
-    setModel( RubyConversionTableModel.new() )
+   # setModel( RubyConversionTableModel.new() )
     #getColumn(model.output_column).setCellEditor( DefaultCellEditor.new(model.system_box) )
     #default_renderer = getDefaultRenderer(javax.swing.JComboBox)
     #setDefaultRenderer(javax.swing.JComboBox, RubyTableComboBoxRenderer.new(default_renderer))
 
-    default_renderer = getDefaultRenderer(JButton)
-    setDefaultRenderer(JButton, RubyTableButtonRenderer.new(default_renderer))
+    #default_renderer = getDefaultRenderer(JButton)
+   # setDefaultRenderer(JButton, RubyTableButtonRenderer.new(default_renderer))
 
    # addMouseListener(JTableButtonMouseListener.new(self))
 

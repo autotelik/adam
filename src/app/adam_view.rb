@@ -35,7 +35,7 @@ class AdamView < ApplicationView
   map :view => "workTabPane", :model => :working_tab_name,  :using => [nil, :get_tab_name]
 
   def load
-    #puts "IN AdamView : load"
+    puts "IN AdamView : load"
   end
 
   # Populate the intial project and asset list
@@ -63,7 +63,7 @@ class AdamView < ApplicationView
     AdamView::map :view => "assetList.selected_index",     :model => :selected_asset_index ,  :using => [:default, nil]
     AdamView::map :view => "assetList.getSelectedIndex",   :model => :selected_asset_index ,  :using => [nil, :default]
 
-    AdamView::map :view => "assetFilter.text", :model => :asset_filter_text
+   #TODO AdamView::map :view => "assetFilter.text", :model => :asset_filter_text
 
     #puts "OUT view : on_first_update"
   end
@@ -177,9 +177,9 @@ class AdamView < ApplicationView
   end
 
   def build_asset_list(model, transfer)
-      assetList.clear
+     # TODO assetList.clear
 
-      model.filtered_assets.each {|t| assetList.add_item(t) }
+     # model.filtered_assets.each {|t| assetList.add_item(t) }
   end
   
   def convert_to_vector(list)

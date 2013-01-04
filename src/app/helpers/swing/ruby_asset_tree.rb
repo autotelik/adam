@@ -47,8 +47,11 @@ class RubyAssetTreeModel < javax.swing.tree.DefaultTreeModel
 
 end   # END MODEL CLASS
 
+
+java_import 'autotelik.swing.DnDJTree'  
+
 module KSE
-  java_import 'autotelik.swing.DnDJTree'
+  include_package  'autotelik.swing'  
 end
 
 class RubyAssetTree < KSE::DnDJTree

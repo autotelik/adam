@@ -127,7 +127,7 @@
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="navigationTabPane" min="-2" pref="306" max="-2" attributes="1"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="workTabPane" pref="759" max="32767" attributes="0"/>
+              <Component id="workTabPane" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
           </Group>
           <Component id="jPanel2" alignment="0" max="32767" attributes="2"/>
@@ -139,8 +139,8 @@
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="navigationTabPane" pref="702" max="32767" attributes="1"/>
-                  <Component id="workTabPane" pref="702" max="32767" attributes="1"/>
+                  <Component id="navigationTabPane" max="32767" attributes="1"/>
+                  <Component id="workTabPane" max="32767" attributes="1"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
@@ -176,14 +176,13 @@
                               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="assetPane" pref="231" max="32767" attributes="1"/>
-                                  <Component id="projectListPane" alignment="0" pref="231" max="32767" attributes="1"/>
+                                  <Component id="projectListPane" alignment="0" pref="214" max="32767" attributes="1"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                               <Component id="assetsFilterLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="assetFilter" pref="231" max="32767" attributes="1"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -201,13 +200,10 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="assetsLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="assetPane" pref="494" max="32767" attributes="0"/>
+                          <Component id="assetPane" pref="482" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="assetFilter" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="assetsFilterLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="assetsFilterLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -249,31 +245,7 @@
             <Container class="javax.swing.JScrollPane" name="assetPane">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="k_swing_ext.FilteredJList" name="assetList">
-                </Component>
-              </SubComponents>
             </Container>
-            <Component class="javax.swing.JTextField" name="assetFilter">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
-                    <CompoundBorder>
-                      <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder roundedCorners="true"/>
-                      </Border>
-                    </CompoundBorder>
-                  </Border>
-                </Property>
-                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
-                  <Insets value="[0, 0, 0, 0]"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="assetList.getFilterField();"/>
-                <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="AdamMDIApplication_assetFilterTextField"/>
-              </AuxValues>
-            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
@@ -296,7 +268,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="assetTreeScrollPane" pref="726" max="32767" attributes="0"/>
+                      <Component id="assetTreeScrollPane" pref="748" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -304,7 +276,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="assetTreeScrollPane" pref="619" max="32767" attributes="0"/>
+                      <Component id="assetTreeScrollPane" pref="610" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -317,13 +289,6 @@
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="k_swing_ext.DnDJTree" name="assetTree">
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                  </AuxValues>
-                </Component>
-              </SubComponents>
             </Container>
           </SubComponents>
         </Container>
@@ -356,7 +321,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" alignment="0" pref="351" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" alignment="0" pref="359" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -392,7 +357,7 @@
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="statusPanel" min="-2" pref="233" max="-2" attributes="0"/>
-                  <EmptySpace pref="225" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jProgressBar1" min="-2" pref="497" max="-2" attributes="0"/>
@@ -459,7 +424,7 @@
                   <Component id="addToolBar" min="-2" pref="293" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="toolsToolBar" min="-2" pref="508" max="-2" attributes="0"/>
-                  <EmptySpace pref="278" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

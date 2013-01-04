@@ -52,13 +52,14 @@ end
 
 
 # Your application code goes here
+java_import javax.swing.UIManager
+java_import org.jvnet.substance.skin.SubstanceOfficeSilver2007LookAndFeel
 
 begin
-  java_import javax.swing.UIManager
-  java_import org.jvnet.substance.skin.SubstanceOfficeSilver2007LookAndFeel
-
+  
+  # TODO - broken  JAN 2013
   #javax.swing.UIManager.set_look_and_feel javax.swing.UIManager.getSystemLookAndFeelClassName
-  javax.swing.UIManager.set_look_and_feel "org.jvnet.substance.skin.SubstanceOfficeSilver2007LookAndFeel"
+ # javax.swing.UIManager.set_look_and_feel "org.jvnet.substance.skin.SubstanceOfficeSilver2007LookAndFeel"
   #rescue UnsupportedLookAndFeelException => e
   #  $stderr << "Error in application:\n#{e}\n#{e.message}"
   #  puts "Error loading supplied look and feel on this OS\n#{e}\n#{e.backtrace}"

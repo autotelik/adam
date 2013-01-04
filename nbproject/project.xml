@@ -8,6 +8,7 @@
                 <root id="src.dir"/>
                 <root id="src.lib.dir"/>
                 <root id="src.autotelik.dir"/>
+                <root id="src.ruby.dir"/>
             </source-roots>
             <test-roots/>
         </data>

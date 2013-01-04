@@ -38,11 +38,11 @@ class ConversionTabView < ApplicationView
 
     # Swap out the Java JTable placeholder (via netbeans) for our JRuby version
     field = get_field('conversionsJXTable')
-    field.set_value(@main_view_component, RubyConversionTable.new())
+   # field.set_value(@main_view_component, RubyConversionTable.new())
+#
+    #conversionsScrollPane.setViewportView(conversionsJXTable)
 
-    conversionsScrollPane.setViewportView(conversionsJXTable)
-
-    #puts "OUT ConversionsTabView - load"
+    puts "OUT ConversionsTabView - load"
   end
   # Only bother with updating our view/model if we are current Tab.
 

@@ -143,7 +143,7 @@ class AdamController < ApplicationController
 
   # The user types text into filter - updatre Asset list accordingly
 
-  add_listener :type => :document, :components => {"assetFilter.document" => "asset_filter" }
+ #TODO add_listener :type => :document, :components => {"assetFilter.document" => "asset_filter" }
   
   def asset_filter_changed_update(event) 
     update_model(view_state.first, :asset_filter_text)      # Update the filter text

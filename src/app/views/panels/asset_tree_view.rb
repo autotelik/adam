@@ -25,14 +25,14 @@ class AssetTreeView < ApplicationView
 
     # In nested view like this these 2 calls rely on the attributes of mdi being public
     #@main_frame.setAssetTree( RubyAssetTree.new )
-    @main_frame.setAssetTree( @main_view_component )
+   # @main_frame.setAssetTree( @main_view_component )
 
-    @main_frame.assetTreeScrollPane.setViewportView(@main_frame.assetTree)
+   # @main_frame.assetTreeScrollPane.setViewportView(@main_frame.assetTree)
     
     #@main_view_component = @main_frame.assetTree
-    @main_view_component.model = RubyAssetTreeModel.new(asset, true)
+   # @main_view_component.model = RubyAssetTreeModel.new(asset, true)
 
-    @main_view_component.expand_all
+   # @main_view_component.expand_all
   end
 
   # User clicks on Asset in the Navigator List

@@ -43,8 +43,8 @@ class RubyMappingTable < RubyTable
     puts "IN  RubyMappingTable : system_change"
     mappable_nodes = asset ? MappingHelper::mappable_nodes(system, asset.root) : []
     @asset_box = JComboBox.new(mappable_nodes.to_java)
-    setModel( RubyMappingTableModel.new(system, mappable_nodes) )
-    getColumn(model.fixed_map_column).setCellEditor( DefaultCellEditor.new(@asset_box) )
+    #setModel( RubyMappingTableModel.new(system, mappable_nodes) )
+    #getColumn(model.fixed_map_column).setCellEditor( DefaultCellEditor.new(@asset_box) )
     puts "OUT  RubyMappingTable : system_change"
   end
 

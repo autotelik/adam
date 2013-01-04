@@ -72,19 +72,23 @@ when Monkeybars::Resolver::IN_FILE_SYSTEM
     $:.unshift("#{ADAM_LIB_PATH}/ruby/#{gemname}/lib")
   end
 
+  $CLASSPATH << File.join(ADAM_SRC_PATH, 'lib')
+  $CLASSPATH << File.join(ADAM_SRC_PATH, 'lib', 'autotelik')
+  
   # 3rd party jars
    
-  Dir.glob( File.join(ADAM_LIB_PATH, 'java', '*.jar') ).each do |f| 
+  ADAM_JAVA_LIB_PATH = File.join(ADAM_LIB_PATH, 'java')
+  
+  $:.unshift(ADAM_JAVA_LIB_PATH)
+  $CLASSPATH << ADAM_JAVA_LIB_PATH
+    
+  Dir.glob( File.join(ADAM_JAVA_LIB_PATH, '*.jar') ).each do |f| 
     next unless(File.file?(f))
     puts "DEBUG: Add JAR #{f}"
-    $CLASSPATH << f 
-    require f
+    #$CLASSPATH << f 
+    #require File.basename(f)
   end
     
-  ['poi-3.7-20101029', 'substance'].each do |jar|
-    puts "DEBUG: Add JAR "#{depth}/lib/java/#{jar}.jar"
-    add_to_classpath "#{depth}/lib/java/#{jar}.jar"
-  end
 
 when Monkeybars::Resolver::IN_JAR_FILE
   # TODO - Still only runs out of Netbeans (F6)

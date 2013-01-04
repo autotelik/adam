@@ -21,8 +21,9 @@ public class AdamMDIApplication extends javax.swing.JFrame {
 
     /** Creates new form AdamMDIApplication */
     public AdamMDIApplication() {
+        //System.out.print("AdamMDIApplication - START INIT COMPONENTS");
         initComponents();
-        System.out.print("AdamMDIApplication - DONE INIT COMPONENTS");
+        //System.out.print("AdamMDIApplication - DONE INIT COMPONENTS");
     }
 
     /** This method is called from within the constructor to
@@ -45,12 +46,9 @@ public class AdamMDIApplication extends javax.swing.JFrame {
         projectListPane = new javax.swing.JScrollPane();
         projectList = new javax.swing.JList();
         assetPane = new javax.swing.JScrollPane();
-        assetList = new autotelik.swing.FilteredJList();
-        assetFilter = assetList.getFilterField();
         workTabPane = new javax.swing.JTabbedPane();
         assetTreePanel = new javax.swing.JPanel();
         assetTreeScrollPane = new javax.swing.JScrollPane();
-        assetTree = new autotelik.swing.DnDJTree();
         outPutDesktop = new javax.swing.JDesktopPane();
         outPutFrame = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -122,11 +120,6 @@ public class AdamMDIApplication extends javax.swing.JFrame {
         projectList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         projectListPane.setViewportView(projectList);
 
-        assetPane.setViewportView(assetList);
-
-        assetFilter.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true)));
-        assetFilter.setMargin(new java.awt.Insets(0, 0, 0, 0));
-
         javax.swing.GroupLayout navigatorTabLayout = new javax.swing.GroupLayout(navigatorTab);
         navigatorTab.setLayout(navigatorTabLayout);
         navigatorTabLayout.setHorizontalGroup(
@@ -141,12 +134,11 @@ public class AdamMDIApplication extends javax.swing.JFrame {
                         .addGap(11, 11, 11)
                         .addGroup(navigatorTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(assetPane, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
-                            .addComponent(projectListPane, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)))
+                            .addComponent(projectListPane, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navigatorTabLayout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(assetsFilterLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(assetFilter, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         navigatorTabLayout.setVerticalGroup(
@@ -159,17 +151,13 @@ public class AdamMDIApplication extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(navigatorTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(assetsLabel)
-                    .addComponent(assetPane, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE))
+                    .addComponent(assetPane, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(navigatorTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(assetFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(assetsFilterLabel))
+                .addComponent(assetsFilterLabel)
                 .addContainerGap())
         );
 
         navigationTabPane.addTab("Navigator", navigatorTab);
-
-        assetTreeScrollPane.setViewportView(assetTree);
 
         javax.swing.GroupLayout assetTreePanelLayout = new javax.swing.GroupLayout(assetTreePanel);
         assetTreePanel.setLayout(assetTreePanelLayout);
@@ -177,13 +165,13 @@ public class AdamMDIApplication extends javax.swing.JFrame {
             assetTreePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(assetTreePanelLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(assetTreeScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+                .addComponent(assetTreeScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
                 .addContainerGap())
         );
         assetTreePanelLayout.setVerticalGroup(
             assetTreePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(assetTreePanelLayout.createSequentialGroup()
-                .addComponent(assetTreeScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
+                .addComponent(assetTreeScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
                 .addGap(55, 55, 55))
         );
 
@@ -203,7 +191,7 @@ public class AdamMDIApplication extends javax.swing.JFrame {
         );
         outPutFrameLayout.setVerticalGroup(
             outPutFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
         );
 
         outPutFrame.setBounds(38, 22, 548, 386);
@@ -227,7 +215,7 @@ public class AdamMDIApplication extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(statusPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 225, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -297,14 +285,14 @@ public class AdamMDIApplication extends javax.swing.JFrame {
                 .addComponent(addToolBar, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(toolsToolBar, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(toolsToolBar, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-                    .addComponent(addToolBar, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                    .addComponent(toolsToolBar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(addToolBar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -350,7 +338,7 @@ public class AdamMDIApplication extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(navigationTabPane, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(workTabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 759, Short.MAX_VALUE)
+                .addComponent(workTabPane)
                 .addGap(18, 18, 18))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -360,8 +348,8 @@ public class AdamMDIApplication extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(navigationTabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
-                    .addComponent(workTabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE))
+                    .addComponent(navigationTabPane)
+                    .addComponent(workTabPane))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -369,29 +357,29 @@ public class AdamMDIApplication extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public DnDJTree getAssetTree() {
-        return assetTree;
-    }
+    //public DnDJTree getAssetTree() {
+   //     return assetTree;
+   // }
 
-    public void setAssetTree(DnDJTree assetTree) {
-        this.assetTree = assetTree;
-    }
+   // public void setAssetTree(DnDJTree assetTree) {
+    //    this.assetTree = assetTree;
+   // }
 
-    public JTextField getAssetFilter() {
-        return assetFilter;
-    }
+   // public JTextField getAssetFilter() {
+    //    return assetFilter;
+   // }
 
-    public void setAssetFilter(JTextField assetFilter) {
-        this.assetFilter = assetFilter;
-    }
+    //public void setAssetFilter(JTextField assetFilter) {
+     //   this.assetFilter = assetFilter;
+   // }
 
-    public FilteredJList getAssetList() {
-        return assetList;
-    }
+   // public FilteredJList getAssetList() {
+     //   return assetList;
+   // }
 
-    public void setAssetList(FilteredJList assetList) {
-        this.assetList = assetList;
-    }
+    //public void setAssetList(FilteredJList assetList) {
+   //     this.assetList = assetList;
+   // }
 
     public JScrollPane getAssetPane() {
         return assetPane;
@@ -448,10 +436,7 @@ private void jFileChooser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN
     javax.swing.JButton addLeafNodeButton;
     javax.swing.JButton addProjectButton;
     javax.swing.JToolBar addToolBar;
-    javax.swing.JTextField assetFilter;
-    autotelik.swing.FilteredJList assetList;
     javax.swing.JScrollPane assetPane;
-    public autotelik.swing.DnDJTree assetTree;
     javax.swing.JPanel assetTreePanel;
     public javax.swing.JScrollPane assetTreeScrollPane;
     javax.swing.JLabel assetsFilterLabel;
